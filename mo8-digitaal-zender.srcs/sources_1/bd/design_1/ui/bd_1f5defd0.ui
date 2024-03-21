@@ -1,0 +1,23 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.824692",
+   "Default View_TopLeft":"-141,-85",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 2 -x 1060 -y 60 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 2 -x 1060 -y 130 -defaultsOSRD
+preplace port UART -pg 1 -lvl 2 -x 1060 -y 280 -defaultsOSRD
+preplace inst koppeling_embedded -pg 1 -lvl 1 -x 520 -y 250 -defaultsOSRD -resize 992 460
+preplace netloc koppeling_embedded_DDR 1 1 1 NJ 60
+preplace netloc koppeling_embedded_FIXED_IO 1 1 1 NJ 130
+preplace netloc koppeling_embedded_UART_1_0 1 1 1 NJ 280
+levelinfo -pg 1 0 520 1060
+pagesize -pg 1 -db -bbox -sgen 0 0 1410 620
+"
+}
+{
+   "da_axi4_cnt":"2",
+   "da_clkrst_cnt":"4",
+   "da_ps7_cnt":"1"
+}
