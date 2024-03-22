@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender.runs/design_1_axi_gpio_0_1_synth_1'
+HD_PWD='C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/design_1_axi_gpio_0_1_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

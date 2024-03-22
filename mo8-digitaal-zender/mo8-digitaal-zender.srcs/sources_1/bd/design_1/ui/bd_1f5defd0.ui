@@ -1,19 +1,21 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.824692",
-   "Default View_TopLeft":"-141,-85",
+   "Default View_ScaleFactor":"1.14286",
+   "Default View_TopLeft":"-95,3",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 2 -x 1060 -y 60 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 2 -x 1060 -y 130 -defaultsOSRD
-preplace port UART -pg 1 -lvl 2 -x 1060 -y 280 -defaultsOSRD
-preplace inst koppeling_embedded -pg 1 -lvl 1 -x 520 -y 250 -defaultsOSRD -resize 992 460
-preplace netloc koppeling_embedded_DDR 1 1 1 NJ 60
-preplace netloc koppeling_embedded_FIXED_IO 1 1 1 NJ 130
-preplace netloc koppeling_embedded_UART_1_0 1 1 1 NJ 280
-levelinfo -pg 1 0 520 1060
-pagesize -pg 1 -db -bbox -sgen 0 0 1410 620
+preplace port DDR -pg 1 -lvl 2 -x 620 -y 150 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 2 -x 620 -y 180 -defaultsOSRD
+preplace port UART -pg 1 -lvl 2 -x 620 -y 228 -defaultsOSRD
+preplace inst koppeling_embedded -pg 1 -lvl 1 -x 290 -y 220 -defaultsOSRD -resize 541 190
+preplace inst TEMP_Uitlezen_keypad -pg 1 -lvl 1 -x 290 -y 60 -defaultsOSRD
+preplace netloc rsa_encryptie_ingedrukte_knop_tri_i_1 1 1 1 590 60n
+preplace netloc koppeling_embedded_DDR 1 1 1 600J 150n
+preplace netloc koppeling_embedded_FIXED_IO 1 1 1 600J 176n
+preplace netloc koppeling_embedded_UART_1_0 1 1 1 590J 213n
+levelinfo -pg 1 0 290 620
+pagesize -pg 1 -db -bbox -sgen 0 0 730 320
 "
 }
 {

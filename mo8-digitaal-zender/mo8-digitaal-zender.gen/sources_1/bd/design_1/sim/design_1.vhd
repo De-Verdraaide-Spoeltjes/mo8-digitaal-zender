@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
---Date        : Thu Mar 21 10:36:42 2024
+--Date        : Fri Mar 22 16:01:12 2024
 --Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -1101,7 +1101,8 @@ entity koppeling_embedded_imp_13QDZ6R is
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     UART_1_0_rxd : in STD_LOGIC;
     UART_1_0_txd : out STD_LOGIC;
-    rsa_encryptie_ingedrukte_knop_tri_i : in STD_LOGIC;
+    rsa_encryptie_ingedrukte_knop_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    rsa_encryptie_karakter_ready_tri_o : out STD_LOGIC;
     rsa_encryptie_versleuteld_karakter_tri_o : out STD_LOGIC
   );
 end koppeling_embedded_imp_13QDZ6R;
@@ -1142,7 +1143,8 @@ architecture STRUCTURE of koppeling_embedded_imp_13QDZ6R is
     s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_rvalid : out STD_LOGIC;
     s_axi_rready : in STD_LOGIC;
-    gpio_io_o : out STD_LOGIC_VECTOR ( 31 downto 0 )
+    gpio_io_o : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    gpio2_io_o : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component design_1_axi_gpio_0_1;
   component design_1_axi_gpio_0_0 is
@@ -1166,6 +1168,7 @@ architecture STRUCTURE of koppeling_embedded_imp_13QDZ6R is
     s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_rvalid : out STD_LOGIC;
     s_axi_rready : in STD_LOGIC;
+    ip2intc_irpt : out STD_LOGIC;
     gpio_io_i : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component design_1_axi_gpio_0_0;
@@ -1212,6 +1215,7 @@ architecture STRUCTURE of koppeling_embedded_imp_13QDZ6R is
     M_AXI_GP0_BRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M_AXI_GP0_RRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M_AXI_GP0_RDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    IRQ_F2P : in STD_LOGIC_VECTOR ( 0 to 0 );
     FCLK_CLK0 : out STD_LOGIC;
     FCLK_RESET0_N : out STD_LOGIC;
     MIO : inout STD_LOGIC_VECTOR ( 53 downto 0 );
@@ -1258,7 +1262,8 @@ architecture STRUCTURE of koppeling_embedded_imp_13QDZ6R is
   signal Conn2_PS_CLK : STD_LOGIC;
   signal Conn2_PS_PORB : STD_LOGIC;
   signal Conn2_PS_SRSTB : STD_LOGIC;
-  signal Conn3_TRI_I : STD_LOGIC;
+  signal Conn3_TRI_I : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal Conn4_TRI_O : STD_LOGIC_VECTOR ( 0 to 0 );
   signal Conn5_RxD : STD_LOGIC;
   signal Conn5_TxD : STD_LOGIC;
   signal Conn6_TRI_O : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -1337,15 +1342,17 @@ architecture STRUCTURE of koppeling_embedded_imp_13QDZ6R is
   signal axi_interconnect_0_M01_AXI_WVALID : STD_LOGIC;
   signal proc_sys_reset_0_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal processing_system7_0_FCLK_RESET0_N : STD_LOGIC;
+  signal rsa_encryptie_ingedrukte_knop_ip2intc_irpt : STD_LOGIC;
   signal NLW_proc_sys_reset_0_mb_reset_UNCONNECTED : STD_LOGIC;
   signal NLW_proc_sys_reset_0_bus_struct_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_proc_sys_reset_0_interconnect_aresetn_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_proc_sys_reset_0_peripheral_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
 begin
   CLK_100MHz <= S00_ACLK_1;
-  Conn3_TRI_I <= rsa_encryptie_ingedrukte_knop_tri_i;
+  Conn3_TRI_I(3 downto 0) <= rsa_encryptie_ingedrukte_knop_tri_i(3 downto 0);
   Conn5_RxD <= UART_1_0_rxd;
   UART_1_0_txd <= Conn5_TxD;
+  rsa_encryptie_karakter_ready_tri_o <= Conn4_TRI_O(0);
   rsa_encryptie_versleuteld_karakter_tri_o <= Conn6_TRI_O(0);
 axi_interconnect_0: entity work.design_1_axi_interconnect_0_0
      port map (
@@ -1464,6 +1471,7 @@ processing_system7_0: component design_1_processing_system7_0_0
       DDR_WEB => DDR_we_n,
       FCLK_CLK0 => S00_ACLK_1,
       FCLK_RESET0_N => processing_system7_0_FCLK_RESET0_N,
+      IRQ_F2P(0) => rsa_encryptie_ingedrukte_knop_ip2intc_irpt,
       MIO(53 downto 0) => FIXED_IO_mio(53 downto 0),
       M_AXI_GP0_ACLK => S00_ACLK_1,
       M_AXI_GP0_ARADDR(31 downto 0) => S00_AXI_1_ARADDR(31 downto 0),
@@ -1512,10 +1520,8 @@ processing_system7_0: component design_1_processing_system7_0_0
     );
 rsa_encryptie_ingedrukte_knop: component design_1_axi_gpio_0_0
      port map (
-      gpio_io_i(3) => Conn3_TRI_I,
-      gpio_io_i(2) => Conn3_TRI_I,
-      gpio_io_i(1) => Conn3_TRI_I,
-      gpio_io_i(0) => Conn3_TRI_I,
+      gpio_io_i(3 downto 0) => Conn3_TRI_I(3 downto 0),
+      ip2intc_irpt => rsa_encryptie_ingedrukte_knop_ip2intc_irpt,
       s_axi_aclk => S00_ACLK_1,
       s_axi_araddr(8 downto 0) => axi_interconnect_0_M00_AXI_ARADDR(8 downto 0),
       s_axi_aresetn => proc_sys_reset_0_peripheral_aresetn(0),
@@ -1538,6 +1544,7 @@ rsa_encryptie_ingedrukte_knop: component design_1_axi_gpio_0_0
     );
 rsa_encryptie_versleuteld_karakter: component design_1_axi_gpio_0_1
      port map (
+      gpio2_io_o(0) => Conn4_TRI_O(0),
       gpio_io_o(31 downto 0) => Conn6_TRI_O(31 downto 0),
       s_axi_aclk => S00_ACLK_1,
       s_axi_araddr(8 downto 0) => axi_interconnect_0_M01_AXI_ARADDR(8 downto 0),
@@ -1591,12 +1598,17 @@ entity design_1 is
     UART_txd : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=11,numReposBlks=6,numNonXlnxBlks=0,numHierBlks=5,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_clkrst_cnt=4,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=12,numReposBlks=7,numNonXlnxBlks=0,numHierBlks=5,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_clkrst_cnt=4,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
 
 architecture STRUCTURE of design_1 is
+  component design_1_xlconstant_0_0 is
+  port (
+    dout : out STD_LOGIC_VECTOR ( 3 downto 0 )
+  );
+  end component design_1_xlconstant_0_0;
   signal koppeling_embedded_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal koppeling_embedded_DDR_BA : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal koppeling_embedded_DDR_CAS_N : STD_LOGIC;
@@ -1620,7 +1632,9 @@ architecture STRUCTURE of design_1 is
   signal koppeling_embedded_FIXED_IO_PS_SRSTB : STD_LOGIC;
   signal koppeling_embedded_UART_1_0_RxD : STD_LOGIC;
   signal koppeling_embedded_UART_1_0_TxD : STD_LOGIC;
+  signal rsa_encryptie_ingedrukte_knop_tri_i_1 : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_koppeling_embedded_CLK_100MHz_UNCONNECTED : STD_LOGIC;
+  signal NLW_koppeling_embedded_rsa_encryptie_karakter_ready_tri_o_UNCONNECTED : STD_LOGIC;
   signal NLW_koppeling_embedded_rsa_encryptie_versleuteld_karakter_tri_o_UNCONNECTED : STD_LOGIC;
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of DDR_cas_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CAS_N";
@@ -1639,8 +1653,8 @@ architecture STRUCTURE of design_1 is
   attribute X_INTERFACE_INFO of FIXED_IO_ps_clk : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK";
   attribute X_INTERFACE_INFO of FIXED_IO_ps_porb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB";
   attribute X_INTERFACE_INFO of FIXED_IO_ps_srstb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB";
-  attribute X_INTERFACE_INFO of UART_rxd : signal is "xilinx.com:interface:uart:1.0 UART ";
-  attribute X_INTERFACE_INFO of UART_txd : signal is "xilinx.com:interface:uart:1.0 UART ";
+  attribute X_INTERFACE_INFO of UART_rxd : signal is "xilinx.com:interface:uart:1.0 UART RxD";
+  attribute X_INTERFACE_INFO of UART_txd : signal is "xilinx.com:interface:uart:1.0 UART TxD";
   attribute X_INTERFACE_INFO of DDR_addr : signal is "xilinx.com:interface:ddrx:1.0 DDR ADDR";
   attribute X_INTERFACE_PARAMETER of DDR_addr : signal is "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250";
   attribute X_INTERFACE_INFO of DDR_ba : signal is "xilinx.com:interface:ddrx:1.0 DDR BA";
@@ -1652,6 +1666,10 @@ architecture STRUCTURE of design_1 is
 begin
   UART_txd <= koppeling_embedded_UART_1_0_TxD;
   koppeling_embedded_UART_1_0_RxD <= UART_rxd;
+TEMP_Uitlezen_keypad: component design_1_xlconstant_0_0
+     port map (
+      dout(3 downto 0) => rsa_encryptie_ingedrukte_knop_tri_i_1(3 downto 0)
+    );
 koppeling_embedded: entity work.koppeling_embedded_imp_13QDZ6R
      port map (
       CLK_100MHz => NLW_koppeling_embedded_CLK_100MHz_UNCONNECTED,
@@ -1678,7 +1696,8 @@ koppeling_embedded: entity work.koppeling_embedded_imp_13QDZ6R
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
       UART_1_0_rxd => koppeling_embedded_UART_1_0_RxD,
       UART_1_0_txd => koppeling_embedded_UART_1_0_TxD,
-      rsa_encryptie_ingedrukte_knop_tri_i => '0',
+      rsa_encryptie_ingedrukte_knop_tri_i(3 downto 0) => rsa_encryptie_ingedrukte_knop_tri_i_1(3 downto 0),
+      rsa_encryptie_karakter_ready_tri_o => NLW_koppeling_embedded_rsa_encryptie_karakter_ready_tri_o_UNCONNECTED,
       rsa_encryptie_versleuteld_karakter_tri_o => NLW_koppeling_embedded_rsa_encryptie_versleuteld_karakter_tri_o_UNCONNECTED
     );
 end STRUCTURE;

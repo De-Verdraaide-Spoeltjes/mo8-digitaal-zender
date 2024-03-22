@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x63F2D01AF39BD14A",
+      "boundary_crc": "0x63F2D01A181B4BC5",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../mo8-digitaal-zender.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -24,7 +24,8 @@
         "rsa_encryptie_versleuteld_karakter": "",
         "rsa_encryptie_ingedrukte_knop": "",
         "processing_system7_0": ""
-      }
+      },
+      "TEMP_Uitlezen_keypad": ""
     },
     "interface_ports": {
       "DDR": {
@@ -235,6 +236,11 @@
             "vlnv": "xilinx.com:interface:uart_rtl:1.0"
           },
           "rsa_encryptie_versleuteld_karakter": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
+            "vlnv": "xilinx.com:interface:gpio_rtl:1.0"
+          },
+          "rsa_encryptie_karakter_ready": {
             "mode": "Master",
             "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
             "vlnv": "xilinx.com:interface:gpio_rtl:1.0"
@@ -653,6 +659,15 @@
             "parameters": {
               "C_ALL_OUTPUTS": {
                 "value": "1"
+              },
+              "C_ALL_OUTPUTS_2": {
+                "value": "1"
+              },
+              "C_GPIO2_WIDTH": {
+                "value": "1"
+              },
+              "C_IS_DUAL": {
+                "value": "1"
               }
             }
           },
@@ -667,6 +682,9 @@
               },
               "C_GPIO_WIDTH": {
                 "value": "4"
+              },
+              "C_INTERRUPT_PRESENT": {
+                "value": "1"
               }
             }
           },
@@ -793,6 +811,18 @@
               "PCW_CLK3_FREQ": {
                 "value": "10000000"
               },
+              "PCW_CORE0_FIQ_INTR": {
+                "value": "0"
+              },
+              "PCW_CORE0_IRQ_INTR": {
+                "value": "0"
+              },
+              "PCW_CORE1_FIQ_INTR": {
+                "value": "0"
+              },
+              "PCW_CORE1_IRQ_INTR": {
+                "value": "0"
+              },
               "PCW_CPU_CPU_6X4X_MAX_RANGE": {
                 "value": "667"
               },
@@ -832,20 +862,11 @@
               "PCW_ENET0_PERIPHERAL_ENABLE": {
                 "value": "0"
               },
-              "PCW_ENET0_RESET_ENABLE": {
-                "value": "1"
-              },
-              "PCW_ENET0_RESET_IO": {
-                "value": "MIO 9"
-              },
               "PCW_ENET1_PERIPHERAL_CLKSRC": {
                 "value": "IO PLL"
               },
               "PCW_ENET1_PERIPHERAL_ENABLE": {
                 "value": "0"
-              },
-              "PCW_ENET_RESET_ENABLE": {
-                "value": "1"
               },
               "PCW_ENET_RESET_POLARITY": {
                 "value": "Active Low"
@@ -1096,9 +1117,6 @@
               "PCW_I2C0_PERIPHERAL_ENABLE": {
                 "value": "0"
               },
-              "PCW_I2C_PERIPHERAL_FREQMHZ": {
-                "value": "108.333336"
-              },
               "PCW_I2C_RESET_ENABLE": {
                 "value": "0"
               },
@@ -1110,6 +1128,12 @@
               },
               "PCW_INCLUDE_ACP_TRANS_CHECK": {
                 "value": "0"
+              },
+              "PCW_IRQ_F2P_INTR": {
+                "value": "1"
+              },
+              "PCW_IRQ_F2P_MODE": {
+                "value": "DIRECT"
               },
               "PCW_MIO_0_IOTYPE": {
                 "value": "LVCMOS 3.3V"
@@ -1711,6 +1735,18 @@
               "PCW_OVERRIDE_BASIC_CLOCK": {
                 "value": "0"
               },
+              "PCW_P2F_GPIO_INTR": {
+                "value": "0"
+              },
+              "PCW_P2F_QSPI_INTR": {
+                "value": "0"
+              },
+              "PCW_P2F_UART0_INTR": {
+                "value": "0"
+              },
+              "PCW_P2F_UART1_INTR": {
+                "value": "0"
+              },
               "PCW_PACKAGE_DDR_BOARD_DELAY0": {
                 "value": "0.279"
               },
@@ -1745,7 +1781,7 @@
                 "value": "200"
               },
               "PCW_PERIPHERAL_BOARD_PRESET": {
-                "value": "None"
+                "value": "part0"
               },
               "PCW_PLL_BYPASSMODE_ENABLE": {
                 "value": "0"
@@ -1801,9 +1837,6 @@
               "PCW_SDIO_PERIPHERAL_CLKSRC": {
                 "value": "IO PLL"
               },
-              "PCW_SDIO_PERIPHERAL_FREQMHZ": {
-                "value": "50"
-              },
               "PCW_SDIO_PERIPHERAL_VALID": {
                 "value": "0"
               },
@@ -1848,6 +1881,18 @@
               },
               "PCW_SPI_PERIPHERAL_VALID": {
                 "value": "0"
+              },
+              "PCW_S_AXI_HP0_DATA_WIDTH": {
+                "value": "64"
+              },
+              "PCW_S_AXI_HP1_DATA_WIDTH": {
+                "value": "64"
+              },
+              "PCW_S_AXI_HP2_DATA_WIDTH": {
+                "value": "64"
+              },
+              "PCW_S_AXI_HP3_DATA_WIDTH": {
+                "value": "64"
               },
               "PCW_TPIU_PERIPHERAL_CLKSRC": {
                 "value": "External"
@@ -2119,12 +2164,6 @@
               "PCW_USB0_PERIPHERAL_ENABLE": {
                 "value": "0"
               },
-              "PCW_USB0_RESET_ENABLE": {
-                "value": "1"
-              },
-              "PCW_USB0_RESET_IO": {
-                "value": "MIO 46"
-              },
               "PCW_USB1_PERIPHERAL_ENABLE": {
                 "value": "0"
               },
@@ -2171,7 +2210,7 @@
                 "value": "0"
               },
               "PCW_USE_FABRIC_INTERRUPT": {
-                "value": "0"
+                "value": "1"
               },
               "PCW_USE_HIGH_OCM": {
                 "value": "0"
@@ -2373,6 +2412,12 @@
               "rsa_encryptie_ingedrukte_knop"
             ]
           },
+          "Conn4": {
+            "interface_ports": [
+              "rsa_encryptie_versleuteld_karakter/GPIO2",
+              "rsa_encryptie_karakter_ready"
+            ]
+          },
           "Conn5": {
             "interface_ports": [
               "processing_system7_0/UART_1",
@@ -2435,6 +2480,26 @@
               "processing_system7_0/FCLK_RESET0_N",
               "proc_sys_reset_0/ext_reset_in"
             ]
+          },
+          "rsa_encryptie_ingedrukte_knop_ip2intc_irpt": {
+            "ports": [
+              "rsa_encryptie_ingedrukte_knop/ip2intc_irpt",
+              "processing_system7_0/IRQ_F2P"
+            ]
+          }
+        }
+      },
+      "TEMP_Uitlezen_keypad": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_1_xlconstant_0_0",
+        "xci_path": "ip\\design_1_xlconstant_0_0\\design_1_xlconstant_0_0.xci",
+        "inst_hier_path": "TEMP_Uitlezen_keypad",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "8"
+          },
+          "CONST_WIDTH": {
+            "value": "4"
           }
         }
       }
@@ -2456,6 +2521,14 @@
         "interface_ports": [
           "UART",
           "koppeling_embedded/UART_1_0"
+        ]
+      }
+    },
+    "nets": {
+      "rsa_encryptie_ingedrukte_knop_tri_i_1": {
+        "ports": [
+          "TEMP_Uitlezen_keypad/dout",
+          "koppeling_embedded/rsa_encryptie_ingedrukte_knop_tri_i"
         ]
       }
     },
