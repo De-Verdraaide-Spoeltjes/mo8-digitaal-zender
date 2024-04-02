@@ -1,26 +1,47 @@
 {
-   "ActiveEmotionalView":"Default View",
+   "ActiveEmotionalView":"No Loops",
    "Default View_ScaleFactor":"1.25",
-   "Default View_TopLeft":"-242,-22",
+   "Default View_TopLeft":"-270,-143",
    "ExpandedHierarchyInLayout":"",
+   "No Loops_ExpandedHierarchyInLayout":"",
+   "No Loops_Layout":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+preplace port port-id_sys_clock -pg 1 -lvl 0 -x -30 -y 60 -defaultsOSRD
+preplace port port-id_Col_0_0 -pg 1 -lvl 0 -x -30 -y 170 -defaultsOSRD
+preplace port port-id_Col_1_0 -pg 1 -lvl 0 -x -30 -y 230 -defaultsOSRD
+preplace port port-id_Col_2_0 -pg 1 -lvl 0 -x -30 -y 200 -defaultsOSRD
+preplace port port-id_Col_3_0 -pg 1 -lvl 0 -x -30 -y 140 -defaultsOSRD
+preplace port port-id_Row_0_0 -pg 1 -lvl 3 -x 470 -y 90 -defaultsOSRD
+preplace port port-id_Row_1_0 -pg 1 -lvl 3 -x 470 -y 150 -defaultsOSRD
+preplace port port-id_Row_2_0 -pg 1 -lvl 3 -x 470 -y 120 -defaultsOSRD
+preplace portBus Data_0 -pg 1 -lvl 3 -x 470 -y 60 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 90 -y 40 -swap {1 0 2 3} -defaultsOSRD -pinDir reset left -pinY reset 40L -pinDir clk_in1 left -pinY clk_in1 20L -pinDir clk_out1 right -pinY clk_out1 20R -pinDir locked right -pinY locked 40R
+preplace inst keypad_0 -pg 1 -lvl 2 -x 300 -y 40 -swap {2 4 3 1 0 6 8 7 5} -defaultsOSRD -pinDir Col_0 left -pinY Col_0 130L -pinDir Col_1 left -pinY Col_1 190L -pinDir Col_2 left -pinY Col_2 160L -pinDir Col_3 left -pinY Col_3 100L -pinDir clk left -pinY clk 20L -pinDir Row_0 right -pinY Row_0 40R -pinDir Row_1 right -pinY Row_1 80R -pinDir Row_2 right -pinY Row_2 60R -pinBusDir Data right -pinBusY Data 20R
+preplace netloc Col_0_0_1 1 0 2 NJ 170 NJ
+preplace netloc Col_1_0_1 1 0 2 NJ 230 NJ
+preplace netloc Col_2_0_1 1 0 2 NJ 200 NJ
+preplace netloc Col_3_0_1 1 0 2 NJ 140 NJ
+preplace netloc clk_wiz_0_clk_out1 1 1 1 N 60
+preplace netloc keypad_0_Data 1 2 1 N 60
+preplace netloc keypad_0_Row_0 1 2 1 450 80n
+preplace netloc keypad_0_Row_1 1 2 1 410 120n
+preplace netloc keypad_0_Row_2 1 2 1 430 100n
+preplace netloc sys_clock_1 1 0 1 N 60
+levelinfo -pg 1 -30 90 300 470
+pagesize -pg 1 -db -bbox -sgen -150 -10 600 290
+",
+   "No Loops_ScaleFactor":"1.6245",
+   "No Loops_TopLeft":"-159,4",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 2 -x 240 -y 70 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 2 -x 240 -y 100 -defaultsOSRD
-preplace port UART -pg 1 -lvl 2 -x 240 -y 130 -defaultsOSRD
-preplace port status_led -pg 1 -lvl 2 -x 240 -y 180 -defaultsOSRD
-preplace inst connection_embedded -pg 1 -lvl 1 -x 110 -y 130 -defaultsOSRD
-preplace netloc processing_system7_0_DDR 1 1 1 220J 70n
-preplace netloc processing_system7_0_FIXED_IO 1 1 1 NJ 100
-preplace netloc processing_system7_0_UART_1 1 1 1 220J 120n
-preplace netloc status_led_GPIO 1 1 1 NJ 180
-levelinfo -pg 1 0 110 240
-pagesize -pg 1 -db -bbox -sgen 0 0 360 290
+preplace inst keypad_0 -pg 1 -lvl 1 -x 110 -y 40 -defaultsOSRD
+levelinfo -pg 1 0 110 220
+pagesize -pg 1 -db -bbox -sgen 0 -60 220 180
 "
 }
 {
    "da_axi4_cnt":"8",
-   "da_board_cnt":"5",
+   "da_board_cnt":"6",
    "da_clkrst_cnt":"1",
    "da_ps7_cnt":"1"
 }
