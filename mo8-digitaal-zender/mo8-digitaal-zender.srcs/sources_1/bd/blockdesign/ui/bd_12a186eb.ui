@@ -1,21 +1,21 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.25",
-   "Default View_TopLeft":"-238,-22",
+   "Default View_TopLeft":"-422,-134",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 2 -x 240 -y 70 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 2 -x 240 -y 100 -defaultsOSRD
-preplace port UART -pg 1 -lvl 2 -x 240 -y 130 -defaultsOSRD
-preplace port status_led -pg 1 -lvl 2 -x 240 -y 180 -defaultsOSRD
-preplace inst connection_embedded -pg 1 -lvl 1 -x 110 -y 130 -defaultsOSRD
-preplace netloc processing_system7_0_DDR 1 1 1 220J 70n
-preplace netloc processing_system7_0_FIXED_IO 1 1 1 NJ 100
-preplace netloc processing_system7_0_UART_1 1 1 1 220J 120n
-preplace netloc status_led_GPIO 1 1 1 NJ 180
-levelinfo -pg 1 0 110 240
-pagesize -pg 1 -db -bbox -sgen 0 0 360 250
+preplace port DDR -pg 1 -lvl 2 -x 300 -y 70 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 2 -x 300 -y 100 -defaultsOSRD
+preplace port UART -pg 1 -lvl 2 -x 300 -y 130 -defaultsOSRD
+preplace portBus status_led -pg 1 -lvl 2 -x 300 -y 170 -defaultsOSRD
+preplace inst connection_embedded -pg 1 -lvl 1 -x 110 -y 140 -defaultsOSRD
+preplace netloc connection_embedded_status_led 1 1 1 N 170
+preplace netloc processing_system7_0_DDR 1 1 1 280J 70n
+preplace netloc processing_system7_0_FIXED_IO 1 1 1 280J 100n
+preplace netloc processing_system7_0_UART_1 1 1 1 NJ 130
+levelinfo -pg 1 -80 110 300
+pagesize -pg 1 -db -bbox -sgen -260 -20 460 270
 "
 }
 {

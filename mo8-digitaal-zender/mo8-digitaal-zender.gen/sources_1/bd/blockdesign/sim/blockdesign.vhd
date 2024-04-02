@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
---Date        : Tue Apr  2 16:19:15 2024
+--Date        : Tue Apr  2 16:31:20 2024
 --Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
 --Command     : generate_target blockdesign.bd
 --Design      : blockdesign
@@ -1559,10 +1559,10 @@ entity connection_embedded_imp_1E8ES2 is
     UART_rxd : in STD_LOGIC;
     UART_txd : out STD_LOGIC;
     clk_100MHz : out STD_LOGIC;
-    rsa_encrypted_char_tri_o : out STD_LOGIC;
-    rsa_input_value_tri_i : in STD_LOGIC;
-    status_led_tri_o : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    transmit_keys_tri_i : in STD_LOGIC
+    rsa_encrypted_char : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    rsa_input_value : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    status_led : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    transmit_keys : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
 end connection_embedded_imp_1E8ES2;
 
@@ -1757,6 +1757,8 @@ architecture STRUCTURE of connection_embedded_imp_1E8ES2 is
   end component blockdesign_axi_gpio_3_0;
   signal axi_gpio_0_ip2intc_irpt : STD_LOGIC;
   signal axi_gpio_2_ip2intc_irpt : STD_LOGIC;
+  signal gpio_io_i_0_1 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal gpio_io_i_1_1 : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal proc_sys_reset_0_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal processing_system7_0_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal processing_system7_0_DDR_BA : STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -1889,10 +1891,8 @@ architecture STRUCTURE of connection_embedded_imp_1E8ES2 is
   signal ps7_0_axi_periph_M03_AXI_WREADY : STD_LOGIC;
   signal ps7_0_axi_periph_M03_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal ps7_0_axi_periph_M03_AXI_WVALID : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal rsa_encrypted_char_GPIO_TRI_I : STD_LOGIC;
-  signal rsa_input_value_GPIO_TRI_I : STD_LOGIC;
-  signal status_led_GPIO_TRI_O : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal transmit_keys_GPIO_TRI_O : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal rsa_encrypted_char_gpio_io_o : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal status_led_gpio_io_o : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal xlconcat_0_dout : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_proc_sys_reset_0_mb_reset_UNCONNECTED : STD_LOGIC;
   signal NLW_proc_sys_reset_0_bus_struct_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -1901,11 +1901,11 @@ architecture STRUCTURE of connection_embedded_imp_1E8ES2 is
 begin
   UART_txd <= processing_system7_0_UART_1_TxD;
   clk_100MHz <= processing_system7_0_FCLK_CLK0;
+  gpio_io_i_0_1(0) <= transmit_keys(0);
+  gpio_io_i_1_1(3 downto 0) <= rsa_input_value(3 downto 0);
   processing_system7_0_UART_1_RxD <= UART_rxd;
-  rsa_encrypted_char_GPIO_TRI_I <= transmit_keys_tri_i;
-  rsa_encrypted_char_tri_o <= transmit_keys_GPIO_TRI_O(0);
-  rsa_input_value_GPIO_TRI_I <= rsa_input_value_tri_i;
-  status_led_tri_o(2 downto 0) <= status_led_GPIO_TRI_O(2 downto 0);
+  rsa_encrypted_char(31 downto 0) <= rsa_encrypted_char_gpio_io_o(31 downto 0);
+  status_led(2 downto 0) <= status_led_gpio_io_o(2 downto 0);
 proc_sys_reset_0: component blockdesign_proc_sys_reset_0_0
      port map (
       aux_reset_in => '1',
@@ -2108,9 +2108,9 @@ ps7_0_axi_periph: entity work.blockdesign_ps7_0_axi_periph_1
       S00_AXI_wstrb(3 downto 0) => processing_system7_0_M_AXI_GP0_WSTRB(3 downto 0),
       S00_AXI_wvalid => processing_system7_0_M_AXI_GP0_WVALID
     );
-rsa_encrypted_char: component blockdesign_axi_gpio_1_0
+rsa_encrypted_char_RnM: component blockdesign_axi_gpio_1_0
      port map (
-      gpio_io_o(31 downto 0) => transmit_keys_GPIO_TRI_O(31 downto 0),
+      gpio_io_o(31 downto 0) => rsa_encrypted_char_gpio_io_o(31 downto 0),
       s_axi_aclk => processing_system7_0_FCLK_CLK0,
       s_axi_araddr(8 downto 0) => ps7_0_axi_periph_M01_AXI_ARADDR(8 downto 0),
       s_axi_aresetn => proc_sys_reset_0_peripheral_aresetn(0),
@@ -2131,12 +2131,9 @@ rsa_encrypted_char: component blockdesign_axi_gpio_1_0
       s_axi_wstrb(3 downto 0) => ps7_0_axi_periph_M01_AXI_WSTRB(3 downto 0),
       s_axi_wvalid => ps7_0_axi_periph_M01_AXI_WVALID(0)
     );
-rsa_input_value: component blockdesign_axi_gpio_0_0
+rsa_input_value_RnM: component blockdesign_axi_gpio_0_0
      port map (
-      gpio_io_i(3) => rsa_input_value_GPIO_TRI_I,
-      gpio_io_i(2) => rsa_input_value_GPIO_TRI_I,
-      gpio_io_i(1) => rsa_input_value_GPIO_TRI_I,
-      gpio_io_i(0) => rsa_input_value_GPIO_TRI_I,
+      gpio_io_i(3 downto 0) => gpio_io_i_1_1(3 downto 0),
       ip2intc_irpt => axi_gpio_0_ip2intc_irpt,
       s_axi_aclk => processing_system7_0_FCLK_CLK0,
       s_axi_araddr(8 downto 0) => ps7_0_axi_periph_M00_AXI_ARADDR(8 downto 0),
@@ -2158,9 +2155,9 @@ rsa_input_value: component blockdesign_axi_gpio_0_0
       s_axi_wstrb(3 downto 0) => ps7_0_axi_periph_M00_AXI_WSTRB(3 downto 0),
       s_axi_wvalid => ps7_0_axi_periph_M00_AXI_WVALID(0)
     );
-status_led: component blockdesign_axi_gpio_3_0
+status_led_RnM: component blockdesign_axi_gpio_3_0
      port map (
-      gpio_io_o(2 downto 0) => status_led_GPIO_TRI_O(2 downto 0),
+      gpio_io_o(2 downto 0) => status_led_gpio_io_o(2 downto 0),
       s_axi_aclk => processing_system7_0_FCLK_CLK0,
       s_axi_araddr(8 downto 0) => ps7_0_axi_periph_M03_AXI_ARADDR(8 downto 0),
       s_axi_aresetn => proc_sys_reset_0_peripheral_aresetn(0),
@@ -2181,9 +2178,9 @@ status_led: component blockdesign_axi_gpio_3_0
       s_axi_wstrb(3 downto 0) => ps7_0_axi_periph_M03_AXI_WSTRB(3 downto 0),
       s_axi_wvalid => ps7_0_axi_periph_M03_AXI_WVALID(0)
     );
-transmit_keys: component blockdesign_axi_gpio_2_0
+transmit_keys_RnM: component blockdesign_axi_gpio_2_0
      port map (
-      gpio_io_i(0) => rsa_encrypted_char_GPIO_TRI_I,
+      gpio_io_i(0) => gpio_io_i_0_1(0),
       ip2intc_irpt => axi_gpio_2_ip2intc_irpt,
       s_axi_aclk => processing_system7_0_FCLK_CLK0,
       s_axi_araddr(8 downto 0) => ps7_0_axi_periph_M02_AXI_ARADDR(8 downto 0),
@@ -2241,7 +2238,7 @@ entity blockdesign is
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     UART_rxd : in STD_LOGIC;
     UART_txd : out STD_LOGIC;
-    status_led_tri_o : out STD_LOGIC_VECTOR ( 2 downto 0 )
+    status_led : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
   attribute CORE_GENERATION_INFO of blockdesign : entity is "blockdesign,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=blockdesign,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=16,numReposBlks=9,numNonXlnxBlks=0,numHierBlks=7,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=8,da_board_cnt=5,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
@@ -2250,6 +2247,7 @@ entity blockdesign is
 end blockdesign;
 
 architecture STRUCTURE of blockdesign is
+  signal connection_embedded_status_led : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal processing_system7_0_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal processing_system7_0_DDR_BA : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal processing_system7_0_DDR_CAS_N : STD_LOGIC;
@@ -2273,9 +2271,8 @@ architecture STRUCTURE of blockdesign is
   signal processing_system7_0_FIXED_IO_PS_SRSTB : STD_LOGIC;
   signal processing_system7_0_UART_1_RxD : STD_LOGIC;
   signal processing_system7_0_UART_1_TxD : STD_LOGIC;
-  signal status_led_GPIO_TRI_O : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal NLW_connection_embedded_clk_100MHz_UNCONNECTED : STD_LOGIC;
-  signal NLW_connection_embedded_rsa_encrypted_char_tri_o_UNCONNECTED : STD_LOGIC;
+  signal NLW_connection_embedded_rsa_encrypted_char_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of DDR_cas_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CAS_N";
   attribute X_INTERFACE_INFO of DDR_ck_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CK_N";
@@ -2303,11 +2300,10 @@ architecture STRUCTURE of blockdesign is
   attribute X_INTERFACE_INFO of DDR_dqs_n : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_N";
   attribute X_INTERFACE_INFO of DDR_dqs_p : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_P";
   attribute X_INTERFACE_INFO of FIXED_IO_mio : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO";
-  attribute X_INTERFACE_INFO of status_led_tri_o : signal is "xilinx.com:interface:gpio:1.0 status_led TRI_O";
 begin
   UART_txd <= processing_system7_0_UART_1_TxD;
   processing_system7_0_UART_1_RxD <= UART_rxd;
-  status_led_tri_o(2 downto 0) <= status_led_GPIO_TRI_O(2 downto 0);
+  status_led(2 downto 0) <= connection_embedded_status_led(2 downto 0);
 connection_embedded: entity work.connection_embedded_imp_1E8ES2
      port map (
       DDR_addr(14 downto 0) => DDR_addr(14 downto 0),
@@ -2334,9 +2330,9 @@ connection_embedded: entity work.connection_embedded_imp_1E8ES2
       UART_rxd => processing_system7_0_UART_1_RxD,
       UART_txd => processing_system7_0_UART_1_TxD,
       clk_100MHz => NLW_connection_embedded_clk_100MHz_UNCONNECTED,
-      rsa_encrypted_char_tri_o => NLW_connection_embedded_rsa_encrypted_char_tri_o_UNCONNECTED,
-      rsa_input_value_tri_i => '0',
-      status_led_tri_o(2 downto 0) => status_led_GPIO_TRI_O(2 downto 0),
-      transmit_keys_tri_i => '0'
+      rsa_encrypted_char(31 downto 0) => NLW_connection_embedded_rsa_encrypted_char_UNCONNECTED(31 downto 0),
+      rsa_input_value(3 downto 0) => B"0000",
+      status_led(2 downto 0) => connection_embedded_status_led(2 downto 0),
+      transmit_keys(0) => '0'
     );
 end STRUCTURE;

@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x6617EFCF48EA49AC",
+      "boundary_crc": "0xF029DB81F9AD0D7D",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../mo8-digitaal-zender.gen/sources_1/bd/blockdesign",
       "name": "blockdesign",
@@ -214,29 +214,18 @@
             "direction": "I"
           }
         }
-      },
+      }
+    },
+    "ports": {
       "status_led": {
-        "mode": "Master",
-        "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
-        "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
-        "port_maps": {
-          "TRI_O": {
-            "physical_name": "status_led_tri_o",
-            "direction": "O",
-            "left": "2",
-            "right": "0"
-          }
-        }
+        "direction": "O",
+        "left": "2",
+        "right": "0"
       }
     },
     "components": {
       "connection_embedded": {
         "interface_ports": {
-          "rsa_input_value": {
-            "mode": "Master",
-            "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
-            "vlnv": "xilinx.com:interface:gpio_rtl:1.0"
-          },
           "DDR": {
             "mode": "Master",
             "vlnv_bus_definition": "xilinx.com:interface:ddrx:1.0",
@@ -251,27 +240,32 @@
             "mode": "Master",
             "vlnv_bus_definition": "xilinx.com:interface:uart:1.0",
             "vlnv": "xilinx.com:interface:uart_rtl:1.0"
-          },
-          "rsa_encrypted_char": {
-            "mode": "Master",
-            "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
-            "vlnv": "xilinx.com:interface:gpio_rtl:1.0"
-          },
-          "transmit_keys": {
-            "mode": "Master",
-            "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
-            "vlnv": "xilinx.com:interface:gpio_rtl:1.0"
-          },
-          "status_led": {
-            "mode": "Master",
-            "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
-            "vlnv": "xilinx.com:interface:gpio_rtl:1.0"
           }
         },
         "ports": {
           "clk_100MHz": {
             "type": "clk",
             "direction": "O"
+          },
+          "transmit_keys": {
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          },
+          "rsa_input_value": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "status_led": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "rsa_encrypted_char": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
           }
         },
         "components": {
@@ -2684,30 +2678,6 @@
               "ps7_0_axi_periph/M03_AXI",
               "status_led/S_AXI"
             ]
-          },
-          "rsa_encrypted_char_GPIO": {
-            "interface_ports": [
-              "transmit_keys",
-              "transmit_keys/GPIO"
-            ]
-          },
-          "rsa_input_value_GPIO": {
-            "interface_ports": [
-              "rsa_input_value",
-              "rsa_input_value/GPIO"
-            ]
-          },
-          "status_led_GPIO": {
-            "interface_ports": [
-              "status_led",
-              "status_led/GPIO"
-            ]
-          },
-          "transmit_keys_GPIO": {
-            "interface_ports": [
-              "rsa_encrypted_char",
-              "rsa_encrypted_char/GPIO"
-            ]
           }
         },
         "nets": {
@@ -2721,6 +2691,18 @@
             "ports": [
               "transmit_keys/ip2intc_irpt",
               "xlconcat_0/In1"
+            ]
+          },
+          "gpio_io_i_0_1": {
+            "ports": [
+              "transmit_keys",
+              "transmit_keys/gpio_io_i"
+            ]
+          },
+          "gpio_io_i_1_1": {
+            "ports": [
+              "rsa_input_value",
+              "rsa_input_value/gpio_io_i"
             ]
           },
           "proc_sys_reset_0_peripheral_aresetn": {
@@ -2762,6 +2744,18 @@
               "proc_sys_reset_0/ext_reset_in"
             ]
           },
+          "rsa_encrypted_char_gpio_io_o": {
+            "ports": [
+              "rsa_encrypted_char/gpio_io_o",
+              "rsa_encrypted_char"
+            ]
+          },
+          "status_led_gpio_io_o": {
+            "ports": [
+              "status_led/gpio_io_o",
+              "status_led"
+            ]
+          },
           "xlconcat_0_dout": {
             "ports": [
               "xlconcat_0/dout",
@@ -2789,11 +2783,13 @@
           "UART",
           "connection_embedded/UART"
         ]
-      },
-      "status_led_GPIO": {
-        "interface_ports": [
-          "status_led",
-          "connection_embedded/status_led"
+      }
+    },
+    "nets": {
+      "connection_embedded_status_led": {
+        "ports": [
+          "connection_embedded/status_led",
+          "status_led"
         ]
       }
     },
