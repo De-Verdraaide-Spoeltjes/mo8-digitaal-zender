@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
---Date        : Mon Mar 25 12:00:28 2024
+--Date        : Tue Apr  2 16:19:15 2024
 --Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
 --Command     : generate_target blockdesign.bd
 --Design      : blockdesign
@@ -1559,10 +1559,10 @@ entity connection_embedded_imp_1E8ES2 is
     UART_rxd : in STD_LOGIC;
     UART_txd : out STD_LOGIC;
     clk_100MHz : out STD_LOGIC;
-    rsa_encrypted_char_tri_i : in STD_LOGIC;
+    rsa_encrypted_char_tri_o : out STD_LOGIC;
     rsa_input_value_tri_i : in STD_LOGIC;
     status_led_tri_o : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    transmit_keys_tri_o : out STD_LOGIC
+    transmit_keys_tri_i : in STD_LOGIC
   );
 end connection_embedded_imp_1E8ES2;
 
@@ -1902,10 +1902,10 @@ begin
   UART_txd <= processing_system7_0_UART_1_TxD;
   clk_100MHz <= processing_system7_0_FCLK_CLK0;
   processing_system7_0_UART_1_RxD <= UART_rxd;
-  rsa_encrypted_char_GPIO_TRI_I <= rsa_encrypted_char_tri_i;
+  rsa_encrypted_char_GPIO_TRI_I <= transmit_keys_tri_i;
+  rsa_encrypted_char_tri_o <= transmit_keys_GPIO_TRI_O(0);
   rsa_input_value_GPIO_TRI_I <= rsa_input_value_tri_i;
   status_led_tri_o(2 downto 0) <= status_led_GPIO_TRI_O(2 downto 0);
-  transmit_keys_tri_o <= transmit_keys_GPIO_TRI_O(0);
 proc_sys_reset_0: component blockdesign_proc_sys_reset_0_0
      port map (
       aux_reset_in => '1',
@@ -2108,29 +2108,28 @@ ps7_0_axi_periph: entity work.blockdesign_ps7_0_axi_periph_1
       S00_AXI_wstrb(3 downto 0) => processing_system7_0_M_AXI_GP0_WSTRB(3 downto 0),
       S00_AXI_wvalid => processing_system7_0_M_AXI_GP0_WVALID
     );
-rsa_encrypted_char: component blockdesign_axi_gpio_2_0
+rsa_encrypted_char: component blockdesign_axi_gpio_1_0
      port map (
-      gpio_io_i(0) => rsa_encrypted_char_GPIO_TRI_I,
-      ip2intc_irpt => axi_gpio_2_ip2intc_irpt,
+      gpio_io_o(31 downto 0) => transmit_keys_GPIO_TRI_O(31 downto 0),
       s_axi_aclk => processing_system7_0_FCLK_CLK0,
-      s_axi_araddr(8 downto 0) => ps7_0_axi_periph_M02_AXI_ARADDR(8 downto 0),
+      s_axi_araddr(8 downto 0) => ps7_0_axi_periph_M01_AXI_ARADDR(8 downto 0),
       s_axi_aresetn => proc_sys_reset_0_peripheral_aresetn(0),
-      s_axi_arready => ps7_0_axi_periph_M02_AXI_ARREADY,
-      s_axi_arvalid => ps7_0_axi_periph_M02_AXI_ARVALID(0),
-      s_axi_awaddr(8 downto 0) => ps7_0_axi_periph_M02_AXI_AWADDR(8 downto 0),
-      s_axi_awready => ps7_0_axi_periph_M02_AXI_AWREADY,
-      s_axi_awvalid => ps7_0_axi_periph_M02_AXI_AWVALID(0),
-      s_axi_bready => ps7_0_axi_periph_M02_AXI_BREADY(0),
-      s_axi_bresp(1 downto 0) => ps7_0_axi_periph_M02_AXI_BRESP(1 downto 0),
-      s_axi_bvalid => ps7_0_axi_periph_M02_AXI_BVALID,
-      s_axi_rdata(31 downto 0) => ps7_0_axi_periph_M02_AXI_RDATA(31 downto 0),
-      s_axi_rready => ps7_0_axi_periph_M02_AXI_RREADY(0),
-      s_axi_rresp(1 downto 0) => ps7_0_axi_periph_M02_AXI_RRESP(1 downto 0),
-      s_axi_rvalid => ps7_0_axi_periph_M02_AXI_RVALID,
-      s_axi_wdata(31 downto 0) => ps7_0_axi_periph_M02_AXI_WDATA(31 downto 0),
-      s_axi_wready => ps7_0_axi_periph_M02_AXI_WREADY,
-      s_axi_wstrb(3 downto 0) => ps7_0_axi_periph_M02_AXI_WSTRB(3 downto 0),
-      s_axi_wvalid => ps7_0_axi_periph_M02_AXI_WVALID(0)
+      s_axi_arready => ps7_0_axi_periph_M01_AXI_ARREADY,
+      s_axi_arvalid => ps7_0_axi_periph_M01_AXI_ARVALID(0),
+      s_axi_awaddr(8 downto 0) => ps7_0_axi_periph_M01_AXI_AWADDR(8 downto 0),
+      s_axi_awready => ps7_0_axi_periph_M01_AXI_AWREADY,
+      s_axi_awvalid => ps7_0_axi_periph_M01_AXI_AWVALID(0),
+      s_axi_bready => ps7_0_axi_periph_M01_AXI_BREADY(0),
+      s_axi_bresp(1 downto 0) => ps7_0_axi_periph_M01_AXI_BRESP(1 downto 0),
+      s_axi_bvalid => ps7_0_axi_periph_M01_AXI_BVALID,
+      s_axi_rdata(31 downto 0) => ps7_0_axi_periph_M01_AXI_RDATA(31 downto 0),
+      s_axi_rready => ps7_0_axi_periph_M01_AXI_RREADY(0),
+      s_axi_rresp(1 downto 0) => ps7_0_axi_periph_M01_AXI_RRESP(1 downto 0),
+      s_axi_rvalid => ps7_0_axi_periph_M01_AXI_RVALID,
+      s_axi_wdata(31 downto 0) => ps7_0_axi_periph_M01_AXI_WDATA(31 downto 0),
+      s_axi_wready => ps7_0_axi_periph_M01_AXI_WREADY,
+      s_axi_wstrb(3 downto 0) => ps7_0_axi_periph_M01_AXI_WSTRB(3 downto 0),
+      s_axi_wvalid => ps7_0_axi_periph_M01_AXI_WVALID(0)
     );
 rsa_input_value: component blockdesign_axi_gpio_0_0
      port map (
@@ -2182,28 +2181,29 @@ status_led: component blockdesign_axi_gpio_3_0
       s_axi_wstrb(3 downto 0) => ps7_0_axi_periph_M03_AXI_WSTRB(3 downto 0),
       s_axi_wvalid => ps7_0_axi_periph_M03_AXI_WVALID(0)
     );
-transmit_keys: component blockdesign_axi_gpio_1_0
+transmit_keys: component blockdesign_axi_gpio_2_0
      port map (
-      gpio_io_o(31 downto 0) => transmit_keys_GPIO_TRI_O(31 downto 0),
+      gpio_io_i(0) => rsa_encrypted_char_GPIO_TRI_I,
+      ip2intc_irpt => axi_gpio_2_ip2intc_irpt,
       s_axi_aclk => processing_system7_0_FCLK_CLK0,
-      s_axi_araddr(8 downto 0) => ps7_0_axi_periph_M01_AXI_ARADDR(8 downto 0),
+      s_axi_araddr(8 downto 0) => ps7_0_axi_periph_M02_AXI_ARADDR(8 downto 0),
       s_axi_aresetn => proc_sys_reset_0_peripheral_aresetn(0),
-      s_axi_arready => ps7_0_axi_periph_M01_AXI_ARREADY,
-      s_axi_arvalid => ps7_0_axi_periph_M01_AXI_ARVALID(0),
-      s_axi_awaddr(8 downto 0) => ps7_0_axi_periph_M01_AXI_AWADDR(8 downto 0),
-      s_axi_awready => ps7_0_axi_periph_M01_AXI_AWREADY,
-      s_axi_awvalid => ps7_0_axi_periph_M01_AXI_AWVALID(0),
-      s_axi_bready => ps7_0_axi_periph_M01_AXI_BREADY(0),
-      s_axi_bresp(1 downto 0) => ps7_0_axi_periph_M01_AXI_BRESP(1 downto 0),
-      s_axi_bvalid => ps7_0_axi_periph_M01_AXI_BVALID,
-      s_axi_rdata(31 downto 0) => ps7_0_axi_periph_M01_AXI_RDATA(31 downto 0),
-      s_axi_rready => ps7_0_axi_periph_M01_AXI_RREADY(0),
-      s_axi_rresp(1 downto 0) => ps7_0_axi_periph_M01_AXI_RRESP(1 downto 0),
-      s_axi_rvalid => ps7_0_axi_periph_M01_AXI_RVALID,
-      s_axi_wdata(31 downto 0) => ps7_0_axi_periph_M01_AXI_WDATA(31 downto 0),
-      s_axi_wready => ps7_0_axi_periph_M01_AXI_WREADY,
-      s_axi_wstrb(3 downto 0) => ps7_0_axi_periph_M01_AXI_WSTRB(3 downto 0),
-      s_axi_wvalid => ps7_0_axi_periph_M01_AXI_WVALID(0)
+      s_axi_arready => ps7_0_axi_periph_M02_AXI_ARREADY,
+      s_axi_arvalid => ps7_0_axi_periph_M02_AXI_ARVALID(0),
+      s_axi_awaddr(8 downto 0) => ps7_0_axi_periph_M02_AXI_AWADDR(8 downto 0),
+      s_axi_awready => ps7_0_axi_periph_M02_AXI_AWREADY,
+      s_axi_awvalid => ps7_0_axi_periph_M02_AXI_AWVALID(0),
+      s_axi_bready => ps7_0_axi_periph_M02_AXI_BREADY(0),
+      s_axi_bresp(1 downto 0) => ps7_0_axi_periph_M02_AXI_BRESP(1 downto 0),
+      s_axi_bvalid => ps7_0_axi_periph_M02_AXI_BVALID,
+      s_axi_rdata(31 downto 0) => ps7_0_axi_periph_M02_AXI_RDATA(31 downto 0),
+      s_axi_rready => ps7_0_axi_periph_M02_AXI_RREADY(0),
+      s_axi_rresp(1 downto 0) => ps7_0_axi_periph_M02_AXI_RRESP(1 downto 0),
+      s_axi_rvalid => ps7_0_axi_periph_M02_AXI_RVALID,
+      s_axi_wdata(31 downto 0) => ps7_0_axi_periph_M02_AXI_WDATA(31 downto 0),
+      s_axi_wready => ps7_0_axi_periph_M02_AXI_WREADY,
+      s_axi_wstrb(3 downto 0) => ps7_0_axi_periph_M02_AXI_WSTRB(3 downto 0),
+      s_axi_wvalid => ps7_0_axi_periph_M02_AXI_WVALID(0)
     );
 xlconcat_0: component blockdesign_xlconcat_0_0
      port map (
@@ -2275,7 +2275,7 @@ architecture STRUCTURE of blockdesign is
   signal processing_system7_0_UART_1_TxD : STD_LOGIC;
   signal status_led_GPIO_TRI_O : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal NLW_connection_embedded_clk_100MHz_UNCONNECTED : STD_LOGIC;
-  signal NLW_connection_embedded_transmit_keys_tri_o_UNCONNECTED : STD_LOGIC;
+  signal NLW_connection_embedded_rsa_encrypted_char_tri_o_UNCONNECTED : STD_LOGIC;
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of DDR_cas_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CAS_N";
   attribute X_INTERFACE_INFO of DDR_ck_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CK_N";
@@ -2303,7 +2303,7 @@ architecture STRUCTURE of blockdesign is
   attribute X_INTERFACE_INFO of DDR_dqs_n : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_N";
   attribute X_INTERFACE_INFO of DDR_dqs_p : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_P";
   attribute X_INTERFACE_INFO of FIXED_IO_mio : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO";
-  attribute X_INTERFACE_INFO of status_led_tri_o : signal is "xilinx.com:interface:gpio:1.0 status_led ";
+  attribute X_INTERFACE_INFO of status_led_tri_o : signal is "xilinx.com:interface:gpio:1.0 status_led TRI_O";
 begin
   UART_txd <= processing_system7_0_UART_1_TxD;
   processing_system7_0_UART_1_RxD <= UART_rxd;
@@ -2334,9 +2334,9 @@ connection_embedded: entity work.connection_embedded_imp_1E8ES2
       UART_rxd => processing_system7_0_UART_1_RxD,
       UART_txd => processing_system7_0_UART_1_TxD,
       clk_100MHz => NLW_connection_embedded_clk_100MHz_UNCONNECTED,
-      rsa_encrypted_char_tri_i => '0',
+      rsa_encrypted_char_tri_o => NLW_connection_embedded_rsa_encrypted_char_tri_o_UNCONNECTED,
       rsa_input_value_tri_i => '0',
       status_led_tri_o(2 downto 0) => status_led_GPIO_TRI_O(2 downto 0),
-      transmit_keys_tri_o => NLW_connection_embedded_transmit_keys_tri_o_UNCONNECTED
+      transmit_keys_tri_i => '0'
     );
 end STRUCTURE;

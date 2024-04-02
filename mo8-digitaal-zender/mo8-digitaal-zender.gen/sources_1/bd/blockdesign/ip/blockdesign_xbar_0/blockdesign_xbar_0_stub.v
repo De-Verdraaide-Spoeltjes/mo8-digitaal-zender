@@ -2,7 +2,7 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Mon Mar 25 12:02:35 2024
+// Date        : Tue Apr  2 16:21:01 2024
 // Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_xbar_0/blockdesign_xbar_0_stub.v

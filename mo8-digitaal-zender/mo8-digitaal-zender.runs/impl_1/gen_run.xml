@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1711364688">
-  <File Type="OPT-HWDEF" Name="blockdesign_wrapper.hwdef"/>
-  <File Type="ROUTE-BUS-SKEW" Name="blockdesign_wrapper_bus_skew_routed.rpt"/>
-  <File Type="PA-DCP" Name="blockdesign_wrapper.dcp"/>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1712067563">
   <File Type="ROUTE-PWR" Name="blockdesign_wrapper_power_routed.rpt"/>
   <File Type="PA-TCL" Name="blockdesign_wrapper.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="blockdesign_wrapper_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="blockdesign_wrapper_reports.tcl"/>
+  <File Type="OPT-RQA-PB" Name="blockdesign_wrapper_rqa_opted.pb"/>
+  <File Type="BITSTR-MMI" Name="blockdesign_wrapper.mmi"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="blockdesign_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="blockdesign_wrapper_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR-SUM" Name="blockdesign_wrapper_power_summary_routed.pb"/>
-  <File Type="OPT-RQA-PB" Name="blockdesign_wrapper_rqa_opted.pb"/>
-  <File Type="REPORTS-TCL" Name="blockdesign_wrapper_reports.tcl"/>
   <File Type="OPT-TIMING" Name="blockdesign_wrapper_timing_summary_opted.rpt"/>
   <File Type="OPT-DCP" Name="blockdesign_wrapper_opt.dcp"/>
   <File Type="OPT-DRC" Name="blockdesign_wrapper_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="blockdesign_wrapper.hwdef"/>
   <File Type="PWROPT-DCP" Name="blockdesign_wrapper_pwropt.dcp"/>
   <File Type="PWROPT-DRC" Name="blockdesign_wrapper_drc_pwropted.rpt"/>
   <File Type="PWROPT-TIMING" Name="blockdesign_wrapper_timing_summary_pwropted.rpt"/>
@@ -52,20 +51,20 @@
   <File Type="ROUTE-TIMING-RPX" Name="blockdesign_wrapper_timing_summary_routed.rpx"/>
   <File Type="ROUTE-SIMILARITY" Name="blockdesign_wrapper_incremental_reuse_routed.rpt"/>
   <File Type="ROUTE-CLK" Name="blockdesign_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="blockdesign_wrapper_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="blockdesign_wrapper_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="blockdesign_wrapper_bus_skew_routed.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="blockdesign_wrapper_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="blockdesign_wrapper_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="design_1_wrapper_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="design_1_wrapper_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="design_1_wrapper_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="design_1_wrapper_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="blockdesign_wrapper_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="blockdesign_wrapper_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="blockdesign_wrapper_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="blockdesign_wrapper_bus_skew_postroute_physopted.rpt"/>
   <File Type="BG-BIT" Name="blockdesign_wrapper.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="design_1_wrapper_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="design_1_wrapper_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="blockdesign_wrapper_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="blockdesign_wrapper_bus_skew_postroute_physopted.rpx"/>
   <File Type="BITSTR-NKY" Name="blockdesign_wrapper.nky"/>
   <File Type="BITSTR-BMM" Name="blockdesign_wrapper_bd.bmm"/>
-  <File Type="BITSTR-MMI" Name="blockdesign_wrapper.mmi"/>
   <File Type="PDI-FILE" Name="blockdesign_wrapper.pdi"/>
   <File Type="BOOT-PDI-FILE" Name="blockdesign_wrapper_soc.pdi"/>
   <File Type="PL-PDI-FILE" Name="blockdesign_wrapper_pld.pdi"/>
@@ -146,7 +145,9 @@
     <Step Id="write_bitstream"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="blockdesign_axi_gpio_3_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="blockdesign_auto_pc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="blockdesign_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="blockdesign_proc_sys_reset_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="blockdesign_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="blockdesign_axi_gpio_2_0"/>
 </GenRun>

@@ -15,8 +15,8 @@
         "rsa_input_value": "",
         "processing_system7_0": "",
         "xlconcat_0": "",
-        "transmit_keys": "",
         "rsa_encrypted_char": "",
+        "transmit_keys": "",
         "proc_sys_reset_0": "",
         "status_led": "",
         "ps7_0_axi_periph": {
@@ -252,12 +252,12 @@
             "vlnv_bus_definition": "xilinx.com:interface:uart:1.0",
             "vlnv": "xilinx.com:interface:uart_rtl:1.0"
           },
-          "transmit_keys": {
+          "rsa_encrypted_char": {
             "mode": "Master",
             "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
             "vlnv": "xilinx.com:interface:gpio_rtl:1.0"
           },
-          "rsa_encrypted_char": {
+          "transmit_keys": {
             "mode": "Master",
             "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
             "vlnv": "xilinx.com:interface:gpio_rtl:1.0"
@@ -1999,11 +1999,11 @@
             "xci_path": "ip\\blockdesign_xlconcat_0_0\\blockdesign_xlconcat_0_0.xci",
             "inst_hier_path": "connection_embedded/xlconcat_0"
           },
-          "transmit_keys": {
+          "rsa_encrypted_char": {
             "vlnv": "xilinx.com:ip:axi_gpio:2.0",
             "xci_name": "blockdesign_axi_gpio_1_0",
             "xci_path": "ip\\blockdesign_axi_gpio_1_0\\blockdesign_axi_gpio_1_0.xci",
-            "inst_hier_path": "connection_embedded/transmit_keys",
+            "inst_hier_path": "connection_embedded/rsa_encrypted_char",
             "parameters": {
               "C_ALL_OUTPUTS": {
                 "value": "1"
@@ -2013,11 +2013,11 @@
               }
             }
           },
-          "rsa_encrypted_char": {
+          "transmit_keys": {
             "vlnv": "xilinx.com:ip:axi_gpio:2.0",
             "xci_name": "blockdesign_axi_gpio_2_0",
             "xci_path": "ip\\blockdesign_axi_gpio_2_0\\blockdesign_axi_gpio_2_0.xci",
-            "inst_hier_path": "connection_embedded/rsa_encrypted_char",
+            "inst_hier_path": "connection_embedded/transmit_keys",
             "parameters": {
               "C_ALL_INPUTS": {
                 "value": "1"
@@ -2670,13 +2670,13 @@
           "ps7_0_axi_periph_M01_AXI": {
             "interface_ports": [
               "ps7_0_axi_periph/M01_AXI",
-              "transmit_keys/S_AXI"
+              "rsa_encrypted_char/S_AXI"
             ]
           },
           "ps7_0_axi_periph_M02_AXI": {
             "interface_ports": [
               "ps7_0_axi_periph/M02_AXI",
-              "rsa_encrypted_char/S_AXI"
+              "transmit_keys/S_AXI"
             ]
           },
           "ps7_0_axi_periph_M03_AXI": {
@@ -2687,8 +2687,8 @@
           },
           "rsa_encrypted_char_GPIO": {
             "interface_ports": [
-              "rsa_encrypted_char",
-              "rsa_encrypted_char/GPIO"
+              "transmit_keys",
+              "transmit_keys/GPIO"
             ]
           },
           "rsa_input_value_GPIO": {
@@ -2705,8 +2705,8 @@
           },
           "transmit_keys_GPIO": {
             "interface_ports": [
-              "transmit_keys",
-              "transmit_keys/GPIO"
+              "rsa_encrypted_char",
+              "rsa_encrypted_char/GPIO"
             ]
           }
         },
@@ -2719,7 +2719,7 @@
           },
           "axi_gpio_2_ip2intc_irpt": {
             "ports": [
-              "rsa_encrypted_char/ip2intc_irpt",
+              "transmit_keys/ip2intc_irpt",
               "xlconcat_0/In1"
             ]
           },
@@ -2730,9 +2730,9 @@
               "rsa_input_value/s_axi_aresetn",
               "ps7_0_axi_periph/M00_ARESETN",
               "ps7_0_axi_periph/ARESETN",
-              "transmit_keys/s_axi_aresetn",
-              "ps7_0_axi_periph/M01_ARESETN",
               "rsa_encrypted_char/s_axi_aresetn",
+              "ps7_0_axi_periph/M01_ARESETN",
+              "transmit_keys/s_axi_aresetn",
               "ps7_0_axi_periph/M02_ARESETN",
               "status_led/s_axi_aresetn",
               "ps7_0_axi_periph/M03_ARESETN"
@@ -2747,9 +2747,9 @@
               "ps7_0_axi_periph/S00_ACLK",
               "ps7_0_axi_periph/M00_ACLK",
               "ps7_0_axi_periph/ACLK",
-              "transmit_keys/s_axi_aclk",
-              "ps7_0_axi_periph/M01_ACLK",
               "rsa_encrypted_char/s_axi_aclk",
+              "ps7_0_axi_periph/M01_ACLK",
+              "transmit_keys/s_axi_aclk",
               "ps7_0_axi_periph/M02_ACLK",
               "status_led/s_axi_aclk",
               "ps7_0_axi_periph/M03_ACLK",
@@ -2808,12 +2808,12 @@
                 "range": "64K"
               },
               "SEG_axi_gpio_1_Reg": {
-                "address_block": "/connection_embedded/transmit_keys/S_AXI/Reg",
+                "address_block": "/connection_embedded/rsa_encrypted_char/S_AXI/Reg",
                 "offset": "0x41210000",
                 "range": "64K"
               },
               "SEG_axi_gpio_2_Reg": {
-                "address_block": "/connection_embedded/rsa_encrypted_char/S_AXI/Reg",
+                "address_block": "/connection_embedded/transmit_keys/S_AXI/Reg",
                 "offset": "0x41220000",
                 "range": "64K"
               },

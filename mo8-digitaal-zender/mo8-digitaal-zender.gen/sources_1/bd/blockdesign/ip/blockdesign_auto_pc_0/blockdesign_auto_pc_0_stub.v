@@ -2,11 +2,11 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Thu Mar 21 10:39:34 2024
+// Date        : Tue Apr  2 16:21:08 2024
 // Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub -rename_top blockdesign_auto_pc_0 -prefix
-//               blockdesign_auto_pc_0_ design_1_auto_pc_0_stub.v
-// Design      : design_1_auto_pc_0
+// Command     : write_verilog -force -mode synth_stub
+//               c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_auto_pc_0/blockdesign_auto_pc_0_stub.v
+// Design      : blockdesign_auto_pc_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1
 // --------------------------------------------------------------------------------

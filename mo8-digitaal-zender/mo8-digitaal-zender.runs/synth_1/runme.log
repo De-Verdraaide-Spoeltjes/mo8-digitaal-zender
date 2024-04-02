@@ -12,7 +12,7 @@
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source blockdesign_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1364.484 ; gain = 159.141
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1365.863 ; gain = 162.133
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2023.1/data/ip'.
@@ -24,20 +24,22 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 19744
+INFO: [Synth 8-7075] Helper process launched with PID 24260
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2238.883 ; gain = 407.734
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2238.648 ; gain = 409.113
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'blockdesign_wrapper' [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/hdl/blockdesign_wrapper.vhd:44]
-INFO: [Synth 8-3491] module 'blockdesign' declared at 'c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:2219' bound to instance 'blockdesign_i' of component 'blockdesign' [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/hdl/blockdesign_wrapper.vhd:74]
+INFO: [Synth 8-638] synthesizing module 'blockdesign_wrapper' [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/hdl/blockdesign_wrapper.vhd:44]
+INFO: [Synth 8-3491] module 'blockdesign' declared at 'c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:2219' bound to instance 'blockdesign_i' of component 'blockdesign' [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/hdl/blockdesign_wrapper.vhd:74]
 INFO: [Synth 8-638] synthesizing module 'blockdesign' [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:2252]
 INFO: [Synth 8-638] synthesizing module 'connection_embedded_imp_1E8ES2' [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:1569]
-INFO: [Synth 8-3491] module 'blockdesign_proc_sys_reset_0_0' declared at 'C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-25512-Lenovo-Jochem/realtime/blockdesign_proc_sys_reset_0_0_stub.vhdl:6' bound to instance 'proc_sys_reset_0' of component 'blockdesign_proc_sys_reset_0_0' [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:1909]
-INFO: [Synth 8-638] synthesizing module 'blockdesign_proc_sys_reset_0_0' [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-25512-Lenovo-Jochem/realtime/blockdesign_proc_sys_reset_0_0_stub.vhdl:22]
-INFO: [Synth 8-3491] module 'blockdesign_processing_system7_0_0' declared at 'C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-25512-Lenovo-Jochem/realtime/blockdesign_processing_system7_0_0_stub.vhdl:6' bound to instance 'processing_system7_0' of component 'blockdesign_processing_system7_0_0' [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:1922]
-INFO: [Synth 8-638] synthesizing module 'blockdesign_processing_system7_0_0' [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-25512-Lenovo-Jochem/realtime/blockdesign_processing_system7_0_0_stub.vhdl:77]
+INFO: [Synth 8-3491] module 'blockdesign_proc_sys_reset_0_0' declared at 'C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-16848-Lenovo-Jochem/realtime/blockdesign_proc_sys_reset_0_0_stub.vhdl:6' bound to instance 'proc_sys_reset_0' of component 'blockdesign_proc_sys_reset_0_0' [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:1909]
+INFO: [Synth 8-638] synthesizing module 'blockdesign_proc_sys_reset_0_0' [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-16848-Lenovo-Jochem/realtime/blockdesign_proc_sys_reset_0_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'blockdesign_processing_system7_0_0' declared at 'C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-16848-Lenovo-Jochem/realtime/blockdesign_processing_system7_0_0_stub.vhdl:6' bound to instance 'processing_system7_0' of component 'blockdesign_processing_system7_0_0' [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:1922]
+INFO: [Synth 8-638] synthesizing module 'blockdesign_processing_system7_0_0' [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-16848-Lenovo-Jochem/realtime/blockdesign_processing_system7_0_0_stub.vhdl:77]
 INFO: [Synth 8-638] synthesizing module 'blockdesign_ps7_0_axi_periph_1' [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:858]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_18O3S6F' [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:58]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_18O3S6F' (0#1) [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:58]
@@ -48,20 +50,20 @@ INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_IXHTEI' (0#1) [c:
 INFO: [Synth 8-638] synthesizing module 'm03_couplers_imp_1P0EM4K' [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:361]
 INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_1P0EM4K' (0#1) [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:361]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_LCZJP3' [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:485]
-INFO: [Synth 8-3491] module 'blockdesign_auto_pc_0' declared at 'C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-25512-Lenovo-Jochem/realtime/blockdesign_auto_pc_0_stub.vhdl:6' bound to instance 'auto_pc' of component 'blockdesign_auto_pc_0' [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:668]
-INFO: [Synth 8-638] synthesizing module 'blockdesign_auto_pc_0' [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-25512-Lenovo-Jochem/realtime/blockdesign_auto_pc_0_stub.vhdl:71]
+INFO: [Synth 8-3491] module 'blockdesign_auto_pc_0' declared at 'C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-16848-Lenovo-Jochem/realtime/blockdesign_auto_pc_0_stub.vhdl:6' bound to instance 'auto_pc' of component 'blockdesign_auto_pc_0' [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:668]
+INFO: [Synth 8-638] synthesizing module 'blockdesign_auto_pc_0' [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-16848-Lenovo-Jochem/realtime/blockdesign_auto_pc_0_stub.vhdl:71]
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_LCZJP3' (0#1) [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:485]
-INFO: [Synth 8-3491] module 'blockdesign_xbar_0' declared at 'C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-25512-Lenovo-Jochem/realtime/blockdesign_xbar_0_stub.vhdl:6' bound to instance 'xbar' of component 'blockdesign_xbar_0' [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:1437]
-INFO: [Synth 8-638] synthesizing module 'blockdesign_xbar_0' [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-25512-Lenovo-Jochem/realtime/blockdesign_xbar_0_stub.vhdl:52]
+INFO: [Synth 8-3491] module 'blockdesign_xbar_0' declared at 'C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-16848-Lenovo-Jochem/realtime/blockdesign_xbar_0_stub.vhdl:6' bound to instance 'xbar' of component 'blockdesign_xbar_0' [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:1437]
+INFO: [Synth 8-638] synthesizing module 'blockdesign_xbar_0' [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-16848-Lenovo-Jochem/realtime/blockdesign_xbar_0_stub.vhdl:52]
 INFO: [Synth 8-256] done synthesizing module 'blockdesign_ps7_0_axi_periph_1' (0#1) [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:858]
-INFO: [Synth 8-3491] module 'blockdesign_axi_gpio_2_0' declared at 'C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-25512-Lenovo-Jochem/realtime/blockdesign_axi_gpio_2_0_stub.vhdl:6' bound to instance 'rsa_encrypted_char' of component 'blockdesign_axi_gpio_2_0' [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:2111]
-INFO: [Synth 8-638] synthesizing module 'blockdesign_axi_gpio_2_0' [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-25512-Lenovo-Jochem/realtime/blockdesign_axi_gpio_2_0_stub.vhdl:33]
-INFO: [Synth 8-3491] module 'blockdesign_axi_gpio_0_0' declared at 'C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-25512-Lenovo-Jochem/realtime/blockdesign_axi_gpio_0_0_stub.vhdl:6' bound to instance 'rsa_input_value' of component 'blockdesign_axi_gpio_0_0' [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:2135]
-INFO: [Synth 8-638] synthesizing module 'blockdesign_axi_gpio_0_0' [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-25512-Lenovo-Jochem/realtime/blockdesign_axi_gpio_0_0_stub.vhdl:33]
-INFO: [Synth 8-3491] module 'blockdesign_axi_gpio_3_0' declared at 'C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-25512-Lenovo-Jochem/realtime/blockdesign_axi_gpio_3_0_stub.vhdl:6' bound to instance 'status_led' of component 'blockdesign_axi_gpio_3_0' [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:2162]
-INFO: [Synth 8-638] synthesizing module 'blockdesign_axi_gpio_3_0' [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-25512-Lenovo-Jochem/realtime/blockdesign_axi_gpio_3_0_stub.vhdl:32]
-INFO: [Synth 8-3491] module 'blockdesign_axi_gpio_1_0' declared at 'C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-25512-Lenovo-Jochem/realtime/blockdesign_axi_gpio_1_0_stub.vhdl:6' bound to instance 'transmit_keys' of component 'blockdesign_axi_gpio_1_0' [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:2185]
-INFO: [Synth 8-638] synthesizing module 'blockdesign_axi_gpio_1_0' [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-25512-Lenovo-Jochem/realtime/blockdesign_axi_gpio_1_0_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'blockdesign_axi_gpio_1_0' declared at 'C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-16848-Lenovo-Jochem/realtime/blockdesign_axi_gpio_1_0_stub.vhdl:6' bound to instance 'rsa_encrypted_char' of component 'blockdesign_axi_gpio_1_0' [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:2111]
+INFO: [Synth 8-638] synthesizing module 'blockdesign_axi_gpio_1_0' [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-16848-Lenovo-Jochem/realtime/blockdesign_axi_gpio_1_0_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'blockdesign_axi_gpio_0_0' declared at 'C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-16848-Lenovo-Jochem/realtime/blockdesign_axi_gpio_0_0_stub.vhdl:6' bound to instance 'rsa_input_value' of component 'blockdesign_axi_gpio_0_0' [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:2134]
+INFO: [Synth 8-638] synthesizing module 'blockdesign_axi_gpio_0_0' [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-16848-Lenovo-Jochem/realtime/blockdesign_axi_gpio_0_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'blockdesign_axi_gpio_3_0' declared at 'C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-16848-Lenovo-Jochem/realtime/blockdesign_axi_gpio_3_0_stub.vhdl:6' bound to instance 'status_led' of component 'blockdesign_axi_gpio_3_0' [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:2161]
+INFO: [Synth 8-638] synthesizing module 'blockdesign_axi_gpio_3_0' [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-16848-Lenovo-Jochem/realtime/blockdesign_axi_gpio_3_0_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'blockdesign_axi_gpio_2_0' declared at 'C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-16848-Lenovo-Jochem/realtime/blockdesign_axi_gpio_2_0_stub.vhdl:6' bound to instance 'transmit_keys' of component 'blockdesign_axi_gpio_2_0' [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:2184]
+INFO: [Synth 8-638] synthesizing module 'blockdesign_axi_gpio_2_0' [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-16848-Lenovo-Jochem/realtime/blockdesign_axi_gpio_2_0_stub.vhdl:33]
 INFO: [Synth 8-3491] module 'blockdesign_xlconcat_0_0' declared at 'c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_xlconcat_0_0/synth/blockdesign_xlconcat_0_0.v:53' bound to instance 'xlconcat_0' of component 'blockdesign_xlconcat_0_0' [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:2208]
 INFO: [Synth 8-6157] synthesizing module 'blockdesign_xlconcat_0_0' [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_xlconcat_0_0/synth/blockdesign_xlconcat_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
@@ -69,7 +71,7 @@ INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (0#1) [
 INFO: [Synth 8-6155] done synthesizing module 'blockdesign_xlconcat_0_0' (0#1) [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_xlconcat_0_0/synth/blockdesign_xlconcat_0_0.v:53]
 INFO: [Synth 8-256] done synthesizing module 'connection_embedded_imp_1E8ES2' (0#1) [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:1569]
 INFO: [Synth 8-256] done synthesizing module 'blockdesign' (0#1) [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:2252]
-INFO: [Synth 8-256] done synthesizing module 'blockdesign_wrapper' (0#1) [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/hdl/blockdesign_wrapper.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'blockdesign_wrapper' (0#1) [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/hdl/blockdesign_wrapper.vhd:44]
 WARNING: [Synth 8-7129] Port In2[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In3[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In4[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
@@ -172,18 +174,18 @@ WARNING: [Synth 8-7129] Port In100[0] in module xlconcat_v2_1_4_xlconcat is eith
 WARNING: [Synth 8-7129] Port In101[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2340.734 ; gain = 509.586
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2341.305 ; gain = 511.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2358.660 ; gain = 527.512
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2341.305 ; gain = 511.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2358.660 ; gain = 527.512
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2341.305 ; gain = 511.770
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 2358.660 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 2341.305 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -192,18 +194,18 @@ Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal
 Finished Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_axi_gpio_0_0/blockdesign_axi_gpio_0_0/design_1_axi_gpio_0_0_in_context.xdc] for cell 'blockdesign_i/connection_embedded/rsa_input_value'
 Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_processing_system7_0_0/blockdesign_processing_system7_0_0/blockdesign_processing_system7_0_0_in_context.xdc] for cell 'blockdesign_i/connection_embedded/processing_system7_0'
 Finished Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_processing_system7_0_0/blockdesign_processing_system7_0_0/blockdesign_processing_system7_0_0_in_context.xdc] for cell 'blockdesign_i/connection_embedded/processing_system7_0'
-Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_axi_gpio_1_0/blockdesign_axi_gpio_1_0/design_1_axi_gpio_0_1_in_context.xdc] for cell 'blockdesign_i/connection_embedded/transmit_keys'
-Finished Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_axi_gpio_1_0/blockdesign_axi_gpio_1_0/design_1_axi_gpio_0_1_in_context.xdc] for cell 'blockdesign_i/connection_embedded/transmit_keys'
-Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_axi_gpio_2_0/blockdesign_axi_gpio_2_0/blockdesign_axi_gpio_2_0_in_context.xdc] for cell 'blockdesign_i/connection_embedded/rsa_encrypted_char'
-Finished Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_axi_gpio_2_0/blockdesign_axi_gpio_2_0/blockdesign_axi_gpio_2_0_in_context.xdc] for cell 'blockdesign_i/connection_embedded/rsa_encrypted_char'
-Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_proc_sys_reset_0_0/blockdesign_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_in_context.xdc] for cell 'blockdesign_i/connection_embedded/proc_sys_reset_0'
-Finished Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_proc_sys_reset_0_0/blockdesign_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_in_context.xdc] for cell 'blockdesign_i/connection_embedded/proc_sys_reset_0'
+Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_axi_gpio_1_0/blockdesign_axi_gpio_1_0/design_1_axi_gpio_0_1_in_context.xdc] for cell 'blockdesign_i/connection_embedded/rsa_encrypted_char'
+Finished Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_axi_gpio_1_0/blockdesign_axi_gpio_1_0/design_1_axi_gpio_0_1_in_context.xdc] for cell 'blockdesign_i/connection_embedded/rsa_encrypted_char'
+Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_axi_gpio_2_0/blockdesign_axi_gpio_2_0/blockdesign_axi_gpio_2_0_in_context.xdc] for cell 'blockdesign_i/connection_embedded/transmit_keys'
+Finished Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_axi_gpio_2_0/blockdesign_axi_gpio_2_0/blockdesign_axi_gpio_2_0_in_context.xdc] for cell 'blockdesign_i/connection_embedded/transmit_keys'
+Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_proc_sys_reset_0_0/blockdesign_proc_sys_reset_0_0/blockdesign_proc_sys_reset_0_0_in_context.xdc] for cell 'blockdesign_i/connection_embedded/proc_sys_reset_0'
+Finished Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_proc_sys_reset_0_0/blockdesign_proc_sys_reset_0_0/blockdesign_proc_sys_reset_0_0_in_context.xdc] for cell 'blockdesign_i/connection_embedded/proc_sys_reset_0'
 Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_axi_gpio_3_0/blockdesign_axi_gpio_3_0/blockdesign_axi_gpio_3_0_in_context.xdc] for cell 'blockdesign_i/connection_embedded/status_led'
 Finished Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_axi_gpio_3_0/blockdesign_axi_gpio_3_0/blockdesign_axi_gpio_3_0_in_context.xdc] for cell 'blockdesign_i/connection_embedded/status_led'
 Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_xbar_0/blockdesign_xbar_0/blockdesign_xbar_0_in_context.xdc] for cell 'blockdesign_i/connection_embedded/ps7_0_axi_periph/xbar'
 Finished Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_xbar_0/blockdesign_xbar_0/blockdesign_xbar_0_in_context.xdc] for cell 'blockdesign_i/connection_embedded/ps7_0_axi_periph/xbar'
-Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_auto_pc_0/blockdesign_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'blockdesign_i/connection_embedded/ps7_0_axi_periph/s00_couplers/auto_pc'
-Finished Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_auto_pc_0/blockdesign_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'blockdesign_i/connection_embedded/ps7_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_auto_pc_0/blockdesign_auto_pc_0/blockdesign_auto_pc_0_in_context.xdc] for cell 'blockdesign_i/connection_embedded/ps7_0_axi_periph/s00_couplers/auto_pc'
+Finished Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_auto_pc_0/blockdesign_auto_pc_0/blockdesign_auto_pc_0_in_context.xdc] for cell 'blockdesign_i/connection_embedded/ps7_0_axi_periph/s00_couplers/auto_pc'
 Parsing XDC File [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/constrs_1/new/constraints.xdc]
 Finished Parsing XDC File [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/constrs_1/new/constraints.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/blockdesign_wrapper_propImpl.xdc].
@@ -212,20 +214,22 @@ Parsing XDC File [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal
 Finished Parsing XDC File [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2386.527 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2341.305 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2386.527 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2341.305 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 2386.527 ; gain = 555.379
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 2341.305 ; gain = 511.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 2386.527 ; gain = 555.379
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 2341.305 ; gain = 511.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -494,39 +498,19 @@ Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i. (constraint file  
 Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/connection_embedded/rsa_input_value. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/connection_embedded/processing_system7_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/connection_embedded/xlconcat_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/connection_embedded/transmit_keys. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/connection_embedded/rsa_encrypted_char. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/connection_embedded/transmit_keys. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/connection_embedded/proc_sys_reset_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/connection_embedded/status_led. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/connection_embedded/ps7_0_axi_periph/xbar. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/connection_embedded/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/connection_embedded/ps7_0_axi_periph. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 2386.527 ; gain = 555.379
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 2341.305 ; gain = 511.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Preparing Guide Design
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 2341.305 ; gain = 511.770
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-6895] The reference checkpoint C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp is not suitable for use with incremental synthesis for this design. Please regenerate the checkpoint for this design with -incremental_synth switch in the same Vivado session that synth_design has been run. Synthesis will continue with the default flow
----------------------------------------------------------------------------------
-Finished Doing Graph Differ : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 2386.527 ; gain = 555.379
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Preparing Guide Design : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 2386.527 ; gain = 555.379
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 2386.527 ; gain = 555.379
----------------------------------------------------------------------------------
-
-
-Incremental Synthesis Report Summary:
-
-1. Incremental synthesis run: no
-
-   Reason for not running incremental synthesis : 
-
-
-INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -548,25 +532,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 2386.527 ; gain = 555.379
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 2341.305 ; gain = 511.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:25 . Memory (MB): peak = 2386.527 ; gain = 555.379
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:26 . Memory (MB): peak = 2341.305 ; gain = 511.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:25 . Memory (MB): peak = 2386.527 ; gain = 555.379
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:26 . Memory (MB): peak = 2341.305 ; gain = 511.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:25 . Memory (MB): peak = 2386.527 ; gain = 555.379
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:27 . Memory (MB): peak = 2341.305 ; gain = 511.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -584,37 +568,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:30 . Memory (MB): peak = 2386.527 ; gain = 555.379
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:32 . Memory (MB): peak = 2341.305 ; gain = 511.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:30 . Memory (MB): peak = 2386.527 ; gain = 555.379
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:32 . Memory (MB): peak = 2341.305 ; gain = 511.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:30 . Memory (MB): peak = 2386.527 ; gain = 555.379
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:32 . Memory (MB): peak = 2341.305 ; gain = 511.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:30 . Memory (MB): peak = 2386.527 ; gain = 555.379
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:32 . Memory (MB): peak = 2341.305 ; gain = 511.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:30 . Memory (MB): peak = 2386.527 ; gain = 555.379
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:32 . Memory (MB): peak = 2341.305 ; gain = 511.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:30 . Memory (MB): peak = 2386.527 ; gain = 555.379
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:32 . Memory (MB): peak = 2341.305 ; gain = 511.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -628,10 +612,10 @@ Report BlackBoxes:
 |2     |blockdesign_auto_pc_0              |         1|
 |3     |blockdesign_proc_sys_reset_0_0     |         1|
 |4     |blockdesign_processing_system7_0_0 |         1|
-|5     |blockdesign_axi_gpio_2_0           |         1|
+|5     |blockdesign_axi_gpio_1_0           |         1|
 |6     |blockdesign_axi_gpio_0_0           |         1|
 |7     |blockdesign_axi_gpio_3_0           |         1|
-|8     |blockdesign_axi_gpio_1_0           |         1|
+|8     |blockdesign_axi_gpio_2_0           |         1|
 +------+-----------------------------------+----------+
 
 Report Cell Usage: 
@@ -650,25 +634,24 @@ Report Cell Usage:
 |10    |OBUF                                    |     4|
 +------+----------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:30 . Memory (MB): peak = 2386.527 ; gain = 555.379
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:32 . Memory (MB): peak = 2341.305 ; gain = 511.770
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 1 critical warnings and 11 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:28 . Memory (MB): peak = 2386.527 ; gain = 527.512
-Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:30 . Memory (MB): peak = 2386.527 ; gain = 555.379
+Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:29 . Memory (MB): peak = 2341.305 ; gain = 511.770
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:32 . Memory (MB): peak = 2341.305 ; gain = 511.770
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 2386.527 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 2349.395 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2386.527 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2358.992 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 41ce0717
+Synth Design complete | Checksum: de40f9b1
 INFO: [Common 17-83] Releasing license: Synthesis
-60 Infos, 101 Warnings, 1 Critical Warnings and 0 Errors encountered.
+63 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 2386.527 ; gain = 965.844
-INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:38 . Memory (MB): peak = 2358.992 ; gain = 938.219
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/blockdesign_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file blockdesign_wrapper_utilization_synth.rpt -pb blockdesign_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Mar 25 12:03:31 2024...
+INFO: [Common 17-206] Exiting Vivado at Tue Apr  2 16:22:10 2024...

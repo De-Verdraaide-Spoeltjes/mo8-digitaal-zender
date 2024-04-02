@@ -2,11 +2,11 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
--- Date        : Thu Mar 21 10:42:22 2024
+-- Date        : Tue Apr  2 16:20:43 2024
 -- Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top blockdesign_proc_sys_reset_0_0 -prefix
---               blockdesign_proc_sys_reset_0_0_ design_1_proc_sys_reset_0_0_sim_netlist.vhdl
--- Design      : design_1_proc_sys_reset_0_0
+-- Command     : write_vhdl -force -mode funcsim
+--               c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_proc_sys_reset_0_0/blockdesign_proc_sys_reset_0_0_sim_netlist.vhdl
+-- Design      : blockdesign_proc_sys_reset_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xc7z020clg400-1
@@ -26,6 +26,8 @@ entity blockdesign_proc_sys_reset_0_0_cdc_sync is
     aux_reset_in : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of blockdesign_proc_sys_reset_0_0_cdc_sync : entity is "cdc_sync";
 end blockdesign_proc_sys_reset_0_0_cdc_sync;
 
 architecture STRUCTURE of blockdesign_proc_sys_reset_0_0_cdc_sync is
@@ -246,6 +248,8 @@ entity blockdesign_proc_sys_reset_0_0_upcnt_n is
     seq_cnt_en : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of blockdesign_proc_sys_reset_0_0_upcnt_n : entity is "upcnt_n";
 end blockdesign_proc_sys_reset_0_0_upcnt_n;
 
 architecture STRUCTURE of blockdesign_proc_sys_reset_0_0_upcnt_n is
@@ -410,6 +414,8 @@ entity blockdesign_proc_sys_reset_0_0_lpf is
     ext_reset_in : in STD_LOGIC;
     aux_reset_in : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of blockdesign_proc_sys_reset_0_0_lpf : entity is "lpf";
 end blockdesign_proc_sys_reset_0_0_lpf;
 
 architecture STRUCTURE of blockdesign_proc_sys_reset_0_0_lpf is
@@ -598,6 +604,8 @@ entity blockdesign_proc_sys_reset_0_0_sequence_psr is
     lpf_int : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of blockdesign_proc_sys_reset_0_0_sequence_psr : entity is "sequence_psr";
 end blockdesign_proc_sys_reset_0_0_sequence_psr;
 
 architecture STRUCTURE of blockdesign_proc_sys_reset_0_0_sequence_psr is
@@ -936,6 +944,8 @@ entity blockdesign_proc_sys_reset_0_0_proc_sys_reset is
   attribute C_NUM_PERP_ARESETN of blockdesign_proc_sys_reset_0_0_proc_sys_reset : entity is 1;
   attribute C_NUM_PERP_RST : integer;
   attribute C_NUM_PERP_RST of blockdesign_proc_sys_reset_0_0_proc_sys_reset : entity is 1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of blockdesign_proc_sys_reset_0_0_proc_sys_reset : entity is "proc_sys_reset";
 end blockdesign_proc_sys_reset_0_0_proc_sys_reset;
 
 architecture STRUCTURE of blockdesign_proc_sys_reset_0_0_proc_sys_reset is
@@ -1062,7 +1072,7 @@ entity blockdesign_proc_sys_reset_0_0 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of blockdesign_proc_sys_reset_0_0 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of blockdesign_proc_sys_reset_0_0 : entity is "design_1_proc_sys_reset_0_0,proc_sys_reset,{}";
+  attribute CHECK_LICENSE_TYPE of blockdesign_proc_sys_reset_0_0 : entity is "blockdesign_proc_sys_reset_0_0,proc_sys_reset,{}";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of blockdesign_proc_sys_reset_0_0 : entity is "yes";
   attribute x_core_info : string;
@@ -1099,7 +1109,7 @@ architecture STRUCTURE of blockdesign_proc_sys_reset_0_0 is
   attribute x_interface_info of mb_reset : signal is "xilinx.com:signal:reset:1.0 mb_rst RST";
   attribute x_interface_parameter of mb_reset : signal is "XIL_INTERFACENAME mb_rst, POLARITY ACTIVE_HIGH, TYPE PROCESSOR, INSERT_VIP 0";
   attribute x_interface_info of slowest_sync_clk : signal is "xilinx.com:signal:clock:1.0 clock CLK";
-  attribute x_interface_parameter of slowest_sync_clk : signal is "XIL_INTERFACENAME clock, ASSOCIATED_RESET mb_reset:bus_struct_reset:interconnect_aresetn:peripheral_aresetn:peripheral_reset, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
+  attribute x_interface_parameter of slowest_sync_clk : signal is "XIL_INTERFACENAME clock, ASSOCIATED_RESET mb_reset:bus_struct_reset:interconnect_aresetn:peripheral_aresetn:peripheral_reset, FREQ_HZ 1e+08, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN blockdesign_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   attribute x_interface_info of bus_struct_reset : signal is "xilinx.com:signal:reset:1.0 bus_struct_reset RST";
   attribute x_interface_parameter of bus_struct_reset : signal is "XIL_INTERFACENAME bus_struct_reset, POLARITY ACTIVE_HIGH, TYPE INTERCONNECT, INSERT_VIP 0";
   attribute x_interface_info of interconnect_aresetn : signal is "xilinx.com:signal:reset:1.0 interconnect_low_rst RST";
