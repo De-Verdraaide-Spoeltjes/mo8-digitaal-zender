@@ -30,8 +30,8 @@ preplace netloc sys_clock_1 1 0 1 N 60
 levelinfo -pg 1 -30 90 300 470
 pagesize -pg 1 -db -bbox -sgen -150 -10 600 290
 ",
-   "No Loops_ScaleFactor":"1.6245",
-   "No Loops_TopLeft":"-159,4",
+   "No Loops_ScaleFactor":"1.0",
+   "No Loops_TopLeft":"-382,-74",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
 preplace inst keypad_0 -pg 1 -lvl 1 -x 110 -y 40 -defaultsOSRD

@@ -1,0 +1,1951 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+| Date         : Tue Apr  2 21:17:00 2024
+| Host         : TRENLAPTOP running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -report_unconstrained -file blockdesign_wrapper_timing_summary_routed.rpt -pb blockdesign_wrapper_timing_summary_routed.pb -rpx blockdesign_wrapper_timing_summary_routed.rpx -warn_on_violation
+| Design       : blockdesign_wrapper
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity  Description                     Violations  
+---------  --------  ------------------------------  ----------  
+TIMING-20  Warning   Non-clocked latch               3           
+LATCH-1    Advisory  Existing latches in the design  1           
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (12)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (3)
+5. checking no_input_delay (4)
+6. checking no_output_delay (7)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (12)
+-------------------------
+ There are 3 register/latch pins with no clock driven by root clock pin: blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/Q (HIGH)
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (3)
+------------------------------------------------
+ There are 3 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (4)
+------------------------------
+ There are 4 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (7)
+-------------------------------
+ There are 7 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+     97.662        0.000                      0                    4        0.284        0.000                      0                    4        2.000        0.000                       0                    10  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock                               Waveform(ns)         Period(ns)      Frequency(MHz)
+-----                               ------------         ----------      --------------
+sys_clock                           {0.000 4.000}        8.000           125.000         
+  clk_out1_blockdesign_clk_wiz_0_0  {0.000 50.000}       100.000         10.000          
+  clkfbout_blockdesign_clk_wiz_0_0  {0.000 4.000}        8.000           125.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock                                   WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----                                   -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+sys_clock                                                                                                                                                                             2.000        0.000                       0                     1  
+  clk_out1_blockdesign_clk_wiz_0_0       97.662        0.000                      0                    4        0.284        0.000                      0                    4       49.500        0.000                       0                     6  
+  clkfbout_blockdesign_clk_wiz_0_0                                                                                                                                                    5.845        0.000                       0                     3  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group                        From Clock                        To Clock                        
+----------                        ----------                        --------                        
+(none)                                                                                                
+(none)                            clk_out1_blockdesign_clk_wiz_0_0                                    
+(none)                            clkfbout_blockdesign_clk_wiz_0_0                                    
+(none)                                                              clk_out1_blockdesign_clk_wiz_0_0  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sys_clock
+  To Clock:  sys_clock
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        2.000ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         sys_clock
+Waveform(ns):       { 0.000 4.000 }
+Period(ns):         8.000
+Sources:            { sys_clock }
+
+Check Type        Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     MMCME2_ADV/CLKIN1  n/a            1.249         8.000       6.751      MMCME2_ADV_X1Y2  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+Max Period        n/a     MMCME2_ADV/CLKIN1  n/a            100.000       8.000       92.000     MMCME2_ADV_X1Y2  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+Low Pulse Width   Slow    MMCME2_ADV/CLKIN1  n/a            2.000         4.000       2.000      MMCME2_ADV_X1Y2  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+Low Pulse Width   Fast    MMCME2_ADV/CLKIN1  n/a            2.000         4.000       2.000      MMCME2_ADV_X1Y2  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+High Pulse Width  Slow    MMCME2_ADV/CLKIN1  n/a            2.000         4.000       2.000      MMCME2_ADV_X1Y2  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+High Pulse Width  Fast    MMCME2_ADV/CLKIN1  n/a            2.000         4.000       2.000      MMCME2_ADV_X1Y2  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_out1_blockdesign_clk_wiz_0_0
+  To Clock:  clk_out1_blockdesign_clk_wiz_0_0
+
+Setup :            0  Failing Endpoints,  Worst Slack       97.662ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.284ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack       49.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             97.662ns  (required time - arrival time)
+  Source:                 blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             clk_out1_blockdesign_clk_wiz_0_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            100.000ns  (clk_out1_blockdesign_clk_wiz_0_0 rise@100.000ns - clk_out1_blockdesign_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        2.262ns  (logic 0.704ns (31.129%)  route 1.558ns (68.871%))
+  Logic Levels:           2  (LUT5=1 LUT6=1)
+  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.484ns = ( 98.516 - 100.000 ) 
+    Source Clock Delay      (SCD):    -0.852ns
+    Clock Pessimism Removal (CPR):    0.632ns
+  Clock Uncertainty:      0.105ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.198ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         1.451     1.451 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.285     2.736    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.759    -5.023 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.206    -2.817    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101    -2.716 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           1.864    -0.852    blockdesign_i/keypad_0/U0/clk
+    SLICE_X110Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y91        FDRE (Prop_fdre_C_Q)         0.456    -0.396 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]/Q
+                         net (fo=21, routed)          0.883     0.487    blockdesign_i/keypad_0/U0/state[0]
+    SLICE_X110Y91        LUT6 (Prop_lut6_I0_O)        0.124     0.611 r  blockdesign_i/keypad_0/U0/FSM_sequential_state[0]_i_4/O
+                         net (fo=1, routed)           0.674     1.285    blockdesign_i/keypad_0/U0/FSM_sequential_state[0]_i_4_n_0
+    SLICE_X110Y91        LUT5 (Prop_lut5_I4_O)        0.124     1.409 r  blockdesign_i/keypad_0/U0/FSM_sequential_state[0]_i_1/O
+                         net (fo=1, routed)           0.000     1.409    blockdesign_i/keypad_0/U0/FSM_sequential_state[0]_i_1_n_0
+    SLICE_X110Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                    100.000   100.000 r  
+    H16                                               0.000   100.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000   100.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         1.380   101.380 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.162   102.542    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.814    94.728 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.012    96.740    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    96.831 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           1.685    98.516    blockdesign_i/keypad_0/U0/clk
+    SLICE_X110Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]/C
+                         clock pessimism              0.632    99.148    
+                         clock uncertainty           -0.105    99.043    
+    SLICE_X110Y91        FDRE (Setup_fdre_C_D)        0.029    99.072    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]
+  -------------------------------------------------------------------
+                         required time                         99.072    
+                         arrival time                          -1.409    
+  -------------------------------------------------------------------
+                         slack                                 97.662    
+
+Slack (MET) :             97.889ns  (required time - arrival time)
+  Source:                 blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             clk_out1_blockdesign_clk_wiz_0_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            100.000ns  (clk_out1_blockdesign_clk_wiz_0_0 rise@100.000ns - clk_out1_blockdesign_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        2.010ns  (logic 0.704ns (35.020%)  route 1.306ns (64.980%))
+  Logic Levels:           2  (LUT6=2)
+  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.484ns = ( 98.516 - 100.000 ) 
+    Source Clock Delay      (SCD):    -0.852ns
+    Clock Pessimism Removal (CPR):    0.607ns
+  Clock Uncertainty:      0.105ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.198ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         1.451     1.451 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.285     2.736    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.759    -5.023 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.206    -2.817    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101    -2.716 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           1.864    -0.852    blockdesign_i/keypad_0/U0/clk
+    SLICE_X110Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y91        FDRE (Prop_fdre_C_Q)         0.456    -0.396 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]/Q
+                         net (fo=21, routed)          0.873     0.477    blockdesign_i/keypad_0/U0/state[0]
+    SLICE_X113Y91        LUT6 (Prop_lut6_I0_O)        0.124     0.601 r  blockdesign_i/keypad_0/U0/FSM_sequential_state[3]_i_2/O
+                         net (fo=1, routed)           0.433     1.034    blockdesign_i/keypad_0/U0/FSM_sequential_state[3]_i_2_n_0
+    SLICE_X113Y91        LUT6 (Prop_lut6_I0_O)        0.124     1.158 r  blockdesign_i/keypad_0/U0/FSM_sequential_state[3]_i_1/O
+                         net (fo=1, routed)           0.000     1.158    blockdesign_i/keypad_0/U0/FSM_sequential_state[3]_i_1_n_0
+    SLICE_X113Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                    100.000   100.000 r  
+    H16                                               0.000   100.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000   100.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         1.380   101.380 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.162   102.542    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.814    94.728 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.012    96.740    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    96.831 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           1.685    98.516    blockdesign_i/keypad_0/U0/clk
+    SLICE_X113Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/C
+                         clock pessimism              0.607    99.123    
+                         clock uncertainty           -0.105    99.018    
+    SLICE_X113Y91        FDRE (Setup_fdre_C_D)        0.029    99.047    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]
+  -------------------------------------------------------------------
+                         required time                         99.047    
+                         arrival time                          -1.158    
+  -------------------------------------------------------------------
+                         slack                                 97.889    
+
+Slack (MET) :             98.067ns  (required time - arrival time)
+  Source:                 blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             clk_out1_blockdesign_clk_wiz_0_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            100.000ns  (clk_out1_blockdesign_clk_wiz_0_0 rise@100.000ns - clk_out1_blockdesign_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        1.941ns  (logic 0.898ns (46.255%)  route 1.043ns (53.745%))
+  Logic Levels:           2  (MUXF7=1 MUXF8=1)
+  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.484ns = ( 98.516 - 100.000 ) 
+    Source Clock Delay      (SCD):    -0.852ns
+    Clock Pessimism Removal (CPR):    0.632ns
+  Clock Uncertainty:      0.105ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.198ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         1.451     1.451 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.285     2.736    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.759    -5.023 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.206    -2.817    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101    -2.716 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           1.864    -0.852    blockdesign_i/keypad_0/U0/clk
+    SLICE_X112Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y91        FDRE (Prop_fdre_C_Q)         0.518    -0.334 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/Q
+                         net (fo=15, routed)          1.043     0.709    blockdesign_i/keypad_0/U0/state[2]
+    SLICE_X112Y91        MUXF7 (Prop_muxf7_S_O)       0.292     1.001 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]_i_3/O
+                         net (fo=1, routed)           0.000     1.001    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]_i_3_n_0
+    SLICE_X112Y91        MUXF8 (Prop_muxf8_I1_O)      0.088     1.089 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]_i_1/O
+                         net (fo=1, routed)           0.000     1.089    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]_i_1_n_0
+    SLICE_X112Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                    100.000   100.000 r  
+    H16                                               0.000   100.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000   100.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         1.380   101.380 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.162   102.542    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.814    94.728 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.012    96.740    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    96.831 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           1.685    98.516    blockdesign_i/keypad_0/U0/clk
+    SLICE_X112Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/C
+                         clock pessimism              0.632    99.148    
+                         clock uncertainty           -0.105    99.043    
+    SLICE_X112Y91        FDRE (Setup_fdre_C_D)        0.113    99.156    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]
+  -------------------------------------------------------------------
+                         required time                         99.156    
+                         arrival time                          -1.089    
+  -------------------------------------------------------------------
+                         slack                                 98.067    
+
+Slack (MET) :             98.083ns  (required time - arrival time)
+  Source:                 blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             clk_out1_blockdesign_clk_wiz_0_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            100.000ns  (clk_out1_blockdesign_clk_wiz_0_0 rise@100.000ns - clk_out1_blockdesign_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        1.876ns  (logic 0.929ns (49.508%)  route 0.947ns (50.492%))
+  Logic Levels:           3  (LUT6=1 MUXF7=1 MUXF8=1)
+  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.484ns = ( 98.516 - 100.000 ) 
+    Source Clock Delay      (SCD):    -0.852ns
+    Clock Pessimism Removal (CPR):    0.632ns
+  Clock Uncertainty:      0.105ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.198ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         1.451     1.451 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.285     2.736    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.759    -5.023 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.206    -2.817    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101    -2.716 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           1.864    -0.852    blockdesign_i/keypad_0/U0/clk
+    SLICE_X111Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y91        FDRE (Prop_fdre_C_Q)         0.456    -0.396 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]/Q
+                         net (fo=21, routed)          0.947     0.551    blockdesign_i/keypad_0/U0/state[1]
+    SLICE_X111Y91        LUT6 (Prop_lut6_I5_O)        0.124     0.675 r  blockdesign_i/keypad_0/U0/FSM_sequential_state[1]_i_5/O
+                         net (fo=1, routed)           0.000     0.675    blockdesign_i/keypad_0/U0/FSM_sequential_state[1]_i_5_n_0
+    SLICE_X111Y91        MUXF7 (Prop_muxf7_I1_O)      0.245     0.920 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]_i_2/O
+                         net (fo=1, routed)           0.000     0.920    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]_i_2_n_0
+    SLICE_X111Y91        MUXF8 (Prop_muxf8_I0_O)      0.104     1.024 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]_i_1/O
+                         net (fo=1, routed)           0.000     1.024    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]_i_1_n_0
+    SLICE_X111Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                    100.000   100.000 r  
+    H16                                               0.000   100.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000   100.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         1.380   101.380 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.162   102.542    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.814    94.728 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.012    96.740    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    96.831 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           1.685    98.516    blockdesign_i/keypad_0/U0/clk
+    SLICE_X111Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]/C
+                         clock pessimism              0.632    99.148    
+                         clock uncertainty           -0.105    99.043    
+    SLICE_X111Y91        FDRE (Setup_fdre_C_D)        0.064    99.107    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]
+  -------------------------------------------------------------------
+                         required time                         99.107    
+                         arrival time                          -1.024    
+  -------------------------------------------------------------------
+                         slack                                 98.083    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.284ns  (arrival time - required time)
+  Source:                 blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             clk_out1_blockdesign_clk_wiz_0_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_blockdesign_clk_wiz_0_0 rise@0.000ns - clk_out1_blockdesign_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        0.405ns  (logic 0.280ns (69.089%)  route 0.125ns (30.911%))
+  Logic Levels:           2  (MUXF7=1 MUXF8=1)
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.833ns
+    Source Clock Delay      (SCD):    -0.596ns
+    Clock Pessimism Removal (CPR):    -0.252ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         0.219     0.219 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.659    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.613    -1.954 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.696    -1.257    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026    -1.231 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           0.635    -0.596    blockdesign_i/keypad_0/U0/clk
+    SLICE_X112Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y91        FDRE (Prop_fdre_C_Q)         0.164    -0.432 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/Q
+                         net (fo=15, routed)          0.125    -0.307    blockdesign_i/keypad_0/U0/state[2]
+    SLICE_X111Y91        MUXF7 (Prop_muxf7_S_O)       0.093    -0.214 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]_i_2/O
+                         net (fo=1, routed)           0.000    -0.214    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]_i_2_n_0
+    SLICE_X111Y91        MUXF8 (Prop_muxf8_I0_O)      0.023    -0.191 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]_i_1/O
+                         net (fo=1, routed)           0.000    -0.191    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]_i_1_n_0
+    SLICE_X111Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         0.406     0.406 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.886    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.407    -2.521 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.752    -1.769    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029    -1.740 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           0.907    -0.833    blockdesign_i/keypad_0/U0/clk
+    SLICE_X111Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]/C
+                         clock pessimism              0.252    -0.580    
+    SLICE_X111Y91        FDRE (Hold_fdre_C_D)         0.105    -0.475    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]
+  -------------------------------------------------------------------
+                         required time                          0.475    
+                         arrival time                          -0.191    
+  -------------------------------------------------------------------
+                         slack                                  0.284    
+
+Slack (MET) :             0.286ns  (arrival time - required time)
+  Source:                 blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             clk_out1_blockdesign_clk_wiz_0_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_blockdesign_clk_wiz_0_0 rise@0.000ns - clk_out1_blockdesign_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        0.377ns  (logic 0.186ns (49.301%)  route 0.191ns (50.699%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.833ns
+    Source Clock Delay      (SCD):    -0.596ns
+    Clock Pessimism Removal (CPR):    -0.236ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         0.219     0.219 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.659    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.613    -1.954 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.696    -1.257    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026    -1.231 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           0.635    -0.596    blockdesign_i/keypad_0/U0/clk
+    SLICE_X113Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y91        FDRE (Prop_fdre_C_Q)         0.141    -0.455 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/Q
+                         net (fo=12, routed)          0.191    -0.264    blockdesign_i/keypad_0/U0/state[3]
+    SLICE_X113Y91        LUT6 (Prop_lut6_I1_O)        0.045    -0.219 r  blockdesign_i/keypad_0/U0/FSM_sequential_state[3]_i_1/O
+                         net (fo=1, routed)           0.000    -0.219    blockdesign_i/keypad_0/U0/FSM_sequential_state[3]_i_1_n_0
+    SLICE_X113Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         0.406     0.406 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.886    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.407    -2.521 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.752    -1.769    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029    -1.740 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           0.907    -0.833    blockdesign_i/keypad_0/U0/clk
+    SLICE_X113Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/C
+                         clock pessimism              0.236    -0.596    
+    SLICE_X113Y91        FDRE (Hold_fdre_C_D)         0.091    -0.505    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]
+  -------------------------------------------------------------------
+                         required time                          0.505    
+                         arrival time                          -0.219    
+  -------------------------------------------------------------------
+                         slack                                  0.286    
+
+Slack (MET) :             0.287ns  (arrival time - required time)
+  Source:                 blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             clk_out1_blockdesign_clk_wiz_0_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_blockdesign_clk_wiz_0_0 rise@0.000ns - clk_out1_blockdesign_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        0.434ns  (logic 0.222ns (51.175%)  route 0.212ns (48.825%))
+  Logic Levels:           1  (MUXF8=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.833ns
+    Source Clock Delay      (SCD):    -0.596ns
+    Clock Pessimism Removal (CPR):    -0.249ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         0.219     0.219 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.659    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.613    -1.954 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.696    -1.257    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026    -1.231 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           0.635    -0.596    blockdesign_i/keypad_0/U0/clk
+    SLICE_X113Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y91        FDRE (Prop_fdre_C_Q)         0.141    -0.455 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/Q
+                         net (fo=12, routed)          0.212    -0.244    blockdesign_i/keypad_0/U0/state[3]
+    SLICE_X112Y91        MUXF8 (Prop_muxf8_S_O)       0.081    -0.163 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]_i_1/O
+                         net (fo=1, routed)           0.000    -0.163    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]_i_1_n_0
+    SLICE_X112Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         0.406     0.406 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.886    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.407    -2.521 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.752    -1.769    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029    -1.740 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           0.907    -0.833    blockdesign_i/keypad_0/U0/clk
+    SLICE_X112Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/C
+                         clock pessimism              0.249    -0.583    
+    SLICE_X112Y91        FDRE (Hold_fdre_C_D)         0.134    -0.449    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]
+  -------------------------------------------------------------------
+                         required time                          0.449    
+                         arrival time                          -0.163    
+  -------------------------------------------------------------------
+                         slack                                  0.287    
+
+Slack (MET) :             0.301ns  (arrival time - required time)
+  Source:                 blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             clk_out1_blockdesign_clk_wiz_0_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_blockdesign_clk_wiz_0_0 rise@0.000ns - clk_out1_blockdesign_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        0.405ns  (logic 0.231ns (56.973%)  route 0.174ns (43.027%))
+  Logic Levels:           2  (LUT5=1 LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.833ns
+    Source Clock Delay      (SCD):    -0.596ns
+    Clock Pessimism Removal (CPR):    -0.249ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         0.219     0.219 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.659    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.613    -1.954 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.696    -1.257    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026    -1.231 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           0.635    -0.596    blockdesign_i/keypad_0/U0/clk
+    SLICE_X111Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y91        FDRE (Prop_fdre_C_Q)         0.141    -0.455 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]/Q
+                         net (fo=21, routed)          0.116    -0.340    blockdesign_i/keypad_0/U0/state[1]
+    SLICE_X110Y91        LUT6 (Prop_lut6_I4_O)        0.045    -0.295 r  blockdesign_i/keypad_0/U0/FSM_sequential_state[0]_i_3/O
+                         net (fo=1, routed)           0.059    -0.236    blockdesign_i/keypad_0/U0/FSM_sequential_state[0]_i_3_n_0
+    SLICE_X110Y91        LUT5 (Prop_lut5_I2_O)        0.045    -0.191 r  blockdesign_i/keypad_0/U0/FSM_sequential_state[0]_i_1/O
+                         net (fo=1, routed)           0.000    -0.191    blockdesign_i/keypad_0/U0/FSM_sequential_state[0]_i_1_n_0
+    SLICE_X110Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         0.406     0.406 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.886    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.407    -2.521 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.752    -1.769    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029    -1.740 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           0.907    -0.833    blockdesign_i/keypad_0/U0/clk
+    SLICE_X110Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]/C
+                         clock pessimism              0.249    -0.583    
+    SLICE_X110Y91        FDRE (Hold_fdre_C_D)         0.091    -0.492    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]
+  -------------------------------------------------------------------
+                         required time                          0.492    
+                         arrival time                          -0.191    
+  -------------------------------------------------------------------
+                         slack                                  0.301    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_out1_blockdesign_clk_wiz_0_0
+Waveform(ns):       { 0.000 50.000 }
+Period(ns):         100.000
+Sources:            { blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0 }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     BUFG/I              n/a            2.155         100.000     97.845     BUFGCTRL_X0Y16   blockdesign_i/clk_wiz_0/inst/clkout1_buf/I
+Min Period        n/a     MMCME2_ADV/CLKOUT0  n/a            1.249         100.000     98.751     MMCME2_ADV_X1Y2  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+Min Period        n/a     FDRE/C              n/a            1.000         100.000     99.000     SLICE_X110Y91    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]/C
+Min Period        n/a     FDRE/C              n/a            1.000         100.000     99.000     SLICE_X111Y91    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]/C
+Min Period        n/a     FDRE/C              n/a            1.000         100.000     99.000     SLICE_X112Y91    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/C
+Min Period        n/a     FDRE/C              n/a            1.000         100.000     99.000     SLICE_X113Y91    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/C
+Max Period        n/a     MMCME2_ADV/CLKOUT0  n/a            213.360       100.000     113.360    MMCME2_ADV_X1Y2  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         50.000      49.500     SLICE_X110Y91    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         50.000      49.500     SLICE_X110Y91    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         50.000      49.500     SLICE_X111Y91    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         50.000      49.500     SLICE_X111Y91    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         50.000      49.500     SLICE_X112Y91    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         50.000      49.500     SLICE_X112Y91    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         50.000      49.500     SLICE_X113Y91    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         50.000      49.500     SLICE_X113Y91    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         50.000      49.500     SLICE_X110Y91    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         50.000      49.500     SLICE_X110Y91    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         50.000      49.500     SLICE_X111Y91    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         50.000      49.500     SLICE_X111Y91    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         50.000      49.500     SLICE_X112Y91    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         50.000      49.500     SLICE_X112Y91    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         50.000      49.500     SLICE_X113Y91    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         50.000      49.500     SLICE_X113Y91    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/C
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clkfbout_blockdesign_clk_wiz_0_0
+  To Clock:  clkfbout_blockdesign_clk_wiz_0_0
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        5.845ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clkfbout_blockdesign_clk_wiz_0_0
+Waveform(ns):       { 0.000 4.000 }
+Period(ns):         8.000
+Sources:            { blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBOUT }
+
+Check Type  Corner  Lib Pin              Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period  n/a     BUFG/I               n/a            2.155         8.000       5.845      BUFGCTRL_X0Y17   blockdesign_i/clk_wiz_0/inst/clkf_buf/I
+Min Period  n/a     MMCME2_ADV/CLKFBOUT  n/a            1.249         8.000       6.751      MMCME2_ADV_X1Y2  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBOUT
+Min Period  n/a     MMCME2_ADV/CLKFBIN   n/a            1.249         8.000       6.751      MMCME2_ADV_X1Y2  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBIN
+Max Period  n/a     MMCME2_ADV/CLKFBIN   n/a            100.000       8.000       92.000     MMCME2_ADV_X1Y2  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBIN
+Max Period  n/a     MMCME2_ADV/CLKFBOUT  n/a            213.360       8.000       205.360    MMCME2_ADV_X1Y2  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBOUT
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay             3 Endpoints
+Min Delay             3 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 blockdesign_i/keypad_0/U0/Row_2_reg/G
+                            (positive level-sensitive latch)
+  Destination:            Row_2_0
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.925ns  (logic 4.363ns (62.996%)  route 2.563ns (37.004%))
+  Logic Levels:           2  (LDCE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y90        LDCE                         0.000     0.000 r  blockdesign_i/keypad_0/U0/Row_2_reg/G
+    SLICE_X112Y90        LDCE (EnToQ_ldce_G_Q)        0.829     0.829 r  blockdesign_i/keypad_0/U0/Row_2_reg/Q
+                         net (fo=1, routed)           2.563     3.392    Row_2_0_OBUF
+    R16                  OBUF (Prop_obuf_I_O)         3.534     6.925 r  Row_2_0_OBUF_inst/O
+                         net (fo=0)                   0.000     6.925    Row_2_0
+    R16                                                               r  Row_2_0 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 blockdesign_i/keypad_0/U0/Row_0_reg/G
+                            (positive level-sensitive latch)
+  Destination:            Row_0_0
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.380ns  (logic 4.462ns (69.939%)  route 1.918ns (30.061%))
+  Logic Levels:           2  (LDCE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y90        LDCE                         0.000     0.000 r  blockdesign_i/keypad_0/U0/Row_0_reg/G
+    SLICE_X112Y90        LDCE (EnToQ_ldce_G_Q)        0.829     0.829 r  blockdesign_i/keypad_0/U0/Row_0_reg/Q
+                         net (fo=1, routed)           1.918     2.747    Row_0_0_OBUF
+    V15                  OBUF (Prop_obuf_I_O)         3.633     6.380 r  Row_0_0_OBUF_inst/O
+                         net (fo=0)                   0.000     6.380    Row_0_0
+    V15                                                               r  Row_0_0 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 blockdesign_i/keypad_0/U0/Row_1_reg/G
+                            (positive level-sensitive latch)
+  Destination:            Row_1_0
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.074ns  (logic 4.407ns (72.559%)  route 1.667ns (27.441%))
+  Logic Levels:           2  (LDCE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y90        LDCE                         0.000     0.000 r  blockdesign_i/keypad_0/U0/Row_1_reg/G
+    SLICE_X112Y90        LDCE (EnToQ_ldce_G_Q)        0.829     0.829 r  blockdesign_i/keypad_0/U0/Row_1_reg/Q
+                         net (fo=1, routed)           1.667     2.496    Row_1_0_OBUF
+    T15                  OBUF (Prop_obuf_I_O)         3.578     6.074 r  Row_1_0_OBUF_inst/O
+                         net (fo=0)                   0.000     6.074    Row_1_0
+    T15                                                               r  Row_1_0 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 blockdesign_i/keypad_0/U0/Row_1_reg/G
+                            (positive level-sensitive latch)
+  Destination:            Row_1_0
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.857ns  (logic 1.523ns (81.978%)  route 0.335ns (18.022%))
+  Logic Levels:           2  (LDCE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y90        LDCE                         0.000     0.000 r  blockdesign_i/keypad_0/U0/Row_1_reg/G
+    SLICE_X112Y90        LDCE (EnToQ_ldce_G_Q)        0.244     0.244 r  blockdesign_i/keypad_0/U0/Row_1_reg/Q
+                         net (fo=1, routed)           0.335     0.579    Row_1_0_OBUF
+    T15                  OBUF (Prop_obuf_I_O)         1.279     1.857 r  Row_1_0_OBUF_inst/O
+                         net (fo=0)                   0.000     1.857    Row_1_0
+    T15                                                               r  Row_1_0 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 blockdesign_i/keypad_0/U0/Row_0_reg/G
+                            (positive level-sensitive latch)
+  Destination:            Row_0_0
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.018ns  (logic 1.577ns (78.151%)  route 0.441ns (21.849%))
+  Logic Levels:           2  (LDCE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y90        LDCE                         0.000     0.000 r  blockdesign_i/keypad_0/U0/Row_0_reg/G
+    SLICE_X112Y90        LDCE (EnToQ_ldce_G_Q)        0.244     0.244 r  blockdesign_i/keypad_0/U0/Row_0_reg/Q
+                         net (fo=1, routed)           0.441     0.685    Row_0_0_OBUF
+    V15                  OBUF (Prop_obuf_I_O)         1.333     2.018 r  Row_0_0_OBUF_inst/O
+                         net (fo=0)                   0.000     2.018    Row_0_0
+    V15                                                               r  Row_0_0 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 blockdesign_i/keypad_0/U0/Row_2_reg/G
+                            (positive level-sensitive latch)
+  Destination:            Row_2_0
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.209ns  (logic 1.479ns (66.926%)  route 0.731ns (33.074%))
+  Logic Levels:           2  (LDCE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y90        LDCE                         0.000     0.000 r  blockdesign_i/keypad_0/U0/Row_2_reg/G
+    SLICE_X112Y90        LDCE (EnToQ_ldce_G_Q)        0.244     0.244 r  blockdesign_i/keypad_0/U0/Row_2_reg/Q
+                         net (fo=1, routed)           0.731     0.975    Row_2_0_OBUF
+    R16                  OBUF (Prop_obuf_I_O)         1.235     2.209 r  Row_2_0_OBUF_inst/O
+                         net (fo=0)                   0.000     2.209    Row_2_0
+    R16                                                               r  Row_2_0 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  clk_out1_blockdesign_clk_wiz_0_0
+  To Clock:  
+
+Max Delay             7 Endpoints
+Min Delay             7 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            Data_0[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.394ns  (logic 4.391ns (59.383%)  route 3.003ns (40.617%))
+  Logic Levels:           2  (LUT4=1 OBUF=1)
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.198ns
+    Phase Error              (PE):    0.097ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         1.451     1.451 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.285     2.736    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.759    -5.023 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.206    -2.817    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101    -2.716 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           1.864    -0.852    blockdesign_i/keypad_0/U0/clk
+    SLICE_X111Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y91        FDRE (Prop_fdre_C_Q)         0.456    -0.396 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]/Q
+                         net (fo=21, routed)          0.888     0.492    blockdesign_i/keypad_0/U0/state[1]
+    SLICE_X113Y90        LUT4 (Prop_lut4_I2_O)        0.152     0.644 r  blockdesign_i/keypad_0/U0/Data[3]_INST_0/O
+                         net (fo=1, routed)           2.115     2.759    Data_0_OBUF[3]
+    M14                  OBUF (Prop_obuf_I_O)         3.783     6.542 r  Data_0_OBUF[3]_inst/O
+                         net (fo=0)                   0.000     6.542    Data_0[3]
+    M14                                                               r  Data_0[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            Data_0[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.170ns  (logic 4.214ns (58.782%)  route 2.955ns (41.218%))
+  Logic Levels:           2  (LUT4=1 OBUF=1)
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.198ns
+    Phase Error              (PE):    0.097ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         1.451     1.451 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.285     2.736    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.759    -5.023 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.206    -2.817    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101    -2.716 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           1.864    -0.852    blockdesign_i/keypad_0/U0/clk
+    SLICE_X112Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y91        FDRE (Prop_fdre_C_Q)         0.518    -0.334 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/Q
+                         net (fo=15, routed)          0.848     0.513    blockdesign_i/keypad_0/U0/state[2]
+    SLICE_X113Y90        LUT4 (Prop_lut4_I1_O)        0.124     0.637 r  blockdesign_i/keypad_0/U0/Data[2]_INST_0/O
+                         net (fo=1, routed)           2.108     2.745    Data_0_OBUF[2]
+    N16                  OBUF (Prop_obuf_I_O)         3.572     6.317 r  Data_0_OBUF[2]_inst/O
+                         net (fo=0)                   0.000     6.317    Data_0[2]
+    N16                                                               r  Data_0[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            Data_0[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.163ns  (logic 4.408ns (61.533%)  route 2.755ns (38.467%))
+  Logic Levels:           2  (LUT4=1 OBUF=1)
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.198ns
+    Phase Error              (PE):    0.097ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         1.451     1.451 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.285     2.736    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.759    -5.023 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.206    -2.817    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101    -2.716 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           1.864    -0.852    blockdesign_i/keypad_0/U0/clk
+    SLICE_X112Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y91        FDRE (Prop_fdre_C_Q)         0.518    -0.334 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/Q
+                         net (fo=15, routed)          0.848     0.513    blockdesign_i/keypad_0/U0/state[2]
+    SLICE_X113Y90        LUT4 (Prop_lut4_I0_O)        0.152     0.665 r  blockdesign_i/keypad_0/U0/Data[0]_INST_0/O
+                         net (fo=1, routed)           1.908     2.573    Data_0_OBUF[0]
+    R14                  OBUF (Prop_obuf_I_O)         3.738     6.311 r  Data_0_OBUF[0]_inst/O
+                         net (fo=0)                   0.000     6.311    Data_0[0]
+    R14                                                               r  Data_0[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            Data_0[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.834ns  (logic 4.137ns (60.538%)  route 2.697ns (39.462%))
+  Logic Levels:           2  (LUT4=1 OBUF=1)
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.198ns
+    Phase Error              (PE):    0.097ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         1.451     1.451 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.285     2.736    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.759    -5.023 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.206    -2.817    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101    -2.716 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           1.864    -0.852    blockdesign_i/keypad_0/U0/clk
+    SLICE_X111Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y91        FDRE (Prop_fdre_C_Q)         0.456    -0.396 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]/Q
+                         net (fo=21, routed)          0.888     0.492    blockdesign_i/keypad_0/U0/state[1]
+    SLICE_X113Y90        LUT4 (Prop_lut4_I3_O)        0.124     0.616 r  blockdesign_i/keypad_0/U0/Data[1]_INST_0/O
+                         net (fo=1, routed)           1.809     2.425    Data_0_OBUF[1]
+    P14                  OBUF (Prop_obuf_I_O)         3.557     5.982 r  Data_0_OBUF[1]_inst/O
+                         net (fo=0)                   0.000     5.982    Data_0[1]
+    P14                                                               r  Data_0[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            blockdesign_i/keypad_0/U0/Row_2_reg/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        1.898ns  (logic 0.670ns (35.294%)  route 1.228ns (64.706%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.198ns
+    Phase Error              (PE):    0.097ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         1.451     1.451 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.285     2.736    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.759    -5.023 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.206    -2.817    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101    -2.716 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           1.864    -0.852    blockdesign_i/keypad_0/U0/clk
+    SLICE_X112Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y91        FDRE (Prop_fdre_C_Q)         0.518    -0.334 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/Q
+                         net (fo=15, routed)          0.846     0.511    blockdesign_i/keypad_0/U0/state[2]
+    SLICE_X112Y90        LUT4 (Prop_lut4_I1_O)        0.152     0.663 r  blockdesign_i/keypad_0/U0/Row_2_reg_i_1/O
+                         net (fo=1, routed)           0.383     1.046    blockdesign_i/keypad_0/U0/Row_2_reg_i_1_n_0
+    SLICE_X112Y90        LDCE                                         r  blockdesign_i/keypad_0/U0/Row_2_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            blockdesign_i/keypad_0/U0/Row_1_reg/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        1.488ns  (logic 0.642ns (43.158%)  route 0.846ns (56.842%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.198ns
+    Phase Error              (PE):    0.097ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         1.451     1.451 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.285     2.736    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.759    -5.023 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.206    -2.817    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101    -2.716 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           1.864    -0.852    blockdesign_i/keypad_0/U0/clk
+    SLICE_X112Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y91        FDRE (Prop_fdre_C_Q)         0.518    -0.334 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/Q
+                         net (fo=15, routed)          0.846     0.511    blockdesign_i/keypad_0/U0/state[2]
+    SLICE_X112Y90        LUT4 (Prop_lut4_I3_O)        0.124     0.635 r  blockdesign_i/keypad_0/U0/Row_1_reg_i_1/O
+                         net (fo=1, routed)           0.000     0.635    blockdesign_i/keypad_0/U0/Row_1_reg_i_1_n_0
+    SLICE_X112Y90        LDCE                                         r  blockdesign_i/keypad_0/U0/Row_1_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            blockdesign_i/keypad_0/U0/Row_0_reg/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        1.473ns  (logic 0.580ns (39.365%)  route 0.893ns (60.635%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.198ns
+    Phase Error              (PE):    0.097ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         1.451     1.451 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.285     2.736    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.759    -5.023 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.206    -2.817    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101    -2.716 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           1.864    -0.852    blockdesign_i/keypad_0/U0/clk
+    SLICE_X111Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y91        FDRE (Prop_fdre_C_Q)         0.456    -0.396 f  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]/Q
+                         net (fo=21, routed)          0.893     0.497    blockdesign_i/keypad_0/U0/state[1]
+    SLICE_X112Y90        LUT4 (Prop_lut4_I1_O)        0.124     0.621 r  blockdesign_i/keypad_0/U0/Row_0_reg_i_1/O
+                         net (fo=1, routed)           0.000     0.621    blockdesign_i/keypad_0/U0/Row_0_reg_i_1_n_0
+    SLICE_X112Y90        LDCE                                         r  blockdesign_i/keypad_0/U0/Row_0_reg/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            blockdesign_i/keypad_0/U0/Row_1_reg/D
+  Path Group:             (none)
+  Path Type:              Min at Slow Process Corner
+  Data Path Delay:        0.882ns  (logic 0.467ns (52.923%)  route 0.415ns (47.077%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.198ns
+    Phase Error              (PE):    0.097ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         1.380     1.380 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.162     2.542    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.814    -5.272 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.012    -3.260    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    -3.169 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           1.685    -1.484    blockdesign_i/keypad_0/U0/clk
+    SLICE_X113Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y91        FDRE (Prop_fdre_C_Q)         0.367    -1.117 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/Q
+                         net (fo=12, routed)          0.415    -0.702    blockdesign_i/keypad_0/U0/state[3]
+    SLICE_X112Y90        LUT4 (Prop_lut4_I0_O)        0.100    -0.602 r  blockdesign_i/keypad_0/U0/Row_1_reg_i_1/O
+                         net (fo=1, routed)           0.000    -0.602    blockdesign_i/keypad_0/U0/Row_1_reg_i_1_n_0
+    SLICE_X112Y90        LDCE                                         r  blockdesign_i/keypad_0/U0/Row_1_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            blockdesign_i/keypad_0/U0/Row_0_reg/D
+  Path Group:             (none)
+  Path Type:              Min at Slow Process Corner
+  Data Path Delay:        0.885ns  (logic 0.467ns (52.768%)  route 0.418ns (47.232%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.198ns
+    Phase Error              (PE):    0.097ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         1.380     1.380 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.162     2.542    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.814    -5.272 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.012    -3.260    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    -3.169 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           1.685    -1.484    blockdesign_i/keypad_0/U0/clk
+    SLICE_X110Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y91        FDRE (Prop_fdre_C_Q)         0.367    -1.117 f  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]/Q
+                         net (fo=21, routed)          0.418    -0.699    blockdesign_i/keypad_0/U0/state[0]
+    SLICE_X112Y90        LUT4 (Prop_lut4_I2_O)        0.100    -0.599 r  blockdesign_i/keypad_0/U0/Row_0_reg_i_1/O
+                         net (fo=1, routed)           0.000    -0.599    blockdesign_i/keypad_0/U0/Row_0_reg_i_1_n_0
+    SLICE_X112Y90        LDCE                                         r  blockdesign_i/keypad_0/U0/Row_0_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            blockdesign_i/keypad_0/U0/Row_2_reg/D
+  Path Group:             (none)
+  Path Type:              Min at Slow Process Corner
+  Data Path Delay:        1.197ns  (logic 0.461ns (38.507%)  route 0.736ns (61.493%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.198ns
+    Phase Error              (PE):    0.097ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         1.380     1.380 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.162     2.542    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.814    -5.272 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.012    -3.260    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    -3.169 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           1.685    -1.484    blockdesign_i/keypad_0/U0/clk
+    SLICE_X113Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y91        FDRE (Prop_fdre_C_Q)         0.367    -1.117 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/Q
+                         net (fo=12, routed)          0.415    -0.702    blockdesign_i/keypad_0/U0/state[3]
+    SLICE_X112Y90        LUT4 (Prop_lut4_I3_O)        0.094    -0.608 r  blockdesign_i/keypad_0/U0/Row_2_reg_i_1/O
+                         net (fo=1, routed)           0.321    -0.287    blockdesign_i/keypad_0/U0/Row_2_reg_i_1_n_0
+    SLICE_X112Y90        LDCE                                         r  blockdesign_i/keypad_0/U0/Row_2_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            Data_0[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.033ns  (logic 1.444ns (71.028%)  route 0.589ns (28.972%))
+  Logic Levels:           2  (LUT4=1 OBUF=1)
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.198ns
+    Phase Error              (PE):    0.097ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         0.219     0.219 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.659    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.613    -1.954 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.696    -1.257    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026    -1.231 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           0.635    -0.596    blockdesign_i/keypad_0/U0/clk
+    SLICE_X113Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y91        FDRE (Prop_fdre_C_Q)         0.141    -0.455 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/Q
+                         net (fo=12, routed)          0.197    -0.258    blockdesign_i/keypad_0/U0/state[3]
+    SLICE_X113Y90        LUT4 (Prop_lut4_I0_O)        0.045    -0.213 r  blockdesign_i/keypad_0/U0/Data[1]_INST_0/O
+                         net (fo=1, routed)           0.392     0.179    Data_0_OBUF[1]
+    P14                  OBUF (Prop_obuf_I_O)         1.258     1.437 r  Data_0_OBUF[1]_inst/O
+                         net (fo=0)                   0.000     1.437    Data_0[1]
+    P14                                                               r  Data_0[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            Data_0[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.101ns  (logic 1.488ns (70.822%)  route 0.613ns (29.178%))
+  Logic Levels:           2  (LUT4=1 OBUF=1)
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.198ns
+    Phase Error              (PE):    0.097ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         0.219     0.219 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.659    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.613    -1.954 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.696    -1.257    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026    -1.231 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           0.635    -0.596    blockdesign_i/keypad_0/U0/clk
+    SLICE_X110Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y91        FDRE (Prop_fdre_C_Q)         0.141    -0.455 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]/Q
+                         net (fo=21, routed)          0.193    -0.262    blockdesign_i/keypad_0/U0/state[0]
+    SLICE_X113Y90        LUT4 (Prop_lut4_I2_O)        0.049    -0.213 r  blockdesign_i/keypad_0/U0/Data[0]_INST_0/O
+                         net (fo=1, routed)           0.420     0.207    Data_0_OBUF[0]
+    R14                  OBUF (Prop_obuf_I_O)         1.298     1.504 r  Data_0_OBUF[0]_inst/O
+                         net (fo=0)                   0.000     1.504    Data_0[0]
+    R14                                                               r  Data_0[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            Data_0[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.177ns  (logic 1.459ns (66.998%)  route 0.719ns (33.002%))
+  Logic Levels:           2  (LUT4=1 OBUF=1)
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.198ns
+    Phase Error              (PE):    0.097ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         0.219     0.219 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.659    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.613    -1.954 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.696    -1.257    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026    -1.231 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           0.635    -0.596    blockdesign_i/keypad_0/U0/clk
+    SLICE_X110Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y91        FDRE (Prop_fdre_C_Q)         0.141    -0.455 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]/Q
+                         net (fo=21, routed)          0.193    -0.262    blockdesign_i/keypad_0/U0/state[0]
+    SLICE_X113Y90        LUT4 (Prop_lut4_I3_O)        0.045    -0.217 r  blockdesign_i/keypad_0/U0/Data[2]_INST_0/O
+                         net (fo=1, routed)           0.526     0.308    Data_0_OBUF[2]
+    N16                  OBUF (Prop_obuf_I_O)         1.273     1.581 r  Data_0_OBUF[2]_inst/O
+                         net (fo=0)                   0.000     1.581    Data_0[2]
+    N16                                                               r  Data_0[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            Data_0[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.258ns  (logic 1.532ns (67.871%)  route 0.725ns (32.129%))
+  Logic Levels:           2  (LUT4=1 OBUF=1)
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.198ns
+    Phase Error              (PE):    0.097ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         0.219     0.219 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.659    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.613    -1.954 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.696    -1.257    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026    -1.231 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           0.635    -0.596    blockdesign_i/keypad_0/U0/clk
+    SLICE_X113Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y91        FDRE (Prop_fdre_C_Q)         0.141    -0.455 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/Q
+                         net (fo=12, routed)          0.197    -0.258    blockdesign_i/keypad_0/U0/state[3]
+    SLICE_X113Y90        LUT4 (Prop_lut4_I0_O)        0.048    -0.210 r  blockdesign_i/keypad_0/U0/Data[3]_INST_0/O
+                         net (fo=1, routed)           0.528     0.318    Data_0_OBUF[3]
+    M14                  OBUF (Prop_obuf_I_O)         1.343     1.661 r  Data_0_OBUF[3]_inst/O
+                         net (fo=0)                   0.000     1.661    Data_0[3]
+    M14                                                               r  Data_0[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  clkfbout_blockdesign_clk_wiz_0_0
+  To Clock:  
+
+Max Delay             1 Endpoint
+Min Delay             1 Endpoint
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBOUT
+                            (clock source 'clkfbout_blockdesign_clk_wiz_0_0'  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBIN
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        4.287ns  (logic 0.101ns (2.356%)  route 4.186ns (97.644%))
+  Logic Levels:           1  (BUFG=1)
+  Clock Uncertainty:      0.145ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.081ns
+    Phase Error              (PE):    0.097ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clkfbout_blockdesign_clk_wiz_0_0 fall edge)
+                                                      4.000     4.000 f  
+    H16                                               0.000     4.000 f  sys_clock (IN)
+                         net (fo=0)                   0.000     4.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         1.451     5.451 f  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.285     6.736    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+  -------------------------------------------------------------------    -------------------
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -7.759    -1.023 f  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBOUT
+                         net (fo=1, routed)           2.206     1.183    blockdesign_i/clk_wiz_0/inst/clkfbout_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.101     1.284 f  blockdesign_i/clk_wiz_0/inst/clkf_buf/O
+                         net (fo=1, routed)           1.980     3.264    blockdesign_i/clk_wiz_0/inst/clkfbout_buf_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV                                   f  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBIN
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBOUT
+                            (clock source 'clkfbout_blockdesign_clk_wiz_0_0'  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBIN
+  Path Group:             (none)
+  Path Type:              Min at Slow Process Corner
+  Data Path Delay:        3.873ns  (logic 0.091ns (2.349%)  route 3.782ns (97.651%))
+  Logic Levels:           1  (BUFG=1)
+  Clock Uncertainty:      0.145ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.081ns
+    Phase Error              (PE):    0.097ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clkfbout_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         1.380     1.380 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.162     2.542    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+  -------------------------------------------------------------------    -------------------
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -7.814    -5.272 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBOUT
+                         net (fo=1, routed)           2.012    -3.260    blockdesign_i/clk_wiz_0/inst/clkfbout_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.091    -3.169 r  blockdesign_i/clk_wiz_0/inst/clkf_buf/O
+                         net (fo=1, routed)           1.770    -1.399    blockdesign_i/clk_wiz_0/inst/clkfbout_buf_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV                                   r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBIN
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  clk_out1_blockdesign_clk_wiz_0_0
+
+Max Delay             4 Endpoints
+Min Delay             4 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 Col_2_0
+                            (input port)
+  Destination:            blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        4.187ns  (logic 1.817ns (43.397%)  route 2.370ns (56.603%))
+  Logic Levels:           3  (IBUF=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -1.484ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.484ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.198ns
+    Phase Error              (PE):    0.097ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    U13                                               0.000     0.000 r  Col_2_0 (IN)
+                         net (fo=0)                   0.000     0.000    Col_2_0
+    U13                  IBUF (Prop_ibuf_I_O)         1.569     1.569 r  Col_2_0_IBUF_inst/O
+                         net (fo=11, routed)          1.696     3.264    blockdesign_i/keypad_0/U0/Col_2
+    SLICE_X110Y91        LUT6 (Prop_lut6_I1_O)        0.124     3.388 r  blockdesign_i/keypad_0/U0/FSM_sequential_state[0]_i_4/O
+                         net (fo=1, routed)           0.674     4.063    blockdesign_i/keypad_0/U0/FSM_sequential_state[0]_i_4_n_0
+    SLICE_X110Y91        LUT5 (Prop_lut5_I4_O)        0.124     4.187 r  blockdesign_i/keypad_0/U0/FSM_sequential_state[0]_i_1/O
+                         net (fo=1, routed)           0.000     4.187    blockdesign_i/keypad_0/U0/FSM_sequential_state[0]_i_1_n_0
+    SLICE_X110Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         1.380     1.380 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.162     2.542    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.814    -5.272 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.012    -3.260    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    -3.169 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           1.685    -1.484    blockdesign_i/keypad_0/U0/clk
+    SLICE_X110Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]/C
+
+Slack:                    inf
+  Source:                 Col_2_0
+                            (input port)
+  Destination:            blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        3.853ns  (logic 1.817ns (47.154%)  route 2.036ns (52.846%))
+  Logic Levels:           3  (IBUF=1 LUT6=2)
+  Clock Path Skew:        -1.484ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.484ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.198ns
+    Phase Error              (PE):    0.097ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    U13                                               0.000     0.000 r  Col_2_0 (IN)
+                         net (fo=0)                   0.000     0.000    Col_2_0
+    U13                  IBUF (Prop_ibuf_I_O)         1.569     1.569 r  Col_2_0_IBUF_inst/O
+                         net (fo=11, routed)          1.603     3.172    blockdesign_i/keypad_0/U0/Col_2
+    SLICE_X113Y91        LUT6 (Prop_lut6_I5_O)        0.124     3.296 r  blockdesign_i/keypad_0/U0/FSM_sequential_state[3]_i_2/O
+                         net (fo=1, routed)           0.433     3.729    blockdesign_i/keypad_0/U0/FSM_sequential_state[3]_i_2_n_0
+    SLICE_X113Y91        LUT6 (Prop_lut6_I0_O)        0.124     3.853 r  blockdesign_i/keypad_0/U0/FSM_sequential_state[3]_i_1/O
+                         net (fo=1, routed)           0.000     3.853    blockdesign_i/keypad_0/U0/FSM_sequential_state[3]_i_1_n_0
+    SLICE_X113Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         1.380     1.380 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.162     2.542    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.814    -5.272 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.012    -3.260    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    -3.169 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           1.685    -1.484    blockdesign_i/keypad_0/U0/clk
+    SLICE_X113Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/C
+
+Slack:                    inf
+  Source:                 Col_1_0
+                            (input port)
+  Destination:            blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        3.826ns  (logic 2.044ns (53.421%)  route 1.782ns (46.579%))
+  Logic Levels:           4  (IBUF=1 LUT6=1 MUXF7=1 MUXF8=1)
+  Clock Path Skew:        -1.484ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.484ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.198ns
+    Phase Error              (PE):    0.097ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    U12                                               0.000     0.000 r  Col_1_0 (IN)
+                         net (fo=0)                   0.000     0.000    Col_1_0
+    U12                  IBUF (Prop_ibuf_I_O)         1.571     1.571 r  Col_1_0_IBUF_inst/O
+                         net (fo=13, routed)          1.782     3.353    blockdesign_i/keypad_0/U0/Col_1
+    SLICE_X111Y91        LUT6 (Prop_lut6_I2_O)        0.124     3.477 r  blockdesign_i/keypad_0/U0/FSM_sequential_state[1]_i_5/O
+                         net (fo=1, routed)           0.000     3.477    blockdesign_i/keypad_0/U0/FSM_sequential_state[1]_i_5_n_0
+    SLICE_X111Y91        MUXF7 (Prop_muxf7_I1_O)      0.245     3.722 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]_i_2/O
+                         net (fo=1, routed)           0.000     3.722    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]_i_2_n_0
+    SLICE_X111Y91        MUXF8 (Prop_muxf8_I0_O)      0.104     3.826 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]_i_1/O
+                         net (fo=1, routed)           0.000     3.826    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]_i_1_n_0
+    SLICE_X111Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         1.380     1.380 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.162     2.542    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.814    -5.272 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.012    -3.260    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    -3.169 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           1.685    -1.484    blockdesign_i/keypad_0/U0/clk
+    SLICE_X111Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]/C
+
+Slack:                    inf
+  Source:                 Col_1_0
+                            (input port)
+  Destination:            blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        3.692ns  (logic 2.040ns (55.240%)  route 1.653ns (44.760%))
+  Logic Levels:           4  (IBUF=1 LUT5=1 MUXF7=1 MUXF8=1)
+  Clock Path Skew:        -1.484ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.484ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.198ns
+    Phase Error              (PE):    0.097ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    U12                                               0.000     0.000 r  Col_1_0 (IN)
+                         net (fo=0)                   0.000     0.000    Col_1_0
+    U12                  IBUF (Prop_ibuf_I_O)         1.571     1.571 r  Col_1_0_IBUF_inst/O
+                         net (fo=13, routed)          1.653     3.223    blockdesign_i/keypad_0/U0/Col_1
+    SLICE_X112Y91        LUT5 (Prop_lut5_I0_O)        0.124     3.347 r  blockdesign_i/keypad_0/U0/FSM_sequential_state[2]_i_5/O
+                         net (fo=1, routed)           0.000     3.347    blockdesign_i/keypad_0/U0/FSM_sequential_state[2]_i_5_n_0
+    SLICE_X112Y91        MUXF7 (Prop_muxf7_I1_O)      0.247     3.594 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]_i_2/O
+                         net (fo=1, routed)           0.000     3.594    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]_i_2_n_0
+    SLICE_X112Y91        MUXF8 (Prop_muxf8_I0_O)      0.098     3.692 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]_i_1/O
+                         net (fo=1, routed)           0.000     3.692    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]_i_1_n_0
+    SLICE_X112Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         1.380     1.380 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.162     2.542    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.814    -5.272 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.012    -3.260    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    -3.169 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           1.685    -1.484    blockdesign_i/keypad_0/U0/clk
+    SLICE_X112Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/C
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 Col_3_0
+                            (input port)
+  Destination:            blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.873ns  (logic 0.479ns (54.908%)  route 0.393ns (45.092%))
+  Logic Levels:           4  (IBUF=1 LUT5=1 MUXF7=1 MUXF8=1)
+  Clock Path Skew:        -0.833ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.833ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V13                                               0.000     0.000 r  Col_3_0 (IN)
+                         net (fo=0)                   0.000     0.000    Col_3_0
+    V13                  IBUF (Prop_ibuf_I_O)         0.337     0.337 r  Col_3_0_IBUF_inst/O
+                         net (fo=8, routed)           0.393     0.731    blockdesign_i/keypad_0/U0/Col_3
+    SLICE_X112Y91        LUT5 (Prop_lut5_I4_O)        0.045     0.776 r  blockdesign_i/keypad_0/U0/FSM_sequential_state[2]_i_5/O
+                         net (fo=1, routed)           0.000     0.776    blockdesign_i/keypad_0/U0/FSM_sequential_state[2]_i_5_n_0
+    SLICE_X112Y91        MUXF7 (Prop_muxf7_I1_O)      0.075     0.851 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]_i_2/O
+                         net (fo=1, routed)           0.000     0.851    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]_i_2_n_0
+    SLICE_X112Y91        MUXF8 (Prop_muxf8_I0_O)      0.022     0.873 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]_i_1/O
+                         net (fo=1, routed)           0.000     0.873    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]_i_1_n_0
+    SLICE_X112Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         0.406     0.406 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.886    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.407    -2.521 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.752    -1.769    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029    -1.740 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           0.907    -0.833    blockdesign_i/keypad_0/U0/clk
+    SLICE_X112Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[2]/C
+
+Slack:                    inf
+  Source:                 Col_3_0
+                            (input port)
+  Destination:            blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.878ns  (logic 0.463ns (52.715%)  route 0.415ns (47.285%))
+  Logic Levels:           4  (IBUF=1 LUT6=1 MUXF7=1 MUXF8=1)
+  Clock Path Skew:        -0.833ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.833ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V13                                               0.000     0.000 r  Col_3_0 (IN)
+                         net (fo=0)                   0.000     0.000    Col_3_0
+    V13                  IBUF (Prop_ibuf_I_O)         0.337     0.337 r  Col_3_0_IBUF_inst/O
+                         net (fo=8, routed)           0.415     0.752    blockdesign_i/keypad_0/U0/Col_3
+    SLICE_X111Y91        LUT6 (Prop_lut6_I3_O)        0.045     0.797 r  blockdesign_i/keypad_0/U0/FSM_sequential_state[1]_i_6/O
+                         net (fo=1, routed)           0.000     0.797    blockdesign_i/keypad_0/U0/FSM_sequential_state[1]_i_6_n_0
+    SLICE_X111Y91        MUXF7 (Prop_muxf7_I0_O)      0.062     0.859 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]_i_3/O
+                         net (fo=1, routed)           0.000     0.859    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]_i_3_n_0
+    SLICE_X111Y91        MUXF8 (Prop_muxf8_I1_O)      0.019     0.878 r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]_i_1/O
+                         net (fo=1, routed)           0.000     0.878    blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]_i_1_n_0
+    SLICE_X111Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         0.406     0.406 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.886    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.407    -2.521 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.752    -1.769    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029    -1.740 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           0.907    -0.833    blockdesign_i/keypad_0/U0/clk
+    SLICE_X111Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[1]/C
+
+Slack:                    inf
+  Source:                 Col_0_0
+                            (input port)
+  Destination:            blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.911ns  (logic 0.386ns (42.374%)  route 0.525ns (57.626%))
+  Logic Levels:           3  (IBUF=1 LUT6=2)
+  Clock Path Skew:        -0.833ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.833ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    T14                                               0.000     0.000 r  Col_0_0 (IN)
+                         net (fo=0)                   0.000     0.000    Col_0_0
+    T14                  IBUF (Prop_ibuf_I_O)         0.296     0.296 r  Col_0_0_IBUF_inst/O
+                         net (fo=11, routed)          0.390     0.686    blockdesign_i/keypad_0/U0/Col_0
+    SLICE_X113Y91        LUT6 (Prop_lut6_I3_O)        0.045     0.731 r  blockdesign_i/keypad_0/U0/FSM_sequential_state[3]_i_2/O
+                         net (fo=1, routed)           0.135     0.866    blockdesign_i/keypad_0/U0/FSM_sequential_state[3]_i_2_n_0
+    SLICE_X113Y91        LUT6 (Prop_lut6_I0_O)        0.045     0.911 r  blockdesign_i/keypad_0/U0/FSM_sequential_state[3]_i_1/O
+                         net (fo=1, routed)           0.000     0.911    blockdesign_i/keypad_0/U0/FSM_sequential_state[3]_i_1_n_0
+    SLICE_X113Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         0.406     0.406 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.886    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.407    -2.521 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.752    -1.769    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029    -1.740 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           0.907    -0.833    blockdesign_i/keypad_0/U0/clk
+    SLICE_X113Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[3]/C
+
+Slack:                    inf
+  Source:                 Col_3_0
+                            (input port)
+  Destination:            blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_blockdesign_clk_wiz_0_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        1.022ns  (logic 0.427ns (41.800%)  route 0.595ns (58.200%))
+  Logic Levels:           3  (IBUF=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.833ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.833ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V13                                               0.000     0.000 r  Col_3_0 (IN)
+                         net (fo=0)                   0.000     0.000    Col_3_0
+    V13                  IBUF (Prop_ibuf_I_O)         0.337     0.337 r  Col_3_0_IBUF_inst/O
+                         net (fo=8, routed)           0.536     0.873    blockdesign_i/keypad_0/U0/Col_3
+    SLICE_X110Y91        LUT6 (Prop_lut6_I1_O)        0.045     0.918 r  blockdesign_i/keypad_0/U0/FSM_sequential_state[0]_i_3/O
+                         net (fo=1, routed)           0.059     0.977    blockdesign_i/keypad_0/U0/FSM_sequential_state[0]_i_3_n_0
+    SLICE_X110Y91        LUT5 (Prop_lut5_I2_O)        0.045     1.022 r  blockdesign_i/keypad_0/U0/FSM_sequential_state[0]_i_1/O
+                         net (fo=1, routed)           0.000     1.022    blockdesign_i/keypad_0/U0/FSM_sequential_state[0]_i_1_n_0
+    SLICE_X110Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_blockdesign_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    blockdesign_i/clk_wiz_0/inst/clk_in1
+    H16                  IBUF (Prop_ibuf_I_O)         0.406     0.406 r  blockdesign_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.886    blockdesign_i/clk_wiz_0/inst/clk_in1_blockdesign_clk_wiz_0_0
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.407    -2.521 r  blockdesign_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.752    -1.769    blockdesign_i/clk_wiz_0/inst/clk_out1_blockdesign_clk_wiz_0_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029    -1.740 r  blockdesign_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=4, routed)           0.907    -0.833    blockdesign_i/keypad_0/U0/clk
+    SLICE_X110Y91        FDRE                                         r  blockdesign_i/keypad_0/U0/FSM_sequential_state_reg[0]/C
+
+
+
+
+

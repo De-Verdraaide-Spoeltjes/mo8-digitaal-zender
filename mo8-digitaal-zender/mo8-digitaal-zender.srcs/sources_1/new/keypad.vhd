@@ -191,12 +191,9 @@ begin
                     next_state <= s2_3;
                 end if;
 
-            when others =>
-                Row_0 <= '0';
-                Row_1 <= '0';
-                Row_2 <= '0';
-                --Data <= "1111"; --Zit hier de multiple drivers error?
-                next_state <= s0;
+
+            when others => next_state <= s0;
+
         end case;
     end process;
 
@@ -235,7 +232,7 @@ begin
             when s2_0 =>
                 Data <= "0011";
             when s2_1 =>
-                d <= "0110";
+                Data <= "0110";
             when s2_2 =>
                 Data <= "1001";
             when s2_3 =>
@@ -245,5 +242,5 @@ begin
 		end case;
 	end process;
 
-    state <= next_state;
+    -- state <= next_state;
 end Behavioral;
