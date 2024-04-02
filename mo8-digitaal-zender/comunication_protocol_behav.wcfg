@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="comunication_protocol_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="comunication_protocol" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="10.067040 us"></ZoomStartTime>
+      <ZoomEndTime time="31.067041 us"></ZoomEndTime>
+      <Cursor1Time time="29.000000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="375"></NameColumnWidth>
+      <ValueColumnWidth column_width="240"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="15" />
+   <wvobject fp_name="/comunication_protocol/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/comunication_protocol/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/comunication_protocol/buffer_in" type="array">
+      <obj_property name="ElementShortName">buffer_in[127:0]</obj_property>
+      <obj_property name="ObjectShortName">buffer_in[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/comunication_protocol/buffer_full" type="logic">
+      <obj_property name="ElementShortName">buffer_full</obj_property>
+      <obj_property name="ObjectShortName">buffer_full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/comunication_protocol/buffer_read" type="logic">
+      <obj_property name="ElementShortName">buffer_read</obj_property>
+      <obj_property name="ObjectShortName">buffer_read</obj_property>
+   </wvobject>
+   <wvobject fp_name="/comunication_protocol/keypad_data" type="array">
+      <obj_property name="ElementShortName">keypad_data[3:0]</obj_property>
+      <obj_property name="ObjectShortName">keypad_data[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/comunication_protocol/data_read_done" type="logic">
+      <obj_property name="ElementShortName">data_read_done</obj_property>
+      <obj_property name="ObjectShortName">data_read_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/comunication_protocol/data_ready" type="logic">
+      <obj_property name="ElementShortName">data_ready</obj_property>
+      <obj_property name="ObjectShortName">data_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/comunication_protocol/data_out" type="array">
+      <obj_property name="ElementShortName">data_out[191:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out[191:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/comunication_protocol/keypad_is_hekkie" type="logic">
+      <obj_property name="ElementShortName">keypad_is_hekkie</obj_property>
+      <obj_property name="ObjectShortName">keypad_is_hekkie</obj_property>
+   </wvobject>
+   <wvobject fp_name="/comunication_protocol/keypad_is_hekkie_s" type="logic">
+      <obj_property name="ElementShortName">keypad_is_hekkie_s</obj_property>
+      <obj_property name="ObjectShortName">keypad_is_hekkie_s</obj_property>
+   </wvobject>
+   <wvobject fp_name="/comunication_protocol/keypad_old" type="array">
+      <obj_property name="ElementShortName">keypad_old[3:0]</obj_property>
+      <obj_property name="ObjectShortName">keypad_old[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/comunication_protocol/current_state" type="other">
+      <obj_property name="ElementShortName">current_state</obj_property>
+      <obj_property name="ObjectShortName">current_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/comunication_protocol/next_state" type="other">
+      <obj_property name="ElementShortName">next_state</obj_property>
+      <obj_property name="ObjectShortName">next_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/comunication_protocol/CRC_devider" type="other">
+      <obj_property name="ElementShortName">CRC_devider</obj_property>
+      <obj_property name="ObjectShortName">CRC_devider</obj_property>
+   </wvobject>
+</wave_config>

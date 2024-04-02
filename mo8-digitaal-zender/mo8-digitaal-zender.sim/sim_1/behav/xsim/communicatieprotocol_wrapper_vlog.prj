@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../mo8-digitaal-zender.gen/sources_1/bd/communicatieprotocol/ipshared/30ef" --include "../../../../mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ipshared/ec67/hdl" --include "../../../../mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ipshared/aed8/hdl" --include "C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../mo8-digitaal-zender.ip_user_files/bd/communicatieprotocol/ip/communicatieprotocol_fifo_generator_0_0/sim/communicatieprotocol_fifo_generator_0_0.v" \
+"../../../../mo8-digitaal-zender.ip_user_files/bd/communicatieprotocol/ip/communicatieprotocol_clk_wiz_0/communicatieprotocol_clk_wiz_0_clk_wiz.v" \
+"../../../../mo8-digitaal-zender.ip_user_files/bd/communicatieprotocol/ip/communicatieprotocol_clk_wiz_0/communicatieprotocol_clk_wiz_0.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
