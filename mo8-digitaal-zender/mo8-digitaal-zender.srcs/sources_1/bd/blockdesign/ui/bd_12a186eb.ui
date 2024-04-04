@@ -6,32 +6,32 @@
    "No Loops_ExpandedHierarchyInLayout":"",
    "No Loops_Layout":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
-preplace port port-id_sys_clock -pg 1 -lvl 0 -x -30 -y 60 -defaultsOSRD
-preplace port port-id_Col_0_0 -pg 1 -lvl 0 -x -30 -y 170 -defaultsOSRD
-preplace port port-id_Col_1_0 -pg 1 -lvl 0 -x -30 -y 230 -defaultsOSRD
-preplace port port-id_Col_2_0 -pg 1 -lvl 0 -x -30 -y 200 -defaultsOSRD
-preplace port port-id_Col_3_0 -pg 1 -lvl 0 -x -30 -y 140 -defaultsOSRD
-preplace port port-id_Row_0_0 -pg 1 -lvl 3 -x 470 -y 90 -defaultsOSRD
-preplace port port-id_Row_1_0 -pg 1 -lvl 3 -x 470 -y 150 -defaultsOSRD
-preplace port port-id_Row_2_0 -pg 1 -lvl 3 -x 470 -y 120 -defaultsOSRD
-preplace portBus Data_0 -pg 1 -lvl 3 -x 470 -y 60 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 90 -y 40 -swap {1 0 2 3} -defaultsOSRD -pinDir reset left -pinY reset 40L -pinDir clk_in1 left -pinY clk_in1 20L -pinDir clk_out1 right -pinY clk_out1 20R -pinDir locked right -pinY locked 40R
-preplace inst keypad_0 -pg 1 -lvl 2 -x 300 -y 40 -swap {2 4 3 1 0 6 8 7 5} -defaultsOSRD -pinDir Col_0 left -pinY Col_0 130L -pinDir Col_1 left -pinY Col_1 190L -pinDir Col_2 left -pinY Col_2 160L -pinDir Col_3 left -pinY Col_3 100L -pinDir clk left -pinY clk 20L -pinDir Row_0 right -pinY Row_0 40R -pinDir Row_1 right -pinY Row_1 80R -pinDir Row_2 right -pinY Row_2 60R -pinBusDir Data right -pinBusY Data 20R
-preplace netloc Col_0_0_1 1 0 2 NJ 170 NJ
-preplace netloc Col_1_0_1 1 0 2 NJ 230 NJ
-preplace netloc Col_2_0_1 1 0 2 NJ 200 NJ
-preplace netloc Col_3_0_1 1 0 2 NJ 140 NJ
-preplace netloc clk_wiz_0_clk_out1 1 1 1 N 60
-preplace netloc keypad_0_Data 1 2 1 N 60
-preplace netloc keypad_0_Row_0 1 2 1 450 80n
-preplace netloc keypad_0_Row_1 1 2 1 410 120n
-preplace netloc keypad_0_Row_2 1 2 1 430 100n
-preplace netloc sys_clock_1 1 0 1 N 60
-levelinfo -pg 1 -30 90 300 470
-pagesize -pg 1 -db -bbox -sgen -150 -10 600 290
+preplace port port-id_sys_clock -pg 1 -lvl 0 -x 0 -y 210 -defaultsOSRD
+preplace port port-id_Row_0_0 -pg 1 -lvl 3 -x 440 -y 60 -defaultsOSRD
+preplace port port-id_Row_1_0 -pg 1 -lvl 3 -x 440 -y 90 -defaultsOSRD
+preplace port port-id_Row_2_0 -pg 1 -lvl 3 -x 440 -y 120 -defaultsOSRD
+preplace port port-id_Col_0_0 -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port port-id_Col_2_0 -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
+preplace port port-id_Col_1_0 -pg 1 -lvl 0 -x 0 -y 90 -defaultsOSRD
+preplace port port-id_Col_3_0 -pg 1 -lvl 0 -x 0 -y 150 -defaultsOSRD
+preplace portBus Data_0 -pg 1 -lvl 3 -x 440 -y 150 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 110 -y 190 -defaultsOSRD -pinDir clk_in1 left -pinY clk_in1 20L -pinDir clk_out1 right -pinY clk_out1 20R
+preplace inst keypad_0 -pg 1 -lvl 2 -x 310 -y 40 -defaultsOSRD -pinDir Col_0 left -pinY Col_0 20L -pinDir Col_1 left -pinY Col_1 50L -pinDir Col_2 left -pinY Col_2 80L -pinDir Col_3 left -pinY Col_3 110L -pinDir clk left -pinY clk 170L -pinDir Row_0 right -pinY Row_0 20R -pinDir Row_1 right -pinY Row_1 50R -pinDir Row_2 right -pinY Row_2 80R -pinBusDir Data right -pinBusY Data 110R
+preplace netloc clk_wiz_0_clk_out1 1 1 1 NJ 210
+preplace netloc keypad_0_Data 1 2 1 NJ 150
+preplace netloc keypad_0_Row_0 1 2 1 NJ 60
+preplace netloc keypad_0_Row_1 1 2 1 NJ 90
+preplace netloc keypad_0_Row_2 1 2 1 NJ 120
+preplace netloc sys_clock_1 1 0 1 NJ 210
+preplace netloc Col_0_0_1 1 0 2 NJ 60 NJ
+preplace netloc Col_2_0_1 1 0 2 NJ 120 NJ
+preplace netloc Col_1_0_1 1 0 2 NJ 90 NJ
+preplace netloc Col_3_0_1 1 0 2 NJ 150 NJ
+levelinfo -pg 1 0 110 310 440
+pagesize -pg 1 -db -bbox -sgen -110 0 560 270
 ",
-   "No Loops_ScaleFactor":"1.0",
-   "No Loops_TopLeft":"-382,-74",
+   "No Loops_ScaleFactor":"1.25",
+   "No Loops_TopLeft":"-199,-2",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
 preplace inst keypad_0 -pg 1 -lvl 1 -x 110 -y 40 -defaultsOSRD

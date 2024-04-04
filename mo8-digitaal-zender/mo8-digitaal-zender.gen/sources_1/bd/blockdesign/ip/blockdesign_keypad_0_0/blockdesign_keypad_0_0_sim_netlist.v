@@ -2,7 +2,7 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Tue Apr  2 21:13:47 2024
+// Date        : Thu Apr  4 13:42:51 2024
 // Host        : TRENLAPTOP running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_keypad_0_0/blockdesign_keypad_0_0_sim_netlist.v
@@ -30,7 +30,7 @@ module blockdesign_keypad_0_0
   input Col_1;
   input Col_2;
   input Col_3;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, FREQ_HZ 10000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input clk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input clk;
   output Row_0;
   output Row_1;
   output Row_2;
@@ -60,24 +60,24 @@ endmodule
 
 (* ORIG_REF_NAME = "keypad" *) 
 module blockdesign_keypad_0_0_keypad
-   (Data,
-    Row_0,
+   (Row_0,
     Row_1,
     Row_2,
-    Col_1,
-    Col_0,
+    Data,
     clk,
     Col_3,
-    Col_2);
-  output [3:0]Data;
+    Col_1,
+    Col_2,
+    Col_0);
   output Row_0;
   output Row_1;
   output Row_2;
-  input Col_1;
-  input Col_0;
+  output [3:0]Data;
   input clk;
   input Col_3;
+  input Col_1;
   input Col_2;
+  input Col_0;
 
   wire Col_0;
   wire Col_1;
@@ -99,6 +99,7 @@ module blockdesign_keypad_0_0_keypad
   wire \FSM_sequential_state[3]_i_1_n_0 ;
   wire \FSM_sequential_state[3]_i_2_n_0 ;
   wire \FSM_sequential_state[3]_i_3_n_0 ;
+  wire \FSM_sequential_state[3]_i_4_n_0 ;
   wire \FSM_sequential_state_reg[1]_i_1_n_0 ;
   wire \FSM_sequential_state_reg[1]_i_2_n_0 ;
   wire \FSM_sequential_state_reg[1]_i_3_n_0 ;
@@ -112,6 +113,7 @@ module blockdesign_keypad_0_0_keypad
   wire Row_1_reg_i_1_n_0;
   wire Row_2;
   wire Row_2_reg_i_1_n_0;
+  wire await;
   wire clk;
   wire [3:0]state;
 
@@ -161,7 +163,7 @@ module blockdesign_keypad_0_0_keypad
         .I4(\FSM_sequential_state[0]_i_4_n_0 ),
         .O(\FSM_sequential_state[0]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h5501CCCC55005555)) 
+    .INIT(64'h005555551055CCCC)) 
     \FSM_sequential_state[0]_i_2 
        (.I0(state[2]),
         .I1(state[0]),
@@ -171,46 +173,46 @@ module blockdesign_keypad_0_0_keypad
         .I5(Col_2),
         .O(\FSM_sequential_state[0]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hFF000000FFFFF400)) 
+    .INIT(64'hFFFF7300FF000000)) 
     \FSM_sequential_state[0]_i_3 
+       (.I0(Col_3),
+        .I1(Col_1),
+        .I2(Col_2),
+        .I3(state[0]),
+        .I4(state[1]),
+        .I5(Col_0),
+        .O(\FSM_sequential_state[0]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'h00AA00AA4050FFFF)) 
+    \FSM_sequential_state[0]_i_4 
+       (.I0(state[0]),
+        .I1(Col_3),
+        .I2(Col_1),
+        .I3(Col_2),
+        .I4(Col_0),
+        .I5(state[1]),
+        .O(\FSM_sequential_state[0]_i_4_n_0 ));
+  LUT5 #(
+    .INIT(32'h22107750)) 
+    \FSM_sequential_state[1]_i_4 
+       (.I0(state[0]),
+        .I1(Col_2),
+        .I2(Col_0),
+        .I3(state[1]),
+        .I4(Col_1),
+        .O(\FSM_sequential_state[1]_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'h0F008F000FFFFF00)) 
+    \FSM_sequential_state[1]_i_5 
        (.I0(Col_2),
         .I1(Col_3),
         .I2(Col_1),
         .I3(state[0]),
         .I4(state[1]),
         .I5(Col_0),
-        .O(\FSM_sequential_state[0]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'h88888888FFFF0045)) 
-    \FSM_sequential_state[0]_i_4 
-       (.I0(state[0]),
-        .I1(Col_2),
-        .I2(Col_3),
-        .I3(Col_1),
-        .I4(Col_0),
-        .I5(state[1]),
-        .O(\FSM_sequential_state[0]_i_4_n_0 ));
-  LUT5 #(
-    .INIT(32'hC480D590)) 
-    \FSM_sequential_state[1]_i_4 
-       (.I0(state[0]),
-        .I1(state[1]),
-        .I2(Col_2),
-        .I3(Col_1),
-        .I4(Col_0),
-        .O(\FSM_sequential_state[1]_i_4_n_0 ));
-  LUT6 #(
-    .INIT(64'hF0FFF000FF00F100)) 
-    \FSM_sequential_state[1]_i_5 
-       (.I0(Col_3),
-        .I1(Col_2),
-        .I2(Col_1),
-        .I3(state[0]),
-        .I4(Col_0),
-        .I5(state[1]),
         .O(\FSM_sequential_state[1]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFABAA00000000)) 
+    .INIT(64'hAAEAFFFF00000000)) 
     \FSM_sequential_state[1]_i_6 
        (.I0(state[0]),
         .I1(Col_2),
@@ -220,24 +222,24 @@ module blockdesign_keypad_0_0_keypad
         .I5(state[1]),
         .O(\FSM_sequential_state[1]_i_6_n_0 ));
   LUT4 #(
-    .INIT(16'h3437)) 
+    .INIT(16'h33B8)) 
     \FSM_sequential_state[1]_i_7 
        (.I0(Col_2),
         .I1(state[0]),
-        .I2(state[1]),
-        .I3(Col_1),
+        .I2(Col_1),
+        .I3(state[1]),
         .O(\FSM_sequential_state[1]_i_7_n_0 ));
   LUT5 #(
-    .INIT(32'h00000001)) 
+    .INIT(32'h00002000)) 
     \FSM_sequential_state[2]_i_4 
-       (.I0(state[1]),
-        .I1(Col_1),
-        .I2(Col_2),
-        .I3(Col_0),
+       (.I0(Col_0),
+        .I1(state[1]),
+        .I2(Col_1),
+        .I3(Col_2),
         .I4(state[0]),
         .O(\FSM_sequential_state[2]_i_4_n_0 ));
   LUT5 #(
-    .INIT(32'hFFEFFFE0)) 
+    .INIT(32'hFF70FF7F)) 
     \FSM_sequential_state[2]_i_5 
        (.I0(Col_1),
         .I1(Col_0),
@@ -246,56 +248,64 @@ module blockdesign_keypad_0_0_keypad
         .I4(Col_3),
         .O(\FSM_sequential_state[2]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'h0055222200547777)) 
+    .INIT(64'h15005500F5F5A0A0)) 
     \FSM_sequential_state[2]_i_6 
        (.I0(state[0]),
-        .I1(Col_3),
-        .I2(Col_1),
+        .I1(Col_1),
+        .I2(Col_3),
         .I3(Col_0),
-        .I4(state[1]),
-        .I5(Col_2),
+        .I4(Col_2),
+        .I5(state[1]),
         .O(\FSM_sequential_state[2]_i_6_n_0 ));
   LUT5 #(
-    .INIT(32'h3030BB88)) 
+    .INIT(32'h03440377)) 
     \FSM_sequential_state[2]_i_7 
        (.I0(Col_2),
         .I1(state[0]),
         .I2(Col_3),
-        .I3(Col_1),
-        .I4(state[1]),
+        .I3(state[1]),
+        .I4(Col_1),
         .O(\FSM_sequential_state[2]_i_7_n_0 ));
-  LUT6 #(
-    .INIT(64'h0C0CFCCC88888888)) 
+  LUT1 #(
+    .INIT(2'h1)) 
     \FSM_sequential_state[3]_i_1 
-       (.I0(\FSM_sequential_state[3]_i_2_n_0 ),
-        .I1(state[3]),
-        .I2(state[0]),
-        .I3(\FSM_sequential_state[3]_i_3_n_0 ),
-        .I4(state[1]),
-        .I5(state[2]),
+       (.I0(await),
         .O(\FSM_sequential_state[3]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFDDDDFFFE8888)) 
+    .INIT(64'h7F70FFFF7F700000)) 
     \FSM_sequential_state[3]_i_2 
+       (.I0(state[1]),
+        .I1(state[0]),
+        .I2(state[2]),
+        .I3(\FSM_sequential_state[3]_i_3_n_0 ),
+        .I4(state[3]),
+        .I5(\FSM_sequential_state[3]_i_4_n_0 ),
+        .O(\FSM_sequential_state[3]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'hBFFF0A0AFFFF5F5F)) 
+    \FSM_sequential_state[3]_i_3 
        (.I0(state[0]),
-        .I1(Col_3),
-        .I2(Col_1),
+        .I1(Col_1),
+        .I2(Col_3),
         .I3(Col_0),
         .I4(state[1]),
         .I5(Col_2),
-        .O(\FSM_sequential_state[3]_i_2_n_0 ));
-  LUT2 #(
-    .INIT(4'h1)) 
-    \FSM_sequential_state[3]_i_3 
-       (.I0(Col_1),
-        .I1(Col_0),
         .O(\FSM_sequential_state[3]_i_3_n_0 ));
+  LUT5 #(
+    .INIT(32'h20000000)) 
+    \FSM_sequential_state[3]_i_4 
+       (.I0(state[0]),
+        .I1(state[1]),
+        .I2(Col_1),
+        .I3(Col_0),
+        .I4(state[2]),
+        .O(\FSM_sequential_state[3]_i_4_n_0 ));
   (* FSM_ENCODED_STATES = "s0_3:0100,s0_2:0011,s2_2:1101,s0_1:0010,s2_0:1011,s2_1:1100,s2:1010,s0_0:0001,s0:0000,s1_1:0111,s1_3:1001,s1_0:0110,s1_2:1000,s2_3:1110,s1:0101" *) 
   FDRE #(
     .INIT(1'b0)) 
     \FSM_sequential_state_reg[0] 
        (.C(clk),
-        .CE(1'b1),
+        .CE(\FSM_sequential_state[3]_i_1_n_0 ),
         .D(\FSM_sequential_state[0]_i_1_n_0 ),
         .Q(state[0]),
         .R(1'b0));
@@ -304,7 +314,7 @@ module blockdesign_keypad_0_0_keypad
     .INIT(1'b0)) 
     \FSM_sequential_state_reg[1] 
        (.C(clk),
-        .CE(1'b1),
+        .CE(\FSM_sequential_state[3]_i_1_n_0 ),
         .D(\FSM_sequential_state_reg[1]_i_1_n_0 ),
         .Q(state[1]),
         .R(1'b0));
@@ -328,7 +338,7 @@ module blockdesign_keypad_0_0_keypad
     .INIT(1'b0)) 
     \FSM_sequential_state_reg[2] 
        (.C(clk),
-        .CE(1'b1),
+        .CE(\FSM_sequential_state[3]_i_1_n_0 ),
         .D(\FSM_sequential_state_reg[2]_i_1_n_0 ),
         .Q(state[2]),
         .R(1'b0));
@@ -352,8 +362,8 @@ module blockdesign_keypad_0_0_keypad
     .INIT(1'b0)) 
     \FSM_sequential_state_reg[3] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\FSM_sequential_state[3]_i_1_n_0 ),
+        .CE(\FSM_sequential_state[3]_i_1_n_0 ),
+        .D(\FSM_sequential_state[3]_i_2_n_0 ),
         .Q(state[3]),
         .R(1'b0));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -368,12 +378,12 @@ module blockdesign_keypad_0_0_keypad
         .Q(Row_0));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT4 #(
-    .INIT(16'h0057)) 
+    .INIT(16'h7EAA)) 
     Row_0_reg_i_1
-       (.I0(state[2]),
+       (.I0(state[3]),
         .I1(state[1]),
         .I2(state[0]),
-        .I3(state[3]),
+        .I3(state[2]),
         .O(Row_0_reg_i_1_n_0));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT4 #(
@@ -396,11 +406,11 @@ module blockdesign_keypad_0_0_keypad
         .Q(Row_1));
   (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT4 #(
-    .INIT(16'h5422)) 
+    .INIT(16'h2BF5)) 
     Row_1_reg_i_1
        (.I0(state[3]),
-        .I1(state[1]),
-        .I2(state[0]),
+        .I1(state[0]),
+        .I2(state[1]),
         .I3(state[2]),
         .O(Row_1_reg_i_1_n_0));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -414,14 +424,21 @@ module blockdesign_keypad_0_0_keypad
         .GE(1'b1),
         .Q(Row_2));
   (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT4 #(
-    .INIT(16'h6E00)) 
+  LUT3 #(
+    .INIT(8'h1F)) 
     Row_2_reg_i_1
-       (.I0(state[1]),
-        .I1(state[2]),
-        .I2(state[0]),
-        .I3(state[3]),
+       (.I0(state[2]),
+        .I1(state[1]),
+        .I2(state[3]),
         .O(Row_2_reg_i_1_n_0));
+  FDRE #(
+    .INIT(1'b0)) 
+    await_reg
+       (.C(clk),
+        .CE(1'b1),
+        .D(\FSM_sequential_state[3]_i_1_n_0 ),
+        .Q(await),
+        .R(1'b0));
 endmodule
 `ifndef GLBL
 `define GLBL

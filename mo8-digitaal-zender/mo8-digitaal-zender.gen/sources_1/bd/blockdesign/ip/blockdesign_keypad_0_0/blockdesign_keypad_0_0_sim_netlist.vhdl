@@ -2,7 +2,7 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
--- Date        : Tue Apr  2 21:13:47 2024
+-- Date        : Thu Apr  4 13:42:51 2024
 -- Host        : TRENLAPTOP running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               c:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_keypad_0_0/blockdesign_keypad_0_0_sim_netlist.vhdl
@@ -17,15 +17,15 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity blockdesign_keypad_0_0_keypad is
   port (
-    Data : out STD_LOGIC_VECTOR ( 3 downto 0 );
     Row_0 : out STD_LOGIC;
     Row_1 : out STD_LOGIC;
     Row_2 : out STD_LOGIC;
-    Col_1 : in STD_LOGIC;
-    Col_0 : in STD_LOGIC;
+    Data : out STD_LOGIC_VECTOR ( 3 downto 0 );
     clk : in STD_LOGIC;
     Col_3 : in STD_LOGIC;
-    Col_2 : in STD_LOGIC
+    Col_1 : in STD_LOGIC;
+    Col_2 : in STD_LOGIC;
+    Col_0 : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of blockdesign_keypad_0_0_keypad : entity is "keypad";
@@ -47,6 +47,7 @@ architecture STRUCTURE of blockdesign_keypad_0_0_keypad is
   signal \FSM_sequential_state[3]_i_1_n_0\ : STD_LOGIC;
   signal \FSM_sequential_state[3]_i_2_n_0\ : STD_LOGIC;
   signal \FSM_sequential_state[3]_i_3_n_0\ : STD_LOGIC;
+  signal \FSM_sequential_state[3]_i_4_n_0\ : STD_LOGIC;
   signal \FSM_sequential_state_reg[1]_i_1_n_0\ : STD_LOGIC;
   signal \FSM_sequential_state_reg[1]_i_2_n_0\ : STD_LOGIC;
   signal \FSM_sequential_state_reg[1]_i_3_n_0\ : STD_LOGIC;
@@ -57,6 +58,7 @@ architecture STRUCTURE of blockdesign_keypad_0_0_keypad is
   signal Row_0_reg_i_2_n_0 : STD_LOGIC;
   signal Row_1_reg_i_1_n_0 : STD_LOGIC;
   signal Row_2_reg_i_1_n_0 : STD_LOGIC;
+  signal await : STD_LOGIC;
   signal state : STD_LOGIC_VECTOR ( 3 downto 0 );
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of \Data[0]_INST_0\ : label is "soft_lutpair1";
@@ -139,7 +141,7 @@ begin
     );
 \FSM_sequential_state[0]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5501CCCC55005555"
+      INIT => X"005555551055CCCC"
     )
         port map (
       I0 => state(2),
@@ -152,7 +154,45 @@ begin
     );
 \FSM_sequential_state[0]_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FF000000FFFFF400"
+      INIT => X"FFFF7300FF000000"
+    )
+        port map (
+      I0 => Col_3,
+      I1 => Col_1,
+      I2 => Col_2,
+      I3 => state(0),
+      I4 => state(1),
+      I5 => Col_0,
+      O => \FSM_sequential_state[0]_i_3_n_0\
+    );
+\FSM_sequential_state[0]_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00AA00AA4050FFFF"
+    )
+        port map (
+      I0 => state(0),
+      I1 => Col_3,
+      I2 => Col_1,
+      I3 => Col_2,
+      I4 => Col_0,
+      I5 => state(1),
+      O => \FSM_sequential_state[0]_i_4_n_0\
+    );
+\FSM_sequential_state[1]_i_4\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"22107750"
+    )
+        port map (
+      I0 => state(0),
+      I1 => Col_2,
+      I2 => Col_0,
+      I3 => state(1),
+      I4 => Col_1,
+      O => \FSM_sequential_state[1]_i_4_n_0\
+    );
+\FSM_sequential_state[1]_i_5\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0F008F000FFFFF00"
     )
         port map (
       I0 => Col_2,
@@ -161,49 +201,11 @@ begin
       I3 => state(0),
       I4 => state(1),
       I5 => Col_0,
-      O => \FSM_sequential_state[0]_i_3_n_0\
-    );
-\FSM_sequential_state[0]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"88888888FFFF0045"
-    )
-        port map (
-      I0 => state(0),
-      I1 => Col_2,
-      I2 => Col_3,
-      I3 => Col_1,
-      I4 => Col_0,
-      I5 => state(1),
-      O => \FSM_sequential_state[0]_i_4_n_0\
-    );
-\FSM_sequential_state[1]_i_4\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"C480D590"
-    )
-        port map (
-      I0 => state(0),
-      I1 => state(1),
-      I2 => Col_2,
-      I3 => Col_1,
-      I4 => Col_0,
-      O => \FSM_sequential_state[1]_i_4_n_0\
-    );
-\FSM_sequential_state[1]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"F0FFF000FF00F100"
-    )
-        port map (
-      I0 => Col_3,
-      I1 => Col_2,
-      I2 => Col_1,
-      I3 => state(0),
-      I4 => Col_0,
-      I5 => state(1),
       O => \FSM_sequential_state[1]_i_5_n_0\
     );
 \FSM_sequential_state[1]_i_6\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFABAA00000000"
+      INIT => X"AAEAFFFF00000000"
     )
         port map (
       I0 => state(0),
@@ -216,30 +218,30 @@ begin
     );
 \FSM_sequential_state[1]_i_7\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"3437"
+      INIT => X"33B8"
     )
         port map (
       I0 => Col_2,
       I1 => state(0),
-      I2 => state(1),
-      I3 => Col_1,
+      I2 => Col_1,
+      I3 => state(1),
       O => \FSM_sequential_state[1]_i_7_n_0\
     );
 \FSM_sequential_state[2]_i_4\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"00000001"
+      INIT => X"00002000"
     )
         port map (
-      I0 => state(1),
-      I1 => Col_1,
-      I2 => Col_2,
-      I3 => Col_0,
+      I0 => Col_0,
+      I1 => state(1),
+      I2 => Col_1,
+      I3 => Col_2,
       I4 => state(0),
       O => \FSM_sequential_state[2]_i_4_n_0\
     );
 \FSM_sequential_state[2]_i_5\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFEFFFE0"
+      INIT => X"FF70FF7F"
     )
         port map (
       I0 => Col_1,
@@ -251,63 +253,74 @@ begin
     );
 \FSM_sequential_state[2]_i_6\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0055222200547777"
+      INIT => X"15005500F5F5A0A0"
     )
         port map (
       I0 => state(0),
-      I1 => Col_3,
-      I2 => Col_1,
+      I1 => Col_1,
+      I2 => Col_3,
       I3 => Col_0,
-      I4 => state(1),
-      I5 => Col_2,
+      I4 => Col_2,
+      I5 => state(1),
       O => \FSM_sequential_state[2]_i_6_n_0\
     );
 \FSM_sequential_state[2]_i_7\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"3030BB88"
+      INIT => X"03440377"
     )
         port map (
       I0 => Col_2,
       I1 => state(0),
       I2 => Col_3,
-      I3 => Col_1,
-      I4 => state(1),
+      I3 => state(1),
+      I4 => Col_1,
       O => \FSM_sequential_state[2]_i_7_n_0\
     );
-\FSM_sequential_state[3]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0C0CFCCC88888888"
-    )
-        port map (
-      I0 => \FSM_sequential_state[3]_i_2_n_0\,
-      I1 => state(3),
-      I2 => state(0),
-      I3 => \FSM_sequential_state[3]_i_3_n_0\,
-      I4 => state(1),
-      I5 => state(2),
-      O => \FSM_sequential_state[3]_i_1_n_0\
-    );
-\FSM_sequential_state[3]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFDDDDFFFE8888"
-    )
-        port map (
-      I0 => state(0),
-      I1 => Col_3,
-      I2 => Col_1,
-      I3 => Col_0,
-      I4 => state(1),
-      I5 => Col_2,
-      O => \FSM_sequential_state[3]_i_2_n_0\
-    );
-\FSM_sequential_state[3]_i_3\: unisim.vcomponents.LUT2
+\FSM_sequential_state[3]_i_1\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
         port map (
-      I0 => Col_1,
-      I1 => Col_0,
+      I0 => await,
+      O => \FSM_sequential_state[3]_i_1_n_0\
+    );
+\FSM_sequential_state[3]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"7F70FFFF7F700000"
+    )
+        port map (
+      I0 => state(1),
+      I1 => state(0),
+      I2 => state(2),
+      I3 => \FSM_sequential_state[3]_i_3_n_0\,
+      I4 => state(3),
+      I5 => \FSM_sequential_state[3]_i_4_n_0\,
+      O => \FSM_sequential_state[3]_i_2_n_0\
+    );
+\FSM_sequential_state[3]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"BFFF0A0AFFFF5F5F"
+    )
+        port map (
+      I0 => state(0),
+      I1 => Col_1,
+      I2 => Col_3,
+      I3 => Col_0,
+      I4 => state(1),
+      I5 => Col_2,
       O => \FSM_sequential_state[3]_i_3_n_0\
+    );
+\FSM_sequential_state[3]_i_4\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"20000000"
+    )
+        port map (
+      I0 => state(0),
+      I1 => state(1),
+      I2 => Col_1,
+      I3 => Col_0,
+      I4 => state(2),
+      O => \FSM_sequential_state[3]_i_4_n_0\
     );
 \FSM_sequential_state_reg[0]\: unisim.vcomponents.FDRE
     generic map(
@@ -315,7 +328,7 @@ begin
     )
         port map (
       C => clk,
-      CE => '1',
+      CE => \FSM_sequential_state[3]_i_1_n_0\,
       D => \FSM_sequential_state[0]_i_1_n_0\,
       Q => state(0),
       R => '0'
@@ -326,7 +339,7 @@ begin
     )
         port map (
       C => clk,
-      CE => '1',
+      CE => \FSM_sequential_state[3]_i_1_n_0\,
       D => \FSM_sequential_state_reg[1]_i_1_n_0\,
       Q => state(1),
       R => '0'
@@ -358,7 +371,7 @@ begin
     )
         port map (
       C => clk,
-      CE => '1',
+      CE => \FSM_sequential_state[3]_i_1_n_0\,
       D => \FSM_sequential_state_reg[2]_i_1_n_0\,
       Q => state(2),
       R => '0'
@@ -390,8 +403,8 @@ begin
     )
         port map (
       C => clk,
-      CE => '1',
-      D => \FSM_sequential_state[3]_i_1_n_0\,
+      CE => \FSM_sequential_state[3]_i_1_n_0\,
+      D => \FSM_sequential_state[3]_i_2_n_0\,
       Q => state(3),
       R => '0'
     );
@@ -408,13 +421,13 @@ Row_0_reg: unisim.vcomponents.LDCE
     );
 Row_0_reg_i_1: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"0057"
+      INIT => X"7EAA"
     )
         port map (
-      I0 => state(2),
+      I0 => state(3),
       I1 => state(1),
       I2 => state(0),
-      I3 => state(3),
+      I3 => state(2),
       O => Row_0_reg_i_1_n_0
     );
 Row_0_reg_i_2: unisim.vcomponents.LUT4
@@ -441,12 +454,12 @@ Row_1_reg: unisim.vcomponents.LDCE
     );
 Row_1_reg_i_1: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"5422"
+      INIT => X"2BF5"
     )
         port map (
       I0 => state(3),
-      I1 => state(1),
-      I2 => state(0),
+      I1 => state(0),
+      I2 => state(1),
       I3 => state(2),
       O => Row_1_reg_i_1_n_0
     );
@@ -461,16 +474,26 @@ Row_2_reg: unisim.vcomponents.LDCE
       GE => '1',
       Q => Row_2
     );
-Row_2_reg_i_1: unisim.vcomponents.LUT4
+Row_2_reg_i_1: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"6E00"
+      INIT => X"1F"
     )
         port map (
-      I0 => state(1),
-      I1 => state(2),
-      I2 => state(0),
-      I3 => state(3),
+      I0 => state(2),
+      I1 => state(1),
+      I2 => state(3),
       O => Row_2_reg_i_1_n_0
+    );
+await_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => '1',
+      D => \FSM_sequential_state[3]_i_1_n_0\,
+      Q => await,
+      R => '0'
     );
 end STRUCTURE;
 library IEEE;
@@ -505,7 +528,7 @@ architecture STRUCTURE of blockdesign_keypad_0_0 is
   attribute x_interface_info : string;
   attribute x_interface_info of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
   attribute x_interface_parameter : string;
-  attribute x_interface_parameter of clk : signal is "XIL_INTERFACENAME clk, FREQ_HZ 10000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0";
+  attribute x_interface_parameter of clk : signal is "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0";
 begin
 U0: entity work.blockdesign_keypad_0_0_keypad
      port map (

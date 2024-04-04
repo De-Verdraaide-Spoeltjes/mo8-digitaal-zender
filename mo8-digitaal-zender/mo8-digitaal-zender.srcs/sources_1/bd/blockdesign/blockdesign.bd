@@ -39,18 +39,6 @@
           }
         }
       },
-      "Col_0_0": {
-        "direction": "I"
-      },
-      "Col_1_0": {
-        "direction": "I"
-      },
-      "Col_2_0": {
-        "direction": "I"
-      },
-      "Col_3_0": {
-        "direction": "I"
-      },
       "Row_0_0": {
         "direction": "O"
       },
@@ -64,6 +52,18 @@
         "direction": "O",
         "left": "3",
         "right": "0"
+      },
+      "Col_0_0": {
+        "direction": "I"
+      },
+      "Col_2_0": {
+        "direction": "I"
+      },
+      "Col_1_0": {
+        "direction": "I"
+      },
+      "Col_3_0": {
+        "direction": "I"
       }
     },
     "components": {
@@ -74,19 +74,25 @@
         "inst_hier_path": "clk_wiz_0",
         "parameters": {
           "CLKOUT1_JITTER": {
-            "value": "197.700"
+            "value": "124.615"
           },
           "CLKOUT1_REQUESTED_OUT_FREQ": {
-            "value": "10.000"
+            "value": "100.000"
           },
           "CLK_IN1_BOARD_INTERFACE": {
             "value": "sys_clock"
           },
           "MMCM_CLKOUT0_DIVIDE_F": {
-            "value": "100.000"
+            "value": "10.000"
           },
           "USE_BOARD_FLOW": {
             "value": "true"
+          },
+          "USE_LOCKED": {
+            "value": "false"
+          },
+          "USE_RESET": {
+            "value": "false"
           }
         }
       },
@@ -118,7 +124,7 @@
             "direction": "I",
             "parameters": {
               "FREQ_HZ": {
-                "value": "10000000",
+                "value": "100000000",
                 "value_src": "ip_prop"
               },
               "PHASE": {

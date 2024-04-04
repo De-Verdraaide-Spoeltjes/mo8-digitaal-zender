@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
---Date        : Tue Apr  2 21:12:27 2024
+--Date        : Thu Apr  4 15:30:46 2024
 --Host        : TRENLAPTOP running 64-bit major release  (build 9200)
 --Command     : generate_target blockdesign.bd
 --Design      : blockdesign
@@ -33,10 +33,8 @@ end blockdesign;
 architecture STRUCTURE of blockdesign is
   component blockdesign_clk_wiz_0_0 is
   port (
-    reset : in STD_LOGIC;
     clk_in1 : in STD_LOGIC;
-    clk_out1 : out STD_LOGIC;
-    locked : out STD_LOGIC
+    clk_out1 : out STD_LOGIC
   );
   end component blockdesign_clk_wiz_0_0;
   component blockdesign_keypad_0_0 is
@@ -62,7 +60,6 @@ architecture STRUCTURE of blockdesign is
   signal keypad_0_Row_1 : STD_LOGIC;
   signal keypad_0_Row_2 : STD_LOGIC;
   signal sys_clock_1 : STD_LOGIC;
-  signal NLW_clk_wiz_0_locked_UNCONNECTED : STD_LOGIC;
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of sys_clock : signal is "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK";
   attribute X_INTERFACE_PARAMETER : string;
@@ -80,9 +77,7 @@ begin
 clk_wiz_0: component blockdesign_clk_wiz_0_0
      port map (
       clk_in1 => sys_clock_1,
-      clk_out1 => clk_wiz_0_clk_out1,
-      locked => NLW_clk_wiz_0_locked_UNCONNECTED,
-      reset => '0'
+      clk_out1 => clk_wiz_0_clk_out1
     );
 keypad_0: component blockdesign_keypad_0_0
      port map (
