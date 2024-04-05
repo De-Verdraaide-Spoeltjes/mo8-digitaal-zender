@@ -5,11 +5,13 @@ vlib questa_lib/msim/xilinx_vip
 vlib questa_lib/msim/xpm
 vlib questa_lib/msim/xil_defaultlib
 vlib questa_lib/msim/fifo_generator_v13_2_8
+vlib questa_lib/msim/xlslice_v1_0_2
 
 vmap xilinx_vip questa_lib/msim/xilinx_vip
 vmap xpm questa_lib/msim/xpm
 vmap xil_defaultlib questa_lib/msim/xil_defaultlib
 vmap fifo_generator_v13_2_8 questa_lib/msim/fifo_generator_v13_2_8
+vmap xlslice_v1_0_2 questa_lib/msim/xlslice_v1_0_2
 
 vlog -work xilinx_vip  -incr -mfcu  -sv -L axi_vip_v1_1_14 -L processing_system7_vip_v1_0_16 -L xilinx_vip "+incdir+C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
 "C:/Xilinx/Vivado/2023.1/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" \
@@ -48,6 +50,12 @@ vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../mo8-digitaal-zender
 
 vcom -work xil_defaultlib  -93  \
 "../../../bd/communicatieprotocol/sim/communicatieprotocol.vhd" \
+
+vlog -work xlslice_v1_0_2  -incr -mfcu  "+incdir+../../../../mo8-digitaal-zender.gen/sources_1/bd/communicatieprotocol/ipshared/30ef" "+incdir+C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../mo8-digitaal-zender.gen/sources_1/bd/communicatieprotocol/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v" \
+
+vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../mo8-digitaal-zender.gen/sources_1/bd/communicatieprotocol/ipshared/30ef" "+incdir+C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../bd/communicatieprotocol/ip/communicatieprotocol_xlslice_0_0/sim/communicatieprotocol_xlslice_0_0.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

@@ -55,20 +55,19 @@
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module communicatieprotocol_fifo_generator_0_0 (
   clk,
-  srst,
   din,
   wr_en,
   rd_en,
   dout,
   full,
   empty,
-  valid
+  rd_data_count,
+  wr_data_count
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME core_clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 core_clk CLK" *)
 input wire clk;
-input wire srst;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE WR_DATA" *)
 input wire [31 : 0] din;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE WR_EN" *)
@@ -81,13 +80,14 @@ output wire [127 : 0] dout;
 output wire full;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_read:1.0 FIFO_READ EMPTY" *)
 output wire empty;
-output wire valid;
+output wire [8 : 0] rd_data_count;
+output wire [10 : 0] wr_data_count;
 
   fifo_generator_v13_2_8 #(
     .C_COMMON_CLOCK(1),
     .C_SELECT_XPM(0),
     .C_COUNT_TYPE(0),
-    .C_DATA_COUNT_WIDTH(6),
+    .C_DATA_COUNT_WIDTH(10),
     .C_DEFAULT_VALUE("BlankString"),
     .C_DIN_WIDTH(32),
     .C_DOUT_RST_VAL("0"),
@@ -102,14 +102,14 @@ output wire valid;
     .C_HAS_INT_CLK(0),
     .C_HAS_MEMINIT_FILE(0),
     .C_HAS_OVERFLOW(0),
-    .C_HAS_RD_DATA_COUNT(0),
+    .C_HAS_RD_DATA_COUNT(1),
     .C_HAS_RD_RST(0),
     .C_HAS_RST(0),
-    .C_HAS_SRST(1),
+    .C_HAS_SRST(0),
     .C_HAS_UNDERFLOW(0),
-    .C_HAS_VALID(1),
+    .C_HAS_VALID(0),
     .C_HAS_WR_ACK(0),
-    .C_HAS_WR_DATA_COUNT(0),
+    .C_HAS_WR_DATA_COUNT(1),
     .C_HAS_WR_RST(0),
     .C_IMPLEMENTATION_TYPE(0),
     .C_INIT_WR_PNTR_VAL(0),
@@ -119,19 +119,19 @@ output wire valid;
     .C_OVERFLOW_LOW(0),
     .C_PRELOAD_LATENCY(1),
     .C_PRELOAD_REGS(0),
-    .C_PRIM_FIFO_TYPE("512x36"),
+    .C_PRIM_FIFO_TYPE("1kx36"),
     .C_PROG_EMPTY_THRESH_ASSERT_VAL(2),
     .C_PROG_EMPTY_THRESH_NEGATE_VAL(3),
     .C_PROG_EMPTY_TYPE(0),
-    .C_PROG_FULL_THRESH_ASSERT_VAL(61),
-    .C_PROG_FULL_THRESH_NEGATE_VAL(60),
+    .C_PROG_FULL_THRESH_ASSERT_VAL(1021),
+    .C_PROG_FULL_THRESH_NEGATE_VAL(1020),
     .C_PROG_FULL_TYPE(0),
-    .C_RD_DATA_COUNT_WIDTH(5),
-    .C_RD_DEPTH(16),
+    .C_RD_DATA_COUNT_WIDTH(9),
+    .C_RD_DEPTH(256),
     .C_RD_FREQ(1),
-    .C_RD_PNTR_WIDTH(4),
+    .C_RD_PNTR_WIDTH(8),
     .C_UNDERFLOW_LOW(0),
-    .C_USE_DOUT_RST(1),
+    .C_USE_DOUT_RST(0),
     .C_USE_ECC(0),
     .C_USE_EMBEDDED_REG(0),
     .C_USE_PIPELINE_REG(0),
@@ -140,10 +140,10 @@ output wire valid;
     .C_USE_FWFT_DATA_COUNT(1),
     .C_VALID_LOW(0),
     .C_WR_ACK_LOW(0),
-    .C_WR_DATA_COUNT_WIDTH(7),
-    .C_WR_DEPTH(64),
+    .C_WR_DATA_COUNT_WIDTH(11),
+    .C_WR_DEPTH(1024),
     .C_WR_FREQ(1),
-    .C_WR_PNTR_WIDTH(6),
+    .C_WR_PNTR_WIDTH(10),
     .C_WR_RESPONSE_LATENCY(1),
     .C_MSGON_VAL(1),
     .C_ENABLE_RST_SYNC(1),
@@ -291,7 +291,7 @@ output wire valid;
     .backup_marker(1'D0),
     .clk(clk),
     .rst(1'D0),
-    .srst(srst),
+    .srst(1'D0),
     .wr_clk(1'D0),
     .wr_rst(1'D0),
     .rd_clk(1'D0),
@@ -299,12 +299,12 @@ output wire valid;
     .din(din),
     .wr_en(wr_en),
     .rd_en(rd_en),
-    .prog_empty_thresh(4'B0),
-    .prog_empty_thresh_assert(4'B0),
-    .prog_empty_thresh_negate(4'B0),
-    .prog_full_thresh(6'B0),
-    .prog_full_thresh_assert(6'B0),
-    .prog_full_thresh_negate(6'B0),
+    .prog_empty_thresh(8'B0),
+    .prog_empty_thresh_assert(8'B0),
+    .prog_empty_thresh_negate(8'B0),
+    .prog_full_thresh(10'B0),
+    .prog_full_thresh_assert(10'B0),
+    .prog_full_thresh_negate(10'B0),
     .int_clk(1'D0),
     .injectdbiterr(1'D0),
     .injectsbiterr(1'D0),
@@ -316,11 +316,11 @@ output wire valid;
     .overflow(),
     .empty(empty),
     .almost_empty(),
-    .valid(valid),
+    .valid(),
     .underflow(),
     .data_count(),
-    .rd_data_count(),
-    .wr_data_count(),
+    .rd_data_count(rd_data_count),
+    .wr_data_count(wr_data_count),
     .prog_full(),
     .prog_empty(),
     .sbiterr(),

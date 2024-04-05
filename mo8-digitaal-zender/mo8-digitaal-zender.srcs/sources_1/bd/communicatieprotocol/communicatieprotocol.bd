@@ -11,9 +11,10 @@
       "validated": "true"
     },
     "design_tree": {
-      "comunication_protocol_0": "",
       "fifo_generator_0": "",
-      "clk_wiz": ""
+      "clk_wiz": "",
+      "comunication_protocol_0": "",
+      "xlslice_0": ""
     },
     "ports": {
       "din_0": {
@@ -66,6 +67,73 @@
       }
     },
     "components": {
+      "fifo_generator_0": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "xci_name": "communicatieprotocol_fifo_generator_0_0",
+        "xci_path": "ip\\communicatieprotocol_fifo_generator_0_0\\communicatieprotocol_fifo_generator_0_0.xci",
+        "inst_hier_path": "fifo_generator_0",
+        "parameters": {
+          "Almost_Full_Flag": {
+            "value": "false"
+          },
+          "Fifo_Implementation": {
+            "value": "Common_Clock_Block_RAM"
+          },
+          "INTERFACE_TYPE": {
+            "value": "Native"
+          },
+          "Input_Data_Width": {
+            "value": "32"
+          },
+          "Input_Depth": {
+            "value": "1024"
+          },
+          "Output_Data_Width": {
+            "value": "128"
+          },
+          "Programmable_Full_Type": {
+            "value": "No_Programmable_Full_Threshold"
+          },
+          "Read_Data_Count": {
+            "value": "true"
+          },
+          "Read_Data_Count_Width": {
+            "value": "9"
+          },
+          "Reset_Pin": {
+            "value": "false"
+          },
+          "Valid_Flag": {
+            "value": "false"
+          },
+          "Write_Data_Count": {
+            "value": "true"
+          },
+          "Write_Data_Count_Width": {
+            "value": "11"
+          }
+        }
+      },
+      "clk_wiz": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "communicatieprotocol_clk_wiz_0",
+        "xci_path": "ip\\communicatieprotocol_clk_wiz_0\\communicatieprotocol_clk_wiz_0.xci",
+        "inst_hier_path": "clk_wiz",
+        "parameters": {
+          "CLK_IN1_BOARD_INTERFACE": {
+            "value": "sys_clock"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          },
+          "USE_LOCKED": {
+            "value": "false"
+          },
+          "USE_RESET": {
+            "value": "true"
+          }
+        }
+      },
       "comunication_protocol_0": {
         "vlnv": "xilinx.com:module_ref:comunication_protocol:1.0",
         "xci_name": "communicatieprotocol_comunication_protocol_0_0",
@@ -113,8 +181,10 @@
             "left": "127",
             "right": "0"
           },
-          "buffer_full": {
-            "direction": "I"
+          "buffer_data_ready": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
           },
           "buffer_read": {
             "direction": "O"
@@ -137,49 +207,17 @@
           }
         }
       },
-      "fifo_generator_0": {
-        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
-        "xci_name": "communicatieprotocol_fifo_generator_0_0",
-        "xci_path": "ip\\communicatieprotocol_fifo_generator_0_0\\communicatieprotocol_fifo_generator_0_0.xci",
-        "inst_hier_path": "fifo_generator_0",
+      "xlslice_0": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "communicatieprotocol_xlslice_0_0",
+        "xci_path": "ip\\communicatieprotocol_xlslice_0_0\\communicatieprotocol_xlslice_0_0.xci",
+        "inst_hier_path": "xlslice_0",
         "parameters": {
-          "INTERFACE_TYPE": {
-            "value": "Native"
+          "DIN_FROM": {
+            "value": "2"
           },
-          "Input_Data_Width": {
-            "value": "32"
-          },
-          "Input_Depth": {
-            "value": "64"
-          },
-          "Output_Data_Width": {
-            "value": "128"
-          },
-          "Programmable_Full_Type": {
-            "value": "No_Programmable_Full_Threshold"
-          },
-          "Valid_Flag": {
-            "value": "true"
-          }
-        }
-      },
-      "clk_wiz": {
-        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
-        "xci_name": "communicatieprotocol_clk_wiz_0",
-        "xci_path": "ip\\communicatieprotocol_clk_wiz_0\\communicatieprotocol_clk_wiz_0.xci",
-        "inst_hier_path": "clk_wiz",
-        "parameters": {
-          "CLK_IN1_BOARD_INTERFACE": {
-            "value": "sys_clock"
-          },
-          "USE_BOARD_FLOW": {
-            "value": "true"
-          },
-          "USE_LOCKED": {
-            "value": "false"
-          },
-          "USE_RESET": {
-            "value": "true"
+          "DIN_WIDTH": {
+            "value": "9"
           }
         }
       }
@@ -228,22 +266,16 @@
           "comunication_protocol_0/buffer_in"
         ]
       },
-      "fifo_generator_0_valid": {
+      "fifo_generator_0_rd_data_count": {
         "ports": [
-          "fifo_generator_0/valid",
-          "comunication_protocol_0/buffer_full"
+          "fifo_generator_0/rd_data_count",
+          "xlslice_0/Din"
         ]
       },
       "keypad_data_0_1": {
         "ports": [
           "keypad_data_0",
           "comunication_protocol_0/keypad_data"
-        ]
-      },
-      "rst_clk_wiz_100M_peripheral_reset": {
-        "ports": [
-          "comunication_protocol_0/reset",
-          "fifo_generator_0/srst"
         ]
       },
       "sys_clock_1": {
@@ -256,6 +288,12 @@
         "ports": [
           "wr_en_0",
           "fifo_generator_0/wr_en"
+        ]
+      },
+      "xlslice_0_Dout": {
+        "ports": [
+          "xlslice_0/Dout",
+          "comunication_protocol_0/buffer_data_ready"
         ]
       }
     }

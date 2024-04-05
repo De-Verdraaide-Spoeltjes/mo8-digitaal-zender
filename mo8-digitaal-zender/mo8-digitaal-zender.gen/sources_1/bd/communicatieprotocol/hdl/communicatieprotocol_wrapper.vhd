@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
---Date        : Tue Apr  2 17:38:20 2024
+--Date        : Fri Apr  5 11:52:41 2024
 --Host        : XPS-Tommy running 64-bit major release  (build 9200)
 --Command     : generate_target communicatieprotocol_wrapper.bd
 --Design      : communicatieprotocol_wrapper

@@ -35,7 +35,7 @@ use IEEE.NUMERIC_STD.ALL;
 -- |----------|-------------|-------------------------------------------------|
 -- | 16 bytes | 48-175 bits | Data                                            |
 -- |----------|-------------|-------------------------------------------------|
--- | 2 byte   | 176-191 bits| CRC of the data_in (128 bit)                       |
+-- | 2 byte   | 176-191 bits| CRC of the data_in (128 bit)                    |
 -- |----------|-------------|-------------------------------------------------|
 
 entity comunication_protocol is
@@ -47,9 +47,9 @@ entity comunication_protocol is
         reset       : in STD_LOGIC;
 
         -- FIFO interface
-        buffer_in   : in STD_LOGIC_VECTOR(127 downto 0);
-        buffer_full : in STD_LOGIC;
-        buffer_read : out STD_LOGIC;
+        buffer_in           : in STD_LOGIC_VECTOR(127 downto 0);
+        buffer_data_ready   : in STD_LOGIC_VECTOR(2 downto 0);
+        buffer_read         : out STD_LOGIC;
 
         -- Keypad
         keypad_data : in STD_LOGIC_VECTOR(3 downto 0);
@@ -68,7 +68,7 @@ architecture Behavioral of comunication_protocol is
     signal keypad_old           : std_logic_vector(3 downto 0) := (others => '0');
 
     -- State machine
-    type state_type is (Waiting_for_hekkie, Create_protocol, Send_data, Reset_data);
+    type state_type is (Waiting_for_hekkie, Enable_read_buffer, Reading_buffer, Create_protocol, Send_data, Reset_data);
     signal current_state, next_state : state_type := Waiting_for_hekkie;
 
     -- CRC calculation - 8 bit
@@ -121,9 +121,9 @@ architecture Behavioral of comunication_protocol is
 begin
 
     -- Keypad
-    check_if_hekkie:process(keypad_data)
+    check_if_hekkie:process(keypad_data, current_state)
     begin
-        if keypad_data /= keypad_old AND keypad_data = "1010" then
+        if keypad_data /= keypad_old AND keypad_data = "1010" AND current_state = Waiting_for_hekkie then
             keypad_is_hekkie <= '1';
         else
             keypad_is_hekkie <= '0';
@@ -133,15 +133,21 @@ begin
     end process;
 
     -- Next state logic
-    next_state_decoder:process(keypad_is_hekkie, buffer_full, data_read_done)
+    next_state_decoder:process(keypad_is_hekkie, buffer_data_ready, data_read_done, current_state)
     begin
         case current_state is
             when Waiting_for_hekkie =>
-                if keypad_is_hekkie = '1' AND keypad_is_hekkie_s = '0' AND buffer_full = '1' then
-                    next_state <= Create_protocol;
+                if keypad_is_hekkie = '1' AND keypad_is_hekkie_s = '0' AND buffer_data_ready >= std_logic_vector(to_unsigned(1, buffer_data_ready'length)) then
+                    next_state <= Enable_read_buffer;
                 else
                     next_state <= Waiting_for_hekkie;
                 end if;
+
+            when Enable_read_buffer =>
+                next_state <= Reading_buffer;
+            
+            when Reading_buffer =>
+                next_state <= Create_protocol;
 
             when Create_protocol =>
                 next_state <= Send_data;
@@ -179,6 +185,12 @@ begin
         case current_state is
             when Waiting_for_hekkie =>
                 buffer_read <= '0';
+            
+            when Enable_read_buffer =>
+                buffer_read <= '1';
+
+            when Reading_buffer =>
+                buffer_read <= '0';
 
             when Create_protocol =>
                 keypad_is_hekkie_s <= '1';
@@ -206,7 +218,7 @@ begin
                 data_ready <= '1';
                 
             when Reset_data =>
-                buffer_read <= '1';
+                buffer_read <= '0';
                 data_ready <= '0';
                 keypad_is_hekkie_s <= '0';
                 data_out <= (others => '0');

@@ -58,7 +58,7 @@ ENTITY communicatieprotocol_comunication_protocol_0_0 IS
     clk : IN STD_LOGIC;
     reset : IN STD_LOGIC;
     buffer_in : IN STD_LOGIC_VECTOR(127 DOWNTO 0);
-    buffer_full : IN STD_LOGIC;
+    buffer_data_ready : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     buffer_read : OUT STD_LOGIC;
     keypad_data : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     data_read_done : IN STD_LOGIC;
@@ -78,7 +78,7 @@ ARCHITECTURE communicatieprotocol_comunication_protocol_0_0_arch OF communicatie
       clk : IN STD_LOGIC;
       reset : IN STD_LOGIC;
       buffer_in : IN STD_LOGIC_VECTOR(127 DOWNTO 0);
-      buffer_full : IN STD_LOGIC;
+      buffer_data_ready : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
       buffer_read : OUT STD_LOGIC;
       keypad_data : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
       data_read_done : IN STD_LOGIC;
@@ -101,7 +101,7 @@ BEGIN
       clk => clk,
       reset => reset,
       buffer_in => buffer_in,
-      buffer_full => buffer_full,
+      buffer_data_ready => buffer_data_ready,
       buffer_read => buffer_read,
       keypad_data => keypad_data,
       data_read_done => data_read_done,
