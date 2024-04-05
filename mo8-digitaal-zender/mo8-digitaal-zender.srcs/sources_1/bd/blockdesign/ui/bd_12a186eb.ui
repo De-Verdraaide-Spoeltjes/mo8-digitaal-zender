@@ -1,21 +1,47 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.25",
-   "Default View_TopLeft":"-422,-134",
+   "Default View_TopLeft":"-502,-51",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 2 -x 300 -y 70 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 2 -x 300 -y 100 -defaultsOSRD
-preplace port UART -pg 1 -lvl 2 -x 300 -y 130 -defaultsOSRD
-preplace portBus status_led -pg 1 -lvl 2 -x 300 -y 170 -defaultsOSRD
-preplace inst connection_embedded -pg 1 -lvl 1 -x 110 -y 140 -defaultsOSRD
-preplace netloc connection_embedded_status_led 1 1 1 N 170
-preplace netloc processing_system7_0_DDR 1 1 1 280J 70n
-preplace netloc processing_system7_0_FIXED_IO 1 1 1 280J 100n
-preplace netloc processing_system7_0_UART_1 1 1 1 NJ 130
-levelinfo -pg 1 -80 110 300
-pagesize -pg 1 -db -bbox -sgen -260 -20 460 270
+preplace port DDR -pg 1 -lvl 3 -x 830 -y 420 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 3 -x 830 -y 450 -defaultsOSRD
+preplace port UART -pg 1 -lvl 3 -x 830 -y 480 -defaultsOSRD
+preplace port port-id_Row_2_0 -pg 1 -lvl 3 -x 830 -y 720 -defaultsOSRD
+preplace port port-id_Row_1_0 -pg 1 -lvl 3 -x 830 -y 690 -defaultsOSRD
+preplace port port-id_Row_0_0 -pg 1 -lvl 3 -x 830 -y 660 -defaultsOSRD
+preplace port port-id_Col_0_0 -pg 1 -lvl 0 -x 0 -y 640 -defaultsOSRD
+preplace port port-id_Col_1_0 -pg 1 -lvl 0 -x 0 -y 670 -defaultsOSRD
+preplace port port-id_Col_2_0 -pg 1 -lvl 0 -x 0 -y 700 -defaultsOSRD
+preplace port port-id_Col_3_0 -pg 1 -lvl 0 -x 0 -y 730 -defaultsOSRD
+preplace port port-id_reset_in -pg 1 -lvl 0 -x 0 -y 510 -defaultsOSRD
+preplace portBus status_led -pg 1 -lvl 3 -x 830 -y 510 -defaultsOSRD
+preplace inst connection_embedded -pg 1 -lvl 1 -x 240 -y 490 -defaultsOSRD
+preplace inst keypad_0 -pg 1 -lvl 1 -x 240 -y 700 -defaultsOSRD
+preplace inst fifo_generator_0 -pg 1 -lvl 1 -x 240 -y 150 -defaultsOSRD
+preplace inst comunication_protocol_0 -pg 1 -lvl 2 -x 640 -y 320 -defaultsOSRD
+preplace netloc Col_0_0_1 1 0 1 20J 640n
+preplace netloc Col_1_0_1 1 0 1 20J 670n
+preplace netloc Col_2_0_1 1 0 1 NJ 700
+preplace netloc Col_3_0_1 1 0 1 20J 720n
+preplace netloc aux_reset_in_0_1 1 0 1 NJ 510
+preplace netloc comunication_protocol_0_buffer_read 1 0 3 50 10 NJ 10 810
+preplace netloc connection_embedded_clk_100MHz 1 0 2 40 300 450
+preplace netloc connection_embedded_reset 1 0 2 50 290 440
+preplace netloc connection_embedded_rsa_encrypted_char 1 0 2 20 320 430
+preplace netloc connection_embedded_status_led 1 1 2 NJ 510 NJ
+preplace netloc fifo_generator_0_dout 1 0 2 30 310 NJ
+preplace netloc fifo_generator_0_rd_data_count 1 1 1 460 140n
+preplace netloc keypad_0_Data 1 0 2 50 600 460
+preplace netloc keypad_0_Row_0 1 1 2 470J 660 NJ
+preplace netloc keypad_0_Row_1 1 1 2 NJ 690 NJ
+preplace netloc keypad_0_Row_2 1 1 2 430J 720 NJ
+preplace netloc processing_system7_0_DDR 1 1 2 NJ 430 810J
+preplace netloc processing_system7_0_FIXED_IO 1 1 2 NJ 450 NJ
+preplace netloc processing_system7_0_UART_1 1 1 2 NJ 470 810J
+levelinfo -pg 1 0 240 640 830
+pagesize -pg 1 -db -bbox -sgen -100 0 970 800
 "
 }
 {
