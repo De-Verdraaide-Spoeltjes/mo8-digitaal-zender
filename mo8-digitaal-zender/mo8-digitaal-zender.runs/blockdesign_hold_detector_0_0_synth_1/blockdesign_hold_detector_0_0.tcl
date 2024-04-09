@@ -70,8 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "blockdesign_hold_detector_0_0_synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 2
-set_param xicom.use_bs_reader 1
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 set_param ips.modRefOverrideMrefDirPath c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/mref
@@ -94,7 +92,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/hold_detector.vhd
-read_ip -quiet c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/blockdesign/ip/blockdesign_hold_detector_0_0/blockdesign_hold_detector_0_0.xci
+read_ip -quiet C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/blockdesign/ip/blockdesign_hold_detector_0_0/blockdesign_hold_detector_0_0.xci
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
---Date        : Tue Apr  9 13:23:57 2024
+--Date        : Tue Apr  9 16:33:25 2024
 --Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
 --Command     : generate_target blockdesign.bd
 --Design      : blockdesign
@@ -2343,7 +2343,7 @@ entity blockdesign is
     status_led : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of blockdesign : entity is "blockdesign,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=blockdesign,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=25,numReposBlks=17,numNonXlnxBlks=0,numHierBlks=8,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=4,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=8,da_board_cnt=5,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of blockdesign : entity is "blockdesign,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=blockdesign,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=26,numReposBlks=18,numNonXlnxBlks=0,numHierBlks=8,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=5,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=8,da_board_cnt=5,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of blockdesign : entity is "blockdesign.hwdef";
 end blockdesign;
@@ -2389,6 +2389,14 @@ architecture STRUCTURE of blockdesign is
     data_out : out STD_LOGIC_VECTOR ( 191 downto 0 )
   );
   end component blockdesign_comunication_protocol_0_0;
+  component blockdesign_DeBounce_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    Reset : in STD_LOGIC;
+    data_in : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    data_out : out STD_LOGIC_VECTOR ( 3 downto 0 )
+  );
+  end component blockdesign_DeBounce_0_0;
   signal Col_0_0_1 : STD_LOGIC;
   signal Col_1_0_1 : STD_LOGIC;
   signal Col_2_0_1 : STD_LOGIC;
@@ -2402,6 +2410,7 @@ architecture STRUCTURE of blockdesign is
   signal fifo_generator_0_dout : STD_LOGIC_VECTOR ( 127 downto 0 );
   signal fifo_generator_0_rd_data_count : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal keypad_0_Data : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal keypad_0_Data1 : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal keypad_0_Row_0 : STD_LOGIC;
   signal keypad_0_Row_1 : STD_LOGIC;
   signal keypad_0_Row_2 : STD_LOGIC;
@@ -2475,6 +2484,13 @@ begin
   aux_reset_in_0_1 <= reset_in;
   processing_system7_0_UART_1_RxD <= UART_rxd;
   status_led(2 downto 0) <= connection_embedded_status_led(2 downto 0);
+DeBounce_0: component blockdesign_DeBounce_0_0
+     port map (
+      Reset => connection_embedded_reset(0),
+      clk => connection_embedded_clk_100MHz,
+      data_in(3 downto 0) => keypad_0_Data1(3 downto 0),
+      data_out(3 downto 0) => keypad_0_Data(3 downto 0)
+    );
 comunication_protocol_0: component blockdesign_comunication_protocol_0_0
      port map (
       buffer_data_ready(2 downto 0) => fifo_generator_0_rd_data_count(2 downto 0),
@@ -2546,7 +2562,7 @@ keypad_0: component blockdesign_keypad_0_0
       Col_1 => Col_1_0_1,
       Col_2 => Col_2_0_1,
       Col_3 => Col_3_0_1,
-      Data(3 downto 0) => keypad_0_Data(3 downto 0),
+      Data(3 downto 0) => keypad_0_Data1(3 downto 0),
       Row_0 => keypad_0_Row_0,
       Row_1 => keypad_0_Row_1,
       Row_2 => keypad_0_Row_2,

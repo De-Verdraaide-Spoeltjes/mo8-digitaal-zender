@@ -3,8 +3,8 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Tue Apr  9 13:19:11 2024
-# Process ID: 27028
+# Start of session at: Tue Apr  9 16:33:45 2024
+# Process ID: 24816
 # Current directory: C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/blockdesign_hold_detector_0_0_synth_1
 # Command line: vivado.exe -log blockdesign_hold_detector_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source blockdesign_hold_detector_0_0.tcl
 # Log file: C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/blockdesign_hold_detector_0_0_synth_1/blockdesign_hold_detector_0_0.vds

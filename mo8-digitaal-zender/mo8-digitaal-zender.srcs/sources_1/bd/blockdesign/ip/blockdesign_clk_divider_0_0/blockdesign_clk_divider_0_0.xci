@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "blockdesign_clk_divider_0_0",
-    "cell_name": "filter_sterretje/clk_divider_0",
+    "cell_name": "clk_divider_0",
     "component_reference": "xilinx.com:module_ref:clk_divider:1.0",
     "ip_revision": "1",
     "gen_directory": "../../../../../../mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_divider_0_0",

@@ -116,29 +116,44 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/new/Debounce_Data.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/bd/blockdesign/blockdesign.bd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_util_reduced_logic_0_0/blockdesign_util_reduced_logic_0_0.xci">
-          <Proxy FileSetName="blockdesign_util_reduced_logic_0_0"/>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_processing_system7_0_0/blockdesign_processing_system7_0_0.xci">
+          <Proxy FileSetName="blockdesign_processing_system7_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_util_vector_logic_0_0/blockdesign_util_vector_logic_0_0.xci">
-          <Proxy FileSetName="blockdesign_util_vector_logic_0_0"/>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_clk_divider_0_0/blockdesign_clk_divider_0_0.xci">
+          <Proxy FileSetName="blockdesign_clk_divider_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_comunication_protocol_0_0/blockdesign_comunication_protocol_0_0.xci">
-          <Proxy FileSetName="blockdesign_comunication_protocol_0_0"/>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_axi_gpio_2_0/blockdesign_axi_gpio_2_0.xci">
+          <Proxy FileSetName="blockdesign_axi_gpio_2_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_keypad_0_0/blockdesign_keypad_0_0.xci">
           <Proxy FileSetName="blockdesign_keypad_0_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_comunication_protocol_0_0/blockdesign_comunication_protocol_0_0.xci">
+          <Proxy FileSetName="blockdesign_comunication_protocol_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_util_reduced_logic_0_0/blockdesign_util_reduced_logic_0_0.xci">
+          <Proxy FileSetName="blockdesign_util_reduced_logic_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_fifo_generator_0_0/blockdesign_fifo_generator_0_0.xci">
           <Proxy FileSetName="blockdesign_fifo_generator_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_axi_gpio_2_0/blockdesign_axi_gpio_2_0.xci">
-          <Proxy FileSetName="blockdesign_axi_gpio_2_0"/>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_util_vector_logic_0_0/blockdesign_util_vector_logic_0_0.xci">
+          <Proxy FileSetName="blockdesign_util_vector_logic_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_hold_detector_0_0/blockdesign_hold_detector_0_0.xci">
+          <Proxy FileSetName="blockdesign_hold_detector_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_axi_gpio_3_0/blockdesign_axi_gpio_3_0.xci">
           <Proxy FileSetName="blockdesign_axi_gpio_3_0"/>
@@ -146,14 +161,8 @@
         <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_proc_sys_reset_0_0/blockdesign_proc_sys_reset_0_0.xci">
           <Proxy FileSetName="blockdesign_proc_sys_reset_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_processing_system7_0_0/blockdesign_processing_system7_0_0.xci">
-          <Proxy FileSetName="blockdesign_processing_system7_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_hold_detector_0_0/blockdesign_hold_detector_0_0.xci">
-          <Proxy FileSetName="blockdesign_hold_detector_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_clk_divider_0_0/blockdesign_clk_divider_0_0.xci">
-          <Proxy FileSetName="blockdesign_clk_divider_0_0"/>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_DeBounce_0_0/blockdesign_DeBounce_0_0.xci">
+          <Proxy FileSetName="blockdesign_DeBounce_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/blockdesign/hdl/blockdesign_wrapper.vhd">
@@ -266,15 +275,21 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
+    <FileSet Name="blockdesign_clk_divider_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blockdesign_clk_divider_0_0" RelGenDir="$PGENDIR/blockdesign_clk_divider_0_0">
+      <Config>
+        <Option Name="TopModule" Val="blockdesign_clk_divider_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
     <FileSet Name="blockdesign_hold_detector_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blockdesign_hold_detector_0_0" RelGenDir="$PGENDIR/blockdesign_hold_detector_0_0">
       <Config>
         <Option Name="TopModule" Val="blockdesign_hold_detector_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="blockdesign_clk_divider_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blockdesign_clk_divider_0_0" RelGenDir="$PGENDIR/blockdesign_clk_divider_0_0">
+    <FileSet Name="blockdesign_DeBounce_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blockdesign_DeBounce_0_0" RelGenDir="$PGENDIR/blockdesign_DeBounce_0_0">
       <Config>
-        <Option Name="TopModule" Val="blockdesign_clk_divider_0_0"/>
+        <Option Name="TopModule" Val="blockdesign_DeBounce_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -350,9 +365,7 @@
     </Run>
     <Run Id="blockdesign_util_reduced_logic_0_0_synth_1" Type="Ft3:Synth" SrcSet="blockdesign_util_reduced_logic_0_0" Part="xc7z020clg400-1" ConstrsSet="blockdesign_util_reduced_logic_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/blockdesign_util_reduced_logic_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_util_reduced_logic_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_util_reduced_logic_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -362,9 +375,7 @@
     </Run>
     <Run Id="blockdesign_util_vector_logic_0_0_synth_1" Type="Ft3:Synth" SrcSet="blockdesign_util_vector_logic_0_0" Part="xc7z020clg400-1" ConstrsSet="blockdesign_util_vector_logic_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/blockdesign_util_vector_logic_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_util_vector_logic_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_util_vector_logic_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -374,9 +385,7 @@
     </Run>
     <Run Id="blockdesign_comunication_protocol_0_0_synth_1" Type="Ft3:Synth" SrcSet="blockdesign_comunication_protocol_0_0" Part="xc7z020clg400-1" ConstrsSet="blockdesign_comunication_protocol_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/blockdesign_comunication_protocol_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_comunication_protocol_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_comunication_protocol_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -386,9 +395,7 @@
     </Run>
     <Run Id="blockdesign_keypad_0_0_synth_1" Type="Ft3:Synth" SrcSet="blockdesign_keypad_0_0" Part="xc7z020clg400-1" ConstrsSet="blockdesign_keypad_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/blockdesign_keypad_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_keypad_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_keypad_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -397,6 +404,16 @@
       <RQSFiles/>
     </Run>
     <Run Id="blockdesign_fifo_generator_0_0_synth_1" Type="Ft3:Synth" SrcSet="blockdesign_fifo_generator_0_0" Part="xc7z020clg400-1" ConstrsSet="blockdesign_fifo_generator_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/blockdesign_fifo_generator_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_fifo_generator_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_fifo_generator_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_clk_divider_0_0_synth_1" Type="Ft3:Synth" SrcSet="blockdesign_clk_divider_0_0" Part="xc7z020clg400-1" ConstrsSet="blockdesign_clk_divider_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/blockdesign_clk_divider_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_clk_divider_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_clk_divider_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -420,7 +437,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="blockdesign_clk_divider_0_0_synth_1" Type="Ft3:Synth" SrcSet="blockdesign_clk_divider_0_0" Part="xc7z020clg400-1" ConstrsSet="blockdesign_clk_divider_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/blockdesign_clk_divider_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_clk_divider_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_clk_divider_0_0_synth_1">
+    <Run Id="blockdesign_DeBounce_0_0_synth_1" Type="Ft3:Synth" SrcSet="blockdesign_DeBounce_0_0" Part="xc7z020clg400-1" ConstrsSet="blockdesign_DeBounce_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/blockdesign_DeBounce_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_DeBounce_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_DeBounce_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -520,9 +537,7 @@
     </Run>
     <Run Id="blockdesign_util_reduced_logic_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="blockdesign_util_reduced_logic_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="blockdesign_util_reduced_logic_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_util_reduced_logic_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_util_reduced_logic_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -539,9 +554,7 @@
     </Run>
     <Run Id="blockdesign_util_vector_logic_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="blockdesign_util_vector_logic_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="blockdesign_util_vector_logic_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_util_vector_logic_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_util_vector_logic_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -558,9 +571,7 @@
     </Run>
     <Run Id="blockdesign_comunication_protocol_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="blockdesign_comunication_protocol_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="blockdesign_comunication_protocol_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_comunication_protocol_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_comunication_protocol_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -577,9 +588,7 @@
     </Run>
     <Run Id="blockdesign_keypad_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="blockdesign_keypad_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="blockdesign_keypad_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_keypad_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_keypad_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -595,6 +604,23 @@
       <RQSFiles/>
     </Run>
     <Run Id="blockdesign_fifo_generator_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="blockdesign_fifo_generator_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="blockdesign_fifo_generator_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_fifo_generator_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_fifo_generator_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_clk_divider_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="blockdesign_clk_divider_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="blockdesign_clk_divider_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_clk_divider_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_clk_divider_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
           <Desc>Default settings for Implementation.</Desc>
@@ -632,7 +658,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="blockdesign_clk_divider_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="blockdesign_clk_divider_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="blockdesign_clk_divider_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_clk_divider_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_clk_divider_0_0_impl_1">
+    <Run Id="blockdesign_DeBounce_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="blockdesign_DeBounce_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="blockdesign_DeBounce_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_DeBounce_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_DeBounce_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
           <Desc>Default settings for Implementation.</Desc>

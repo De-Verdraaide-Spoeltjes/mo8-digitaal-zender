@@ -45,17 +45,20 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign
 # IP: bd/blockdesign/ip/blockdesign_util_vector_logic_0_0/blockdesign_util_vector_logic_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_util_vector_logic_0_0 || ORIG_REF_NAME==blockdesign_util_vector_logic_0_0} -quiet] -quiet
 
-# IP: bd/blockdesign/ip/blockdesign_util_reduced_logic_0_0/blockdesign_util_reduced_logic_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_util_reduced_logic_0_0 || ORIG_REF_NAME==blockdesign_util_reduced_logic_0_0} -quiet] -quiet
-
 # IP: bd/blockdesign/ip/blockdesign_xlconstant_0_0/blockdesign_xlconstant_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_xlconstant_0_0 || ORIG_REF_NAME==blockdesign_xlconstant_0_0} -quiet] -quiet
+
+# IP: bd/blockdesign/ip/blockdesign_util_reduced_logic_0_0/blockdesign_util_reduced_logic_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_util_reduced_logic_0_0 || ORIG_REF_NAME==blockdesign_util_reduced_logic_0_0} -quiet] -quiet
 
 # IP: bd/blockdesign/ip/blockdesign_clk_divider_0_0/blockdesign_clk_divider_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_clk_divider_0_0 || ORIG_REF_NAME==blockdesign_clk_divider_0_0} -quiet] -quiet
 
 # IP: bd/blockdesign/ip/blockdesign_hold_detector_0_0/blockdesign_hold_detector_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_hold_detector_0_0 || ORIG_REF_NAME==blockdesign_hold_detector_0_0} -quiet] -quiet
+
+# IP: bd/blockdesign/ip/blockdesign_DeBounce_0_0/blockdesign_DeBounce_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_DeBounce_0_0 || ORIG_REF_NAME==blockdesign_DeBounce_0_0} -quiet] -quiet
 
 # IP: bd/blockdesign/ip/blockdesign_auto_pc_0/blockdesign_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_auto_pc_0 || ORIG_REF_NAME==blockdesign_auto_pc_0} -quiet] -quiet
