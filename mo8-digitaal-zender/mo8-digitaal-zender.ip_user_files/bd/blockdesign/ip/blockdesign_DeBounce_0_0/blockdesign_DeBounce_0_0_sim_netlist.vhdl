@@ -2,10 +2,10 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
--- Date        : Tue Apr  9 13:31:36 2024
+-- Date        : Tue Apr  9 14:55:15 2024
 -- Host        : TRENLAPTOP running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top blockdesign_DeBounce_0_0 -prefix
---               blockdesign_DeBounce_0_0_ blockdesign_DeBounce_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               c:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_DeBounce_0_0/blockdesign_DeBounce_0_0_sim_netlist.vhdl
 -- Design      : blockdesign_DeBounce_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -22,6 +22,8 @@ entity blockdesign_DeBounce_0_0_DeBounce is
     data_in : in STD_LOGIC_VECTOR ( 3 downto 0 );
     clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of blockdesign_DeBounce_0_0_DeBounce : entity is "DeBounce";
 end blockdesign_DeBounce_0_0_DeBounce;
 
 architecture STRUCTURE of blockdesign_DeBounce_0_0_DeBounce is
@@ -31,35 +33,68 @@ architecture STRUCTURE of blockdesign_DeBounce_0_0_DeBounce is
   signal \count0_carry__0_n_1\ : STD_LOGIC;
   signal \count0_carry__0_n_2\ : STD_LOGIC;
   signal \count0_carry__0_n_3\ : STD_LOGIC;
+  signal \count0_carry__0_n_4\ : STD_LOGIC;
+  signal \count0_carry__0_n_5\ : STD_LOGIC;
+  signal \count0_carry__0_n_6\ : STD_LOGIC;
+  signal \count0_carry__0_n_7\ : STD_LOGIC;
   signal \count0_carry__1_n_0\ : STD_LOGIC;
   signal \count0_carry__1_n_1\ : STD_LOGIC;
   signal \count0_carry__1_n_2\ : STD_LOGIC;
   signal \count0_carry__1_n_3\ : STD_LOGIC;
+  signal \count0_carry__1_n_4\ : STD_LOGIC;
+  signal \count0_carry__1_n_5\ : STD_LOGIC;
+  signal \count0_carry__1_n_6\ : STD_LOGIC;
+  signal \count0_carry__1_n_7\ : STD_LOGIC;
   signal \count0_carry__2_n_0\ : STD_LOGIC;
   signal \count0_carry__2_n_1\ : STD_LOGIC;
   signal \count0_carry__2_n_2\ : STD_LOGIC;
   signal \count0_carry__2_n_3\ : STD_LOGIC;
+  signal \count0_carry__2_n_4\ : STD_LOGIC;
+  signal \count0_carry__2_n_5\ : STD_LOGIC;
+  signal \count0_carry__2_n_6\ : STD_LOGIC;
+  signal \count0_carry__2_n_7\ : STD_LOGIC;
   signal \count0_carry__3_n_0\ : STD_LOGIC;
   signal \count0_carry__3_n_1\ : STD_LOGIC;
   signal \count0_carry__3_n_2\ : STD_LOGIC;
   signal \count0_carry__3_n_3\ : STD_LOGIC;
+  signal \count0_carry__3_n_4\ : STD_LOGIC;
+  signal \count0_carry__3_n_5\ : STD_LOGIC;
+  signal \count0_carry__3_n_6\ : STD_LOGIC;
+  signal \count0_carry__3_n_7\ : STD_LOGIC;
   signal \count0_carry__4_n_0\ : STD_LOGIC;
   signal \count0_carry__4_n_1\ : STD_LOGIC;
   signal \count0_carry__4_n_2\ : STD_LOGIC;
   signal \count0_carry__4_n_3\ : STD_LOGIC;
+  signal \count0_carry__4_n_4\ : STD_LOGIC;
+  signal \count0_carry__4_n_5\ : STD_LOGIC;
+  signal \count0_carry__4_n_6\ : STD_LOGIC;
+  signal \count0_carry__4_n_7\ : STD_LOGIC;
   signal \count0_carry__5_n_0\ : STD_LOGIC;
   signal \count0_carry__5_n_1\ : STD_LOGIC;
   signal \count0_carry__5_n_2\ : STD_LOGIC;
   signal \count0_carry__5_n_3\ : STD_LOGIC;
+  signal \count0_carry__5_n_4\ : STD_LOGIC;
+  signal \count0_carry__5_n_5\ : STD_LOGIC;
+  signal \count0_carry__5_n_6\ : STD_LOGIC;
+  signal \count0_carry__5_n_7\ : STD_LOGIC;
   signal \count0_carry__6_n_2\ : STD_LOGIC;
   signal \count0_carry__6_n_3\ : STD_LOGIC;
+  signal \count0_carry__6_n_5\ : STD_LOGIC;
+  signal \count0_carry__6_n_6\ : STD_LOGIC;
+  signal \count0_carry__6_n_7\ : STD_LOGIC;
   signal count0_carry_n_0 : STD_LOGIC;
   signal count0_carry_n_1 : STD_LOGIC;
   signal count0_carry_n_2 : STD_LOGIC;
   signal count0_carry_n_3 : STD_LOGIC;
+  signal count0_carry_n_4 : STD_LOGIC;
+  signal count0_carry_n_5 : STD_LOGIC;
+  signal count0_carry_n_6 : STD_LOGIC;
+  signal count0_carry_n_7 : STD_LOGIC;
   signal \count[0]_i_1_n_0\ : STD_LOGIC;
   signal \count[31]_i_1_n_0\ : STD_LOGIC;
-  signal data0 : STD_LOGIC_VECTOR ( 31 downto 1 );
+  signal \count[31]_i_3_n_0\ : STD_LOGIC;
+  signal \count[31]_i_4_n_0\ : STD_LOGIC;
+  signal \count[31]_i_5_n_0\ : STD_LOGIC;
   signal \data_out[0]_i_1_n_0\ : STD_LOGIC;
   signal \data_out[1]_i_1_n_0\ : STD_LOGIC;
   signal \data_out[2]_i_1_n_0\ : STD_LOGIC;
@@ -88,9 +123,13 @@ architecture STRUCTURE of blockdesign_DeBounce_0_0_DeBounce is
   attribute ADDER_THRESHOLD of \count0_carry__5\ : label is 35;
   attribute ADDER_THRESHOLD of \count0_carry__6\ : label is 35;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \data_out[0]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \data_out[1]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \data_out[2]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \count[31]_i_4\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \count[31]_i_5\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \data_out[0]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \data_out[1]_i_1\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \data_out[2]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \data_out[3]_i_3\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \data_out[3]_i_5\ : label is "soft_lutpair1";
   attribute SOFT_HLUTNM of \data_out[3]_i_6\ : label is "soft_lutpair0";
 begin
 count0_carry: unisim.vcomponents.CARRY4
@@ -102,7 +141,10 @@ count0_carry: unisim.vcomponents.CARRY4
       CO(0) => count0_carry_n_3,
       CYINIT => count(0),
       DI(3 downto 0) => B"0000",
-      O(3 downto 0) => data0(4 downto 1),
+      O(3) => count0_carry_n_4,
+      O(2) => count0_carry_n_5,
+      O(1) => count0_carry_n_6,
+      O(0) => count0_carry_n_7,
       S(3 downto 0) => count(4 downto 1)
     );
 \count0_carry__0\: unisim.vcomponents.CARRY4
@@ -114,7 +156,10 @@ count0_carry: unisim.vcomponents.CARRY4
       CO(0) => \count0_carry__0_n_3\,
       CYINIT => '0',
       DI(3 downto 0) => B"0000",
-      O(3 downto 0) => data0(8 downto 5),
+      O(3) => \count0_carry__0_n_4\,
+      O(2) => \count0_carry__0_n_5\,
+      O(1) => \count0_carry__0_n_6\,
+      O(0) => \count0_carry__0_n_7\,
       S(3 downto 0) => count(8 downto 5)
     );
 \count0_carry__1\: unisim.vcomponents.CARRY4
@@ -126,7 +171,10 @@ count0_carry: unisim.vcomponents.CARRY4
       CO(0) => \count0_carry__1_n_3\,
       CYINIT => '0',
       DI(3 downto 0) => B"0000",
-      O(3 downto 0) => data0(12 downto 9),
+      O(3) => \count0_carry__1_n_4\,
+      O(2) => \count0_carry__1_n_5\,
+      O(1) => \count0_carry__1_n_6\,
+      O(0) => \count0_carry__1_n_7\,
       S(3 downto 0) => count(12 downto 9)
     );
 \count0_carry__2\: unisim.vcomponents.CARRY4
@@ -138,7 +186,10 @@ count0_carry: unisim.vcomponents.CARRY4
       CO(0) => \count0_carry__2_n_3\,
       CYINIT => '0',
       DI(3 downto 0) => B"0000",
-      O(3 downto 0) => data0(16 downto 13),
+      O(3) => \count0_carry__2_n_4\,
+      O(2) => \count0_carry__2_n_5\,
+      O(1) => \count0_carry__2_n_6\,
+      O(0) => \count0_carry__2_n_7\,
       S(3 downto 0) => count(16 downto 13)
     );
 \count0_carry__3\: unisim.vcomponents.CARRY4
@@ -150,7 +201,10 @@ count0_carry: unisim.vcomponents.CARRY4
       CO(0) => \count0_carry__3_n_3\,
       CYINIT => '0',
       DI(3 downto 0) => B"0000",
-      O(3 downto 0) => data0(20 downto 17),
+      O(3) => \count0_carry__3_n_4\,
+      O(2) => \count0_carry__3_n_5\,
+      O(1) => \count0_carry__3_n_6\,
+      O(0) => \count0_carry__3_n_7\,
       S(3 downto 0) => count(20 downto 17)
     );
 \count0_carry__4\: unisim.vcomponents.CARRY4
@@ -162,7 +216,10 @@ count0_carry: unisim.vcomponents.CARRY4
       CO(0) => \count0_carry__4_n_3\,
       CYINIT => '0',
       DI(3 downto 0) => B"0000",
-      O(3 downto 0) => data0(24 downto 21),
+      O(3) => \count0_carry__4_n_4\,
+      O(2) => \count0_carry__4_n_5\,
+      O(1) => \count0_carry__4_n_6\,
+      O(0) => \count0_carry__4_n_7\,
       S(3 downto 0) => count(24 downto 21)
     );
 \count0_carry__5\: unisim.vcomponents.CARRY4
@@ -174,7 +231,10 @@ count0_carry: unisim.vcomponents.CARRY4
       CO(0) => \count0_carry__5_n_3\,
       CYINIT => '0',
       DI(3 downto 0) => B"0000",
-      O(3 downto 0) => data0(28 downto 25),
+      O(3) => \count0_carry__5_n_4\,
+      O(2) => \count0_carry__5_n_5\,
+      O(1) => \count0_carry__5_n_6\,
+      O(0) => \count0_carry__5_n_7\,
       S(3 downto 0) => count(28 downto 25)
     );
 \count0_carry__6\: unisim.vcomponents.CARRY4
@@ -186,21 +246,22 @@ count0_carry: unisim.vcomponents.CARRY4
       CYINIT => '0',
       DI(3 downto 0) => B"0000",
       O(3) => \NLW_count0_carry__6_O_UNCONNECTED\(3),
-      O(2 downto 0) => data0(31 downto 29),
+      O(2) => \count0_carry__6_n_5\,
+      O(1) => \count0_carry__6_n_6\,
+      O(0) => \count0_carry__6_n_7\,
       S(3) => '0',
       S(2 downto 0) => count(31 downto 29)
     );
-\count[0]_i_1\: unisim.vcomponents.LUT6
+\count[0]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFFF00FF0000FE00"
+      INIT => X"BBBB4440"
     )
         port map (
-      I0 => \data_out[3]_i_3_n_0\,
-      I1 => \data_out[3]_i_4_n_0\,
-      I2 => \data_out[3]_i_5_n_0\,
-      I3 => state_reg_n_0,
-      I4 => Reset,
-      I5 => count(0),
+      I0 => Reset,
+      I1 => state_reg_n_0,
+      I2 => \data_out[3]_i_4_n_0\,
+      I3 => \count[31]_i_3_n_0\,
+      I4 => count(0),
       O => \count[0]_i_1_n_0\
     );
 \count[31]_i_1\: unisim.vcomponents.LUT6
@@ -208,22 +269,59 @@ count0_carry: unisim.vcomponents.CARRY4
       INIT => X"0000000000000004"
     )
         port map (
-      I0 => Reset,
+      I0 => \data_out[3]_i_3_n_0\,
       I1 => state_reg_n_0,
-      I2 => count(0),
-      I3 => \data_out[3]_i_5_n_0\,
-      I4 => \data_out[3]_i_4_n_0\,
-      I5 => \data_out[3]_i_3_n_0\,
+      I2 => Reset,
+      I3 => count(0),
+      I4 => \count[31]_i_3_n_0\,
+      I5 => \data_out[3]_i_4_n_0\,
       O => \count[31]_i_1_n_0\
     );
-\count[31]_i_2\: unisim.vcomponents.LUT2
+\count[31]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"2"
+      INIT => X"4444444444444404"
     )
         port map (
-      I0 => state_reg_n_0,
-      I1 => Reset,
+      I0 => Reset,
+      I1 => state_reg_n_0,
+      I2 => \data_out[3]_i_3_n_0\,
+      I3 => \data_out[3]_i_4_n_0\,
+      I4 => \count[31]_i_3_n_0\,
+      I5 => count(0),
       O => count0
+    );
+\count[31]_i_3\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => \data_out[3]_i_10_n_0\,
+      I1 => \count[31]_i_4_n_0\,
+      I2 => \data_out[3]_i_11_n_0\,
+      I3 => \count[31]_i_5_n_0\,
+      O => \count[31]_i_3_n_0\
+    );
+\count[31]_i_4\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => count(3),
+      I1 => count(2),
+      I2 => count(5),
+      I3 => count(4),
+      O => \count[31]_i_4_n_0\
+    );
+\count[31]_i_5\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFD"
+    )
+        port map (
+      I0 => count(10),
+      I1 => count(11),
+      I2 => count(13),
+      I3 => count(12),
+      O => \count[31]_i_5_n_0\
     );
 \count_reg[0]\: unisim.vcomponents.FDRE
     generic map(
@@ -243,7 +341,7 @@ count0_carry: unisim.vcomponents.CARRY4
         port map (
       C => clk,
       CE => count0,
-      D => data0(10),
+      D => \count0_carry__1_n_6\,
       Q => count(10),
       R => \count[31]_i_1_n_0\
     );
@@ -254,7 +352,7 @@ count0_carry: unisim.vcomponents.CARRY4
         port map (
       C => clk,
       CE => count0,
-      D => data0(11),
+      D => \count0_carry__1_n_5\,
       Q => count(11),
       R => \count[31]_i_1_n_0\
     );
@@ -265,7 +363,7 @@ count0_carry: unisim.vcomponents.CARRY4
         port map (
       C => clk,
       CE => count0,
-      D => data0(12),
+      D => \count0_carry__1_n_4\,
       Q => count(12),
       R => \count[31]_i_1_n_0\
     );
@@ -276,7 +374,7 @@ count0_carry: unisim.vcomponents.CARRY4
         port map (
       C => clk,
       CE => count0,
-      D => data0(13),
+      D => \count0_carry__2_n_7\,
       Q => count(13),
       R => \count[31]_i_1_n_0\
     );
@@ -287,7 +385,7 @@ count0_carry: unisim.vcomponents.CARRY4
         port map (
       C => clk,
       CE => count0,
-      D => data0(14),
+      D => \count0_carry__2_n_6\,
       Q => count(14),
       R => \count[31]_i_1_n_0\
     );
@@ -298,7 +396,7 @@ count0_carry: unisim.vcomponents.CARRY4
         port map (
       C => clk,
       CE => count0,
-      D => data0(15),
+      D => \count0_carry__2_n_5\,
       Q => count(15),
       R => \count[31]_i_1_n_0\
     );
@@ -309,7 +407,7 @@ count0_carry: unisim.vcomponents.CARRY4
         port map (
       C => clk,
       CE => count0,
-      D => data0(16),
+      D => \count0_carry__2_n_4\,
       Q => count(16),
       R => \count[31]_i_1_n_0\
     );
@@ -320,7 +418,7 @@ count0_carry: unisim.vcomponents.CARRY4
         port map (
       C => clk,
       CE => count0,
-      D => data0(17),
+      D => \count0_carry__3_n_7\,
       Q => count(17),
       R => \count[31]_i_1_n_0\
     );
@@ -331,7 +429,7 @@ count0_carry: unisim.vcomponents.CARRY4
         port map (
       C => clk,
       CE => count0,
-      D => data0(18),
+      D => \count0_carry__3_n_6\,
       Q => count(18),
       R => \count[31]_i_1_n_0\
     );
@@ -342,7 +440,7 @@ count0_carry: unisim.vcomponents.CARRY4
         port map (
       C => clk,
       CE => count0,
-      D => data0(19),
+      D => \count0_carry__3_n_5\,
       Q => count(19),
       R => \count[31]_i_1_n_0\
     );
@@ -353,7 +451,7 @@ count0_carry: unisim.vcomponents.CARRY4
         port map (
       C => clk,
       CE => count0,
-      D => data0(1),
+      D => count0_carry_n_7,
       Q => count(1),
       R => \count[31]_i_1_n_0\
     );
@@ -364,7 +462,7 @@ count0_carry: unisim.vcomponents.CARRY4
         port map (
       C => clk,
       CE => count0,
-      D => data0(20),
+      D => \count0_carry__3_n_4\,
       Q => count(20),
       R => \count[31]_i_1_n_0\
     );
@@ -375,7 +473,7 @@ count0_carry: unisim.vcomponents.CARRY4
         port map (
       C => clk,
       CE => count0,
-      D => data0(21),
+      D => \count0_carry__4_n_7\,
       Q => count(21),
       R => \count[31]_i_1_n_0\
     );
@@ -386,7 +484,7 @@ count0_carry: unisim.vcomponents.CARRY4
         port map (
       C => clk,
       CE => count0,
-      D => data0(22),
+      D => \count0_carry__4_n_6\,
       Q => count(22),
       R => \count[31]_i_1_n_0\
     );
@@ -397,7 +495,7 @@ count0_carry: unisim.vcomponents.CARRY4
         port map (
       C => clk,
       CE => count0,
-      D => data0(23),
+      D => \count0_carry__4_n_5\,
       Q => count(23),
       R => \count[31]_i_1_n_0\
     );
@@ -408,7 +506,7 @@ count0_carry: unisim.vcomponents.CARRY4
         port map (
       C => clk,
       CE => count0,
-      D => data0(24),
+      D => \count0_carry__4_n_4\,
       Q => count(24),
       R => \count[31]_i_1_n_0\
     );
@@ -419,7 +517,7 @@ count0_carry: unisim.vcomponents.CARRY4
         port map (
       C => clk,
       CE => count0,
-      D => data0(25),
+      D => \count0_carry__5_n_7\,
       Q => count(25),
       R => \count[31]_i_1_n_0\
     );
@@ -430,7 +528,7 @@ count0_carry: unisim.vcomponents.CARRY4
         port map (
       C => clk,
       CE => count0,
-      D => data0(26),
+      D => \count0_carry__5_n_6\,
       Q => count(26),
       R => \count[31]_i_1_n_0\
     );
@@ -441,7 +539,7 @@ count0_carry: unisim.vcomponents.CARRY4
         port map (
       C => clk,
       CE => count0,
-      D => data0(27),
+      D => \count0_carry__5_n_5\,
       Q => count(27),
       R => \count[31]_i_1_n_0\
     );
@@ -452,7 +550,7 @@ count0_carry: unisim.vcomponents.CARRY4
         port map (
       C => clk,
       CE => count0,
-      D => data0(28),
+      D => \count0_carry__5_n_4\,
       Q => count(28),
       R => \count[31]_i_1_n_0\
     );
@@ -463,7 +561,7 @@ count0_carry: unisim.vcomponents.CARRY4
         port map (
       C => clk,
       CE => count0,
-      D => data0(29),
+      D => \count0_carry__6_n_7\,
       Q => count(29),
       R => \count[31]_i_1_n_0\
     );
@@ -474,7 +572,7 @@ count0_carry: unisim.vcomponents.CARRY4
         port map (
       C => clk,
       CE => count0,
-      D => data0(2),
+      D => count0_carry_n_6,
       Q => count(2),
       R => \count[31]_i_1_n_0\
     );
@@ -485,7 +583,7 @@ count0_carry: unisim.vcomponents.CARRY4
         port map (
       C => clk,
       CE => count0,
-      D => data0(30),
+      D => \count0_carry__6_n_6\,
       Q => count(30),
       R => \count[31]_i_1_n_0\
     );
@@ -496,7 +594,7 @@ count0_carry: unisim.vcomponents.CARRY4
         port map (
       C => clk,
       CE => count0,
-      D => data0(31),
+      D => \count0_carry__6_n_5\,
       Q => count(31),
       R => \count[31]_i_1_n_0\
     );
@@ -507,7 +605,7 @@ count0_carry: unisim.vcomponents.CARRY4
         port map (
       C => clk,
       CE => count0,
-      D => data0(3),
+      D => count0_carry_n_5,
       Q => count(3),
       R => \count[31]_i_1_n_0\
     );
@@ -518,7 +616,7 @@ count0_carry: unisim.vcomponents.CARRY4
         port map (
       C => clk,
       CE => count0,
-      D => data0(4),
+      D => count0_carry_n_4,
       Q => count(4),
       R => \count[31]_i_1_n_0\
     );
@@ -529,7 +627,7 @@ count0_carry: unisim.vcomponents.CARRY4
         port map (
       C => clk,
       CE => count0,
-      D => data0(5),
+      D => \count0_carry__0_n_7\,
       Q => count(5),
       R => \count[31]_i_1_n_0\
     );
@@ -540,7 +638,7 @@ count0_carry: unisim.vcomponents.CARRY4
         port map (
       C => clk,
       CE => count0,
-      D => data0(6),
+      D => \count0_carry__0_n_6\,
       Q => count(6),
       R => \count[31]_i_1_n_0\
     );
@@ -551,7 +649,7 @@ count0_carry: unisim.vcomponents.CARRY4
         port map (
       C => clk,
       CE => count0,
-      D => data0(7),
+      D => \count0_carry__0_n_5\,
       Q => count(7),
       R => \count[31]_i_1_n_0\
     );
@@ -562,7 +660,7 @@ count0_carry: unisim.vcomponents.CARRY4
         port map (
       C => clk,
       CE => count0,
-      D => data0(8),
+      D => \count0_carry__0_n_4\,
       Q => count(8),
       R => \count[31]_i_1_n_0\
     );
@@ -573,7 +671,7 @@ count0_carry: unisim.vcomponents.CARRY4
         port map (
       C => clk,
       CE => count0,
-      D => data0(9),
+      D => \count0_carry__1_n_7\,
       Q => count(9),
       R => \count[31]_i_1_n_0\
     );
@@ -606,14 +704,14 @@ count0_carry: unisim.vcomponents.CARRY4
     );
 \data_out[3]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00010000FFFFFFFF"
+      INIT => X"00000002FFFFFFFF"
     )
         port map (
       I0 => \data_out[3]_i_3_n_0\,
       I1 => \data_out[3]_i_4_n_0\,
       I2 => \data_out[3]_i_5_n_0\,
-      I3 => count(0),
-      I4 => \data_out[3]_i_6_n_0\,
+      I3 => \data_out[3]_i_6_n_0\,
+      I4 => count(0),
       I5 => state_reg_n_0,
       O => \data_out[3]_i_1_n_0\
     );
@@ -648,7 +746,18 @@ count0_carry: unisim.vcomponents.CARRY4
       I1 => state_reg_n_0,
       O => \data_out[3]_i_2_n_0\
     );
-\data_out[3]_i_3\: unisim.vcomponents.LUT6
+\data_out[3]_i_3\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"7FFF"
+    )
+        port map (
+      I0 => data_in(1),
+      I1 => data_in(0),
+      I2 => data_in(3),
+      I3 => data_in(2),
+      O => \data_out[3]_i_3_n_0\
+    );
+\data_out[3]_i_4\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"FFFFFFFFFFFFFFFE"
     )
@@ -659,9 +768,9 @@ count0_carry: unisim.vcomponents.CARRY4
       I3 => count(30),
       I4 => count(1),
       I5 => \data_out[3]_i_9_n_0\,
-      O => \data_out[3]_i_3_n_0\
+      O => \data_out[3]_i_4_n_0\
     );
-\data_out[3]_i_4\: unisim.vcomponents.LUT5
+\data_out[3]_i_5\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"FFFFFFFE"
     )
@@ -671,9 +780,9 @@ count0_carry: unisim.vcomponents.CARRY4
       I2 => count(2),
       I3 => count(3),
       I4 => \data_out[3]_i_10_n_0\,
-      O => \data_out[3]_i_4_n_0\
+      O => \data_out[3]_i_5_n_0\
     );
-\data_out[3]_i_5\: unisim.vcomponents.LUT5
+\data_out[3]_i_6\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"FFFFFEFF"
     )
@@ -683,17 +792,6 @@ count0_carry: unisim.vcomponents.CARRY4
       I2 => count(11),
       I3 => count(10),
       I4 => \data_out[3]_i_11_n_0\,
-      O => \data_out[3]_i_5_n_0\
-    );
-\data_out[3]_i_6\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"7FFF"
-    )
-        port map (
-      I0 => data_in(1),
-      I1 => data_in(0),
-      I2 => data_in(3),
-      I3 => data_in(2),
       O => \data_out[3]_i_6_n_0\
     );
 \data_out[3]_i_7\: unisim.vcomponents.LUT4
@@ -763,13 +861,13 @@ count0_carry: unisim.vcomponents.CARRY4
     );
 state_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFCAAAAAAAA"
+      INIT => X"FFFFFFFEFFFF0000"
     )
         port map (
-      I0 => \data_out[3]_i_6_n_0\,
-      I1 => count(0),
-      I2 => \data_out[3]_i_5_n_0\,
-      I3 => \data_out[3]_i_4_n_0\,
+      I0 => \data_out[3]_i_4_n_0\,
+      I1 => \data_out[3]_i_5_n_0\,
+      I2 => \data_out[3]_i_6_n_0\,
+      I3 => count(0),
       I4 => \data_out[3]_i_3_n_0\,
       I5 => state_reg_n_0,
       O => state_i_1_n_0

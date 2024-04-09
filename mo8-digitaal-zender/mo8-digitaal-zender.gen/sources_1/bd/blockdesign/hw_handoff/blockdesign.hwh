@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Apr  9 14:54:09 2024" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Apr  9 20:32:46 2024" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="blockdesign" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -9,48 +9,48 @@
         <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_in1"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="Row_0_0" SIGIS="undef" SIGNAME="keypad_0_Row_0">
+    <PORT DIR="O" NAME="Col_0_0" SIGIS="undef" SIGNAME="keypad_0_Col_0">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="keypad_0" PORT="Row_0"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="Row_1_0" SIGIS="undef" SIGNAME="keypad_0_Row_1">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="keypad_0" PORT="Row_1"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="Row_2_0" SIGIS="undef" SIGNAME="keypad_0_Row_2">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="keypad_0" PORT="Row_2"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="Col_0_0" SIGIS="undef" SIGNAME="External_Ports_Col_0_0">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="system_ila_0" PORT="probe0"/>
         <CONNECTION INSTANCE="keypad_0" PORT="Col_0"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="Col_2_0" SIGIS="undef" SIGNAME="External_Ports_Col_2_0">
+    <PORT DIR="O" NAME="Col_1_0" SIGIS="undef" SIGNAME="keypad_0_Col_1">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="system_ila_0" PORT="probe2"/>
-        <CONNECTION INSTANCE="keypad_0" PORT="Col_2"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="Col_1_0" SIGIS="undef" SIGNAME="External_Ports_Col_1_0">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="system_ila_0" PORT="probe1"/>
         <CONNECTION INSTANCE="keypad_0" PORT="Col_1"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="Col_3_0" SIGIS="undef" SIGNAME="External_Ports_Col_3_0">
+    <PORT DIR="O" NAME="Col_2_0" SIGIS="undef" SIGNAME="keypad_0_Col_2">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="system_ila_0" PORT="probe3"/>
-        <CONNECTION INSTANCE="keypad_0" PORT="Col_3"/>
+        <CONNECTION INSTANCE="keypad_0" PORT="Col_2"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="3" NAME="Data_0" RIGHT="0" SIGIS="undef" SIGNAME="DeBounce_0_data_out">
+    <PORT DIR="O" LEFT="3" NAME="data_out_0" RIGHT="0" SIGIS="undef" SIGNAME="DeBounce_0_data_out">
       <CONNECTIONS>
         <CONNECTION INSTANCE="DeBounce_0" PORT="data_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="Row_3_0" SIGIS="undef" SIGNAME="External_Ports_Row_3_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="keypad_0" PORT="Row_3"/>
+        <CONNECTION INSTANCE="system_ila_0" PORT="probe8"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="Row_2_0" SIGIS="undef" SIGNAME="External_Ports_Row_2_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="keypad_0" PORT="Row_2"/>
+        <CONNECTION INSTANCE="system_ila_0" PORT="probe7"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="Row_1_0" SIGIS="undef" SIGNAME="External_Ports_Row_1_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="keypad_0" PORT="Row_1"/>
+        <CONNECTION INSTANCE="system_ila_0" PORT="probe6"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="Row_0_0" SIGIS="undef" SIGNAME="External_Ports_Row_0_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="keypad_0" PORT="Row_0"/>
+        <CONNECTION INSTANCE="system_ila_0" PORT="probe5"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -78,8 +78,8 @@
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="data_out" RIGHT="0" SIGIS="undef" SIGNAME="DeBounce_0_data_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="Data_0"/>
-            <CONNECTION INSTANCE="system_ila_0" PORT="probe4"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="data_out_0"/>
+            <CONNECTION INSTANCE="system_ila_0" PORT="probe0"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -672,9 +672,9 @@
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="system_ila_0" PORT="clk"/>
-            <CONNECTION INSTANCE="keypad_0" PORT="clk"/>
             <CONNECTION INSTANCE="DeBounce_0" PORT="clk"/>
+            <CONNECTION INSTANCE="keypad_0" PORT="clk"/>
+            <CONNECTION INSTANCE="system_ila_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -683,28 +683,28 @@
     <MODULE COREREVISION="1" FULLNAME="/keypad_0" HWVERSION="1.0" INSTANCE="keypad_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="keypad" VLNV="xilinx.com:module_ref:keypad:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="blockdesign_keypad_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="blockdesign_keypad_0_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="Col_0" SIGIS="undef" SIGNAME="External_Ports_Col_0_0">
+        <PORT DIR="I" NAME="Row_0" SIGIS="undef" SIGNAME="External_Ports_Row_0_0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="Col_0_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="Row_0_0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="Col_1" SIGIS="undef" SIGNAME="External_Ports_Col_1_0">
+        <PORT DIR="I" NAME="Row_1" SIGIS="undef" SIGNAME="External_Ports_Row_1_0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="Col_1_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="Row_1_0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="Col_2" SIGIS="undef" SIGNAME="External_Ports_Col_2_0">
+        <PORT DIR="I" NAME="Row_2" SIGIS="undef" SIGNAME="External_Ports_Row_2_0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="Col_2_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="Row_2_0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="Col_3" SIGIS="undef" SIGNAME="External_Ports_Col_3_0">
+        <PORT DIR="I" NAME="Row_3" SIGIS="undef" SIGNAME="External_Ports_Row_3_0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="Col_3_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="Row_3_0"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
@@ -712,34 +712,34 @@
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="Row_0" SIGIS="undef" SIGNAME="keypad_0_Row_0">
+        <PORT DIR="O" NAME="Col_0" SIGIS="undef" SIGNAME="keypad_0_Col_0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="Row_0_0"/>
-            <CONNECTION INSTANCE="system_ila_0" PORT="probe6"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="Col_0_0"/>
+            <CONNECTION INSTANCE="system_ila_0" PORT="probe1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="Row_1" SIGIS="undef" SIGNAME="keypad_0_Row_1">
+        <PORT DIR="O" NAME="Col_1" SIGIS="undef" SIGNAME="keypad_0_Col_1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="Row_1_0"/>
-            <CONNECTION INSTANCE="system_ila_0" PORT="probe7"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="Col_1_0"/>
+            <CONNECTION INSTANCE="system_ila_0" PORT="probe2"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="Row_2" SIGIS="undef" SIGNAME="keypad_0_Row_2">
+        <PORT DIR="O" NAME="Col_2" SIGIS="undef" SIGNAME="keypad_0_Col_2">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="Row_2_0"/>
-            <CONNECTION INSTANCE="system_ila_0" PORT="probe8"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="Col_2_0"/>
+            <CONNECTION INSTANCE="system_ila_0" PORT="probe3"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="Data" RIGHT="0" SIGIS="undef" SIGNAME="keypad_0_Data">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="system_ila_0" PORT="probe5"/>
             <CONNECTION INSTANCE="DeBounce_0" PORT="data_in"/>
+            <CONNECTION INSTANCE="system_ila_0" PORT="probe4"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE BD="blockdesign_system_ila_0_0" BDTYPE="SBD" COREREVISION="14" DRIVERMODE="MIXED" FULLNAME="/system_ila_0" HWVERSION="1.1" INSTANCE="system_ila_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="system_ila" SIM_BD="blockdesign_system_ila_0_0" VLNV="xilinx.com:ip:system_ila:1.1">
+    <MODULE BD="blockdesign_system_ila_0_2" BDTYPE="SBD" COREREVISION="14" DRIVERMODE="MIXED" FULLNAME="/system_ila_0" HWVERSION="1.1" INSTANCE="system_ila_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="system_ila" SIM_BD="blockdesign_system_ila_0_2" VLNV="xilinx.com:ip:system_ila:1.1">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=system_ila;v=v1_1;d=pg261-system-ila.pdf"/>
       </DOCUMENTS>
@@ -3310,7 +3310,7 @@
         <PARAMETER NAME="C_DATA_DEPTH" VALUE="1024"/>
         <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="9"/>
         <PARAMETER NAME="C_XLNX_HW_PROBE_INFO" VALUE="DEFAULT"/>
-        <PARAMETER NAME="Component_Name" VALUE="blockdesign_system_ila_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="blockdesign_system_ila_0_2"/>
         <PARAMETER NAME="C_PROBE70_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_TRIGOUT_EN" VALUE="false"/>
         <PARAMETER NAME="C_EN_STRG_QUAL" VALUE="0"/>
@@ -4581,49 +4581,49 @@
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="probe0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_Col_0_0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="Col_0_0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="probe1" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_Col_1_0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="Col_1_0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="probe2" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_Col_2_0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="Col_2_0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="probe3" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_Col_3_0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="Col_3_0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="3" NAME="probe4" RIGHT="0" SIGIS="undef" SIGNAME="DeBounce_0_data_out">
+        <PORT DIR="I" LEFT="3" NAME="probe0" RIGHT="0" SIGIS="undef" SIGNAME="DeBounce_0_data_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="DeBounce_0" PORT="data_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="probe5" RIGHT="0" SIGIS="undef" SIGNAME="keypad_0_Data">
+        <PORT DIR="I" LEFT="0" NAME="probe1" RIGHT="0" SIGIS="undef" SIGNAME="keypad_0_Col_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="keypad_0" PORT="Col_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="probe2" RIGHT="0" SIGIS="undef" SIGNAME="keypad_0_Col_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="keypad_0" PORT="Col_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="probe3" RIGHT="0" SIGIS="undef" SIGNAME="keypad_0_Col_2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="keypad_0" PORT="Col_2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="probe4" RIGHT="0" SIGIS="undef" SIGNAME="keypad_0_Data">
           <CONNECTIONS>
             <CONNECTION INSTANCE="keypad_0" PORT="Data"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="probe6" RIGHT="0" SIGIS="undef" SIGNAME="keypad_0_Row_0">
+        <PORT DIR="I" LEFT="0" NAME="probe5" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_Row_0_0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="keypad_0" PORT="Row_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="Row_0_0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="probe7" RIGHT="0" SIGIS="undef" SIGNAME="keypad_0_Row_1">
+        <PORT DIR="I" LEFT="0" NAME="probe6" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_Row_1_0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="keypad_0" PORT="Row_1"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="Row_1_0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="probe8" RIGHT="0" SIGIS="undef" SIGNAME="keypad_0_Row_2">
+        <PORT DIR="I" LEFT="0" NAME="probe7" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_Row_2_0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="keypad_0" PORT="Row_2"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="Row_2_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="probe8" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_Row_3_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Row_3_0"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

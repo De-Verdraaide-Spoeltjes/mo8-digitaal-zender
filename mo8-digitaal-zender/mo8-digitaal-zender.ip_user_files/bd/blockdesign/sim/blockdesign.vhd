@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
---Date        : Tue Apr  9 14:34:22 2024
+--Date        : Tue Apr  9 14:54:07 2024
 --Host        : TRENLAPTOP running 64-bit major release  (build 9200)
 --Command     : generate_target blockdesign.bd
 --Design      : blockdesign
@@ -37,14 +37,6 @@ architecture STRUCTURE of blockdesign is
     clk_out1 : out STD_LOGIC
   );
   end component blockdesign_clk_wiz_0_0;
-  component blockdesign_DeBounce_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    Reset : in STD_LOGIC;
-    data_in : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    data_out : out STD_LOGIC_VECTOR ( 3 downto 0 )
-  );
-  end component blockdesign_DeBounce_0_0;
   component blockdesign_system_ila_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -72,6 +64,14 @@ architecture STRUCTURE of blockdesign is
     Data : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component blockdesign_keypad_0_0;
+  component blockdesign_DeBounce_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    Reset : in STD_LOGIC;
+    data_in : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    data_out : out STD_LOGIC_VECTOR ( 3 downto 0 )
+  );
+  end component blockdesign_DeBounce_0_0;
   signal Col_0_0_1 : STD_LOGIC;
   attribute DEBUG : string;
   attribute DEBUG of Col_0_0_1 : signal is "true";

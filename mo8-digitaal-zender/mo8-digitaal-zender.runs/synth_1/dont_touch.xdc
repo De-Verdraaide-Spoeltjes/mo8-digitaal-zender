@@ -9,13 +9,13 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign
 # IP: bd/blockdesign/ip/blockdesign_clk_wiz_0_0/blockdesign_clk_wiz_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_clk_wiz_0_0 || ORIG_REF_NAME==blockdesign_clk_wiz_0_0} -quiet] -quiet
 
-# IP: bd/blockdesign/ip/blockdesign_keypad_0_0/blockdesign_keypad_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_keypad_0_0 || ORIG_REF_NAME==blockdesign_keypad_0_0} -quiet] -quiet
-
 # IP: bd/blockdesign/ip/blockdesign_DeBounce_0_0/blockdesign_DeBounce_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_DeBounce_0_0 || ORIG_REF_NAME==blockdesign_DeBounce_0_0} -quiet] -quiet
 
-# IP: bd/blockdesign/ip/blockdesign_system_ila_0_0/blockdesign_system_ila_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_system_ila_0_0 || ORIG_REF_NAME==blockdesign_system_ila_0_0} -quiet] -quiet
+# IP: bd/blockdesign/ip/blockdesign_keypad_0_1/blockdesign_keypad_0_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_keypad_0_1 || ORIG_REF_NAME==blockdesign_keypad_0_1} -quiet] -quiet
+
+# IP: bd/blockdesign/ip/blockdesign_system_ila_0_2/blockdesign_system_ila_0_2.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_system_ila_0_2 || ORIG_REF_NAME==blockdesign_system_ila_0_2} -quiet] -quiet
 
 # XDC: c:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/blockdesign_ooc.xdc

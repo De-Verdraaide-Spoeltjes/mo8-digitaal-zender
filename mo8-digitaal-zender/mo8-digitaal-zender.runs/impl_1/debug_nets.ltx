@@ -30,14 +30,28 @@
                                 "id": 0,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
-                                "isVector": false,
+                                "isVector": true,
                                 "leftIndex": 0,
-                                "rightIndex": 0,
+                                "rightIndex": 3,
                                 "portIndex": 0,
                                 "nets": [
                                     {
                                         "name": "blockdesign_i/system_ila_0/U0/probe0_1",
-                                        "isBus": false
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "blockdesign_i/system_ila_0/U0/probe0_1[3]"
+                                            },
+                                            {
+                                                "name": "blockdesign_i/system_ila_0/U0/probe0_1[2]"
+                                            },
+                                            {
+                                                "name": "blockdesign_i/system_ila_0/U0/probe0_1[1]"
+                                            },
+                                            {
+                                                "name": "blockdesign_i/system_ila_0/U0/probe0_1[0]"
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -124,28 +138,14 @@
                                 "id": 5,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
-                                "isVector": true,
+                                "isVector": false,
                                 "leftIndex": 0,
-                                "rightIndex": 3,
+                                "rightIndex": 0,
                                 "portIndex": 5,
                                 "nets": [
                                     {
                                         "name": "blockdesign_i/system_ila_0/U0/probe5_1",
-                                        "isBus": true,
-                                        "subnets": [
-                                            {
-                                                "name": "blockdesign_i/system_ila_0/U0/probe5_1[3]"
-                                            },
-                                            {
-                                                "name": "blockdesign_i/system_ila_0/U0/probe5_1[2]"
-                                            },
-                                            {
-                                                "name": "blockdesign_i/system_ila_0/U0/probe5_1[1]"
-                                            },
-                                            {
-                                                "name": "blockdesign_i/system_ila_0/U0/probe5_1[0]"
-                                            }
-                                        ]
+                                        "isBus": false
                                     }
                                 ]
                             },
@@ -201,7 +201,7 @@
                         "native_ports": [
                             {
                                 "name": "probe0",
-                                "connectedBus": "Col_0_0_1",
+                                "connectedBus": "DeBounce_0_data_out",
                                 "protocol": "PROBE",
                                 "port_maps": [
                                     {
@@ -210,14 +210,14 @@
                                             "id": 0,
                                             "name": "probe0",
                                             "leftBit": 0,
-                                            "width": 1
+                                            "width": 4
                                         }
                                     }
                                 ]
                             },
                             {
                                 "name": "probe1",
-                                "connectedBus": "Col_1_0_1",
+                                "connectedBus": "keypad_0_Col_0",
                                 "protocol": "PROBE",
                                 "port_maps": [
                                     {
@@ -233,7 +233,7 @@
                             },
                             {
                                 "name": "probe2",
-                                "connectedBus": "Col_2_0_1",
+                                "connectedBus": "keypad_0_Col_1",
                                 "protocol": "PROBE",
                                 "port_maps": [
                                     {
@@ -249,7 +249,7 @@
                             },
                             {
                                 "name": "probe3",
-                                "connectedBus": "Col_3_0_1",
+                                "connectedBus": "keypad_0_Col_2",
                                 "protocol": "PROBE",
                                 "port_maps": [
                                     {
@@ -265,7 +265,7 @@
                             },
                             {
                                 "name": "probe4",
-                                "connectedBus": "DeBounce_0_data_out",
+                                "connectedBus": "keypad_0_Data",
                                 "protocol": "PROBE",
                                 "port_maps": [
                                     {
@@ -281,7 +281,7 @@
                             },
                             {
                                 "name": "probe5",
-                                "connectedBus": "keypad_0_Data",
+                                "connectedBus": "Row_0_0_1",
                                 "protocol": "PROBE",
                                 "port_maps": [
                                     {
@@ -290,14 +290,14 @@
                                             "id": 5,
                                             "name": "probe5",
                                             "leftBit": 0,
-                                            "width": 4
+                                            "width": 1
                                         }
                                     }
                                 ]
                             },
                             {
                                 "name": "probe6",
-                                "connectedBus": "keypad_0_Row_0",
+                                "connectedBus": "Row_1_0_1",
                                 "protocol": "PROBE",
                                 "port_maps": [
                                     {
@@ -313,7 +313,7 @@
                             },
                             {
                                 "name": "probe7",
-                                "connectedBus": "keypad_0_Row_1",
+                                "connectedBus": "Row_2_0_1",
                                 "protocol": "PROBE",
                                 "port_maps": [
                                     {
@@ -329,7 +329,7 @@
                             },
                             {
                                 "name": "probe8",
-                                "connectedBus": "keypad_0_Row_2",
+                                "connectedBus": "Row_3_0_1",
                                 "protocol": "PROBE",
                                 "port_maps": [
                                     {

@@ -3,8 +3,8 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Tue Apr  9 14:55:18 2024
-# Process ID: 253112
+# Start of session at: Tue Apr  9 20:46:08 2024
+# Process ID: 297580
 # Current directory: C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1
 # Command line: vivado.exe -log blockdesign_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source blockdesign_wrapper.tcl
 # Log file: C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/blockdesign_wrapper.vds
@@ -12,11 +12,11 @@
 # Running On: TRENLAPTOP, OS: Windows, CPU Frequency: 2208 MHz, CPU Physical cores: 6, Host memory: 17054 MB
 #-----------------------------------------------------------
 source blockdesign_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1367.336 ; gain = 160.711
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1365.996 ; gain = 161.777
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
-add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1426.844 ; gain = 59.508
+add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1426.160 ; gain = 60.164
 Command: read_checkpoint -auto_incremental -incremental C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -29,49 +29,49 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 232244
+INFO: [Synth 8-7075] Helper process launched with PID 307208
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2251.574 ; gain = 409.328
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2254.938 ; gain = 411.031
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'blockdesign_wrapper' [C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/hdl/blockdesign_wrapper.vhd:29]
 INFO: [Synth 8-3491] module 'blockdesign' declared at 'c:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:15' bound to instance 'blockdesign_i' of component 'blockdesign' [C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/hdl/blockdesign_wrapper.vhd:44]
 INFO: [Synth 8-638] synthesizing module 'blockdesign' [c:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:33]
-INFO: [Synth 8-3491] module 'blockdesign_DeBounce_0_0' declared at 'C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-253112-TRENLAPTOP/realtime/blockdesign_DeBounce_0_0_stub.vhdl:6' bound to instance 'DeBounce_0' of component 'blockdesign_DeBounce_0_0' [c:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:120]
-INFO: [Synth 8-638] synthesizing module 'blockdesign_DeBounce_0_0' [C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-253112-TRENLAPTOP/realtime/blockdesign_DeBounce_0_0_stub.vhdl:16]
-INFO: [Synth 8-3491] module 'blockdesign_clk_wiz_0_0' declared at 'C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-253112-TRENLAPTOP/realtime/blockdesign_clk_wiz_0_0_stub.vhdl:6' bound to instance 'clk_wiz_0' of component 'blockdesign_clk_wiz_0_0' [c:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:127]
-INFO: [Synth 8-638] synthesizing module 'blockdesign_clk_wiz_0_0' [C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-253112-TRENLAPTOP/realtime/blockdesign_clk_wiz_0_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'blockdesign_keypad_0_0' declared at 'C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-253112-TRENLAPTOP/realtime/blockdesign_keypad_0_0_stub.vhdl:6' bound to instance 'keypad_0' of component 'blockdesign_keypad_0_0' [c:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:132]
-INFO: [Synth 8-638] synthesizing module 'blockdesign_keypad_0_0' [C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-253112-TRENLAPTOP/realtime/blockdesign_keypad_0_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'blockdesign_system_ila_0_0' declared at 'C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-253112-TRENLAPTOP/realtime/blockdesign_system_ila_0_0_stub.vhdl:6' bound to instance 'system_ila_0' of component 'blockdesign_system_ila_0_0' [c:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:144]
-INFO: [Synth 8-638] synthesizing module 'blockdesign_system_ila_0_0' [C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-253112-TRENLAPTOP/realtime/blockdesign_system_ila_0_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'blockdesign_DeBounce_0_0' declared at 'C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-297580-TRENLAPTOP/realtime/blockdesign_DeBounce_0_0_stub.vhdl:6' bound to instance 'DeBounce_0' of component 'blockdesign_DeBounce_0_0' [c:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:120]
+INFO: [Synth 8-638] synthesizing module 'blockdesign_DeBounce_0_0' [C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-297580-TRENLAPTOP/realtime/blockdesign_DeBounce_0_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'blockdesign_clk_wiz_0_0' declared at 'C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-297580-TRENLAPTOP/realtime/blockdesign_clk_wiz_0_0_stub.vhdl:6' bound to instance 'clk_wiz_0' of component 'blockdesign_clk_wiz_0_0' [c:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:127]
+INFO: [Synth 8-638] synthesizing module 'blockdesign_clk_wiz_0_0' [C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-297580-TRENLAPTOP/realtime/blockdesign_clk_wiz_0_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'blockdesign_keypad_0_1' declared at 'C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-297580-TRENLAPTOP/realtime/blockdesign_keypad_0_1_stub.vhdl:6' bound to instance 'keypad_0' of component 'blockdesign_keypad_0_1' [c:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:132]
+INFO: [Synth 8-638] synthesizing module 'blockdesign_keypad_0_1' [C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-297580-TRENLAPTOP/realtime/blockdesign_keypad_0_1_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'blockdesign_system_ila_0_2' declared at 'C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-297580-TRENLAPTOP/realtime/blockdesign_system_ila_0_2_stub.vhdl:6' bound to instance 'system_ila_0' of component 'blockdesign_system_ila_0_2' [c:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:144]
+INFO: [Synth 8-638] synthesizing module 'blockdesign_system_ila_0_2' [C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/.Xil/Vivado-297580-TRENLAPTOP/realtime/blockdesign_system_ila_0_2_stub.vhdl:22]
 INFO: [Synth 8-256] done synthesizing module 'blockdesign' (0#1) [c:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd:33]
 INFO: [Synth 8-256] done synthesizing module 'blockdesign_wrapper' (0#1) [C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/hdl/blockdesign_wrapper.vhd:29]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'blockdesign_i'. This will prevent further optimization [C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/hdl/blockdesign_wrapper.vhd:44]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2345.758 ; gain = 503.512
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 2346.742 ; gain = 502.836
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2363.688 ; gain = 521.441
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2364.660 ; gain = 520.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2363.688 ; gain = 521.441
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2364.660 ; gain = 520.754
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2363.688 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2364.660 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [c:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_wiz_0_0/blockdesign_clk_wiz_0_0/blockdesign_clk_wiz_0_0_in_context.xdc] for cell 'blockdesign_i/clk_wiz_0'
 Finished Parsing XDC File [c:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_wiz_0_0/blockdesign_clk_wiz_0_0/blockdesign_clk_wiz_0_0_in_context.xdc] for cell 'blockdesign_i/clk_wiz_0'
-Parsing XDC File [c:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_system_ila_0_0/blockdesign_system_ila_0_0/blockdesign_system_ila_0_0_in_context.xdc] for cell 'blockdesign_i/system_ila_0'
-Finished Parsing XDC File [c:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_system_ila_0_0/blockdesign_system_ila_0_0/blockdesign_system_ila_0_0_in_context.xdc] for cell 'blockdesign_i/system_ila_0'
-Parsing XDC File [c:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_keypad_0_0/blockdesign_keypad_0_0/blockdesign_keypad_0_0_in_context.xdc] for cell 'blockdesign_i/keypad_0'
-Finished Parsing XDC File [c:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_keypad_0_0/blockdesign_keypad_0_0/blockdesign_keypad_0_0_in_context.xdc] for cell 'blockdesign_i/keypad_0'
 Parsing XDC File [c:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_DeBounce_0_0/blockdesign_DeBounce_0_0/blockdesign_DeBounce_0_0_in_context.xdc] for cell 'blockdesign_i/DeBounce_0'
 Finished Parsing XDC File [c:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_DeBounce_0_0/blockdesign_DeBounce_0_0/blockdesign_DeBounce_0_0_in_context.xdc] for cell 'blockdesign_i/DeBounce_0'
+Parsing XDC File [c:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_keypad_0_1/blockdesign_keypad_0_1/blockdesign_keypad_0_1_in_context.xdc] for cell 'blockdesign_i/keypad_0'
+Finished Parsing XDC File [c:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_keypad_0_1/blockdesign_keypad_0_1/blockdesign_keypad_0_1_in_context.xdc] for cell 'blockdesign_i/keypad_0'
+Parsing XDC File [c:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_system_ila_0_2/blockdesign_system_ila_0_2/blockdesign_system_ila_0_2_in_context.xdc] for cell 'blockdesign_i/system_ila_0'
+Finished Parsing XDC File [c:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_system_ila_0_2/blockdesign_system_ila_0_2/blockdesign_system_ila_0_2_in_context.xdc] for cell 'blockdesign_i/system_ila_0'
 Parsing XDC File [C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/constrs_1/new/constraints.xdc]
 WARNING: [Vivado 12-584] No ports matched 'UART_rxd'. [C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/constrs_1/new/constraints.xdc:1]
 WARNING: [Vivado 12-584] No ports matched 'UART_txd'. [C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/constrs_1/new/constraints.xdc:2]
@@ -83,6 +83,17 @@ WARNING: [Vivado 12-584] No ports matched 'status_led_tri_o[0]'. [C:/_code/Git/M
 WARNING: [Vivado 12-584] No ports matched 'status_led_tri_o[0]'. [C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/constrs_1/new/constraints.xdc:9]
 WARNING: [Vivado 12-584] No ports matched 'status_led_tri_o[1]'. [C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/constrs_1/new/constraints.xdc:10]
 WARNING: [Vivado 12-584] No ports matched 'status_led_tri_o[2]'. [C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/constrs_1/new/constraints.xdc:11]
+WARNING: [Vivado 12-584] No ports matched 'Col_3_0'. [C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/constrs_1/new/constraints.xdc:16]
+WARNING: [Vivado 12-584] No ports matched 'Data_0[3]'. [C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/constrs_1/new/constraints.xdc:20]
+WARNING: [Vivado 12-584] No ports matched 'Data_0[2]'. [C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/constrs_1/new/constraints.xdc:21]
+WARNING: [Vivado 12-584] No ports matched 'Data_0[1]'. [C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/constrs_1/new/constraints.xdc:22]
+WARNING: [Vivado 12-584] No ports matched 'Data_0[0]'. [C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/constrs_1/new/constraints.xdc:23]
+WARNING: [Vivado 12-584] No ports matched 'Data_0[0]'. [C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/constrs_1/new/constraints.xdc:24]
+WARNING: [Vivado 12-584] No ports matched 'Data_0[1]'. [C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/constrs_1/new/constraints.xdc:25]
+WARNING: [Vivado 12-584] No ports matched 'Data_0[2]'. [C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/constrs_1/new/constraints.xdc:26]
+WARNING: [Vivado 12-584] No ports matched 'Data_0[3]'. [C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/constrs_1/new/constraints.xdc:27]
+WARNING: [Vivado 12-584] No ports matched 'Col_3_0'. [C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/constrs_1/new/constraints.xdc:29]
+WARNING: [Vivado 12-584] No ports matched 'Col_3_0'. [C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/constrs_1/new/constraints.xdc:31]
 Finished Parsing XDC File [C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/constrs_1/new/constraints.xdc]
 WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/constrs_1/new/constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/blockdesign_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/blockdesign_wrapper_propImpl.xdc].
@@ -91,22 +102,22 @@ Parsing XDC File [C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-d
 Finished Parsing XDC File [C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2391.559 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2392.543 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2391.559 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2392.543 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2391.559 ; gain = 549.312
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 2392.543 ; gain = 548.637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2391.559 ; gain = 549.312
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 2392.543 ; gain = 548.637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -115,14 +126,14 @@ Applied set_property IO_BUFFER_TYPE = NONE for sys_clock. (constraint file  c:/_
 Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clock. (constraint file  c:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_wiz_0_0/blockdesign_clk_wiz_0_0/blockdesign_clk_wiz_0_0_in_context.xdc, line 4).
 Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/clk_wiz_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/system_ila_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/keypad_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/DeBounce_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/keypad_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/system_ila_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2391.559 ; gain = 549.312
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 2392.543 ; gain = 548.637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2391.559 ; gain = 549.312
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 2392.543 ; gain = 548.637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -145,25 +156,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2391.559 ; gain = 549.312
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 2392.543 ; gain = 548.637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 2391.559 ; gain = 549.312
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 2392.543 ; gain = 548.637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 2391.559 ; gain = 549.312
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 2392.543 ; gain = 548.637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 2391.559 ; gain = 549.312
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 2392.543 ; gain = 548.637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -181,37 +192,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 2391.559 ; gain = 549.312
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 2392.543 ; gain = 548.637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 2391.559 ; gain = 549.312
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 2392.543 ; gain = 548.637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 2391.559 ; gain = 549.312
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 2392.543 ; gain = 548.637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 2391.559 ; gain = 549.312
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 2392.543 ; gain = 548.637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 2391.559 ; gain = 549.312
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 2392.543 ; gain = 548.637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 2391.559 ; gain = 549.312
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 2392.543 ; gain = 548.637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -223,8 +234,8 @@ Report BlackBoxes:
 +------+---------------------------+----------+
 |1     |blockdesign_DeBounce_0_0   |         1|
 |2     |blockdesign_clk_wiz_0_0    |         1|
-|3     |blockdesign_keypad_0_0     |         1|
-|4     |blockdesign_system_ila_0_0 |         1|
+|3     |blockdesign_keypad_0_1     |         1|
+|4     |blockdesign_system_ila_0_2 |         1|
 +------+---------------------------+----------+
 
 Report Cell Usage: 
@@ -233,32 +244,32 @@ Report Cell Usage:
 +------+--------------------------------+------+
 |1     |blockdesign_DeBounce_0_0_bbox   |     1|
 |2     |blockdesign_clk_wiz_0_0_bbox    |     1|
-|3     |blockdesign_keypad_0_0_bbox     |     1|
-|4     |blockdesign_system_ila_0_0_bbox |     1|
+|3     |blockdesign_keypad_0_1_bbox     |     1|
+|4     |blockdesign_system_ila_0_2_bbox |     1|
 |5     |IBUF                            |     4|
 |6     |OBUF                            |     7|
 +------+--------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 2391.559 ; gain = 549.312
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 2392.543 ; gain = 548.637
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:29 . Memory (MB): peak = 2391.559 ; gain = 521.441
-Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 2391.559 ; gain = 549.312
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:32 . Memory (MB): peak = 2392.543 ; gain = 520.754
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 2392.543 ; gain = 548.637
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2391.559 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2392.543 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2391.559 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2392.543 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: c74134e2
+Synth Design complete | Checksum: faae1b6e
 INFO: [Common 17-83] Releasing license: Synthesis
-36 Infos, 12 Warnings, 0 Critical Warnings and 0 Errors encountered.
+36 Infos, 23 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 2391.559 ; gain = 949.297
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:42 . Memory (MB): peak = 2392.543 ; gain = 954.242
 INFO: [Common 17-600] The following parameters have non-default value.
 tcl.collectionResultDisplayLimit
 INFO: [Common 17-1381] The checkpoint 'C:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/synth_1/blockdesign_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file blockdesign_wrapper_utilization_synth.rpt -pb blockdesign_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Apr  9 14:56:15 2024...
+INFO: [Common 17-206] Exiting Vivado at Tue Apr  9 20:47:11 2024...

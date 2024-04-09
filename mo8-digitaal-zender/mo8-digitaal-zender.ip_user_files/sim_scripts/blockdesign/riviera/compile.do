@@ -22,8 +22,8 @@ vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../mo8-digitaal-zender.
 vcom -work xil_defaultlib -93  -incr \
 "../../../bd/blockdesign/ip/blockdesign_keypad_0_0/sim/blockdesign_keypad_0_0.vhd" \
 "../../../bd/blockdesign/ip/blockdesign_DeBounce_0_0/sim/blockdesign_DeBounce_0_0.vhd" \
-"../../../bd/blockdesign/ip/blockdesign_system_ila_0_0/bd_0/ip/ip_0/sim/bd_964a_ila_lib_0.vhd" \
 "../../../bd/blockdesign/ip/blockdesign_system_ila_0_0/bd_0/sim/bd_964a.vhd" \
+"../../../bd/blockdesign/ip/blockdesign_system_ila_0_0/bd_0/ip/ip_0/sim/bd_964a_ila_lib_0.vhd" \
 "../../../bd/blockdesign/ip/blockdesign_system_ila_0_0/sim/blockdesign_system_ila_0_0.vhd" \
 "../../../bd/blockdesign/sim/blockdesign.vhd" \
 

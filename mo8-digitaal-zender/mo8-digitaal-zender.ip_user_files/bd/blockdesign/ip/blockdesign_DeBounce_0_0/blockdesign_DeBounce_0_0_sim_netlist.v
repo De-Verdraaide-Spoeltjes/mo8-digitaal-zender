@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Tue Apr  9 13:31:36 2024
+// Date        : Tue Apr  9 14:55:15 2024
 // Host        : TRENLAPTOP running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top blockdesign_DeBounce_0_0 -prefix
-//               blockdesign_DeBounce_0_0_ blockdesign_DeBounce_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               c:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_DeBounce_0_0/blockdesign_DeBounce_0_0_sim_netlist.v
 // Design      : blockdesign_DeBounce_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -13,6 +13,32 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
+(* CHECK_LICENSE_TYPE = "blockdesign_DeBounce_0_0,DeBounce,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
+(* x_core_info = "DeBounce,Vivado 2023.1" *) 
+(* NotValidForBitStream *)
+module blockdesign_DeBounce_0_0
+   (clk,
+    Reset,
+    data_in,
+    data_out);
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, ASSOCIATED_RESET Reset, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input clk;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 Reset RST" *) (* x_interface_parameter = "XIL_INTERFACENAME Reset, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input Reset;
+  input [3:0]data_in;
+  output [3:0]data_out;
+
+  wire Reset;
+  wire clk;
+  wire [3:0]data_in;
+  wire [3:0]data_out;
+
+  blockdesign_DeBounce_0_0_DeBounce U0
+       (.Reset(Reset),
+        .clk(clk),
+        .data_in(data_in),
+        .data_out(data_out));
+endmodule
+
+(* ORIG_REF_NAME = "DeBounce" *) 
 module blockdesign_DeBounce_0_0_DeBounce
    (data_out,
     Reset,
@@ -31,35 +57,68 @@ module blockdesign_DeBounce_0_0_DeBounce
   wire count0_carry__0_n_1;
   wire count0_carry__0_n_2;
   wire count0_carry__0_n_3;
+  wire count0_carry__0_n_4;
+  wire count0_carry__0_n_5;
+  wire count0_carry__0_n_6;
+  wire count0_carry__0_n_7;
   wire count0_carry__1_n_0;
   wire count0_carry__1_n_1;
   wire count0_carry__1_n_2;
   wire count0_carry__1_n_3;
+  wire count0_carry__1_n_4;
+  wire count0_carry__1_n_5;
+  wire count0_carry__1_n_6;
+  wire count0_carry__1_n_7;
   wire count0_carry__2_n_0;
   wire count0_carry__2_n_1;
   wire count0_carry__2_n_2;
   wire count0_carry__2_n_3;
+  wire count0_carry__2_n_4;
+  wire count0_carry__2_n_5;
+  wire count0_carry__2_n_6;
+  wire count0_carry__2_n_7;
   wire count0_carry__3_n_0;
   wire count0_carry__3_n_1;
   wire count0_carry__3_n_2;
   wire count0_carry__3_n_3;
+  wire count0_carry__3_n_4;
+  wire count0_carry__3_n_5;
+  wire count0_carry__3_n_6;
+  wire count0_carry__3_n_7;
   wire count0_carry__4_n_0;
   wire count0_carry__4_n_1;
   wire count0_carry__4_n_2;
   wire count0_carry__4_n_3;
+  wire count0_carry__4_n_4;
+  wire count0_carry__4_n_5;
+  wire count0_carry__4_n_6;
+  wire count0_carry__4_n_7;
   wire count0_carry__5_n_0;
   wire count0_carry__5_n_1;
   wire count0_carry__5_n_2;
   wire count0_carry__5_n_3;
+  wire count0_carry__5_n_4;
+  wire count0_carry__5_n_5;
+  wire count0_carry__5_n_6;
+  wire count0_carry__5_n_7;
   wire count0_carry__6_n_2;
   wire count0_carry__6_n_3;
+  wire count0_carry__6_n_5;
+  wire count0_carry__6_n_6;
+  wire count0_carry__6_n_7;
   wire count0_carry_n_0;
   wire count0_carry_n_1;
   wire count0_carry_n_2;
   wire count0_carry_n_3;
+  wire count0_carry_n_4;
+  wire count0_carry_n_5;
+  wire count0_carry_n_6;
+  wire count0_carry_n_7;
   wire \count[0]_i_1_n_0 ;
   wire \count[31]_i_1_n_0 ;
-  wire [31:1]data0;
+  wire \count[31]_i_3_n_0 ;
+  wire \count[31]_i_4_n_0 ;
+  wire \count[31]_i_5_n_0 ;
   wire [3:0]data_in;
   wire [3:0]data_out;
   wire \data_out[0]_i_1_n_0 ;
@@ -87,7 +146,7 @@ module blockdesign_DeBounce_0_0_DeBounce
         .CO({count0_carry_n_0,count0_carry_n_1,count0_carry_n_2,count0_carry_n_3}),
         .CYINIT(count[0]),
         .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(data0[4:1]),
+        .O({count0_carry_n_4,count0_carry_n_5,count0_carry_n_6,count0_carry_n_7}),
         .S(count[4:1]));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 count0_carry__0
@@ -95,7 +154,7 @@ module blockdesign_DeBounce_0_0_DeBounce
         .CO({count0_carry__0_n_0,count0_carry__0_n_1,count0_carry__0_n_2,count0_carry__0_n_3}),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(data0[8:5]),
+        .O({count0_carry__0_n_4,count0_carry__0_n_5,count0_carry__0_n_6,count0_carry__0_n_7}),
         .S(count[8:5]));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 count0_carry__1
@@ -103,7 +162,7 @@ module blockdesign_DeBounce_0_0_DeBounce
         .CO({count0_carry__1_n_0,count0_carry__1_n_1,count0_carry__1_n_2,count0_carry__1_n_3}),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(data0[12:9]),
+        .O({count0_carry__1_n_4,count0_carry__1_n_5,count0_carry__1_n_6,count0_carry__1_n_7}),
         .S(count[12:9]));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 count0_carry__2
@@ -111,7 +170,7 @@ module blockdesign_DeBounce_0_0_DeBounce
         .CO({count0_carry__2_n_0,count0_carry__2_n_1,count0_carry__2_n_2,count0_carry__2_n_3}),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(data0[16:13]),
+        .O({count0_carry__2_n_4,count0_carry__2_n_5,count0_carry__2_n_6,count0_carry__2_n_7}),
         .S(count[16:13]));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 count0_carry__3
@@ -119,7 +178,7 @@ module blockdesign_DeBounce_0_0_DeBounce
         .CO({count0_carry__3_n_0,count0_carry__3_n_1,count0_carry__3_n_2,count0_carry__3_n_3}),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(data0[20:17]),
+        .O({count0_carry__3_n_4,count0_carry__3_n_5,count0_carry__3_n_6,count0_carry__3_n_7}),
         .S(count[20:17]));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 count0_carry__4
@@ -127,7 +186,7 @@ module blockdesign_DeBounce_0_0_DeBounce
         .CO({count0_carry__4_n_0,count0_carry__4_n_1,count0_carry__4_n_2,count0_carry__4_n_3}),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(data0[24:21]),
+        .O({count0_carry__4_n_4,count0_carry__4_n_5,count0_carry__4_n_6,count0_carry__4_n_7}),
         .S(count[24:21]));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 count0_carry__5
@@ -135,7 +194,7 @@ module blockdesign_DeBounce_0_0_DeBounce
         .CO({count0_carry__5_n_0,count0_carry__5_n_1,count0_carry__5_n_2,count0_carry__5_n_3}),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(data0[28:25]),
+        .O({count0_carry__5_n_4,count0_carry__5_n_5,count0_carry__5_n_6,count0_carry__5_n_7}),
         .S(count[28:25]));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 count0_carry__6
@@ -143,34 +202,63 @@ module blockdesign_DeBounce_0_0_DeBounce
         .CO({NLW_count0_carry__6_CO_UNCONNECTED[3:2],count0_carry__6_n_2,count0_carry__6_n_3}),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({NLW_count0_carry__6_O_UNCONNECTED[3],data0[31:29]}),
+        .O({NLW_count0_carry__6_O_UNCONNECTED[3],count0_carry__6_n_5,count0_carry__6_n_6,count0_carry__6_n_7}),
         .S({1'b0,count[31:29]}));
-  LUT6 #(
-    .INIT(64'hFFFF00FF0000FE00)) 
+  LUT5 #(
+    .INIT(32'hBBBB4440)) 
     \count[0]_i_1 
-       (.I0(\data_out[3]_i_3_n_0 ),
-        .I1(\data_out[3]_i_4_n_0 ),
-        .I2(\data_out[3]_i_5_n_0 ),
-        .I3(state_reg_n_0),
-        .I4(Reset),
-        .I5(count[0]),
+       (.I0(Reset),
+        .I1(state_reg_n_0),
+        .I2(\data_out[3]_i_4_n_0 ),
+        .I3(\count[31]_i_3_n_0 ),
+        .I4(count[0]),
         .O(\count[0]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'h0000000000000004)) 
     \count[31]_i_1 
+       (.I0(\data_out[3]_i_3_n_0 ),
+        .I1(state_reg_n_0),
+        .I2(Reset),
+        .I3(count[0]),
+        .I4(\count[31]_i_3_n_0 ),
+        .I5(\data_out[3]_i_4_n_0 ),
+        .O(\count[31]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h4444444444444404)) 
+    \count[31]_i_2 
        (.I0(Reset),
         .I1(state_reg_n_0),
-        .I2(count[0]),
-        .I3(\data_out[3]_i_5_n_0 ),
-        .I4(\data_out[3]_i_4_n_0 ),
-        .I5(\data_out[3]_i_3_n_0 ),
-        .O(\count[31]_i_1_n_0 ));
-  LUT2 #(
-    .INIT(4'h2)) 
-    \count[31]_i_2 
-       (.I0(state_reg_n_0),
-        .I1(Reset),
+        .I2(\data_out[3]_i_3_n_0 ),
+        .I3(\data_out[3]_i_4_n_0 ),
+        .I4(\count[31]_i_3_n_0 ),
+        .I5(count[0]),
         .O(count0));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \count[31]_i_3 
+       (.I0(\data_out[3]_i_10_n_0 ),
+        .I1(\count[31]_i_4_n_0 ),
+        .I2(\data_out[3]_i_11_n_0 ),
+        .I3(\count[31]_i_5_n_0 ),
+        .O(\count[31]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \count[31]_i_4 
+       (.I0(count[3]),
+        .I1(count[2]),
+        .I2(count[5]),
+        .I3(count[4]),
+        .O(\count[31]_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT4 #(
+    .INIT(16'hFFFD)) 
+    \count[31]_i_5 
+       (.I0(count[10]),
+        .I1(count[11]),
+        .I2(count[13]),
+        .I3(count[12]),
+        .O(\count[31]_i_5_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \count_reg[0] 
@@ -184,7 +272,7 @@ module blockdesign_DeBounce_0_0_DeBounce
     \count_reg[10] 
        (.C(clk),
         .CE(count0),
-        .D(data0[10]),
+        .D(count0_carry__1_n_6),
         .Q(count[10]),
         .R(\count[31]_i_1_n_0 ));
   FDRE #(
@@ -192,7 +280,7 @@ module blockdesign_DeBounce_0_0_DeBounce
     \count_reg[11] 
        (.C(clk),
         .CE(count0),
-        .D(data0[11]),
+        .D(count0_carry__1_n_5),
         .Q(count[11]),
         .R(\count[31]_i_1_n_0 ));
   FDRE #(
@@ -200,7 +288,7 @@ module blockdesign_DeBounce_0_0_DeBounce
     \count_reg[12] 
        (.C(clk),
         .CE(count0),
-        .D(data0[12]),
+        .D(count0_carry__1_n_4),
         .Q(count[12]),
         .R(\count[31]_i_1_n_0 ));
   FDRE #(
@@ -208,7 +296,7 @@ module blockdesign_DeBounce_0_0_DeBounce
     \count_reg[13] 
        (.C(clk),
         .CE(count0),
-        .D(data0[13]),
+        .D(count0_carry__2_n_7),
         .Q(count[13]),
         .R(\count[31]_i_1_n_0 ));
   FDRE #(
@@ -216,7 +304,7 @@ module blockdesign_DeBounce_0_0_DeBounce
     \count_reg[14] 
        (.C(clk),
         .CE(count0),
-        .D(data0[14]),
+        .D(count0_carry__2_n_6),
         .Q(count[14]),
         .R(\count[31]_i_1_n_0 ));
   FDRE #(
@@ -224,7 +312,7 @@ module blockdesign_DeBounce_0_0_DeBounce
     \count_reg[15] 
        (.C(clk),
         .CE(count0),
-        .D(data0[15]),
+        .D(count0_carry__2_n_5),
         .Q(count[15]),
         .R(\count[31]_i_1_n_0 ));
   FDRE #(
@@ -232,7 +320,7 @@ module blockdesign_DeBounce_0_0_DeBounce
     \count_reg[16] 
        (.C(clk),
         .CE(count0),
-        .D(data0[16]),
+        .D(count0_carry__2_n_4),
         .Q(count[16]),
         .R(\count[31]_i_1_n_0 ));
   FDRE #(
@@ -240,7 +328,7 @@ module blockdesign_DeBounce_0_0_DeBounce
     \count_reg[17] 
        (.C(clk),
         .CE(count0),
-        .D(data0[17]),
+        .D(count0_carry__3_n_7),
         .Q(count[17]),
         .R(\count[31]_i_1_n_0 ));
   FDRE #(
@@ -248,7 +336,7 @@ module blockdesign_DeBounce_0_0_DeBounce
     \count_reg[18] 
        (.C(clk),
         .CE(count0),
-        .D(data0[18]),
+        .D(count0_carry__3_n_6),
         .Q(count[18]),
         .R(\count[31]_i_1_n_0 ));
   FDRE #(
@@ -256,7 +344,7 @@ module blockdesign_DeBounce_0_0_DeBounce
     \count_reg[19] 
        (.C(clk),
         .CE(count0),
-        .D(data0[19]),
+        .D(count0_carry__3_n_5),
         .Q(count[19]),
         .R(\count[31]_i_1_n_0 ));
   FDRE #(
@@ -264,7 +352,7 @@ module blockdesign_DeBounce_0_0_DeBounce
     \count_reg[1] 
        (.C(clk),
         .CE(count0),
-        .D(data0[1]),
+        .D(count0_carry_n_7),
         .Q(count[1]),
         .R(\count[31]_i_1_n_0 ));
   FDRE #(
@@ -272,7 +360,7 @@ module blockdesign_DeBounce_0_0_DeBounce
     \count_reg[20] 
        (.C(clk),
         .CE(count0),
-        .D(data0[20]),
+        .D(count0_carry__3_n_4),
         .Q(count[20]),
         .R(\count[31]_i_1_n_0 ));
   FDRE #(
@@ -280,7 +368,7 @@ module blockdesign_DeBounce_0_0_DeBounce
     \count_reg[21] 
        (.C(clk),
         .CE(count0),
-        .D(data0[21]),
+        .D(count0_carry__4_n_7),
         .Q(count[21]),
         .R(\count[31]_i_1_n_0 ));
   FDRE #(
@@ -288,7 +376,7 @@ module blockdesign_DeBounce_0_0_DeBounce
     \count_reg[22] 
        (.C(clk),
         .CE(count0),
-        .D(data0[22]),
+        .D(count0_carry__4_n_6),
         .Q(count[22]),
         .R(\count[31]_i_1_n_0 ));
   FDRE #(
@@ -296,7 +384,7 @@ module blockdesign_DeBounce_0_0_DeBounce
     \count_reg[23] 
        (.C(clk),
         .CE(count0),
-        .D(data0[23]),
+        .D(count0_carry__4_n_5),
         .Q(count[23]),
         .R(\count[31]_i_1_n_0 ));
   FDRE #(
@@ -304,7 +392,7 @@ module blockdesign_DeBounce_0_0_DeBounce
     \count_reg[24] 
        (.C(clk),
         .CE(count0),
-        .D(data0[24]),
+        .D(count0_carry__4_n_4),
         .Q(count[24]),
         .R(\count[31]_i_1_n_0 ));
   FDRE #(
@@ -312,7 +400,7 @@ module blockdesign_DeBounce_0_0_DeBounce
     \count_reg[25] 
        (.C(clk),
         .CE(count0),
-        .D(data0[25]),
+        .D(count0_carry__5_n_7),
         .Q(count[25]),
         .R(\count[31]_i_1_n_0 ));
   FDRE #(
@@ -320,7 +408,7 @@ module blockdesign_DeBounce_0_0_DeBounce
     \count_reg[26] 
        (.C(clk),
         .CE(count0),
-        .D(data0[26]),
+        .D(count0_carry__5_n_6),
         .Q(count[26]),
         .R(\count[31]_i_1_n_0 ));
   FDRE #(
@@ -328,7 +416,7 @@ module blockdesign_DeBounce_0_0_DeBounce
     \count_reg[27] 
        (.C(clk),
         .CE(count0),
-        .D(data0[27]),
+        .D(count0_carry__5_n_5),
         .Q(count[27]),
         .R(\count[31]_i_1_n_0 ));
   FDRE #(
@@ -336,7 +424,7 @@ module blockdesign_DeBounce_0_0_DeBounce
     \count_reg[28] 
        (.C(clk),
         .CE(count0),
-        .D(data0[28]),
+        .D(count0_carry__5_n_4),
         .Q(count[28]),
         .R(\count[31]_i_1_n_0 ));
   FDRE #(
@@ -344,7 +432,7 @@ module blockdesign_DeBounce_0_0_DeBounce
     \count_reg[29] 
        (.C(clk),
         .CE(count0),
-        .D(data0[29]),
+        .D(count0_carry__6_n_7),
         .Q(count[29]),
         .R(\count[31]_i_1_n_0 ));
   FDRE #(
@@ -352,7 +440,7 @@ module blockdesign_DeBounce_0_0_DeBounce
     \count_reg[2] 
        (.C(clk),
         .CE(count0),
-        .D(data0[2]),
+        .D(count0_carry_n_6),
         .Q(count[2]),
         .R(\count[31]_i_1_n_0 ));
   FDRE #(
@@ -360,7 +448,7 @@ module blockdesign_DeBounce_0_0_DeBounce
     \count_reg[30] 
        (.C(clk),
         .CE(count0),
-        .D(data0[30]),
+        .D(count0_carry__6_n_6),
         .Q(count[30]),
         .R(\count[31]_i_1_n_0 ));
   FDRE #(
@@ -368,7 +456,7 @@ module blockdesign_DeBounce_0_0_DeBounce
     \count_reg[31] 
        (.C(clk),
         .CE(count0),
-        .D(data0[31]),
+        .D(count0_carry__6_n_5),
         .Q(count[31]),
         .R(\count[31]_i_1_n_0 ));
   FDRE #(
@@ -376,7 +464,7 @@ module blockdesign_DeBounce_0_0_DeBounce
     \count_reg[3] 
        (.C(clk),
         .CE(count0),
-        .D(data0[3]),
+        .D(count0_carry_n_5),
         .Q(count[3]),
         .R(\count[31]_i_1_n_0 ));
   FDRE #(
@@ -384,7 +472,7 @@ module blockdesign_DeBounce_0_0_DeBounce
     \count_reg[4] 
        (.C(clk),
         .CE(count0),
-        .D(data0[4]),
+        .D(count0_carry_n_4),
         .Q(count[4]),
         .R(\count[31]_i_1_n_0 ));
   FDRE #(
@@ -392,7 +480,7 @@ module blockdesign_DeBounce_0_0_DeBounce
     \count_reg[5] 
        (.C(clk),
         .CE(count0),
-        .D(data0[5]),
+        .D(count0_carry__0_n_7),
         .Q(count[5]),
         .R(\count[31]_i_1_n_0 ));
   FDRE #(
@@ -400,7 +488,7 @@ module blockdesign_DeBounce_0_0_DeBounce
     \count_reg[6] 
        (.C(clk),
         .CE(count0),
-        .D(data0[6]),
+        .D(count0_carry__0_n_6),
         .Q(count[6]),
         .R(\count[31]_i_1_n_0 ));
   FDRE #(
@@ -408,7 +496,7 @@ module blockdesign_DeBounce_0_0_DeBounce
     \count_reg[7] 
        (.C(clk),
         .CE(count0),
-        .D(data0[7]),
+        .D(count0_carry__0_n_5),
         .Q(count[7]),
         .R(\count[31]_i_1_n_0 ));
   FDRE #(
@@ -416,7 +504,7 @@ module blockdesign_DeBounce_0_0_DeBounce
     \count_reg[8] 
        (.C(clk),
         .CE(count0),
-        .D(data0[8]),
+        .D(count0_carry__0_n_4),
         .Q(count[8]),
         .R(\count[31]_i_1_n_0 ));
   FDRE #(
@@ -424,24 +512,24 @@ module blockdesign_DeBounce_0_0_DeBounce
     \count_reg[9] 
        (.C(clk),
         .CE(count0),
-        .D(data0[9]),
+        .D(count0_carry__1_n_7),
         .Q(count[9]),
         .R(\count[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \data_out[0]_i_1 
        (.I0(data_in[0]),
         .I1(state_reg_n_0),
         .O(\data_out[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \data_out[1]_i_1 
        (.I0(data_in[1]),
         .I1(state_reg_n_0),
         .O(\data_out[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \data_out[2]_i_1 
@@ -449,13 +537,13 @@ module blockdesign_DeBounce_0_0_DeBounce
         .I1(state_reg_n_0),
         .O(\data_out[2]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h00010000FFFFFFFF)) 
+    .INIT(64'h00000002FFFFFFFF)) 
     \data_out[3]_i_1 
        (.I0(\data_out[3]_i_3_n_0 ),
         .I1(\data_out[3]_i_4_n_0 ),
         .I2(\data_out[3]_i_5_n_0 ),
-        .I3(count[0]),
-        .I4(\data_out[3]_i_6_n_0 ),
+        .I3(\data_out[3]_i_6_n_0 ),
+        .I4(count[0]),
         .I5(state_reg_n_0),
         .O(\data_out[3]_i_1_n_0 ));
   LUT4 #(
@@ -480,42 +568,44 @@ module blockdesign_DeBounce_0_0_DeBounce
        (.I0(data_in[3]),
         .I1(state_reg_n_0),
         .O(\data_out[3]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT4 #(
+    .INIT(16'h7FFF)) 
+    \data_out[3]_i_3 
+       (.I0(data_in[1]),
+        .I1(data_in[0]),
+        .I2(data_in[3]),
+        .I3(data_in[2]),
+        .O(\data_out[3]_i_3_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
-    \data_out[3]_i_3 
+    \data_out[3]_i_4 
        (.I0(\data_out[3]_i_7_n_0 ),
         .I1(\data_out[3]_i_8_n_0 ),
         .I2(count[31]),
         .I3(count[30]),
         .I4(count[1]),
         .I5(\data_out[3]_i_9_n_0 ),
-        .O(\data_out[3]_i_3_n_0 ));
+        .O(\data_out[3]_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
-    \data_out[3]_i_4 
+    \data_out[3]_i_5 
        (.I0(count[4]),
         .I1(count[5]),
         .I2(count[2]),
         .I3(count[3]),
         .I4(\data_out[3]_i_10_n_0 ),
-        .O(\data_out[3]_i_4_n_0 ));
+        .O(\data_out[3]_i_5_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
     .INIT(32'hFFFFFEFF)) 
-    \data_out[3]_i_5 
+    \data_out[3]_i_6 
        (.I0(count[12]),
         .I1(count[13]),
         .I2(count[11]),
         .I3(count[10]),
         .I4(\data_out[3]_i_11_n_0 ),
-        .O(\data_out[3]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT4 #(
-    .INIT(16'h7FFF)) 
-    \data_out[3]_i_6 
-       (.I0(data_in[1]),
-        .I1(data_in[0]),
-        .I2(data_in[3]),
-        .I3(data_in[2]),
         .O(\data_out[3]_i_6_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
@@ -566,12 +656,12 @@ module blockdesign_DeBounce_0_0_DeBounce
         .PRE(Reset),
         .Q(data_out[3]));
   LUT6 #(
-    .INIT(64'hFFFFFFFCAAAAAAAA)) 
+    .INIT(64'hFFFFFFFEFFFF0000)) 
     state_i_1
-       (.I0(\data_out[3]_i_6_n_0 ),
-        .I1(count[0]),
-        .I2(\data_out[3]_i_5_n_0 ),
-        .I3(\data_out[3]_i_4_n_0 ),
+       (.I0(\data_out[3]_i_4_n_0 ),
+        .I1(\data_out[3]_i_5_n_0 ),
+        .I2(\data_out[3]_i_6_n_0 ),
+        .I3(count[0]),
         .I4(\data_out[3]_i_3_n_0 ),
         .I5(state_reg_n_0),
         .O(state_i_1_n_0));
@@ -583,31 +673,6 @@ module blockdesign_DeBounce_0_0_DeBounce
         .CLR(Reset),
         .D(state_i_1_n_0),
         .Q(state_reg_n_0));
-endmodule
-
-(* CHECK_LICENSE_TYPE = "blockdesign_DeBounce_0_0,DeBounce,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
-(* x_core_info = "DeBounce,Vivado 2023.1" *) 
-(* NotValidForBitStream *)
-module blockdesign_DeBounce_0_0
-   (clk,
-    Reset,
-    data_in,
-    data_out);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, ASSOCIATED_RESET Reset, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input clk;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 Reset RST" *) (* x_interface_parameter = "XIL_INTERFACENAME Reset, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input Reset;
-  input [3:0]data_in;
-  output [3:0]data_out;
-
-  wire Reset;
-  wire clk;
-  wire [3:0]data_in;
-  wire [3:0]data_out;
-
-  blockdesign_DeBounce_0_0_DeBounce U0
-       (.Reset(Reset),
-        .clk(clk),
-        .data_in(data_in),
-        .data_out(data_out));
 endmodule
 `ifndef GLBL
 `define GLBL
