@@ -2,10 +2,10 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
--- Date        : Wed Apr  3 10:42:20 2024
+-- Date        : Thu Apr  4 09:38:39 2024
 -- Host        : TRENLAPTOP running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_wiz_0_0/blockdesign_clk_wiz_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top blockdesign_clk_wiz_0_0 -prefix
+--               blockdesign_clk_wiz_0_0_ blockdesign_clk_wiz_0_0_sim_netlist.vhdl
 -- Design      : blockdesign_clk_wiz_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -15,16 +15,14 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity blockdesign_clk_wiz_0_0_clk_wiz is
+entity blockdesign_clk_wiz_0_0_blockdesign_clk_wiz_0_0_clk_wiz is
   port (
     clk_out1 : out STD_LOGIC;
-    reset : in STD_LOGIC;
-    locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
-end blockdesign_clk_wiz_0_0_clk_wiz;
+end blockdesign_clk_wiz_0_0_blockdesign_clk_wiz_0_0_clk_wiz;
 
-architecture STRUCTURE of blockdesign_clk_wiz_0_0_clk_wiz is
+architecture STRUCTURE of blockdesign_clk_wiz_0_0_blockdesign_clk_wiz_0_0_clk_wiz is
   signal clk_in1_blockdesign_clk_wiz_0_0 : STD_LOGIC;
   signal clk_out1_blockdesign_clk_wiz_0_0 : STD_LOGIC;
   signal clkfbout_blockdesign_clk_wiz_0_0 : STD_LOGIC;
@@ -43,6 +41,7 @@ architecture STRUCTURE of blockdesign_clk_wiz_0_0_clk_wiz is
   signal NLW_mmcm_adv_inst_CLKOUT5_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT6_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_DRDY_UNCONNECTED : STD_LOGIC;
+  signal NLW_mmcm_adv_inst_LOCKED_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_PSDONE_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_DO_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
   attribute BOX_TYPE : string;
@@ -153,13 +152,13 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       DO(15 downto 0) => NLW_mmcm_adv_inst_DO_UNCONNECTED(15 downto 0),
       DRDY => NLW_mmcm_adv_inst_DRDY_UNCONNECTED,
       DWE => '0',
-      LOCKED => locked,
+      LOCKED => NLW_mmcm_adv_inst_LOCKED_UNCONNECTED,
       PSCLK => '0',
       PSDONE => NLW_mmcm_adv_inst_PSDONE_UNCONNECTED,
       PSEN => '0',
       PSINCDEC => '0',
       PWRDWN => '0',
-      RST => reset
+      RST => '0'
     );
 end STRUCTURE;
 library IEEE;
@@ -169,8 +168,6 @@ use UNISIM.VCOMPONENTS.ALL;
 entity blockdesign_clk_wiz_0_0 is
   port (
     clk_out1 : out STD_LOGIC;
-    reset : in STD_LOGIC;
-    locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
@@ -179,11 +176,9 @@ end blockdesign_clk_wiz_0_0;
 
 architecture STRUCTURE of blockdesign_clk_wiz_0_0 is
 begin
-inst: entity work.blockdesign_clk_wiz_0_0_clk_wiz
+inst: entity work.blockdesign_clk_wiz_0_0_blockdesign_clk_wiz_0_0_clk_wiz
      port map (
       clk_in1 => clk_in1,
-      clk_out1 => clk_out1,
-      locked => locked,
-      reset => reset
+      clk_out1 => clk_out1
     );
 end STRUCTURE;

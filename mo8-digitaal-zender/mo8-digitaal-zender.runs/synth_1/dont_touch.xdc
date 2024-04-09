@@ -12,4 +12,10 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign
 # IP: bd/blockdesign/ip/blockdesign_keypad_0_0/blockdesign_keypad_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_keypad_0_0 || ORIG_REF_NAME==blockdesign_keypad_0_0} -quiet] -quiet
 
+# IP: bd/blockdesign/ip/blockdesign_DeBounce_0_0/blockdesign_DeBounce_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_DeBounce_0_0 || ORIG_REF_NAME==blockdesign_DeBounce_0_0} -quiet] -quiet
+
+# IP: bd/blockdesign/ip/blockdesign_system_ila_0_0/blockdesign_system_ila_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_system_ila_0_0 || ORIG_REF_NAME==blockdesign_system_ila_0_0} -quiet] -quiet
+
 # XDC: c:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/blockdesign_ooc.xdc

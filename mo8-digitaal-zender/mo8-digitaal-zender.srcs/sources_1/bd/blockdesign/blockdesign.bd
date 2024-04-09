@@ -12,7 +12,9 @@
     },
     "design_tree": {
       "clk_wiz_0": "",
-      "keypad_0": ""
+      "system_ila_0": "",
+      "keypad_0": "",
+      "DeBounce_0": ""
     },
     "ports": {
       "sys_clock": {
@@ -48,11 +50,6 @@
       "Row_2_0": {
         "direction": "O"
       },
-      "Data_0": {
-        "direction": "O",
-        "left": "3",
-        "right": "0"
-      },
       "Col_0_0": {
         "direction": "I"
       },
@@ -64,6 +61,11 @@
       },
       "Col_3_0": {
         "direction": "I"
+      },
+      "Data_0": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
       }
     },
     "components": {
@@ -93,6 +95,47 @@
           },
           "USE_RESET": {
             "value": "false"
+          }
+        }
+      },
+      "system_ila_0": {
+        "vlnv": "xilinx.com:ip:system_ila:1.1",
+        "xci_name": "blockdesign_system_ila_0_0",
+        "xci_path": "ip\\blockdesign_system_ila_0_0\\blockdesign_system_ila_0_0.xci",
+        "inst_hier_path": "system_ila_0",
+        "parameters": {
+          "C_MON_TYPE": {
+            "value": "NATIVE"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "9"
+          },
+          "C_PROBE0_TYPE": {
+            "value": "0"
+          },
+          "C_PROBE1_TYPE": {
+            "value": "0"
+          },
+          "C_PROBE2_TYPE": {
+            "value": "0"
+          },
+          "C_PROBE3_TYPE": {
+            "value": "0"
+          },
+          "C_PROBE4_TYPE": {
+            "value": "0"
+          },
+          "C_PROBE5_TYPE": {
+            "value": "0"
+          },
+          "C_PROBE6_TYPE": {
+            "value": "0"
+          },
+          "C_PROBE7_TYPE": {
+            "value": "0"
+          },
+          "C_PROBE8_TYPE": {
+            "value": "0"
           }
         }
       },
@@ -152,62 +195,205 @@
             "right": "0"
           }
         }
+      },
+      "DeBounce_0": {
+        "vlnv": "xilinx.com:module_ref:DeBounce:1.0",
+        "xci_name": "blockdesign_DeBounce_0_0",
+        "xci_path": "ip\\blockdesign_DeBounce_0_0\\blockdesign_DeBounce_0_0.xci",
+        "inst_hier_path": "DeBounce_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "DeBounce",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "Reset",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "Reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH"
+              }
+            }
+          },
+          "data_in": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "data_out": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
       }
     },
     "nets": {
       "Col_0_0_1": {
         "ports": [
           "Col_0_0",
+          "system_ila_0/probe0",
           "keypad_0/Col_0"
-        ]
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
       },
       "Col_1_0_1": {
         "ports": [
           "Col_1_0",
+          "system_ila_0/probe1",
           "keypad_0/Col_1"
-        ]
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
       },
       "Col_2_0_1": {
         "ports": [
           "Col_2_0",
+          "system_ila_0/probe2",
           "keypad_0/Col_2"
-        ]
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
       },
       "Col_3_0_1": {
         "ports": [
           "Col_3_0",
+          "system_ila_0/probe3",
           "keypad_0/Col_3"
-        ]
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
+      },
+      "DeBounce_0_data_out": {
+        "ports": [
+          "DeBounce_0/data_out",
+          "Data_0",
+          "system_ila_0/probe4"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
       },
       "clk_wiz_0_clk_out1": {
         "ports": [
           "clk_wiz_0/clk_out1",
-          "keypad_0/clk"
+          "system_ila_0/clk",
+          "keypad_0/clk",
+          "DeBounce_0/clk"
         ]
       },
       "keypad_0_Data": {
         "ports": [
           "keypad_0/Data",
-          "Data_0"
-        ]
+          "system_ila_0/probe5",
+          "DeBounce_0/data_in"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
       },
       "keypad_0_Row_0": {
         "ports": [
           "keypad_0/Row_0",
-          "Row_0_0"
-        ]
+          "Row_0_0",
+          "system_ila_0/probe6"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
       },
       "keypad_0_Row_1": {
         "ports": [
           "keypad_0/Row_1",
-          "Row_1_0"
-        ]
+          "Row_1_0",
+          "system_ila_0/probe7"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
       },
       "keypad_0_Row_2": {
         "ports": [
           "keypad_0/Row_2",
-          "Row_2_0"
-        ]
+          "Row_2_0",
+          "system_ila_0/probe8"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
       },
       "sys_clock_1": {
         "ports": [

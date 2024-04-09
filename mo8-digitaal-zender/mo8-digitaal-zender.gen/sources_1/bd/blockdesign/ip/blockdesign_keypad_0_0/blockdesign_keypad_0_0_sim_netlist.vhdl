@@ -4,8 +4,8 @@
 -- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
 -- Date        : Thu Apr  4 13:42:51 2024
 -- Host        : TRENLAPTOP running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_keypad_0_0/blockdesign_keypad_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top blockdesign_keypad_0_0 -prefix
+--               blockdesign_keypad_0_0_ blockdesign_keypad_0_0_sim_netlist.vhdl
 -- Design      : blockdesign_keypad_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -27,8 +27,6 @@ entity blockdesign_keypad_0_0_keypad is
     Col_2 : in STD_LOGIC;
     Col_0 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of blockdesign_keypad_0_0_keypad : entity is "keypad";
 end blockdesign_keypad_0_0_keypad;
 
 architecture STRUCTURE of blockdesign_keypad_0_0_keypad is

@@ -4,8 +4,8 @@
 -- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
 -- Date        : Thu Apr  4 09:38:39 2024
 -- Host        : TRENLAPTOP running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_wiz_0_0/blockdesign_clk_wiz_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top blockdesign_clk_wiz_0_0 -prefix
+--               blockdesign_clk_wiz_0_0_ blockdesign_clk_wiz_0_0_sim_netlist.vhdl
 -- Design      : blockdesign_clk_wiz_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -15,14 +15,14 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity blockdesign_clk_wiz_0_0_clk_wiz is
+entity blockdesign_clk_wiz_0_0_blockdesign_clk_wiz_0_0_clk_wiz is
   port (
     clk_out1 : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
-end blockdesign_clk_wiz_0_0_clk_wiz;
+end blockdesign_clk_wiz_0_0_blockdesign_clk_wiz_0_0_clk_wiz;
 
-architecture STRUCTURE of blockdesign_clk_wiz_0_0_clk_wiz is
+architecture STRUCTURE of blockdesign_clk_wiz_0_0_blockdesign_clk_wiz_0_0_clk_wiz is
   signal clk_in1_blockdesign_clk_wiz_0_0 : STD_LOGIC;
   signal clk_out1_blockdesign_clk_wiz_0_0 : STD_LOGIC;
   signal clkfbout_blockdesign_clk_wiz_0_0 : STD_LOGIC;
@@ -176,7 +176,7 @@ end blockdesign_clk_wiz_0_0;
 
 architecture STRUCTURE of blockdesign_clk_wiz_0_0 is
 begin
-inst: entity work.blockdesign_clk_wiz_0_0_clk_wiz
+inst: entity work.blockdesign_clk_wiz_0_0_blockdesign_clk_wiz_0_0_clk_wiz
      port map (
       clk_in1 => clk_in1,
       clk_out1 => clk_out1

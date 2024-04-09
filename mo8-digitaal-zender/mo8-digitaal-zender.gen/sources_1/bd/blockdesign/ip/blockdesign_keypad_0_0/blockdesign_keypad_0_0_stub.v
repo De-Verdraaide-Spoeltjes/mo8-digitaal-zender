@@ -4,8 +4,8 @@
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
 // Date        : Thu Apr  4 13:42:51 2024
 // Host        : TRENLAPTOP running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/_code/Git/MO8/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_keypad_0_0/blockdesign_keypad_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top blockdesign_keypad_0_0 -prefix
+//               blockdesign_keypad_0_0_ blockdesign_keypad_0_0_stub.v
 // Design      : blockdesign_keypad_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1

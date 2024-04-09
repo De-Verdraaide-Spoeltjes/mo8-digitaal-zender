@@ -19,7 +19,7 @@ end keypad;
 
 architecture Behavioral of keypad is
     type state_type is (s0, s0_0, s0_1, s0_2, s0_3, s1, s1_0, s1_1, s1_2, s1_3, s2, s2_0, s2_1, s2_2, s2_3, s3);
-    signal state, next_state : state_type;
+    signal state, next_state : state_type; -- state machine states
     signal await : std_logic := '0';
 begin
     process(Col_0, Col_1, Col_2, Col_3, state)

@@ -1,0 +1,8 @@
+verilog xil_defaultlib --include "../../../../mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ipshared/30ef" --include "../../../../mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ipshared/1b7e/hdl/verilog" --include "../../../../mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ipshared/122e/hdl/verilog" --include "../../../../mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ipshared/affe/hdl/verilog" --include "../../../../mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ipshared/20d0/hdl/verilog" \
+"../../../bd/blockdesign/ip/blockdesign_clk_wiz_0_0/blockdesign_clk_wiz_0_0_clk_wiz.v" \
+"../../../bd/blockdesign/ip/blockdesign_clk_wiz_0_0/blockdesign_clk_wiz_0_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,1 @@
+--incr --debug typical --relax --mt 2  -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot blockdesign xil_defaultlib.blockdesign xil_defaultlib.glbl -log elaborate.log
