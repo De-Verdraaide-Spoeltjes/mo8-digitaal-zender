@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Mon Mar 25 12:02:23 2024
+| Date         : Tue Apr  9 11:35:20 2024
 | Host         : Lenovo-Jochem running 64-bit major release  (build 9200)
 | Command      : report_utilization -file blockdesign_processing_system7_0_0_utilization_synth.rpt -pb blockdesign_processing_system7_0_0_utilization_synth.pb
 | Design       : blockdesign_processing_system7_0_0

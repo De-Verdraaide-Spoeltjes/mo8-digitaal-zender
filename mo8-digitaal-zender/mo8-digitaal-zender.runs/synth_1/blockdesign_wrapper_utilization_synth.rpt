@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Tue Apr  2 16:32:40 2024
+| Date         : Tue Apr  9 13:28:32 2024
 | Host         : Lenovo-Jochem running 64-bit major release  (build 9200)
 | Command      : report_utilization -file blockdesign_wrapper_utilization_synth.rpt -pb blockdesign_wrapper_utilization_synth.pb
 | Design       : blockdesign_wrapper
@@ -92,7 +92,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |    5 |     0 |          0 |       125 |  4.00 |
+| Bonded IOB                  |   13 |     0 |          0 |       125 | 10.40 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |          0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         4 |  0.00 |
@@ -148,26 +148,33 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| OBUF     |    4 |                  IO |
-| IBUF     |    1 |                  IO |
+| OBUF     |    7 |                  IO |
+| IBUF     |    6 |                  IO |
 +----------+------+---------------------+
 
 
 8. Black Boxes
 --------------
 
-+------------------------------------+------+
-|              Ref Name              | Used |
-+------------------------------------+------+
-| blockdesign_xbar_0                 |    1 |
-| blockdesign_processing_system7_0_0 |    1 |
-| blockdesign_proc_sys_reset_0_0     |    1 |
-| blockdesign_axi_gpio_3_0           |    1 |
-| blockdesign_axi_gpio_2_0           |    1 |
-| blockdesign_axi_gpio_1_0           |    1 |
-| blockdesign_axi_gpio_0_0           |    1 |
-| blockdesign_auto_pc_0              |    1 |
-+------------------------------------+------+
++---------------------------------------+------+
+|                Ref Name               | Used |
++---------------------------------------+------+
+| blockdesign_xbar_0                    |    1 |
+| blockdesign_util_vector_logic_0_0     |    1 |
+| blockdesign_util_reduced_logic_0_0    |    1 |
+| blockdesign_processing_system7_0_0    |    1 |
+| blockdesign_proc_sys_reset_0_0        |    1 |
+| blockdesign_keypad_0_0                |    1 |
+| blockdesign_hold_detector_0_0         |    1 |
+| blockdesign_fifo_generator_0_0        |    1 |
+| blockdesign_comunication_protocol_0_0 |    1 |
+| blockdesign_clk_divider_0_0           |    1 |
+| blockdesign_axi_gpio_3_0              |    1 |
+| blockdesign_axi_gpio_2_0              |    1 |
+| blockdesign_axi_gpio_1_0              |    1 |
+| blockdesign_axi_gpio_0_0              |    1 |
+| blockdesign_auto_pc_0                 |    1 |
++---------------------------------------+------+
 
 
 9. Instantiated Netlists

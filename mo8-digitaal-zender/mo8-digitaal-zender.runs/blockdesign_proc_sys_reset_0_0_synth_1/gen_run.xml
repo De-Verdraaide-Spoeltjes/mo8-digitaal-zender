@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="blockdesign_proc_sys_reset_0_0_synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1712067562">
+<GenRun Id="blockdesign_proc_sys_reset_0_0_synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1712655147">
   <File Type="PA-TCL" Name="blockdesign_proc_sys_reset_0_0.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="blockdesign_proc_sys_reset_0_0_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="blockdesign_proc_sys_reset_0_0_reports.tcl"/>
@@ -52,9 +52,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

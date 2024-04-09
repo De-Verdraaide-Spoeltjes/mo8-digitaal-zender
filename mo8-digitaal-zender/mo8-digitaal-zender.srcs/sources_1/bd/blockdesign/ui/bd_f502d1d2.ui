@@ -1,0 +1,29 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.859564",
+   "Default View_TopLeft":"-162,-237",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+preplace port port-id_is_sterretje -pg 1 -lvl 5 -x 1010 -y 90 -defaultsOSRD
+preplace port port-id_clk_i -pg 1 -lvl 0 -x 0 -y 50 -defaultsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace portBus keypad_value -pg 1 -lvl 0 -x 0 -y 130 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 2 -x 330 -y 180 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 1 -x 100 -y 190 -defaultsOSRD
+preplace inst util_reduced_logic_0 -pg 1 -lvl 3 -x 610 -y 200 -defaultsOSRD
+preplace inst clk_divider_0 -pg 1 -lvl 3 -x 610 -y 70 -defaultsOSRD
+preplace inst hold_detector_0 -pg 1 -lvl 4 -x 870 -y 90 -defaultsOSRD
+preplace netloc xlconstant_0_dout 1 1 1 NJ 190
+preplace netloc util_vector_logic_0_Res 1 2 1 470 180n
+preplace netloc keypad_0_Data 1 0 2 NJ 130 180J
+preplace netloc clk_divider_0_clk_o 1 3 1 NJ 70
+preplace netloc hold_detector_0_value_out 1 4 1 N 90
+preplace netloc util_reduced_logic_0_Res 1 3 1 750J 110n
+preplace netloc clk_i_1 1 0 3 20J 60 NJ 60 NJ
+preplace netloc reset_1 1 0 4 NJ 80 NJ 80 480 140 740
+levelinfo -pg 1 0 100 330 610 870 1010
+pagesize -pg 1 -db -bbox -sgen -180 0 1150 260
+"
+}
+

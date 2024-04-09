@@ -1,0 +1,14 @@
+verilog xil_defaultlib --include "D:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" --include "../../../../mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ipshared/ec67/hdl" --include "../../../../mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ipshared/aed8/hdl" \
+"../../../bd/blockdesign/ip/blockdesign_processing_system7_0_0/sim/blockdesign_processing_system7_0_0.v" \
+"../../../bd/blockdesign/ip/blockdesign_xlconcat_0_0/sim/blockdesign_xlconcat_0_0.v" \
+"../../../bd/blockdesign/ip/blockdesign_xbar_0/sim/blockdesign_xbar_0.v" \
+"../../../bd/blockdesign/ip/blockdesign_fifo_generator_0_0/sim/blockdesign_fifo_generator_0_0.v" \
+"../../../bd/blockdesign/ip/blockdesign_util_vector_logic_0_0/sim/blockdesign_util_vector_logic_0_0.v" \
+"../../../bd/blockdesign/ip/blockdesign_util_reduced_logic_0_0/sim/blockdesign_util_reduced_logic_0_0.v" \
+"../../../bd/blockdesign/ip/blockdesign_xlconstant_0_0/sim/blockdesign_xlconstant_0_0.v" \
+"../../../bd/blockdesign/ip/blockdesign_auto_pc_0/sim/blockdesign_auto_pc_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

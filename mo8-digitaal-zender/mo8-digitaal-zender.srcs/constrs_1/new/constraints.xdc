@@ -3,6 +3,9 @@ set_property IOSTANDARD LVCMOS33 [get_ports UART_txd]
 set_property PACKAGE_PIN P18 [get_ports UART_rxd]
 set_property PACKAGE_PIN N17 [get_ports UART_txd]
 
+set_property IOSTANDARD LVCMOS33 [get_ports reset_in]
+set_property PACKAGE_PIN L19 [get_ports reset_in]
+
 set_property IOSTANDARD LVCMOS33 [get_ports {status_led[2]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {status_led[1]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {status_led[0]}]
