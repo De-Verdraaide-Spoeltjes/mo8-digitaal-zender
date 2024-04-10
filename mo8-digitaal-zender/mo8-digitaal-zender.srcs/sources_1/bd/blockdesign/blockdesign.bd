@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xFCA4EC042E555F6D",
+      "boundary_crc": "0xF0CDF1F765B408F6",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../mo8-digitaal-zender.gen/sources_1/bd/blockdesign",
       "name": "blockdesign",
@@ -30,7 +30,6 @@
           "m03_couplers": {}
         }
       },
-      "keypad_0": "",
       "fifo_generator_0": "",
       "comunication_protocol_0": "",
       "filter_sterretje": {
@@ -40,7 +39,8 @@
         "clk_divider_0": "",
         "hold_detector_0": ""
       },
-      "DeBounce_0": ""
+      "DeBounce_0": "",
+      "keypad_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -233,27 +233,6 @@
         "left": "2",
         "right": "0"
       },
-      "Row_2_0": {
-        "direction": "O"
-      },
-      "Row_1_0": {
-        "direction": "O"
-      },
-      "Row_0_0": {
-        "direction": "O"
-      },
-      "Col_0_0": {
-        "direction": "I"
-      },
-      "Col_1_0": {
-        "direction": "I"
-      },
-      "Col_2_0": {
-        "direction": "I"
-      },
-      "Col_3_0": {
-        "direction": "I"
-      },
       "reset_in": {
         "type": "rst",
         "direction": "I",
@@ -266,6 +245,27 @@
             "value": "ACTIVE_HIGH"
           }
         }
+      },
+      "Row_0_0": {
+        "direction": "I"
+      },
+      "Row_1_0": {
+        "direction": "I"
+      },
+      "Row_2_0": {
+        "direction": "I"
+      },
+      "Row_3_0": {
+        "direction": "I"
+      },
+      "Col_1_0": {
+        "direction": "O"
+      },
+      "Col_2_0": {
+        "direction": "O"
+      },
+      "Col_0_0": {
+        "direction": "O"
       }
     },
     "components": {
@@ -2836,69 +2836,6 @@
           }
         }
       },
-      "keypad_0": {
-        "vlnv": "xilinx.com:module_ref:keypad:1.0",
-        "xci_name": "blockdesign_keypad_0_0",
-        "xci_path": "ip\\blockdesign_keypad_0_0\\blockdesign_keypad_0_0.xci",
-        "inst_hier_path": "keypad_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "keypad",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "Col_0": {
-            "direction": "I"
-          },
-          "Col_1": {
-            "direction": "I"
-          },
-          "Col_2": {
-            "direction": "I"
-          },
-          "Col_3": {
-            "direction": "I"
-          },
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "blockdesign_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "Row_0": {
-            "direction": "O"
-          },
-          "Row_1": {
-            "direction": "O"
-          },
-          "Row_2": {
-            "direction": "O"
-          },
-          "Data": {
-            "direction": "O",
-            "left": "3",
-            "right": "0",
-            "parameters": {
-              "PortType": {
-                "value": "undef",
-                "value_src": "ip_prop"
-              },
-              "PortType.PROP_SRC": {
-                "value": "false",
-                "value_src": "ip_prop"
-              }
-            }
-          }
-        }
-      },
       "fifo_generator_0": {
         "vlnv": "xilinx.com:ip:fifo_generator:13.2",
         "xci_name": "blockdesign_fifo_generator_0_0",
@@ -3253,17 +3190,7 @@
           "data_in": {
             "direction": "I",
             "left": "3",
-            "right": "0",
-            "parameters": {
-              "PortType": {
-                "value": "undef",
-                "value_src": "ip_prop"
-              },
-              "PortType.PROP_SRC": {
-                "value": "false",
-                "value_src": "ip_prop"
-              }
-            }
+            "right": "0"
           },
           "data_out": {
             "direction": "O",
@@ -3279,6 +3206,59 @@
                 "value_src": "ip_prop"
               }
             }
+          }
+        }
+      },
+      "keypad_0": {
+        "vlnv": "xilinx.com:module_ref:keypad:1.0",
+        "xci_name": "blockdesign_keypad_0_1",
+        "xci_path": "ip\\blockdesign_keypad_0_1\\blockdesign_keypad_0_1.xci",
+        "inst_hier_path": "keypad_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "keypad",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Row_0": {
+            "direction": "I"
+          },
+          "Row_1": {
+            "direction": "I"
+          },
+          "Row_2": {
+            "direction": "I"
+          },
+          "Row_3": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "blockdesign_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "Col_0": {
+            "direction": "O"
+          },
+          "Col_1": {
+            "direction": "O"
+          },
+          "Col_2": {
+            "direction": "O"
+          },
+          "Data": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
           }
         }
       }
@@ -3304,28 +3284,28 @@
       }
     },
     "nets": {
-      "Col_0_0_1": {
+      "Row_0_0_1": {
         "ports": [
-          "Col_0_0",
-          "keypad_0/Col_0"
+          "Row_0_0",
+          "keypad_0/Row_0"
         ]
       },
-      "Col_1_0_1": {
+      "Row_1_0_1": {
         "ports": [
-          "Col_1_0",
-          "keypad_0/Col_1"
+          "Row_1_0",
+          "keypad_0/Row_1"
         ]
       },
-      "Col_2_0_1": {
+      "Row_2_0_1": {
         "ports": [
-          "Col_2_0",
-          "keypad_0/Col_2"
+          "Row_2_0",
+          "keypad_0/Row_2"
         ]
       },
-      "Col_3_0_1": {
+      "Row_3_0_1": {
         "ports": [
-          "Col_3_0",
-          "keypad_0/Col_3"
+          "Row_3_0",
+          "keypad_0/Row_3"
         ]
       },
       "aux_reset_in_0_1": {
@@ -3343,11 +3323,11 @@
       "connection_embedded_clk_100MHz": {
         "ports": [
           "connection_embedded/clk_100MHz",
-          "keypad_0/clk",
           "fifo_generator_0/clk",
           "comunication_protocol_0/clk",
           "filter_sterretje/clk",
-          "DeBounce_0/clk"
+          "DeBounce_0/clk",
+          "keypad_0/clk"
         ]
       },
       "connection_embedded_reset": {
@@ -3383,6 +3363,24 @@
           "comunication_protocol_0/buffer_data_ready"
         ]
       },
+      "keypad_0_Col_0": {
+        "ports": [
+          "keypad_0/Col_0",
+          "Col_0_0"
+        ]
+      },
+      "keypad_0_Col_1": {
+        "ports": [
+          "keypad_0/Col_1",
+          "Col_1_0"
+        ]
+      },
+      "keypad_0_Col_2": {
+        "ports": [
+          "keypad_0/Col_2",
+          "Col_2_0"
+        ]
+      },
       "keypad_0_Data": {
         "ports": [
           "DeBounce_0/data_out",
@@ -3395,24 +3393,6 @@
         "ports": [
           "keypad_0/Data",
           "DeBounce_0/data_in"
-        ]
-      },
-      "keypad_0_Row_0": {
-        "ports": [
-          "keypad_0/Row_0",
-          "Row_0_0"
-        ]
-      },
-      "keypad_0_Row_1": {
-        "ports": [
-          "keypad_0/Row_1",
-          "Row_1_0"
-        ]
-      },
-      "keypad_0_Row_2": {
-        "ports": [
-          "keypad_0/Row_2",
-          "Row_2_0"
         ]
       },
       "util_reduced_logic_0_Res": {

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Tue Apr  9 16:38:28 2024
+| Date         : Wed Apr 10 11:13:58 2024
 | Host         : Lenovo-Jochem running 64-bit major release  (build 9200)
 | Command      : report_drc -file blockdesign_wrapper_drc_routed.rpt -pb blockdesign_wrapper_drc_routed.pb -rpx blockdesign_wrapper_drc_routed.rpx
 | Design       : blockdesign_wrapper
@@ -24,19 +24,25 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 2
+             Violations found: 3
 +-----------+----------+-------------------+------------+
 | Rule      | Severity | Description       | Violations |
 +-----------+----------+-------------------+------------+
+| PDRC-63   | Warning  | SLICEM_5lutO5_A5  | 1          |
 | PDRC-153  | Warning  | Gated clock check | 1          |
 | RTSTAT-10 | Warning  | No routable loads | 1          |
 +-----------+----------+-------------------+------------+
 
 2. REPORT DETAILS
 -----------------
+PDRC-63#1 Warning
+SLICEM_5lutO5_A5  
+Dangling output pin O5 on site SLICE_X42Y81:A5LUT. For this programming the O5 output pin should have a signal.
+Related violations: <none>
+
 PDRC-153#1 Warning
 Gated clock check  
-Net blockdesign_i/keypad_0/U0/Row_0_reg_i_2_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/keypad_0/U0/Row_0_reg_i_2/O, cell blockdesign_i/keypad_0/U0/Row_0_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net blockdesign_i/keypad_0/U0/Col_0_reg_i_2_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/keypad_0/U0/Col_0_reg_i_2/O, cell blockdesign_i/keypad_0/U0/Col_0_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 RTSTAT-10#1 Warning

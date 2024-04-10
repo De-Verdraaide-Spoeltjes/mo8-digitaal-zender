@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
---Date        : Tue Apr  9 16:33:25 2024
+--Date        : Wed Apr 10 11:10:59 2024
 --Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
 --Command     : generate_target blockdesign_wrapper.bd
 --Design      : blockdesign_wrapper
@@ -14,10 +14,9 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity blockdesign_wrapper is
   port (
-    Col_0_0 : in STD_LOGIC;
-    Col_1_0 : in STD_LOGIC;
-    Col_2_0 : in STD_LOGIC;
-    Col_3_0 : in STD_LOGIC;
+    Col_0_0 : out STD_LOGIC;
+    Col_1_0 : out STD_LOGIC;
+    Col_2_0 : out STD_LOGIC;
     DDR_addr : inout STD_LOGIC_VECTOR ( 14 downto 0 );
     DDR_ba : inout STD_LOGIC_VECTOR ( 2 downto 0 );
     DDR_cas_n : inout STD_LOGIC;
@@ -39,9 +38,10 @@ entity blockdesign_wrapper is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
-    Row_0_0 : out STD_LOGIC;
-    Row_1_0 : out STD_LOGIC;
-    Row_2_0 : out STD_LOGIC;
+    Row_0_0 : in STD_LOGIC;
+    Row_1_0 : in STD_LOGIC;
+    Row_2_0 : in STD_LOGIC;
+    Row_3_0 : in STD_LOGIC;
     UART_rxd : in STD_LOGIC;
     UART_txd : out STD_LOGIC;
     reset_in : in STD_LOGIC;
@@ -76,14 +76,14 @@ architecture STRUCTURE of blockdesign_wrapper is
     UART_txd : out STD_LOGIC;
     UART_rxd : in STD_LOGIC;
     status_led : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    Row_2_0 : out STD_LOGIC;
-    Row_1_0 : out STD_LOGIC;
-    Row_0_0 : out STD_LOGIC;
-    Col_0_0 : in STD_LOGIC;
-    Col_1_0 : in STD_LOGIC;
-    Col_2_0 : in STD_LOGIC;
-    Col_3_0 : in STD_LOGIC;
-    reset_in : in STD_LOGIC
+    reset_in : in STD_LOGIC;
+    Row_0_0 : in STD_LOGIC;
+    Row_1_0 : in STD_LOGIC;
+    Row_2_0 : in STD_LOGIC;
+    Row_3_0 : in STD_LOGIC;
+    Col_1_0 : out STD_LOGIC;
+    Col_2_0 : out STD_LOGIC;
+    Col_0_0 : out STD_LOGIC
   );
   end component blockdesign;
 begin
@@ -92,7 +92,6 @@ blockdesign_i: component blockdesign
       Col_0_0 => Col_0_0,
       Col_1_0 => Col_1_0,
       Col_2_0 => Col_2_0,
-      Col_3_0 => Col_3_0,
       DDR_addr(14 downto 0) => DDR_addr(14 downto 0),
       DDR_ba(2 downto 0) => DDR_ba(2 downto 0),
       DDR_cas_n => DDR_cas_n,
@@ -117,6 +116,7 @@ blockdesign_i: component blockdesign
       Row_0_0 => Row_0_0,
       Row_1_0 => Row_1_0,
       Row_2_0 => Row_2_0,
+      Row_3_0 => Row_3_0,
       UART_rxd => UART_rxd,
       UART_txd => UART_txd,
       reset_in => reset_in,

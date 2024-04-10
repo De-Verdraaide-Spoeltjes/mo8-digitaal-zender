@@ -33,9 +33,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign
 # IP: bd/blockdesign/ip/blockdesign_ps7_0_axi_periph_1/blockdesign_ps7_0_axi_periph_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_ps7_0_axi_periph_1 || ORIG_REF_NAME==blockdesign_ps7_0_axi_periph_1} -quiet] -quiet
 
-# IP: bd/blockdesign/ip/blockdesign_keypad_0_0/blockdesign_keypad_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_keypad_0_0 || ORIG_REF_NAME==blockdesign_keypad_0_0} -quiet] -quiet
-
 # IP: bd/blockdesign/ip/blockdesign_fifo_generator_0_0/blockdesign_fifo_generator_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_fifo_generator_0_0 || ORIG_REF_NAME==blockdesign_fifo_generator_0_0} -quiet] -quiet
 
@@ -59,6 +56,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign
 
 # IP: bd/blockdesign/ip/blockdesign_DeBounce_0_0/blockdesign_DeBounce_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_DeBounce_0_0 || ORIG_REF_NAME==blockdesign_DeBounce_0_0} -quiet] -quiet
+
+# IP: bd/blockdesign/ip/blockdesign_keypad_0_1/blockdesign_keypad_0_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_keypad_0_1 || ORIG_REF_NAME==blockdesign_keypad_0_1} -quiet] -quiet
 
 # IP: bd/blockdesign/ip/blockdesign_auto_pc_0/blockdesign_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_auto_pc_0 || ORIG_REF_NAME==blockdesign_auto_pc_0} -quiet] -quiet
