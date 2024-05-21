@@ -1,0 +1,27 @@
+add_force {/communicatieprotocol_wrapper/sys_clock} -radix hex {1 0ns} {0 42500ps} -repeat_every 85000ps
+add_force {/communicatieprotocol_wrapper/din_0} -radix hex {0xffffffff 0ns}
+add_force {/communicatieprotocol_wrapper/keypad_data_0} -radix hex {0xf 0ns}
+add_force {/communicatieprotocol_wrapper/wr_en_0} -radix hex {0 0ns}
+add_force {/communicatieprotocol_wrapper/data_read_done_0} -radix hex {0 0ns}
+run 10us
+add_force {/communicatieprotocol_wrapper/wr_en_0} -radix hex {1 0ns}
+run 50ns
+add_force {/communicatieprotocol_wrapper/wr_en_0} -radix hex {0 0ns}
+add_force {/communicatieprotocol_wrapper/din_0} -radix hex {0 0ns}
+run 50ns
+add_force {/communicatieprotocol_wrapper/wr_en_0} -radix hex {1 0ns}
+run 50ns
+add_force {/communicatieprotocol_wrapper/wr_en_0} -radix hex {0 0ns}
+add_force {/communicatieprotocol_wrapper/din_0} -radix hex {ffffffff 0ns}
+run 50ns
+add_force {/communicatieprotocol_wrapper/wr_en_0} -radix hex {1 0ns}
+run 50ns
+add_force {/communicatieprotocol_wrapper/wr_en_0} -radix hex {0 0ns}
+add_force {/communicatieprotocol_wrapper/din_0} -radix hex {0 0ns}
+run 50ns
+add_force {/communicatieprotocol_wrapper/wr_en_0} -radix hex {1 0ns}
+run 50ns
+add_force {/communicatieprotocol_wrapper/wr_en_0} -radix hex {0 0ns}
+run 1us
+add_force {/communicatieprotocol_wrapper/keypad_data_0} -radix hex {0xa 0ns}
+run 1us

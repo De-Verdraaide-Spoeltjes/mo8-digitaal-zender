@@ -13,8 +13,8 @@
     "design_tree": {
       "fifo_generator_0": "",
       "clk_wiz": "",
-      "comunication_protocol_0": "",
-      "xlslice_0": ""
+      "xlslice_0": "",
+      "comunication_protocol_0": ""
     },
     "ports": {
       "din_0": {
@@ -134,6 +134,20 @@
           }
         }
       },
+      "xlslice_0": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "communicatieprotocol_xlslice_0_0",
+        "xci_path": "ip\\communicatieprotocol_xlslice_0_0\\communicatieprotocol_xlslice_0_0.xci",
+        "inst_hier_path": "xlslice_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "2"
+          },
+          "DIN_WIDTH": {
+            "value": "9"
+          }
+        }
+      },
       "comunication_protocol_0": {
         "vlnv": "xilinx.com:module_ref:comunication_protocol:1.0",
         "xci_name": "communicatieprotocol_comunication_protocol_0_0",
@@ -204,20 +218,6 @@
             "direction": "O",
             "left": "191",
             "right": "0"
-          }
-        }
-      },
-      "xlslice_0": {
-        "vlnv": "xilinx.com:ip:xlslice:1.0",
-        "xci_name": "communicatieprotocol_xlslice_0_0",
-        "xci_path": "ip\\communicatieprotocol_xlslice_0_0\\communicatieprotocol_xlslice_0_0.xci",
-        "inst_hier_path": "xlslice_0",
-        "parameters": {
-          "DIN_FROM": {
-            "value": "2"
-          },
-          "DIN_WIDTH": {
-            "value": "9"
           }
         }
       }

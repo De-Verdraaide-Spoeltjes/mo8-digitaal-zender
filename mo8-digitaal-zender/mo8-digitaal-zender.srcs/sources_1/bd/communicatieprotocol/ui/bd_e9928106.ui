@@ -5,31 +5,31 @@
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
-preplace port port-id_wr_en_0 -pg 1 -lvl 0 -x 0 -y 260 -defaultsOSRD
-preplace port port-id_sys_clock -pg 1 -lvl 0 -x 0 -y 340 -defaultsOSRD
-preplace port port-id_data_read_done_0 -pg 1 -lvl 0 -x 0 -y 160 -defaultsOSRD
-preplace port port-id_data_ready_0 -pg 1 -lvl 5 -x 1190 -y 100 -defaultsOSRD
-preplace portBus din_0 -pg 1 -lvl 0 -x 0 -y 230 -defaultsOSRD
-preplace portBus keypad_data_0 -pg 1 -lvl 0 -x 0 -y 130 -defaultsOSRD
-preplace portBus data_out_0 -pg 1 -lvl 5 -x 1190 -y 130 -defaultsOSRD
-preplace inst fifo_generator_0 -pg 1 -lvl 2 -x 410 -y 280 -defaultsOSRD
+preplace port port-id_wr_en_0 -pg 1 -lvl 0 -x -10 -y 260 -defaultsOSRD
+preplace port port-id_sys_clock -pg 1 -lvl 0 -x -10 -y 340 -defaultsOSRD
+preplace port port-id_data_read_done_0 -pg 1 -lvl 0 -x -10 -y 160 -defaultsOSRD
+preplace port port-id_data_ready_0 -pg 1 -lvl 5 -x 1230 -y 100 -defaultsOSRD
+preplace portBus din_0 -pg 1 -lvl 0 -x -10 -y 230 -defaultsOSRD
+preplace portBus keypad_data_0 -pg 1 -lvl 0 -x -10 -y 130 -defaultsOSRD
+preplace portBus data_out_0 -pg 1 -lvl 5 -x 1230 -y 130 -defaultsOSRD
+preplace inst fifo_generator_0 -pg 1 -lvl 2 -x 430 -y 280 -defaultsOSRD
 preplace inst clk_wiz -pg 1 -lvl 1 -x 110 -y 330 -defaultsOSRD
-preplace inst comunication_protocol_0 -pg 1 -lvl 4 -x 990 -y 110 -defaultsOSRD
-preplace inst xlslice_0 -pg 1 -lvl 3 -x 700 -y 280 -defaultsOSRD
-preplace netloc Net2 1 1 3 210 60 NJ 60 NJ
-preplace netloc comunication_protocol_0_buffer_read 1 1 4 220 400 NJ 400 NJ 400 1160
+preplace inst xlslice_0 -pg 1 -lvl 3 -x 730 -y 280 -defaultsOSRD
+preplace inst comunication_protocol_0 -pg 1 -lvl 4 -x 1020 -y 110 -defaultsOSRD
+preplace netloc Net2 1 1 3 230 60 NJ 60 NJ
+preplace netloc comunication_protocol_0_buffer_read 1 1 4 240 400 NJ 400 NJ 400 1190
 preplace netloc comunication_protocol_0_data_out 1 4 1 NJ 130
-preplace netloc comunication_protocol_0_data_ready 1 4 1 1170J 100n
+preplace netloc comunication_protocol_0_data_ready 1 4 1 1200J 100n
 preplace netloc data_read_done_0_1 1 0 4 NJ 160 NJ 160 NJ 160 NJ
 preplace netloc din_0_1 1 0 2 NJ 230 200J
-preplace netloc fifo_generator_0_dout 1 1 3 220 100 NJ 100 NJ
-preplace netloc keypad_data_0_1 1 0 4 NJ 130 NJ 130 NJ 130 800J
+preplace netloc fifo_generator_0_dout 1 1 3 240 100 NJ 100 NJ
+preplace netloc fifo_generator_0_rd_data_count 1 2 1 620J 270n
+preplace netloc keypad_data_0_1 1 0 4 NJ 130 NJ 130 NJ 130 830J
 preplace netloc sys_clock_1 1 0 1 NJ 340
 preplace netloc wr_en_0_1 1 0 2 NJ 260 NJ
-preplace netloc fifo_generator_0_rd_data_count 1 2 1 600J 270n
-preplace netloc xlslice_0_Dout 1 3 1 810 120n
-levelinfo -pg 1 0 110 410 700 990 1190
-pagesize -pg 1 -db -bbox -sgen -170 0 1360 420
+preplace netloc xlslice_0_Dout 1 3 1 840 120n
+levelinfo -pg 1 -10 110 430 730 1020 1230
+pagesize -pg 1 -db -bbox -sgen -190 0 1410 420
 "
 }
 {

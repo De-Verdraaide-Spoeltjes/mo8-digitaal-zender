@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
---Date        : Fri Apr  5 11:52:41 2024
+--Date        : Thu Apr 11 10:53:09 2024
 --Host        : XPS-Tommy running 64-bit major release  (build 9200)
 --Command     : generate_target communicatieprotocol.bd
 --Design      : communicatieprotocol
@@ -49,6 +49,12 @@ architecture STRUCTURE of communicatieprotocol is
     clk_out1 : out STD_LOGIC
   );
   end component communicatieprotocol_clk_wiz_0;
+  component communicatieprotocol_xlslice_0_0 is
+  port (
+    Din : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    Dout : out STD_LOGIC_VECTOR ( 2 downto 0 )
+  );
+  end component communicatieprotocol_xlslice_0_0;
   component communicatieprotocol_comunication_protocol_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -62,12 +68,6 @@ architecture STRUCTURE of communicatieprotocol is
     data_out : out STD_LOGIC_VECTOR ( 191 downto 0 )
   );
   end component communicatieprotocol_comunication_protocol_0_0;
-  component communicatieprotocol_xlslice_0_0 is
-  port (
-    Din : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    Dout : out STD_LOGIC_VECTOR ( 2 downto 0 )
-  );
-  end component communicatieprotocol_xlslice_0_0;
   signal Net2 : STD_LOGIC;
   signal comunication_protocol_0_buffer_read : STD_LOGIC;
   signal comunication_protocol_0_data_out : STD_LOGIC_VECTOR ( 191 downto 0 );
