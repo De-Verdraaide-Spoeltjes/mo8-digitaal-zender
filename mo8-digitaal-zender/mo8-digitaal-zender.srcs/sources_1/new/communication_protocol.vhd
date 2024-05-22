@@ -66,6 +66,7 @@ architecture Behavioral of comunication_protocol is
     signal keypad_is_hekkie     : std_logic := '0';
     signal keypad_is_hekkie_s   : std_logic := '0';
     signal keypad_old           : std_logic_vector(3 downto 0) := (others => '0');
+    signal header_buffer        : std_logic_vector(31 downto 0) := (others => '0');
 
     -- State machine
     type state_type is (Waiting_for_hekkie, Enable_read_buffer, Reading_buffer, Create_protocol, Send_data, Reset_data);
@@ -192,38 +193,43 @@ begin
             when Reading_buffer =>
                 buffer_read <= '0';
 
+                -- Set start of frame
+                header_buffer(7 downto 0) <= "10101010";
+
+                -- Set ID/ commando
+                header_buffer(15 downto 8) <= "00000001";
+
+                -- Set data length
+                header_buffer(31 downto 16) <= std_logic_vector(to_unsigned(16, 16));
+
             when Create_protocol =>
                 keypad_is_hekkie_s <= '1';
 
-                -- Set start of frame
-                data_out(7 downto 0) <= "10101010";
-
-                -- Set ID/ commando
-                data_out(15 downto 8) <= "00000001";
-
-                -- Set data length
-                data_out(31 downto 16) <= std_logic_vector(to_unsigned(16, 16));
+                -- Copy header to data_out
+                data_out(31 downto 0) <= header_buffer;
 
                 -- Calculate CRC of the header
-                data_out(47 downto 32) <= crc_calculation_header(std_logic_vector(to_unsigned(CRC_devider, 16)), buffer_in(31 downto 0));
-
+                data_out(47 downto 32) <= crc_calculation_header(std_logic_vector(to_unsigned(CRC_devider, 16)), header_buffer);
+                
                 -- Set data
                 data_out(175 downto 48) <= buffer_in;
-
+                
                 -- Calculate CRC of the data
                 data_out(191 downto 176) <= crc_calculation_data(std_logic_vector(to_unsigned(CRC_devider, 16)), buffer_in);
-
+                
 
             when Send_data =>
                 data_ready <= '1';
                 
             when Reset_data =>
+                header_buffer <= (others => '0');
                 buffer_read <= '0';
                 data_ready <= '0';
                 keypad_is_hekkie_s <= '0';
                 data_out <= (others => '0');
 
             when others =>
+                header_buffer <= (others => '0');
                 data_ready <= '0';
                 keypad_is_hekkie_s <= '0';
                 data_out <= (others => '0');
