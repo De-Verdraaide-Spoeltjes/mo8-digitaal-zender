@@ -62,8 +62,7 @@ module blockdesign_fifo_generator_0_0 (
   dout,
   full,
   empty,
-  rd_data_count,
-  wr_data_count
+  rd_data_count
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME core_clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN blockdesign_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
@@ -83,7 +82,6 @@ output wire full;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_read:1.0 FIFO_READ EMPTY" *)
 output wire empty;
 output wire [2 : 0] rd_data_count;
-output wire [10 : 0] wr_data_count;
 
   fifo_generator_v13_2_8 #(
     .C_COMMON_CLOCK(1),
@@ -111,7 +109,7 @@ output wire [10 : 0] wr_data_count;
     .C_HAS_UNDERFLOW(0),
     .C_HAS_VALID(0),
     .C_HAS_WR_ACK(0),
-    .C_HAS_WR_DATA_COUNT(1),
+    .C_HAS_WR_DATA_COUNT(0),
     .C_HAS_WR_RST(0),
     .C_IMPLEMENTATION_TYPE(0),
     .C_INIT_WR_PNTR_VAL(0),
@@ -322,7 +320,7 @@ output wire [10 : 0] wr_data_count;
     .underflow(),
     .data_count(),
     .rd_data_count(rd_data_count),
-    .wr_data_count(wr_data_count),
+    .wr_data_count(),
     .prog_full(),
     .prog_empty(),
     .sbiterr(),

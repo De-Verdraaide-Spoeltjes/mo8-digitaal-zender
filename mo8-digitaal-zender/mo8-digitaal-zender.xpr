@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="63" Path="C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.xpr">
+<Project Product="Vivado" Version="7" Minor="63" Path="D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="7534b548f33d4074a72d1d74c2a137b8"/>
@@ -45,7 +45,6 @@
     <Option Name="SimulatorGccVersionActiveHdl" Val="9.3.0"/>
     <Option Name="TargetLanguage" Val="VHDL"/>
     <Option Name="BoardPart" Val="tul.com.tw:pynq-z2:part0:1.0"/>
-    <Option Name="BoardPartRepoPaths" Val="$PPRDIR/../../../../AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
@@ -68,13 +67,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="1"/>
-    <Option Name="WTModelSimExportSim" Val="1"/>
-    <Option Name="WTQuestaExportSim" Val="1"/>
+    <Option Name="WTXSimExportSim" Val="2"/>
+    <Option Name="WTModelSimExportSim" Val="2"/>
+    <Option Name="WTQuestaExportSim" Val="2"/>
     <Option Name="WTIesExportSim" Val="0"/>
-    <Option Name="WTVcsExportSim" Val="1"/>
-    <Option Name="WTRivieraExportSim" Val="1"/>
-    <Option Name="WTActivehdlExportSim" Val="1"/>
+    <Option Name="WTVcsExportSim" Val="2"/>
+    <Option Name="WTRivieraExportSim" Val="2"/>
+    <Option Name="WTActivehdlExportSim" Val="2"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -128,41 +127,41 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_comunication_protocol_0_0/blockdesign_comunication_protocol_0_0.xci">
-          <Proxy FileSetName="blockdesign_comunication_protocol_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_DeBounce_0_0/blockdesign_DeBounce_0_0.xci">
           <Proxy FileSetName="blockdesign_DeBounce_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_processing_system7_0_0/blockdesign_processing_system7_0_0.xci">
-          <Proxy FileSetName="blockdesign_processing_system7_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_hold_detector_0_0/blockdesign_hold_detector_0_0.xci">
-          <Proxy FileSetName="blockdesign_hold_detector_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_proc_sys_reset_0_0/blockdesign_proc_sys_reset_0_0.xci">
-          <Proxy FileSetName="blockdesign_proc_sys_reset_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_util_vector_logic_0_0/blockdesign_util_vector_logic_0_0.xci">
-          <Proxy FileSetName="blockdesign_util_vector_logic_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_axi_gpio_3_0/blockdesign_axi_gpio_3_0.xci">
           <Proxy FileSetName="blockdesign_axi_gpio_3_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_util_reduced_logic_0_0/blockdesign_util_reduced_logic_0_0.xci">
-          <Proxy FileSetName="blockdesign_util_reduced_logic_0_0"/>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_processing_system7_0_0/blockdesign_processing_system7_0_0.xci">
+          <Proxy FileSetName="blockdesign_processing_system7_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_clk_divider_0_0/blockdesign_clk_divider_0_0.xci">
-          <Proxy FileSetName="blockdesign_clk_divider_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_axi_gpio_2_0/blockdesign_axi_gpio_2_0.xci">
-          <Proxy FileSetName="blockdesign_axi_gpio_2_0"/>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_keypad_0_1/blockdesign_keypad_0_1.xci">
+          <Proxy FileSetName="blockdesign_keypad_0_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_fifo_generator_0_0/blockdesign_fifo_generator_0_0.xci">
           <Proxy FileSetName="blockdesign_fifo_generator_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_keypad_0_1/blockdesign_keypad_0_1.xci">
-          <Proxy FileSetName="blockdesign_keypad_0_1"/>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_comunication_protocol_0_0/blockdesign_comunication_protocol_0_0.xci">
+          <Proxy FileSetName="blockdesign_comunication_protocol_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_axi_gpio_2_0/blockdesign_axi_gpio_2_0.xci">
+          <Proxy FileSetName="blockdesign_axi_gpio_2_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_clk_divider_0_0/blockdesign_clk_divider_0_0.xci">
+          <Proxy FileSetName="blockdesign_clk_divider_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_hold_detector_0_0/blockdesign_hold_detector_0_0.xci">
+          <Proxy FileSetName="blockdesign_hold_detector_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_util_vector_logic_0_0/blockdesign_util_vector_logic_0_0.xci">
+          <Proxy FileSetName="blockdesign_util_vector_logic_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_util_reduced_logic_0_0/blockdesign_util_reduced_logic_0_0.xci">
+          <Proxy FileSetName="blockdesign_util_reduced_logic_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_proc_sys_reset_0_0/blockdesign_proc_sys_reset_0_0.xci">
+          <Proxy FileSetName="blockdesign_proc_sys_reset_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/blockdesign/hdl/blockdesign_wrapper.vhd">
@@ -257,12 +256,6 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="blockdesign_comunication_protocol_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blockdesign_comunication_protocol_0_0" RelGenDir="$PGENDIR/blockdesign_comunication_protocol_0_0">
-      <Config>
-        <Option Name="TopModule" Val="blockdesign_comunication_protocol_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="blockdesign_fifo_generator_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blockdesign_fifo_generator_0_0" RelGenDir="$PGENDIR/blockdesign_fifo_generator_0_0">
       <Config>
         <Option Name="TopModule" Val="blockdesign_fifo_generator_0_0"/>
@@ -290,6 +283,12 @@
     <FileSet Name="blockdesign_keypad_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blockdesign_keypad_0_1" RelGenDir="$PGENDIR/blockdesign_keypad_0_1">
       <Config>
         <Option Name="TopModule" Val="blockdesign_keypad_0_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="blockdesign_comunication_protocol_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blockdesign_comunication_protocol_0_0" RelGenDir="$PGENDIR/blockdesign_comunication_protocol_0_0">
+      <Config>
+        <Option Name="TopModule" Val="blockdesign_comunication_protocol_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -383,16 +382,6 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="blockdesign_comunication_protocol_0_0_synth_1" Type="Ft3:Synth" SrcSet="blockdesign_comunication_protocol_0_0" Part="xc7z020clg400-1" ConstrsSet="blockdesign_comunication_protocol_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/blockdesign_comunication_protocol_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_comunication_protocol_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_comunication_protocol_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
     <Run Id="blockdesign_fifo_generator_0_0_synth_1" Type="Ft3:Synth" SrcSet="blockdesign_fifo_generator_0_0" Part="xc7z020clg400-1" ConstrsSet="blockdesign_fifo_generator_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/blockdesign_fifo_generator_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_fifo_generator_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_fifo_generator_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
@@ -425,9 +414,7 @@
     </Run>
     <Run Id="blockdesign_DeBounce_0_0_synth_1" Type="Ft3:Synth" SrcSet="blockdesign_DeBounce_0_0" Part="xc7z020clg400-1" ConstrsSet="blockdesign_DeBounce_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/blockdesign_DeBounce_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_DeBounce_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_DeBounce_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -436,6 +423,16 @@
       <RQSFiles/>
     </Run>
     <Run Id="blockdesign_keypad_0_1_synth_1" Type="Ft3:Synth" SrcSet="blockdesign_keypad_0_1" Part="xc7z020clg400-1" ConstrsSet="blockdesign_keypad_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/blockdesign_keypad_0_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_keypad_0_1_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_keypad_0_1_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_comunication_protocol_0_0_synth_1" Type="Ft3:Synth" SrcSet="blockdesign_comunication_protocol_0_0" Part="xc7z020clg400-1" ConstrsSet="blockdesign_comunication_protocol_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/blockdesign_comunication_protocol_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_comunication_protocol_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_comunication_protocol_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -567,23 +564,6 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="blockdesign_comunication_protocol_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="blockdesign_comunication_protocol_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="blockdesign_comunication_protocol_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_comunication_protocol_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_comunication_protocol_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
     <Run Id="blockdesign_fifo_generator_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="blockdesign_fifo_generator_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="blockdesign_fifo_generator_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_fifo_generator_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_fifo_generator_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
@@ -637,9 +617,7 @@
     </Run>
     <Run Id="blockdesign_DeBounce_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="blockdesign_DeBounce_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="blockdesign_DeBounce_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_DeBounce_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_DeBounce_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -655,6 +633,23 @@
       <RQSFiles/>
     </Run>
     <Run Id="blockdesign_keypad_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="blockdesign_keypad_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="blockdesign_keypad_0_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_keypad_0_1_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_keypad_0_1_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_comunication_protocol_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="blockdesign_comunication_protocol_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="blockdesign_comunication_protocol_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_comunication_protocol_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_comunication_protocol_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
           <Desc>Default settings for Implementation.</Desc>

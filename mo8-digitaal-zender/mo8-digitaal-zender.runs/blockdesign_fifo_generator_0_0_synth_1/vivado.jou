@@ -3,12 +3,12 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Tue Apr  9 13:24:11 2024
-# Process ID: 12712
-# Current directory: C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/blockdesign_fifo_generator_0_0_synth_1
+# Start of session at: Wed May 22 15:37:55 2024
+# Process ID: 19816
+# Current directory: D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/blockdesign_fifo_generator_0_0_synth_1
 # Command line: vivado.exe -log blockdesign_fifo_generator_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source blockdesign_fifo_generator_0_0.tcl
-# Log file: C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/blockdesign_fifo_generator_0_0_synth_1/blockdesign_fifo_generator_0_0.vds
-# Journal file: C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/blockdesign_fifo_generator_0_0_synth_1\vivado.jou
-# Running On: Lenovo-Jochem, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 4, Host memory: 17041 MB
+# Log file: D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/blockdesign_fifo_generator_0_0_synth_1/blockdesign_fifo_generator_0_0.vds
+# Journal file: D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/blockdesign_fifo_generator_0_0_synth_1\vivado.jou
+# Running On: XPS-Tommy, OS: Windows, CPU Frequency: 2918 MHz, CPU Physical cores: 14, Host memory: 34029 MB
 #-----------------------------------------------------------
 source blockdesign_fifo_generator_0_0.tcl -notrace

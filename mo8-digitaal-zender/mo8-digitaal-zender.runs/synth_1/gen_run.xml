@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1712740263" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/design_1_wrapper.dcp">
   <File Type="PA-TCL" Name="blockdesign_wrapper.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="blockdesign_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="blockdesign_wrapper_reports.tcl"/>
   <File Type="RDS-RDS" Name="blockdesign_wrapper.vds"/>
   <File Type="RDS-UTIL" Name="blockdesign_wrapper_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="blockdesign_wrapper_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="blockdesign_wrapper.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="blockdesign_wrapper_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="blockdesign_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/communication_protocol.vhd">
@@ -91,13 +88,13 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="blockdesign_util_vector_logic_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="blockdesign_axi_gpio_3_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="blockdesign_clk_divider_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="blockdesign_proc_sys_reset_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="blockdesign_util_vector_logic_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="blockdesign_processing_system7_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="blockdesign_comunication_protocol_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="blockdesign_proc_sys_reset_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="blockdesign_clk_divider_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="blockdesign_axi_gpio_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="blockdesign_comunication_protocol_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="blockdesign_util_reduced_logic_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="blockdesign_fifo_generator_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="blockdesign_hold_detector_0_0"/>

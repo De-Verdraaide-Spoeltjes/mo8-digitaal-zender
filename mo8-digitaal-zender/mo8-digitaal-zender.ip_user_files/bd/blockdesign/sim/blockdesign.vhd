@@ -2,8 +2,8 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
---Date        : Tue Apr  9 13:23:57 2024
---Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
+--Date        : Wed May 22 15:37:38 2024
+--Host        : XPS-Tommy running 64-bit major release  (build 9200)
 --Command     : generate_target blockdesign.bd
 --Design      : blockdesign
 --Purpose     : IP block netlist
@@ -2309,10 +2309,9 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity blockdesign is
   port (
-    Col_0_0 : in STD_LOGIC;
-    Col_1_0 : in STD_LOGIC;
-    Col_2_0 : in STD_LOGIC;
-    Col_3_0 : in STD_LOGIC;
+    Col_0_0 : out STD_LOGIC;
+    Col_1_0 : out STD_LOGIC;
+    Col_2_0 : out STD_LOGIC;
     DDR_addr : inout STD_LOGIC_VECTOR ( 14 downto 0 );
     DDR_ba : inout STD_LOGIC_VECTOR ( 2 downto 0 );
     DDR_cas_n : inout STD_LOGIC;
@@ -2334,34 +2333,22 @@ entity blockdesign is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
-    Row_0_0 : out STD_LOGIC;
-    Row_1_0 : out STD_LOGIC;
-    Row_2_0 : out STD_LOGIC;
+    Row_0_0 : in STD_LOGIC;
+    Row_1_0 : in STD_LOGIC;
+    Row_2_0 : in STD_LOGIC;
+    Row_3_0 : in STD_LOGIC;
     UART_rxd : in STD_LOGIC;
     UART_txd : out STD_LOGIC;
     reset_in : in STD_LOGIC;
     status_led : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of blockdesign : entity is "blockdesign,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=blockdesign,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=25,numReposBlks=17,numNonXlnxBlks=0,numHierBlks=8,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=4,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=8,da_board_cnt=5,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of blockdesign : entity is "blockdesign,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=blockdesign,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=26,numReposBlks=18,numNonXlnxBlks=0,numHierBlks=8,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=5,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=8,da_board_cnt=5,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of blockdesign : entity is "blockdesign.hwdef";
 end blockdesign;
 
 architecture STRUCTURE of blockdesign is
-  component blockdesign_keypad_0_0 is
-  port (
-    Col_0 : in STD_LOGIC;
-    Col_1 : in STD_LOGIC;
-    Col_2 : in STD_LOGIC;
-    Col_3 : in STD_LOGIC;
-    clk : in STD_LOGIC;
-    Row_0 : out STD_LOGIC;
-    Row_1 : out STD_LOGIC;
-    Row_2 : out STD_LOGIC;
-    Data : out STD_LOGIC_VECTOR ( 3 downto 0 )
-  );
-  end component blockdesign_keypad_0_0;
   component blockdesign_fifo_generator_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -2372,10 +2359,30 @@ architecture STRUCTURE of blockdesign is
     dout : out STD_LOGIC_VECTOR ( 127 downto 0 );
     full : out STD_LOGIC;
     empty : out STD_LOGIC;
-    rd_data_count : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    wr_data_count : out STD_LOGIC_VECTOR ( 10 downto 0 )
+    rd_data_count : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   end component blockdesign_fifo_generator_0_0;
+  component blockdesign_DeBounce_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    Reset : in STD_LOGIC;
+    data_in : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    data_out : out STD_LOGIC_VECTOR ( 3 downto 0 )
+  );
+  end component blockdesign_DeBounce_0_0;
+  component blockdesign_keypad_0_1 is
+  port (
+    Row_0 : in STD_LOGIC;
+    Row_1 : in STD_LOGIC;
+    Row_2 : in STD_LOGIC;
+    Row_3 : in STD_LOGIC;
+    clk : in STD_LOGIC;
+    Col_0 : out STD_LOGIC;
+    Col_1 : out STD_LOGIC;
+    Col_2 : out STD_LOGIC;
+    Data : out STD_LOGIC_VECTOR ( 3 downto 0 )
+  );
+  end component blockdesign_keypad_0_1;
   component blockdesign_comunication_protocol_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -2389,10 +2396,10 @@ architecture STRUCTURE of blockdesign is
     data_out : out STD_LOGIC_VECTOR ( 191 downto 0 )
   );
   end component blockdesign_comunication_protocol_0_0;
-  signal Col_0_0_1 : STD_LOGIC;
-  signal Col_1_0_1 : STD_LOGIC;
-  signal Col_2_0_1 : STD_LOGIC;
-  signal Col_3_0_1 : STD_LOGIC;
+  signal Row_0_0_1 : STD_LOGIC;
+  signal Row_1_0_1 : STD_LOGIC;
+  signal Row_2_0_1 : STD_LOGIC;
+  signal Row_3_0_1 : STD_LOGIC;
   signal aux_reset_in_0_1 : STD_LOGIC;
   signal comunication_protocol_0_buffer_read : STD_LOGIC;
   signal connection_embedded_clk_100MHz : STD_LOGIC;
@@ -2401,10 +2408,11 @@ architecture STRUCTURE of blockdesign is
   signal connection_embedded_status_led : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal fifo_generator_0_dout : STD_LOGIC_VECTOR ( 127 downto 0 );
   signal fifo_generator_0_rd_data_count : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal keypad_0_Col_0 : STD_LOGIC;
+  signal keypad_0_Col_1 : STD_LOGIC;
+  signal keypad_0_Col_2 : STD_LOGIC;
   signal keypad_0_Data : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal keypad_0_Row_0 : STD_LOGIC;
-  signal keypad_0_Row_1 : STD_LOGIC;
-  signal keypad_0_Row_2 : STD_LOGIC;
+  signal keypad_0_Data1 : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal processing_system7_0_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal processing_system7_0_DDR_BA : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal processing_system7_0_DDR_CAS_N : STD_LOGIC;
@@ -2433,7 +2441,6 @@ architecture STRUCTURE of blockdesign is
   signal NLW_comunication_protocol_0_data_out_UNCONNECTED : STD_LOGIC_VECTOR ( 191 downto 0 );
   signal NLW_fifo_generator_0_empty_UNCONNECTED : STD_LOGIC;
   signal NLW_fifo_generator_0_full_UNCONNECTED : STD_LOGIC;
-  signal NLW_fifo_generator_0_wr_data_count_UNCONNECTED : STD_LOGIC_VECTOR ( 10 downto 0 );
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of DDR_cas_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CAS_N";
   attribute X_INTERFACE_INFO of DDR_ck_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CK_N";
@@ -2464,17 +2471,24 @@ architecture STRUCTURE of blockdesign is
   attribute X_INTERFACE_INFO of DDR_dqs_p : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_P";
   attribute X_INTERFACE_INFO of FIXED_IO_mio : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO";
 begin
-  Col_0_0_1 <= Col_0_0;
-  Col_1_0_1 <= Col_1_0;
-  Col_2_0_1 <= Col_2_0;
-  Col_3_0_1 <= Col_3_0;
-  Row_0_0 <= keypad_0_Row_0;
-  Row_1_0 <= keypad_0_Row_1;
-  Row_2_0 <= keypad_0_Row_2;
+  Col_0_0 <= keypad_0_Col_0;
+  Col_1_0 <= keypad_0_Col_1;
+  Col_2_0 <= keypad_0_Col_2;
+  Row_0_0_1 <= Row_0_0;
+  Row_1_0_1 <= Row_1_0;
+  Row_2_0_1 <= Row_2_0;
+  Row_3_0_1 <= Row_3_0;
   UART_txd <= processing_system7_0_UART_1_TxD;
   aux_reset_in_0_1 <= reset_in;
   processing_system7_0_UART_1_RxD <= UART_rxd;
   status_led(2 downto 0) <= connection_embedded_status_led(2 downto 0);
+DeBounce_0: component blockdesign_DeBounce_0_0
+     port map (
+      Reset => connection_embedded_reset(0),
+      clk => connection_embedded_clk_100MHz,
+      data_in(3 downto 0) => keypad_0_Data1(3 downto 0),
+      data_out(3 downto 0) => keypad_0_Data(3 downto 0)
+    );
 comunication_protocol_0: component blockdesign_comunication_protocol_0_0
      port map (
       buffer_data_ready(2 downto 0) => fifo_generator_0_rd_data_count(2 downto 0),
@@ -2530,7 +2544,6 @@ fifo_generator_0: component blockdesign_fifo_generator_0_0
       rd_data_count(2 downto 0) => fifo_generator_0_rd_data_count(2 downto 0),
       rd_en => comunication_protocol_0_buffer_read,
       srst => connection_embedded_reset(0),
-      wr_data_count(10 downto 0) => NLW_fifo_generator_0_wr_data_count_UNCONNECTED(10 downto 0),
       wr_en => '0'
     );
 filter_sterretje: entity work.filter_sterretje_imp_1BL3XA9
@@ -2540,16 +2553,16 @@ filter_sterretje: entity work.filter_sterretje_imp_1BL3XA9
       keypad_value(3 downto 0) => keypad_0_Data(3 downto 0),
       reset => connection_embedded_reset(0)
     );
-keypad_0: component blockdesign_keypad_0_0
+keypad_0: component blockdesign_keypad_0_1
      port map (
-      Col_0 => Col_0_0_1,
-      Col_1 => Col_1_0_1,
-      Col_2 => Col_2_0_1,
-      Col_3 => Col_3_0_1,
-      Data(3 downto 0) => keypad_0_Data(3 downto 0),
-      Row_0 => keypad_0_Row_0,
-      Row_1 => keypad_0_Row_1,
-      Row_2 => keypad_0_Row_2,
+      Col_0 => keypad_0_Col_0,
+      Col_1 => keypad_0_Col_1,
+      Col_2 => keypad_0_Col_2,
+      Data(3 downto 0) => keypad_0_Data1(3 downto 0),
+      Row_0 => Row_0_0_1,
+      Row_1 => Row_1_0_1,
+      Row_2 => Row_2_0_1,
+      Row_3 => Row_3_0_1,
       clk => connection_embedded_clk_100MHz
     );
 end STRUCTURE;

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Apr 10 11:11:00 2024" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed May 22 15:37:39 2024" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="blockdesign" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -245,8 +245,8 @@
         <PORT DIR="O" LEFT="3" NAME="data_out" RIGHT="0" SIGIS="undef" SIGNAME="DeBounce_0_data_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="connection_embedded_rsa_input_value" PORT="gpio_io_i"/>
-            <CONNECTION INSTANCE="comunication_protocol_0" PORT="keypad_data"/>
             <CONNECTION INSTANCE="filter_sterretje_util_vector_logic_0" PORT="Op1"/>
+            <CONNECTION INSTANCE="comunication_protocol_0" PORT="keypad_data"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -338,10 +338,10 @@
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst" SIGNAME="connection_embedded_proc_sys_reset_0_peripheral_reset">
           <CONNECTIONS>
             <CONNECTION INSTANCE="fifo_generator_0" PORT="srst"/>
-            <CONNECTION INSTANCE="comunication_protocol_0" PORT="reset"/>
             <CONNECTION INSTANCE="filter_sterretje_clk_divider_0" PORT="reset"/>
             <CONNECTION INSTANCE="filter_sterretje_hold_detector_0" PORT="reset"/>
             <CONNECTION INSTANCE="DeBounce_0" PORT="Reset"/>
+            <CONNECTION INSTANCE="comunication_protocol_0" PORT="reset"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst"/>
@@ -1517,10 +1517,10 @@
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="FCLK_CLK0" SIGIS="clk" SIGNAME="connection_embedded_processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="fifo_generator_0" PORT="clk"/>
-            <CONNECTION INSTANCE="comunication_protocol_0" PORT="clk"/>
             <CONNECTION INSTANCE="filter_sterretje_clk_divider_0" PORT="clk_i"/>
             <CONNECTION INSTANCE="DeBounce_0" PORT="clk"/>
             <CONNECTION INSTANCE="keypad_0" PORT="clk"/>
+            <CONNECTION INSTANCE="comunication_protocol_0" PORT="clk"/>
             <CONNECTION INSTANCE="connection_embedded_proc_sys_reset_0" PORT="slowest_sync_clk"/>
             <CONNECTION INSTANCE="connection_embedded_processing_system7_0" PORT="M_AXI_GP0_ACLK"/>
             <CONNECTION INSTANCE="connection_embedded_ps7_0_axi_periph" PORT="S00_ACLK"/>
@@ -4462,7 +4462,7 @@
         <PARAMETER NAME="C_HAS_UNDERFLOW" VALUE="0"/>
         <PARAMETER NAME="C_HAS_VALID" VALUE="0"/>
         <PARAMETER NAME="C_HAS_WR_ACK" VALUE="0"/>
-        <PARAMETER NAME="C_HAS_WR_DATA_COUNT" VALUE="1"/>
+        <PARAMETER NAME="C_HAS_WR_DATA_COUNT" VALUE="0"/>
         <PARAMETER NAME="C_HAS_WR_RST" VALUE="0"/>
         <PARAMETER NAME="C_IMPLEMENTATION_TYPE" VALUE="0"/>
         <PARAMETER NAME="C_INIT_WR_PNTR_VAL" VALUE="0"/>
@@ -4675,7 +4675,7 @@
         <PARAMETER NAME="Use_Extra_Logic" VALUE="true"/>
         <PARAMETER NAME="Data_Count" VALUE="false"/>
         <PARAMETER NAME="Data_Count_Width" VALUE="10"/>
-        <PARAMETER NAME="Write_Data_Count" VALUE="true"/>
+        <PARAMETER NAME="Write_Data_Count" VALUE="false"/>
         <PARAMETER NAME="Write_Data_Count_Width" VALUE="11"/>
         <PARAMETER NAME="Read_Data_Count" VALUE="true"/>
         <PARAMETER NAME="Read_Data_Count_Width" VALUE="3"/>
@@ -4842,7 +4842,6 @@
             <CONNECTION INSTANCE="comunication_protocol_0" PORT="buffer_data_ready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="10" NAME="wr_data_count" RIGHT="0" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="__NOC__" NAME="FIFO_WRITE" TYPE="TARGET" VLNV="xilinx.com:interface:fifo_write:1.0">

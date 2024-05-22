@@ -53,33 +53,33 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-ENTITY blockdesign_keypad_0_0 IS
+ENTITY blockdesign_keypad_0_1 IS
   PORT (
-    Col_0 : IN STD_LOGIC;
-    Col_1 : IN STD_LOGIC;
-    Col_2 : IN STD_LOGIC;
-    Col_3 : IN STD_LOGIC;
+    Row_0 : IN STD_LOGIC;
+    Row_1 : IN STD_LOGIC;
+    Row_2 : IN STD_LOGIC;
+    Row_3 : IN STD_LOGIC;
     clk : IN STD_LOGIC;
-    Row_0 : OUT STD_LOGIC;
-    Row_1 : OUT STD_LOGIC;
-    Row_2 : OUT STD_LOGIC;
+    Col_0 : OUT STD_LOGIC;
+    Col_1 : OUT STD_LOGIC;
+    Col_2 : OUT STD_LOGIC;
     Data : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
   );
-END blockdesign_keypad_0_0;
+END blockdesign_keypad_0_1;
 
-ARCHITECTURE blockdesign_keypad_0_0_arch OF blockdesign_keypad_0_0 IS
+ARCHITECTURE blockdesign_keypad_0_1_arch OF blockdesign_keypad_0_1 IS
   ATTRIBUTE DowngradeIPIdentifiedWarnings : STRING;
-  ATTRIBUTE DowngradeIPIdentifiedWarnings OF blockdesign_keypad_0_0_arch: ARCHITECTURE IS "yes";
+  ATTRIBUTE DowngradeIPIdentifiedWarnings OF blockdesign_keypad_0_1_arch: ARCHITECTURE IS "yes";
   COMPONENT keypad IS
     PORT (
-      Col_0 : IN STD_LOGIC;
-      Col_1 : IN STD_LOGIC;
-      Col_2 : IN STD_LOGIC;
-      Col_3 : IN STD_LOGIC;
+      Row_0 : IN STD_LOGIC;
+      Row_1 : IN STD_LOGIC;
+      Row_2 : IN STD_LOGIC;
+      Row_3 : IN STD_LOGIC;
       clk : IN STD_LOGIC;
-      Row_0 : OUT STD_LOGIC;
-      Row_1 : OUT STD_LOGIC;
-      Row_2 : OUT STD_LOGIC;
+      Col_0 : OUT STD_LOGIC;
+      Col_1 : OUT STD_LOGIC;
+      Col_2 : OUT STD_LOGIC;
       Data : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
     );
   END COMPONENT keypad;
@@ -90,14 +90,14 @@ ARCHITECTURE blockdesign_keypad_0_0_arch OF blockdesign_keypad_0_0 IS
 BEGIN
   U0 : keypad
     PORT MAP (
-      Col_0 => Col_0,
-      Col_1 => Col_1,
-      Col_2 => Col_2,
-      Col_3 => Col_3,
-      clk => clk,
       Row_0 => Row_0,
       Row_1 => Row_1,
       Row_2 => Row_2,
+      Row_3 => Row_3,
+      clk => clk,
+      Col_0 => Col_0,
+      Col_1 => Col_1,
+      Col_2 => Col_2,
       Data => Data
     );
-END blockdesign_keypad_0_0_arch;
+END blockdesign_keypad_0_1_arch;

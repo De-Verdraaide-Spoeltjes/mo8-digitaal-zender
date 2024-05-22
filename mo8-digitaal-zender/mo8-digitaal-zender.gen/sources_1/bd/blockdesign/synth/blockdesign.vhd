@@ -2,8 +2,8 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
---Date        : Wed Apr 10 11:10:59 2024
---Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
+--Date        : Wed May 22 15:37:38 2024
+--Host        : XPS-Tommy running 64-bit major release  (build 9200)
 --Command     : generate_target blockdesign.bd
 --Design      : blockdesign
 --Purpose     : IP block netlist
@@ -2359,23 +2359,9 @@ architecture STRUCTURE of blockdesign is
     dout : out STD_LOGIC_VECTOR ( 127 downto 0 );
     full : out STD_LOGIC;
     empty : out STD_LOGIC;
-    rd_data_count : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    wr_data_count : out STD_LOGIC_VECTOR ( 10 downto 0 )
+    rd_data_count : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   end component blockdesign_fifo_generator_0_0;
-  component blockdesign_comunication_protocol_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    reset : in STD_LOGIC;
-    buffer_in : in STD_LOGIC_VECTOR ( 127 downto 0 );
-    buffer_data_ready : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    buffer_read : out STD_LOGIC;
-    keypad_data : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    data_read_done : in STD_LOGIC;
-    data_ready : out STD_LOGIC;
-    data_out : out STD_LOGIC_VECTOR ( 191 downto 0 )
-  );
-  end component blockdesign_comunication_protocol_0_0;
   component blockdesign_DeBounce_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -2397,6 +2383,19 @@ architecture STRUCTURE of blockdesign is
     Data : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component blockdesign_keypad_0_1;
+  component blockdesign_comunication_protocol_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    reset : in STD_LOGIC;
+    buffer_in : in STD_LOGIC_VECTOR ( 127 downto 0 );
+    buffer_data_ready : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    buffer_read : out STD_LOGIC;
+    keypad_data : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    data_read_done : in STD_LOGIC;
+    data_ready : out STD_LOGIC;
+    data_out : out STD_LOGIC_VECTOR ( 191 downto 0 )
+  );
+  end component blockdesign_comunication_protocol_0_0;
   signal Row_0_0_1 : STD_LOGIC;
   signal Row_1_0_1 : STD_LOGIC;
   signal Row_2_0_1 : STD_LOGIC;
@@ -2442,7 +2441,6 @@ architecture STRUCTURE of blockdesign is
   signal NLW_comunication_protocol_0_data_out_UNCONNECTED : STD_LOGIC_VECTOR ( 191 downto 0 );
   signal NLW_fifo_generator_0_empty_UNCONNECTED : STD_LOGIC;
   signal NLW_fifo_generator_0_full_UNCONNECTED : STD_LOGIC;
-  signal NLW_fifo_generator_0_wr_data_count_UNCONNECTED : STD_LOGIC_VECTOR ( 10 downto 0 );
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of DDR_cas_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CAS_N";
   attribute X_INTERFACE_INFO of DDR_ck_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CK_N";
@@ -2546,7 +2544,6 @@ fifo_generator_0: component blockdesign_fifo_generator_0_0
       rd_data_count(2 downto 0) => fifo_generator_0_rd_data_count(2 downto 0),
       rd_en => comunication_protocol_0_buffer_read,
       srst => connection_embedded_reset(0),
-      wr_data_count(10 downto 0) => NLW_fifo_generator_0_wr_data_count_UNCONNECTED(10 downto 0),
       wr_en => '0'
     );
 filter_sterretje: entity work.filter_sterretje_imp_1BL3XA9
