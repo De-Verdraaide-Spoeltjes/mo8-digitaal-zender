@@ -1,9 +1,36 @@
 Vivado Simulator v2023.1
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_8 -L xlslice_v1_0_2 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot communicatieprotocol_wrapper_behav xil_defaultlib.communicatieprotocol_wrapper xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_8 -L xlslice_v1_0_2 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot comProtocol_full_test_wrapper_behav xil_defaultlib.comProtocol_full_test_wrapper xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=8.0,C...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.comProtocol_full_test_clk_wiz_0_...
+Compiling module xil_defaultlib.comProtocol_full_test_clk_wiz_0
+Compiling architecture behavioral of entity xil_defaultlib.communicatie_protocol_ontvanger [communicatie_protocol_ontvanger_...]
+Compiling architecture comprotocol_full_test_communicatie_protoco_0_0_arch of entity xil_defaultlib.comProtocol_full_test_communicatie_protoco_0_0 [comprotocol_full_test_communicat...]
+Compiling architecture behavioral of entity xil_defaultlib.comunication_protocol [comunication_protocol_default]
+Compiling architecture comprotocol_full_test_comunication_protocol_0_0_arch of entity xil_defaultlib.comProtocol_full_test_comunication_protocol_0_0 [comprotocol_full_test_comunicati...]
+Compiling module fifo_generator_v13_2_8.fifo_generator_v13_2_8_bhv_ver_s...
+Compiling module fifo_generator_v13_2_8.fifo_generator_v13_2_8_CONV_VER(...
+Compiling module fifo_generator_v13_2_8.fifo_generator_vlog_beh(C_COMMON...
+Compiling module xil_defaultlib.comProtocol_full_test_fifo_gener...
+Compiling module xlslice_v1_0_2.xlslice_v1_0_2_xlslice(DIN_WIDTH...
+Compiling module xil_defaultlib.comProtocol_full_test_xlslice_0_...
+Compiling architecture structure of entity xil_defaultlib.comProtocol_full_test [comprotocol_full_test_default]
+Compiling architecture structure of entity xil_defaultlib.comprotocol_full_test_wrapper
+Built simulation snapshot comProtocol_full_test_wrapper_behav

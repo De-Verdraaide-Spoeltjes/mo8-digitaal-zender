@@ -1,0 +1,7 @@
+vhdl xil_defaultlib  \
+"../../../bd/comProtocol_full_test/ip/comProtocol_full_test_communicatie_protoco_0_0/sim/comProtocol_full_test_communicatie_protoco_0_0.vhd" \
+"../../../bd/comProtocol_full_test/ip/comProtocol_full_test_comunication_protocol_0_0/sim/comProtocol_full_test_comunication_protocol_0_0.vhd" \
+"../../../bd/comProtocol_full_test/sim/comProtocol_full_test.vhd" \
+
+# Do not sort compile order
+nosort

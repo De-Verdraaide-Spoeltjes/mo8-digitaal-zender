@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Thu Mar 21 11:32:19 2024
+# Process ID: 24340
+# Current directory: C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent76060 C:\Users\Jochem\GitHub\Fontys\mo8-digitaal-zender\mo8-digitaal-zender\mo8-digitaal-zender.xpr
+# Log file: C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/vivado.log
+# Journal file: C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender\vivado.jou
+# Running On: Lenovo-Jochem, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 4, Host memory: 17041 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.xpr
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/design_1/design_1.bd}

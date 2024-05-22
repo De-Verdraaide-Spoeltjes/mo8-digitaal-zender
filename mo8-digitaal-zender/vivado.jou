@@ -3,15 +3,335 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Thu Mar 21 11:32:19 2024
-# Process ID: 24340
-# Current directory: C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent76060 C:\Users\Jochem\GitHub\Fontys\mo8-digitaal-zender\mo8-digitaal-zender\mo8-digitaal-zender.xpr
-# Log file: C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/vivado.log
-# Journal file: C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender\vivado.jou
-# Running On: Lenovo-Jochem, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 4, Host memory: 17041 MB
+# Start of session at: Wed May 22 14:14:55 2024
+# Process ID: 33116
+# Current directory: D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22964 D:\_code\Git\Fontys\Jaar_2\mo8-digitaal-zender\mo8-digitaal-zender\mo8-digitaal-zender.xpr
+# Log file: D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/vivado.log
+# Journal file: D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender\vivado.jou
+# Running On: XPS-Tommy, OS: Windows, CPU Frequency: 2918 MHz, CPU Physical cores: 14, Host memory: 34029 MB
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.xpr
+open_project D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.xpr
 update_compile_order -fileset sources_1
-open_bd_design {C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/design_1/design_1.bd}
+open_bd_design {D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd}
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/crc16_128in.vhd] -no_script -reset -force -quiet
+remove_files  D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/crc16_128in.vhd
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/crc16_4in.vhd] -no_script -reset -force -quiet
+remove_files  D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/crc16_4in.vhd
+add_files -norecurse D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communicatie_protocol_ontvanger.vhd
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference communicatie_protocol_ontvanger communicatie_protoco_0
+connect_bd_net [get_bd_pins communicatie_protoco_0/clk] [get_bd_pins clk_wiz/clk_out1]
+connect_bd_net [get_bd_pins communicatie_protoco_0/data_rdy_input] [get_bd_pins comunication_protocol_0/data_ready]
+connect_bd_net [get_bd_pins communicatie_protoco_0/data_in] [get_bd_pins comunication_protocol_0/data_out]
+regenerate_bd_layout
+delete_bd_objs [get_bd_ports data_out_0]
+delete_bd_objs [get_bd_ports data_ready_0]
+startgroup
+make_bd_pins_external  [get_bd_pins communicatie_protoco_0/data_out] [get_bd_pins communicatie_protoco_0/crc_h_fail] [get_bd_pins communicatie_protoco_0/crc_d_fail] [get_bd_pins communicatie_protoco_0/data_ready_output]
+endgroup
+regenerate_bd_layout
+save_bd_design
+generate_target all [get_files  D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd]
+catch { config_ip_cache -export [get_ips -all comProtocol_full_test_fifo_generator_0_0] }
+catch { config_ip_cache -export [get_ips -all comProtocol_full_test_clk_wiz_0] }
+catch { config_ip_cache -export [get_ips -all comProtocol_full_test_comunication_protocol_0_0] }
+catch { config_ip_cache -export [get_ips -all comProtocol_full_test_communicatie_protoco_0_0] }
+export_ip_user_files -of_objects [get_files D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd] -directory D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.ip_user_files/sim_scripts -ip_user_files_dir D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.ip_user_files -ipstatic_source_dir D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.cache/compile_simlib/modelsim} {questa=D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.cache/compile_simlib/questa} {riviera=D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.cache/compile_simlib/riviera} {activehdl=D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd] -top
+add_files -norecurse d:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/comProtocol_full_test/hdl/comProtocol_full_test_wrapper.vhd
+update_compile_order -fileset sources_1
+generate_target all [get_files  D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd]
+catch { config_ip_cache -export [get_ips -all comProtocol_full_test_fifo_generator_0_0] }
+catch { config_ip_cache -export [get_ips -all comProtocol_full_test_clk_wiz_0] }
+catch { config_ip_cache -export [get_ips -all comProtocol_full_test_comunication_protocol_0_0] }
+catch { config_ip_cache -export [get_ips -all comProtocol_full_test_communicatie_protoco_0_0] }
+export_ip_user_files -of_objects [get_files D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd] -directory D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.ip_user_files/sim_scripts -ip_user_files_dir D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.ip_user_files -ipstatic_source_dir D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.cache/compile_simlib/modelsim} {questa=D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.cache/compile_simlib/questa} {riviera=D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.cache/compile_simlib/riviera} {activehdl=D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top comProtocol_full_test_wrapper [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+launch_simulation
+open_wave_config D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/communicatieprotocol_wrapper_behav.wcfg
+open_wave_config D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/comunication_protocol_behav.wcfg
+source comProtocol_full_test_wrapper.tcl
+add_force {/communicatieprotocol_wrapper/sys_clock} -radix hex {1 0ns} {0 42500ps} -repeat_every 85000ps
+add_force {/comProtocol_full_test_wrapper/sys_clock} -radix hex {1 0ns} {0 42500ps} -repeat_every 85000ps
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0xffffffff 0ns}
+add_force {/comProtocol_full_test_wrapper/keypad_data_0} -radix hex {0xf 0ns}
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+add_force {/comProtocol_full_test_wrapper/data_read_done_0} -radix hex {0 0ns}
+run 10us
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {ffffffff 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+run 1us
+add_force {/comProtocol_full_test_wrapper/keypad_data_0} -radix hex {0xa 0ns}
+run 1us
+add_force {/comProtocol_full_test_wrapper/sys_clock} -radix hex {1 0ns} {0 42500ps} -repeat_every 85000ps
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0xffffffff 0ns}
+add_force {/comProtocol_full_test_wrapper/keypad_data_0} -radix hex {0xf 0ns}
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+add_force {/comProtocol_full_test_wrapper/data_read_done_0} -radix hex {0 0ns}
+run 10us
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {ffffffff 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+run 1us
+add_force {/comProtocol_full_test_wrapper/keypad_data_0} -radix hex {0xa 0ns}
+run 1us
+relaunch_sim
+add_force {/comProtocol_full_test_wrapper/sys_clock} -radix hex {1 0ns} {0 42500ps} -repeat_every 85000ps
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0xffffffff 0ns}
+add_force {/comProtocol_full_test_wrapper/keypad_data_0} -radix hex {0xf 0ns}
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+add_force {/comProtocol_full_test_wrapper/data_read_done_0} -radix hex {0 0ns}
+run 10us
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {ffffffff 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+run 1us
+add_force {/comProtocol_full_test_wrapper/keypad_data_0} -radix hex {0xa 0ns}
+run 1us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+add_bp {D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communicatie_protocol_ontvanger.vhd} 101
+run 1 us
+run 1 us
+run 1 us
+add_bp {D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communicatie_protocol_ontvanger.vhd} 99
+run 1 us
+add_bp {D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communicatie_protocol_ontvanger.vhd} 111
+remove_bps -file {D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communicatie_protocol_ontvanger.vhd} -line 101
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+remove_bps -file {D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communicatie_protocol_ontvanger.vhd} -line 111
+run 1 us
+run 1 us
+remove_bps -file {D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communicatie_protocol_ontvanger.vhd} -line 99
+run 1 us
+relaunch_sim
+add_force {/comProtocol_full_test_wrapper/sys_clock} -radix hex {1 0ns} {0 42500ps} -repeat_every 85000ps
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0xffffffff 0ns}
+add_force {/comProtocol_full_test_wrapper/keypad_data_0} -radix hex {0xf 0ns}
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+add_force {/comProtocol_full_test_wrapper/data_read_done_0} -radix hex {0 0ns}
+run 10us
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {ffffffff 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+run 1us
+add_force {/comProtocol_full_test_wrapper/keypad_data_0} -radix hex {0xa 0ns}
+run 1us
+open_bd_design {D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd}
+relaunch_sim
+add_force {/comProtocol_full_test_wrapper/sys_clock} -radix hex {1 0ns} {0 42500ps} -repeat_every 85000ps
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0xffffffff 0ns}
+add_force {/comProtocol_full_test_wrapper/keypad_data_0} -radix hex {0xf 0ns}
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+add_force {/comProtocol_full_test_wrapper/data_read_done_0} -radix hex {0 0ns}
+run 10us
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {ffffffff 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+run 1us
+add_force {/comProtocol_full_test_wrapper/keypad_data_0} -radix hex {0xa 0ns}
+run 1us
+relaunch_sim
+open_bd_design {D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd}
+update_module_reference comProtocol_full_test_communicatie_protoco_0_0
+relaunch_sim
+add_force {/comProtocol_full_test_wrapper/sys_clock} -radix hex {1 0ns} {0 42500ps} -repeat_every 85000ps
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0xffffffff 0ns}
+add_force {/comProtocol_full_test_wrapper/keypad_data_0} -radix hex {0xf 0ns}
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+add_force {/comProtocol_full_test_wrapper/data_read_done_0} -radix hex {0 0ns}
+run 10us
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {ffffffff 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+run 1us
+add_force {/comProtocol_full_test_wrapper/keypad_data_0} -radix hex {0xa 0ns}
+run 1us
+open_bd_design {D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd}
+update_module_reference comProtocol_full_test_communicatie_protoco_0_0
+relaunch_sim
+add_force {/comProtocol_full_test_wrapper/sys_clock} -radix hex {1 0ns} {0 42500ps} -repeat_every 85000ps
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0xffffffff 0ns}
+add_force {/comProtocol_full_test_wrapper/keypad_data_0} -radix hex {0xf 0ns}
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+add_force {/comProtocol_full_test_wrapper/data_read_done_0} -radix hex {0 0ns}
+run 10us
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {ffffffff 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+run 1us
+add_force {/comProtocol_full_test_wrapper/keypad_data_0} -radix hex {0xa 0ns}
+run 1us
+open_bd_design {D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd}
+update_module_reference {comProtocol_full_test_comunication_protocol_0_0 communicatieprotocol_comunication_protocol_0_0}
+open_bd_design {D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd}
+relaunch_sim
+save_wave_config {D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/comunication_protocol_behav.wcfg}
+close_sim
+reset_simulation -simset sim_1 -mode behavioral
+launch_simulation
+regenerate_bd_layout
+validate_bd_design -force
+generate_target all [get_files  D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd]
+catch { config_ip_cache -export [get_ips -all comProtocol_full_test_fifo_generator_0_0] }
+catch { config_ip_cache -export [get_ips -all comProtocol_full_test_clk_wiz_0] }
+catch { config_ip_cache -export [get_ips -all comProtocol_full_test_comunication_protocol_0_0] }
+catch { config_ip_cache -export [get_ips -all comProtocol_full_test_communicatie_protoco_0_0] }
+export_ip_user_files -of_objects [get_files D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd] -directory D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.ip_user_files/sim_scripts -ip_user_files_dir D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.ip_user_files -ipstatic_source_dir D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.cache/compile_simlib/modelsim} {questa=D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.cache/compile_simlib/questa} {riviera=D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.cache/compile_simlib/riviera} {activehdl=D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_simulation -simset sim_1 -mode behavioral
+launch_simulation

@@ -1,9 +1,0 @@
-{
-	"version": "1.0",
-	"modules": {
-		"communicatieprotocol": {
-			"proto_instances": {
-			}
-		}
-	}
-}

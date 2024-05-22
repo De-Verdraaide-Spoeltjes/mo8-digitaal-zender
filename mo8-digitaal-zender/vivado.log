@@ -3,76 +3,1694 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Thu Mar 21 11:32:19 2024
-# Process ID: 24340
-# Current directory: C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent76060 C:\Users\Jochem\GitHub\Fontys\mo8-digitaal-zender\mo8-digitaal-zender\mo8-digitaal-zender.xpr
-# Log file: C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/vivado.log
-# Journal file: C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender\vivado.jou
-# Running On: Lenovo-Jochem, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 4, Host memory: 17041 MB
+# Start of session at: Wed May 22 14:14:55 2024
+# Process ID: 33116
+# Current directory: D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22964 D:\_code\Git\Fontys\Jaar_2\mo8-digitaal-zender\mo8-digitaal-zender\mo8-digitaal-zender.xpr
+# Log file: D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/vivado.log
+# Journal file: D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender\vivado.jou
+# Running On: XPS-Tommy, OS: Windows, CPU Frequency: 2918 MHz, CPU Physical cores: 14, Host memory: 34029 MB
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.xpr
-INFO: [Project 1-313] Project file moved from 'C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender' since last save.
-INFO: [filemgmt 56-1] Board Part Repository Path: Directory not found as 'C:/Users/Jochem/GitHub/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store'; using path 'C:/Users/Jochem/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store' instead.
+open_project D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.3 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.3/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/crc16_128in.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/crc16_4in.vhd'.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2023.1/data/ip'.
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:ac701:part0:1.4 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/ac701/1.4/board.xml as part xc7a200tfbg676-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.0 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.0/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.1 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.1/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.3 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.3/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.1 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.1 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
-open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:14 . Memory (MB): peak = 2434.648 ; gain = 475.559
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
+open_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 2492.074 ; gain = 403.008
 update_compile_order -fileset sources_1
-open_bd_design {C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/design_1/design_1.bd}
-Reading block design file <C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/design_1/design_1.bd>...
-Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_interconnect_0
-Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
-Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
-Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
-Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - rsa_encryptie_versleuteld_karakter
-Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - rsa_encryptie_ingedrukte_knop
-Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
-Successfully read diagram <design_1> from block design file <C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/design_1/design_1.bd>
-open_bd_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2548.617 ; gain = 86.395
+open_bd_design {D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd}
+Reading block design file <D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd>...
+Adding component instance block -- xilinx.com:ip:fifo_generator:13.2 - fifo_generator_0
+INFO: [xilinx.com:ip:fifo_generator:13.2-5968] /fifo_generator_0Executing the post_config_ip from bd
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_0
+Adding component instance block -- xilinx.com:module_ref:comunication_protocol:1.0 - comunication_protocol_0
+Successfully read diagram <comProtocol_full_test> from block design file <D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd>
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/crc16_128in.vhd] -no_script -reset -force -quiet
+remove_files  D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/crc16_128in.vhd
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/crc16_4in.vhd] -no_script -reset -force -quiet
+remove_files  D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/crc16_4in.vhd
+add_files -norecurse D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communicatie_protocol_ontvanger.vhd
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference communicatie_protocol_ontvanger communicatie_protoco_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+connect_bd_net [get_bd_pins communicatie_protoco_0/clk] [get_bd_pins clk_wiz/clk_out1]
+connect_bd_net [get_bd_pins communicatie_protoco_0/data_rdy_input] [get_bd_pins comunication_protocol_0/data_ready]
+connect_bd_net [get_bd_pins communicatie_protoco_0/data_in] [get_bd_pins comunication_protocol_0/data_out]
+regenerate_bd_layout
+delete_bd_objs [get_bd_ports data_out_0]
+delete_bd_objs [get_bd_ports data_ready_0]
+startgroup
+make_bd_pins_external  [get_bd_pins communicatie_protoco_0/data_out] [get_bd_pins communicatie_protoco_0/crc_h_fail] [get_bd_pins communicatie_protoco_0/crc_d_fail] [get_bd_pins communicatie_protoco_0/data_ready_output]
+endgroup
+regenerate_bd_layout
+save_bd_design
+Wrote  : <D:\_code\Git\Fontys\Jaar_2\mo8-digitaal-zender\mo8-digitaal-zender\mo8-digitaal-zender.srcs\sources_1\bd\comProtocol_full_test\comProtocol_full_test.bd> 
+Wrote  : <D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/ui/bd_550c8adc.ui> 
+generate_target all [get_files  D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd]
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz clk_wiz propagate
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/comunication_protocol_0/reset
+
+Wrote  : <D:\_code\Git\Fontys\Jaar_2\mo8-digitaal-zender\mo8-digitaal-zender\mo8-digitaal-zender.srcs\sources_1\bd\comProtocol_full_test\comProtocol_full_test.bd> 
+VHDL Output written to : d:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/comProtocol_full_test/synth/comProtocol_full_test.vhd
+VHDL Output written to : d:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/comProtocol_full_test/sim/comProtocol_full_test.vhd
+VHDL Output written to : d:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/comProtocol_full_test/hdl/comProtocol_full_test_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fifo_generator_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block comunication_protocol_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block communicatie_protoco_0 .
+Exporting to file d:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/comProtocol_full_test/hw_handoff/comProtocol_full_test.hwh
+Generated Hardware Definition File d:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/comProtocol_full_test/synth/comProtocol_full_test.hwdef
+catch { config_ip_cache -export [get_ips -all comProtocol_full_test_fifo_generator_0_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: comProtocol_full_test_fifo_generator_0_0
+catch { config_ip_cache -export [get_ips -all comProtocol_full_test_clk_wiz_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: comProtocol_full_test_clk_wiz_0
+catch { config_ip_cache -export [get_ips -all comProtocol_full_test_comunication_protocol_0_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: comProtocol_full_test_comunication_protocol_0_0
+catch { config_ip_cache -export [get_ips -all comProtocol_full_test_communicatie_protoco_0_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: comProtocol_full_test_communicatie_protoco_0_0
+export_ip_user_files -of_objects [get_files D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd] -no_script -sync -force -quiet
+INFO: [Vivado 12-23855] The given sub-design is auto disabled, no action will be taken: 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd'
+export_simulation -of_objects [get_files D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd] -directory D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.ip_user_files/sim_scripts -ip_user_files_dir D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.ip_user_files -ipstatic_source_dir D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.cache/compile_simlib/modelsim} {questa=D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.cache/compile_simlib/questa} {riviera=D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.cache/compile_simlib/riviera} {activehdl=D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd] -top
+add_files -norecurse d:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/comProtocol_full_test/hdl/comProtocol_full_test_wrapper.vhd
+update_compile_order -fileset sources_1
+generate_target all [get_files  D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd]
+INFO: [BD 41-1637] Generated targets are already up-to-date for block design 'comProtocol_full_test' - hence not re-generating.
+catch { config_ip_cache -export [get_ips -all comProtocol_full_test_fifo_generator_0_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: comProtocol_full_test_fifo_generator_0_0
+catch { config_ip_cache -export [get_ips -all comProtocol_full_test_clk_wiz_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: comProtocol_full_test_clk_wiz_0
+catch { config_ip_cache -export [get_ips -all comProtocol_full_test_comunication_protocol_0_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: comProtocol_full_test_comunication_protocol_0_0
+catch { config_ip_cache -export [get_ips -all comProtocol_full_test_communicatie_protoco_0_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: comProtocol_full_test_communicatie_protoco_0_0
+export_ip_user_files -of_objects [get_files D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd] -no_script -sync -force -quiet
+INFO: [Vivado 12-23855] The given sub-design is auto disabled, no action will be taken: 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd'
+export_simulation -of_objects [get_files D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd] -directory D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.ip_user_files/sim_scripts -ip_user_files_dir D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.ip_user_files -ipstatic_source_dir D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.cache/compile_simlib/modelsim} {questa=D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.cache/compile_simlib/questa} {riviera=D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.cache/compile_simlib/riviera} {activehdl=D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+set_property top comProtocol_full_test_wrapper [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'comProtocol_full_test_wrapper'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-12490] The selected simulation model for 'comProtocol_full_test_clk_wiz_0' IP changed to 'rtl' from '', the simulation run directory will be deleted.
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2023.1/data/xsim/xsim.ini' copied to run dir:'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'comProtocol_full_test_wrapper' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_14 -L processing_system7_vip_v1_0_16 -L xilinx_vip -prj comProtocol_full_test_wrapper_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.ip_user_files/bd/comProtocol_full_test/ip/comProtocol_full_test_fifo_generator_0_0/sim/comProtocol_full_test_fifo_generator_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module comProtocol_full_test_fifo_generator_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.ip_user_files/bd/comProtocol_full_test/ip/comProtocol_full_test_clk_wiz_0/comProtocol_full_test_clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module comProtocol_full_test_clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.ip_user_files/bd/comProtocol_full_test/ip/comProtocol_full_test_clk_wiz_0/comProtocol_full_test_clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module comProtocol_full_test_clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.ip_user_files/bd/comProtocol_full_test/ip/comProtocol_full_test_xlslice_0_0/sim/comProtocol_full_test_xlslice_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module comProtocol_full_test_xlslice_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+"xvhdl --incr --relax -prj comProtocol_full_test_wrapper_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/comunication_protocol.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'comunication_protocol'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communicatie_protocol_ontvanger.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'communicatie_protocol_ontvanger'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.ip_user_files/bd/comProtocol_full_test/ip/comProtocol_full_test_comunication_protocol_0_0/sim/comProtocol_full_test_comunication_protocol_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'comProtocol_full_test_comunication_protocol_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.ip_user_files/bd/comProtocol_full_test/ip/comProtocol_full_test_communicatie_protoco_0_0/sim/comProtocol_full_test_communicatie_protoco_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'comProtocol_full_test_communicatie_protoco_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.ip_user_files/bd/comProtocol_full_test/sim/comProtocol_full_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'comProtocol_full_test'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/comProtocol_full_test/hdl/comProtocol_full_test_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'comProtocol_full_test_wrapper'
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 2875.410 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '7' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_8 -L xlslice_v1_0_2 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot comProtocol_full_test_wrapper_behav xil_defaultlib.comProtocol_full_test_wrapper xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_8 -L xlslice_v1_0_2 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot comProtocol_full_test_wrapper_behav xil_defaultlib.comProtocol_full_test_wrapper xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=8.0,C...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.comProtocol_full_test_clk_wiz_0_...
+Compiling module xil_defaultlib.comProtocol_full_test_clk_wiz_0
+Compiling architecture behavioral of entity xil_defaultlib.communicatie_protocol_ontvanger [communicatie_protocol_ontvanger_...]
+Compiling architecture comprotocol_full_test_communicatie_protoco_0_0_arch of entity xil_defaultlib.comProtocol_full_test_communicatie_protoco_0_0 [comprotocol_full_test_communicat...]
+Compiling architecture behavioral of entity xil_defaultlib.comunication_protocol [comunication_protocol_default]
+Compiling architecture comprotocol_full_test_comunication_protocol_0_0_arch of entity xil_defaultlib.comProtocol_full_test_comunication_protocol_0_0 [comprotocol_full_test_comunicati...]
+Compiling module fifo_generator_v13_2_8.fifo_generator_v13_2_8_bhv_ver_s...
+Compiling module fifo_generator_v13_2_8.fifo_generator_v13_2_8_CONV_VER(...
+Compiling module fifo_generator_v13_2_8.fifo_generator_vlog_beh(C_COMMON...
+Compiling module xil_defaultlib.comProtocol_full_test_fifo_gener...
+Compiling module xlslice_v1_0_2.xlslice_v1_0_2_xlslice(DIN_WIDTH...
+Compiling module xil_defaultlib.comProtocol_full_test_xlslice_0_...
+Compiling architecture structure of entity xil_defaultlib.comProtocol_full_test [comprotocol_full_test_default]
+Compiling architecture structure of entity xil_defaultlib.comprotocol_full_test_wrapper
+Built simulation snapshot comProtocol_full_test_wrapper_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 2875.410 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "comProtocol_full_test_wrapper_behav -key {Behavioral:sim_1:Functional:comProtocol_full_test_wrapper} -tclbatch {comProtocol_full_test_wrapper.tcl} -protoinst "protoinst_files/communicatieprotocol.protoinst" -protoinst "protoinst_files/blockdesign.protoinst" -protoinst "protoinst_files/comProtocol_full_test.protoinst" -view {D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/communicatieprotocol_wrapper_behav.wcfg} -view {D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/comunication_protocol_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/communicatieprotocol.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/communicatieprotocol.protoinst for the following reason(s):
+There are no instances of module "communicatieprotocol" in the design.
+
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/blockdesign.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/blockdesign.protoinst for the following reason(s):
+There are no instances of module "blockdesign" in the design.
+
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/comProtocol_full_test.protoinst
+Time resolution is 1 ps
+open_wave_config D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/communicatieprotocol_wrapper_behav.wcfg
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0 was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/communicatieprotocol_i/fifo_generator_0/dout was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[191] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[190] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[189] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[188] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[187] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[186] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[185] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[184] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[183] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[182] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[181] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[180] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[179] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[178] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[177] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[176] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[175] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[174] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[173] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[172] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[171] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[170] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[169] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[168] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[167] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[166] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[165] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[164] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[163] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[162] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[161] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[160] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[159] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[158] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[157] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[156] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[155] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[154] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[153] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[152] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[151] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[150] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[149] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[148] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[147] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[146] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[145] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[144] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[143] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[142] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[141] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[140] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[139] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[138] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[137] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[136] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[135] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[134] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[133] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[132] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[131] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[130] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[129] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[128] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[127] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[126] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[125] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[124] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[123] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[122] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[121] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[120] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[119] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[118] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[117] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[116] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[115] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[114] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[113] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[112] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[111] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[110] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[109] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[108] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[107] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[106] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[105] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[104] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[103] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[102] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[101] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[100] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[99] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[98] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[97] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[96] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[95] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[94] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[93] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[92] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[91] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[90] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[89] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[88] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[87] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[86] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[85] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[84] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[83] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[82] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[81] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[80] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[79] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[78] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[77] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[76] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[75] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[74] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[73] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[72] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[71] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[70] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[69] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[68] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[67] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[66] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[65] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[64] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[63] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[62] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[61] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[60] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[59] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[58] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[57] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[56] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[55] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[54] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[53] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[52] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[51] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[50] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[49] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[48] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[47] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[46] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[45] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[44] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[43] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[42] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[41] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[40] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[39] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[38] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[37] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[36] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[35] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[34] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[33] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[32] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[31] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[30] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[29] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[28] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[27] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[26] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[25] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[24] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[23] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[22] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[21] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[20] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[19] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[18] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[17] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[16] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[15] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[14] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[13] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[12] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[11] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[10] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[9] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[8] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[7] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[6] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[5] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[4] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[3] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[2] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[1] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[0] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/din_0 was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/keypad_data_0 was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/sys_clock was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/wr_en_0 was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/communicatieprotocol_i/fifo_generator_0/rd_en was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/communicatieprotocol_i/clk_wiz/clk_out1 was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/communicatieprotocol_i/comunication_protocol_0/U0/keypad_is_hekkie was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/communicatieprotocol_i/fifo_generator_0/full was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/communicatieprotocol_i/comunication_protocol_0/U0/current_state was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/communicatieprotocol_i/fifo_generator_0/rd_data_count was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/communicatieprotocol_i/fifo_generator_0/wr_data_count was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_read_done_0 was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_ready_0 was not found in the design.
+open_wave_config D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/comunication_protocol_behav.wcfg
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0 was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/communicatieprotocol_i/fifo_generator_0/dout was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[191] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[190] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[189] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[188] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[187] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[186] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[185] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[184] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[183] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[182] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[181] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[180] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[179] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[178] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[177] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[176] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[175] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[174] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[173] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[172] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[171] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[170] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[169] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[168] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[167] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[166] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[165] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[164] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[163] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[162] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[161] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[160] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[159] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[158] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[157] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[156] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[155] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[154] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[153] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[152] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[151] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[150] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[149] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[148] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[147] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[146] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[145] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[144] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[143] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[142] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[141] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[140] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[139] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[138] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[137] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[136] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[135] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[134] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[133] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[132] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[131] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[130] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[129] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[128] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[127] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[126] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[125] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[124] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[123] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[122] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[121] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[120] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[119] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[118] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[117] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[116] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[115] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[114] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[113] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[112] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[111] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[110] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[109] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[108] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[107] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[106] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[105] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[104] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[103] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[102] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[101] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[100] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[99] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[98] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[97] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[96] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[95] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[94] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[93] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[92] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[91] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[90] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[89] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[88] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[87] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[86] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[85] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[84] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[83] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[82] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[81] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[80] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[79] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[78] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[77] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[76] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[75] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[74] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[73] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[72] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[71] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[70] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[69] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[68] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[67] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[66] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[65] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[64] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[63] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[62] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[61] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[60] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[59] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[58] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[57] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[56] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[55] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[54] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[53] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[52] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[51] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[50] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[49] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[48] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[47] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[46] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[45] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[44] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[43] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[42] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[41] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[40] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[39] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[38] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[37] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[36] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[35] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[34] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[33] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[32] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[31] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[30] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[29] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[28] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[27] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[26] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[25] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[24] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[23] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[22] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[21] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[20] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[19] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[18] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[17] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[16] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[15] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[14] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[13] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[12] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[11] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[10] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[9] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[8] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[7] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[6] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[5] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[4] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[3] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[2] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[1] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_out_0[0] was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_read_done_0 was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/data_ready_0 was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/din_0 was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/keypad_data_0 was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/sys_clock was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/wr_en_0 was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/communicatieprotocol_i/fifo_generator_0/rd_en was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/communicatieprotocol_i/clk_wiz/clk_out1 was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/communicatieprotocol_i/comunication_protocol_0/U0/keypad_is_hekkie was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/communicatieprotocol_i/fifo_generator_0/full was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/communicatieprotocol_i/fifo_generator_0/prog_full was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/communicatieprotocol_i/comunication_protocol_0/U0/current_state was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/communicatieprotocol_i/fifo_generator_0/rd_data_count was not found in the design.
+WARNING: Simulation object /communicatieprotocol_wrapper/communicatieprotocol_i/fifo_generator_0/wr_data_count was not found in the design.
+source comProtocol_full_test_wrapper.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'comProtocol_full_test_wrapper_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:20 . Memory (MB): peak = 2954.047 ; gain = 80.188
+add_force {/communicatieprotocol_wrapper/sys_clock} -radix hex {1 0ns} {0 42500ps} -repeat_every 85000ps
+ERROR: [Simtcl 6-8] No such HDL object /communicatieprotocol_wrapper/sys_clock
+add_force {/comProtocol_full_test_wrapper/sys_clock} -radix hex {1 0ns} {0 42500ps} -repeat_every 85000ps
+force1
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0xffffffff 0ns}
+force2
+add_force {/comProtocol_full_test_wrapper/keypad_data_0} -radix hex {0xf 0ns}
+force3
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force4
+add_force {/comProtocol_full_test_wrapper/data_read_done_0} -radix hex {0 0ns}
+force5
+run 10us
+Warning: [Unisim MMCME2_ADV-20] Input CLKIN1 period and attribute CLKIN1_PERIOD are not same. Instance comProtocol_full_test_wrapper.comProtocol_full_test_i.clk_wiz.inst.mmcm_adv_inst 
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+force6
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force7
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0 0ns}
+force8
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+force9
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force10
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {ffffffff 0ns}
+force11
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+force12
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force13
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0 0ns}
+force14
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+force15
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force16
+run 1us
+add_force {/comProtocol_full_test_wrapper/keypad_data_0} -radix hex {0xa 0ns}
+force17
+run 1us
+add_force {/comProtocol_full_test_wrapper/sys_clock} -radix hex {1 0ns} {0 42500ps} -repeat_every 85000ps
+force18
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0xffffffff 0ns}
+force19
+add_force {/comProtocol_full_test_wrapper/keypad_data_0} -radix hex {0xf 0ns}
+force20
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force21
+add_force {/comProtocol_full_test_wrapper/data_read_done_0} -radix hex {0 0ns}
+force22
+run 10us
+Warning: [Unisim MMCME2_ADV-20] Input CLKIN1 period and attribute CLKIN1_PERIOD are not same. Instance comProtocol_full_test_wrapper.comProtocol_full_test_i.clk_wiz.inst.mmcm_adv_inst 
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+force23
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force24
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0 0ns}
+force25
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+force26
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force27
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {ffffffff 0ns}
+force28
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+force29
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force30
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0 0ns}
+force31
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+force32
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force33
+run 1us
+add_force {/comProtocol_full_test_wrapper/keypad_data_0} -radix hex {0xa 0ns}
+force34
+run 1us
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'comProtocol_full_test_wrapper'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2023.1/data/xsim/xsim.ini' copied to run dir:'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'comProtocol_full_test_wrapper' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_14 -L processing_system7_vip_v1_0_16 -L xilinx_vip -prj comProtocol_full_test_wrapper_vlog.prj"
+"xvhdl --incr --relax -prj comProtocol_full_test_wrapper_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 4146.242 ; gain = 0.000
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'comProtocol_full_test_wrapper'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_8 -L xlslice_v1_0_2 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot comProtocol_full_test_wrapper_behav xil_defaultlib.comProtocol_full_test_wrapper xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_8 -L xlslice_v1_0_2 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot comProtocol_full_test_wrapper_behav xil_defaultlib.comProtocol_full_test_wrapper xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/communicatieprotocol.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/communicatieprotocol.protoinst for the following reason(s):
+There are no instances of module "communicatieprotocol" in the design.
+
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/blockdesign.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/blockdesign.protoinst for the following reason(s):
+There are no instances of module "blockdesign" in the design.
+
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/comProtocol_full_test.protoinst
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 4146.242 ; gain = 0.000
+add_force {/comProtocol_full_test_wrapper/sys_clock} -radix hex {1 0ns} {0 42500ps} -repeat_every 85000ps
+force35
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0xffffffff 0ns}
+force36
+add_force {/comProtocol_full_test_wrapper/keypad_data_0} -radix hex {0xf 0ns}
+force37
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force38
+add_force {/comProtocol_full_test_wrapper/data_read_done_0} -radix hex {0 0ns}
+force39
+run 10us
+Warning: [Unisim MMCME2_ADV-20] Input CLKIN1 period and attribute CLKIN1_PERIOD are not same. Instance comProtocol_full_test_wrapper.comProtocol_full_test_i.clk_wiz.inst.mmcm_adv_inst 
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+force40
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force41
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0 0ns}
+force42
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+force43
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force44
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {ffffffff 0ns}
+force45
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+force46
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force47
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0 0ns}
+force48
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+force49
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force50
+run 1us
+add_force {/comProtocol_full_test_wrapper/keypad_data_0} -radix hex {0xa 0ns}
+force51
+run 1us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+add_bp {D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communicatie_protocol_ontvanger.vhd} 101
+run 1 us
+run 1 us
+run 1 us
+add_bp {D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communicatie_protocol_ontvanger.vhd} 99
+run 1 us
+Stopped at time : 50374375 ps : File "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communicatie_protocol_ontvanger.vhd" Line 99
+add_bp {D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communicatie_protocol_ontvanger.vhd} 111
+remove_bps -file {D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communicatie_protocol_ontvanger.vhd} -line 101
+run 1 us
+Stopped at time : 50374375 ps : File "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communicatie_protocol_ontvanger.vhd" Line 111
+run 1 us
+Stopped at time : 50427500 ps : File "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communicatie_protocol_ontvanger.vhd" Line 99
+run 1 us
+Stopped at time : 50480625 ps : File "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communicatie_protocol_ontvanger.vhd" Line 99
+run 1 us
+Stopped at time : 50480625 ps : File "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communicatie_protocol_ontvanger.vhd" Line 111
+run 1 us
+Stopped at time : 50533750 ps : File "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communicatie_protocol_ontvanger.vhd" Line 99
+run 1 us
+Stopped at time : 50586875 ps : File "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communicatie_protocol_ontvanger.vhd" Line 99
+run 1 us
+Stopped at time : 50586875 ps : File "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communicatie_protocol_ontvanger.vhd" Line 111
+run 1 us
+Stopped at time : 50640 ns : File "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communicatie_protocol_ontvanger.vhd" Line 99
+remove_bps -file {D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communicatie_protocol_ontvanger.vhd} -line 111
+run 1 us
+Stopped at time : 50693125 ps : File "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communicatie_protocol_ontvanger.vhd" Line 99
+run 1 us
+Stopped at time : 50746250 ps : File "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communicatie_protocol_ontvanger.vhd" Line 99
+remove_bps -file {D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communicatie_protocol_ontvanger.vhd} -line 99
+run 1 us
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'comProtocol_full_test_wrapper'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_14 -L processing_system7_vip_v1_0_16 -L xilinx_vip -prj comProtocol_full_test_wrapper_vlog.prj"
+"xvhdl --incr --relax -prj comProtocol_full_test_wrapper_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communicatie_protocol_ontvanger.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'communicatie_protocol_ontvanger'
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 4146.242 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '6' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 4146.242 ; gain = 0.000
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'comProtocol_full_test_wrapper'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_8 -L xlslice_v1_0_2 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot comProtocol_full_test_wrapper_behav xil_defaultlib.comProtocol_full_test_wrapper xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_8 -L xlslice_v1_0_2 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot comProtocol_full_test_wrapper_behav xil_defaultlib.comProtocol_full_test_wrapper xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=8.0,C...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.comProtocol_full_test_clk_wiz_0_...
+Compiling module xil_defaultlib.comProtocol_full_test_clk_wiz_0
+Compiling architecture behavioral of entity xil_defaultlib.communicatie_protocol_ontvanger [communicatie_protocol_ontvanger_...]
+Compiling architecture comprotocol_full_test_communicatie_protoco_0_0_arch of entity xil_defaultlib.comProtocol_full_test_communicatie_protoco_0_0 [comprotocol_full_test_communicat...]
+Compiling architecture behavioral of entity xil_defaultlib.comunication_protocol [comunication_protocol_default]
+Compiling architecture comprotocol_full_test_comunication_protocol_0_0_arch of entity xil_defaultlib.comProtocol_full_test_comunication_protocol_0_0 [comprotocol_full_test_comunicati...]
+Compiling module fifo_generator_v13_2_8.fifo_generator_v13_2_8_bhv_ver_s...
+Compiling module fifo_generator_v13_2_8.fifo_generator_v13_2_8_CONV_VER(...
+Compiling module fifo_generator_v13_2_8.fifo_generator_vlog_beh(C_COMMON...
+Compiling module xil_defaultlib.comProtocol_full_test_fifo_gener...
+Compiling module xlslice_v1_0_2.xlslice_v1_0_2_xlslice(DIN_WIDTH...
+Compiling module xil_defaultlib.comProtocol_full_test_xlslice_0_...
+Compiling architecture structure of entity xil_defaultlib.comProtocol_full_test [comprotocol_full_test_default]
+Compiling architecture structure of entity xil_defaultlib.comprotocol_full_test_wrapper
+Built simulation snapshot comProtocol_full_test_wrapper_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 4146.242 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 4146.242 ; gain = 0.000
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/communicatieprotocol.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/communicatieprotocol.protoinst for the following reason(s):
+There are no instances of module "communicatieprotocol" in the design.
+
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/blockdesign.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/blockdesign.protoinst for the following reason(s):
+There are no instances of module "blockdesign" in the design.
+
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/comProtocol_full_test.protoinst
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:21 . Memory (MB): peak = 4146.242 ; gain = 0.000
+add_force {/comProtocol_full_test_wrapper/sys_clock} -radix hex {1 0ns} {0 42500ps} -repeat_every 85000ps
+force52
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0xffffffff 0ns}
+force53
+add_force {/comProtocol_full_test_wrapper/keypad_data_0} -radix hex {0xf 0ns}
+force54
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force55
+add_force {/comProtocol_full_test_wrapper/data_read_done_0} -radix hex {0 0ns}
+force56
+run 10us
+Warning: [Unisim MMCME2_ADV-20] Input CLKIN1 period and attribute CLKIN1_PERIOD are not same. Instance comProtocol_full_test_wrapper.comProtocol_full_test_i.clk_wiz.inst.mmcm_adv_inst 
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+force57
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force58
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0 0ns}
+force59
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+force60
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force61
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {ffffffff 0ns}
+force62
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+force63
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force64
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0 0ns}
+force65
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+force66
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force67
+run 1us
+add_force {/comProtocol_full_test_wrapper/keypad_data_0} -radix hex {0xa 0ns}
+force68
+run 1us
+open_bd_design {D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd}
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'comProtocol_full_test_wrapper'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_14 -L processing_system7_vip_v1_0_16 -L xilinx_vip -prj comProtocol_full_test_wrapper_vlog.prj"
+"xvhdl --incr --relax -prj comProtocol_full_test_wrapper_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communicatie_protocol_ontvanger.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'communicatie_protocol_ontvanger'
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'comProtocol_full_test_wrapper'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_8 -L xlslice_v1_0_2 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot comProtocol_full_test_wrapper_behav xil_defaultlib.comProtocol_full_test_wrapper xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_8 -L xlslice_v1_0_2 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot comProtocol_full_test_wrapper_behav xil_defaultlib.comProtocol_full_test_wrapper xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/communicatieprotocol.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/communicatieprotocol.protoinst for the following reason(s):
+There are no instances of module "communicatieprotocol" in the design.
+
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/blockdesign.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/blockdesign.protoinst for the following reason(s):
+There are no instances of module "blockdesign" in the design.
+
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/comProtocol_full_test.protoinst
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 4146.242 ; gain = 0.000
+add_force {/comProtocol_full_test_wrapper/sys_clock} -radix hex {1 0ns} {0 42500ps} -repeat_every 85000ps
+force69
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0xffffffff 0ns}
+force70
+add_force {/comProtocol_full_test_wrapper/keypad_data_0} -radix hex {0xf 0ns}
+force71
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force72
+add_force {/comProtocol_full_test_wrapper/data_read_done_0} -radix hex {0 0ns}
+force73
+run 10us
+Warning: [Unisim MMCME2_ADV-20] Input CLKIN1 period and attribute CLKIN1_PERIOD are not same. Instance comProtocol_full_test_wrapper.comProtocol_full_test_i.clk_wiz.inst.mmcm_adv_inst 
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+force74
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force75
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0 0ns}
+force76
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+force77
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force78
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {ffffffff 0ns}
+force79
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+force80
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force81
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0 0ns}
+force82
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+force83
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force84
+run 1us
+add_force {/comProtocol_full_test_wrapper/keypad_data_0} -radix hex {0xa 0ns}
+force85
+run 1us
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'comProtocol_full_test_wrapper'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_14 -L processing_system7_vip_v1_0_16 -L xilinx_vip -prj comProtocol_full_test_wrapper_vlog.prj"
+"xvhdl --incr --relax -prj comProtocol_full_test_wrapper_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'comProtocol_full_test_wrapper'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_8 -L xlslice_v1_0_2 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot comProtocol_full_test_wrapper_behav xil_defaultlib.comProtocol_full_test_wrapper xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_8 -L xlslice_v1_0_2 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot comProtocol_full_test_wrapper_behav xil_defaultlib.comProtocol_full_test_wrapper xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/communicatieprotocol.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/communicatieprotocol.protoinst for the following reason(s):
+There are no instances of module "communicatieprotocol" in the design.
+
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/blockdesign.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/blockdesign.protoinst for the following reason(s):
+There are no instances of module "blockdesign" in the design.
+
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/comProtocol_full_test.protoinst
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 4146.242 ; gain = 0.000
+open_bd_design {D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd}
+update_module_reference comProtocol_full_test_communicatie_protoco_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+Upgrading 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd'
+INFO: [IP_Flow 19-3420] Updated comProtocol_full_test_communicatie_protoco_0_0 to use current project options
+Wrote  : <D:\_code\Git\Fontys\Jaar_2\mo8-digitaal-zender\mo8-digitaal-zender\mo8-digitaal-zender.srcs\sources_1\bd\comProtocol_full_test\comProtocol_full_test.bd> 
+Wrote  : <D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/ui/bd_550c8adc.ui> 
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'comProtocol_full_test_wrapper'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz clk_wiz propagate
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/comunication_protocol_0/reset
+
+Wrote  : <D:\_code\Git\Fontys\Jaar_2\mo8-digitaal-zender\mo8-digitaal-zender\mo8-digitaal-zender.srcs\sources_1\bd\comProtocol_full_test\comProtocol_full_test.bd> 
+VHDL Output written to : d:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/comProtocol_full_test/synth/comProtocol_full_test.vhd
+VHDL Output written to : d:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/comProtocol_full_test/sim/comProtocol_full_test.vhd
+VHDL Output written to : d:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/comProtocol_full_test/hdl/comProtocol_full_test_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block communicatie_protoco_0 .
+Exporting to file d:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/comProtocol_full_test/hw_handoff/comProtocol_full_test.hwh
+Generated Hardware Definition File d:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/comProtocol_full_test/synth/comProtocol_full_test.hwdef
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_14 -L processing_system7_vip_v1_0_16 -L xilinx_vip -prj comProtocol_full_test_wrapper_vlog.prj"
+"xvhdl --incr --relax -prj comProtocol_full_test_wrapper_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/comProtocol_full_test/hdl/comProtocol_full_test_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'comProtocol_full_test_wrapper'
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 4146.242 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '6' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 4146.242 ; gain = 0.000
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'comProtocol_full_test_wrapper'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_8 -L xlslice_v1_0_2 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot comProtocol_full_test_wrapper_behav xil_defaultlib.comProtocol_full_test_wrapper xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_8 -L xlslice_v1_0_2 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot comProtocol_full_test_wrapper_behav xil_defaultlib.comProtocol_full_test_wrapper xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=8.0,C...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.comProtocol_full_test_clk_wiz_0_...
+Compiling module xil_defaultlib.comProtocol_full_test_clk_wiz_0
+Compiling architecture behavioral of entity xil_defaultlib.communicatie_protocol_ontvanger [communicatie_protocol_ontvanger_...]
+Compiling architecture comprotocol_full_test_communicatie_protoco_0_0_arch of entity xil_defaultlib.comProtocol_full_test_communicatie_protoco_0_0 [comprotocol_full_test_communicat...]
+Compiling architecture behavioral of entity xil_defaultlib.comunication_protocol [comunication_protocol_default]
+Compiling architecture comprotocol_full_test_comunication_protocol_0_0_arch of entity xil_defaultlib.comProtocol_full_test_comunication_protocol_0_0 [comprotocol_full_test_comunicati...]
+Compiling module fifo_generator_v13_2_8.fifo_generator_v13_2_8_bhv_ver_s...
+Compiling module fifo_generator_v13_2_8.fifo_generator_v13_2_8_CONV_VER(...
+Compiling module fifo_generator_v13_2_8.fifo_generator_vlog_beh(C_COMMON...
+Compiling module xil_defaultlib.comProtocol_full_test_fifo_gener...
+Compiling module xlslice_v1_0_2.xlslice_v1_0_2_xlslice(DIN_WIDTH...
+Compiling module xil_defaultlib.comProtocol_full_test_xlslice_0_...
+Compiling architecture structure of entity xil_defaultlib.comProtocol_full_test [comprotocol_full_test_default]
+Compiling architecture structure of entity xil_defaultlib.comprotocol_full_test_wrapper
+Built simulation snapshot comProtocol_full_test_wrapper_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 4146.242 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 4146.242 ; gain = 0.000
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/communicatieprotocol.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/communicatieprotocol.protoinst for the following reason(s):
+There are no instances of module "communicatieprotocol" in the design.
+
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/blockdesign.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/blockdesign.protoinst for the following reason(s):
+There are no instances of module "blockdesign" in the design.
+
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/comProtocol_full_test.protoinst
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:19 . Memory (MB): peak = 4146.242 ; gain = 0.000
+add_force {/comProtocol_full_test_wrapper/sys_clock} -radix hex {1 0ns} {0 42500ps} -repeat_every 85000ps
+force86
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0xffffffff 0ns}
+force87
+add_force {/comProtocol_full_test_wrapper/keypad_data_0} -radix hex {0xf 0ns}
+force88
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force89
+add_force {/comProtocol_full_test_wrapper/data_read_done_0} -radix hex {0 0ns}
+force90
+run 10us
+Warning: [Unisim MMCME2_ADV-20] Input CLKIN1 period and attribute CLKIN1_PERIOD are not same. Instance comProtocol_full_test_wrapper.comProtocol_full_test_i.clk_wiz.inst.mmcm_adv_inst 
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+force91
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force92
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0 0ns}
+force93
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+force94
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force95
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {ffffffff 0ns}
+force96
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+force97
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force98
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0 0ns}
+force99
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+force100
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force101
+run 1us
+add_force {/comProtocol_full_test_wrapper/keypad_data_0} -radix hex {0xa 0ns}
+force102
+run 1us
+ERROR: Array sizes do not match, left array has 32 elements, right array has 16 elements
+Time: 12921250 ps  Iteration: 2  Process: /comProtocol_full_test_wrapper/comProtocol_full_test_i/communicatie_protoco_0/U0/next_state_decoder
+  File: D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communicatie_protocol_ontvanger.vhd
+
+HDL Line: D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communicatie_protocol_ontvanger.vhd:113
+open_bd_design {D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd}
+update_module_reference comProtocol_full_test_communicatie_protoco_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+Upgrading 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd'
+INFO: [IP_Flow 19-3420] Updated comProtocol_full_test_communicatie_protoco_0_0 to use current project options
+Wrote  : <D:\_code\Git\Fontys\Jaar_2\mo8-digitaal-zender\mo8-digitaal-zender\mo8-digitaal-zender.srcs\sources_1\bd\comProtocol_full_test\comProtocol_full_test.bd> 
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'comProtocol_full_test_wrapper'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz clk_wiz propagate
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/comunication_protocol_0/reset
+
+Wrote  : <D:\_code\Git\Fontys\Jaar_2\mo8-digitaal-zender\mo8-digitaal-zender\mo8-digitaal-zender.srcs\sources_1\bd\comProtocol_full_test\comProtocol_full_test.bd> 
+VHDL Output written to : d:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/comProtocol_full_test/synth/comProtocol_full_test.vhd
+VHDL Output written to : d:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/comProtocol_full_test/sim/comProtocol_full_test.vhd
+VHDL Output written to : d:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/comProtocol_full_test/hdl/comProtocol_full_test_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block communicatie_protoco_0 .
+Exporting to file d:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/comProtocol_full_test/hw_handoff/comProtocol_full_test.hwh
+Generated Hardware Definition File d:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/comProtocol_full_test/synth/comProtocol_full_test.hwdef
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_14 -L processing_system7_vip_v1_0_16 -L xilinx_vip -prj comProtocol_full_test_wrapper_vlog.prj"
+"xvhdl --incr --relax -prj comProtocol_full_test_wrapper_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communicatie_protocol_ontvanger.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'communicatie_protocol_ontvanger'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/comProtocol_full_test/hdl/comProtocol_full_test_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'comProtocol_full_test_wrapper'
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 4146.242 ; gain = 0.000
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'comProtocol_full_test_wrapper'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_8 -L xlslice_v1_0_2 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot comProtocol_full_test_wrapper_behav xil_defaultlib.comProtocol_full_test_wrapper xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_8 -L xlslice_v1_0_2 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot comProtocol_full_test_wrapper_behav xil_defaultlib.comProtocol_full_test_wrapper xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=8.0,C...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.comProtocol_full_test_clk_wiz_0_...
+Compiling module xil_defaultlib.comProtocol_full_test_clk_wiz_0
+Compiling architecture behavioral of entity xil_defaultlib.communicatie_protocol_ontvanger [communicatie_protocol_ontvanger_...]
+Compiling architecture comprotocol_full_test_communicatie_protoco_0_0_arch of entity xil_defaultlib.comProtocol_full_test_communicatie_protoco_0_0 [comprotocol_full_test_communicat...]
+Compiling architecture behavioral of entity xil_defaultlib.comunication_protocol [comunication_protocol_default]
+Compiling architecture comprotocol_full_test_comunication_protocol_0_0_arch of entity xil_defaultlib.comProtocol_full_test_comunication_protocol_0_0 [comprotocol_full_test_comunicati...]
+Compiling module fifo_generator_v13_2_8.fifo_generator_v13_2_8_bhv_ver_s...
+Compiling module fifo_generator_v13_2_8.fifo_generator_v13_2_8_CONV_VER(...
+Compiling module fifo_generator_v13_2_8.fifo_generator_vlog_beh(C_COMMON...
+Compiling module xil_defaultlib.comProtocol_full_test_fifo_gener...
+Compiling module xlslice_v1_0_2.xlslice_v1_0_2_xlslice(DIN_WIDTH...
+Compiling module xil_defaultlib.comProtocol_full_test_xlslice_0_...
+Compiling architecture structure of entity xil_defaultlib.comProtocol_full_test [comprotocol_full_test_default]
+Compiling architecture structure of entity xil_defaultlib.comprotocol_full_test_wrapper
+Built simulation snapshot comProtocol_full_test_wrapper_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 4146.242 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 4146.242 ; gain = 0.000
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/communicatieprotocol.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/communicatieprotocol.protoinst for the following reason(s):
+There are no instances of module "communicatieprotocol" in the design.
+
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/blockdesign.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/blockdesign.protoinst for the following reason(s):
+There are no instances of module "blockdesign" in the design.
+
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/comProtocol_full_test.protoinst
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:18 . Memory (MB): peak = 4146.242 ; gain = 0.000
+add_force {/comProtocol_full_test_wrapper/sys_clock} -radix hex {1 0ns} {0 42500ps} -repeat_every 85000ps
+force103
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0xffffffff 0ns}
+force104
+add_force {/comProtocol_full_test_wrapper/keypad_data_0} -radix hex {0xf 0ns}
+force105
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force106
+add_force {/comProtocol_full_test_wrapper/data_read_done_0} -radix hex {0 0ns}
+force107
+run 10us
+Warning: [Unisim MMCME2_ADV-20] Input CLKIN1 period and attribute CLKIN1_PERIOD are not same. Instance comProtocol_full_test_wrapper.comProtocol_full_test_i.clk_wiz.inst.mmcm_adv_inst 
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+force108
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force109
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0 0ns}
+force110
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+force111
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force112
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {ffffffff 0ns}
+force113
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+force114
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force115
+add_force {/comProtocol_full_test_wrapper/din_0} -radix hex {0 0ns}
+force116
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {1 0ns}
+force117
+run 50ns
+add_force {/comProtocol_full_test_wrapper/wr_en_0} -radix hex {0 0ns}
+force118
+run 1us
+add_force {/comProtocol_full_test_wrapper/keypad_data_0} -radix hex {0xa 0ns}
+force119
+run 1us
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'CRC' [D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/comunication_protocol.vhd:216]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'CRC' [D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/comunication_protocol.vhd:219]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'CRC' [D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/comunication_protocol.vhd:216]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'CRC' [D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/comunication_protocol.vhd:219]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'CRC' [D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/comunication_protocol.vhd:216]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'CRC' [D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/comunication_protocol.vhd:219]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'CRC' [D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/comunication_protocol.vhd:216]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'CRC' [D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/comunication_protocol.vhd:219]
+open_bd_design {D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd}
+update_module_reference {comProtocol_full_test_comunication_protocol_0_0 communicatieprotocol_comunication_protocol_0_0}
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'reset'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'reset'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+Upgrading 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd'
+INFO: [IP_Flow 19-3420] Updated comProtocol_full_test_comunication_protocol_0_0 to use current project options
+Wrote  : <D:\_code\Git\Fontys\Jaar_2\mo8-digitaal-zender\mo8-digitaal-zender\mo8-digitaal-zender.srcs\sources_1\bd\comProtocol_full_test\comProtocol_full_test.bd> 
+Wrote  : <D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/ui/bd_550c8adc.ui> 
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'reset'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+Reading block design file <D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/communicatieprotocol/communicatieprotocol.bd>...
+Adding component instance block -- xilinx.com:ip:fifo_generator:13.2 - fifo_generator_0
+INFO: [xilinx.com:ip:fifo_generator:13.2-5968] /fifo_generator_0Executing the post_config_ip from bd
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_0
+Adding component instance block -- xilinx.com:module_ref:comunication_protocol:1.0 - comunication_protocol_0
+Successfully read diagram <communicatieprotocol> from block design file <D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/communicatieprotocol/communicatieprotocol.bd>
+Upgrading 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/communicatieprotocol/communicatieprotocol.bd'
+INFO: [IP_Flow 19-3420] Updated communicatieprotocol_comunication_protocol_0_0 to use current project options
+Wrote  : <D:\_code\Git\Fontys\Jaar_2\mo8-digitaal-zender\mo8-digitaal-zender\mo8-digitaal-zender.srcs\sources_1\bd\communicatieprotocol\communicatieprotocol.bd> 
+open_bd_design {D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd}
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'comProtocol_full_test_wrapper'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz clk_wiz propagate
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/comunication_protocol_0/reset
+
+Wrote  : <D:\_code\Git\Fontys\Jaar_2\mo8-digitaal-zender\mo8-digitaal-zender\mo8-digitaal-zender.srcs\sources_1\bd\comProtocol_full_test\comProtocol_full_test.bd> 
+VHDL Output written to : d:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/comProtocol_full_test/synth/comProtocol_full_test.vhd
+VHDL Output written to : d:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/comProtocol_full_test/sim/comProtocol_full_test.vhd
+VHDL Output written to : d:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/comProtocol_full_test/hdl/comProtocol_full_test_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block comunication_protocol_0 .
+Exporting to file d:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/comProtocol_full_test/hw_handoff/comProtocol_full_test.hwh
+Generated Hardware Definition File d:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/comProtocol_full_test/synth/comProtocol_full_test.hwdef
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_14 -L processing_system7_vip_v1_0_16 -L xilinx_vip -prj comProtocol_full_test_wrapper_vlog.prj"
+"xvhdl --incr --relax -prj comProtocol_full_test_wrapper_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/comunication_protocol.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'comunication_protocol'
+ERROR: [VRFC 10-8820] cannot read from 'out' object 'data_out'; use 'buffer' or 'inout' instead [D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/comunication_protocol.vhd:216]
+ERROR: [VRFC 10-3031] 'data_out' with mode 'out' cannot be read [D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/comunication_protocol.vhd:216]
+ERROR: [VRFC 10-9458] unit 'behavioral' is ignored due to previous errors [D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/comunication_protocol.vhd:64]
+INFO: [VRFC 10-8704] VHDL file 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/comunication_protocol.vhd' is ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 4207.633 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+save_wave_config {D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/comunication_protocol_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+reset_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-2266] Removing simulation data...
+INFO: [Vivado 12-2267] Reset complete
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'comProtocol_full_test_wrapper'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2023.1/data/xsim/xsim.ini' copied to run dir:'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'comProtocol_full_test_wrapper' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_14 -L processing_system7_vip_v1_0_16 -L xilinx_vip -prj comProtocol_full_test_wrapper_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.ip_user_files/bd/comProtocol_full_test/ip/comProtocol_full_test_fifo_generator_0_0/sim/comProtocol_full_test_fifo_generator_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module comProtocol_full_test_fifo_generator_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.ip_user_files/bd/comProtocol_full_test/ip/comProtocol_full_test_clk_wiz_0/comProtocol_full_test_clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module comProtocol_full_test_clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.ip_user_files/bd/comProtocol_full_test/ip/comProtocol_full_test_clk_wiz_0/comProtocol_full_test_clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module comProtocol_full_test_clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.ip_user_files/bd/comProtocol_full_test/ip/comProtocol_full_test_xlslice_0_0/sim/comProtocol_full_test_xlslice_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module comProtocol_full_test_xlslice_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+"xvhdl --incr --relax -prj comProtocol_full_test_wrapper_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/comunication_protocol.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'comunication_protocol'
+ERROR: [VRFC 10-8820] cannot read from 'out' object 'data_out'; use 'buffer' or 'inout' instead [D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/comunication_protocol.vhd:216]
+ERROR: [VRFC 10-3031] 'data_out' with mode 'out' cannot be read [D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/comunication_protocol.vhd:216]
+ERROR: [VRFC 10-9458] unit 'behavioral' is ignored due to previous errors [D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/comunication_protocol.vhd:64]
+INFO: [VRFC 10-8704] VHDL file 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/comunication_protocol.vhd' is ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 4207.633 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+regenerate_bd_layout
+validate_bd_design -force
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz clk_wiz propagate
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/comunication_protocol_0/reset
+
+generate_target all [get_files  D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd]
+INFO: [BD 41-1662] The design 'comProtocol_full_test.bd' is already validated. Therefore parameter propagation will not be re-run.
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/comunication_protocol_0/reset
+
+Wrote  : <D:\_code\Git\Fontys\Jaar_2\mo8-digitaal-zender\mo8-digitaal-zender\mo8-digitaal-zender.srcs\sources_1\bd\comProtocol_full_test\comProtocol_full_test.bd> 
+Wrote  : <D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/ui/bd_550c8adc.ui> 
+VHDL Output written to : d:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/comProtocol_full_test/synth/comProtocol_full_test.vhd
+VHDL Output written to : d:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/comProtocol_full_test/sim/comProtocol_full_test.vhd
+VHDL Output written to : d:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/comProtocol_full_test/hdl/comProtocol_full_test_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block comunication_protocol_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block communicatie_protoco_0 .
+Exporting to file d:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/comProtocol_full_test/hw_handoff/comProtocol_full_test.hwh
+Generated Hardware Definition File d:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/comProtocol_full_test/synth/comProtocol_full_test.hwdef
+catch { config_ip_cache -export [get_ips -all comProtocol_full_test_fifo_generator_0_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: comProtocol_full_test_fifo_generator_0_0
+catch { config_ip_cache -export [get_ips -all comProtocol_full_test_clk_wiz_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: comProtocol_full_test_clk_wiz_0
+catch { config_ip_cache -export [get_ips -all comProtocol_full_test_comunication_protocol_0_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: comProtocol_full_test_comunication_protocol_0_0
+catch { config_ip_cache -export [get_ips -all comProtocol_full_test_communicatie_protoco_0_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: comProtocol_full_test_communicatie_protoco_0_0
+export_ip_user_files -of_objects [get_files D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd] -no_script -sync -force -quiet
+INFO: [Vivado 12-23855] The given sub-design is auto disabled, no action will be taken: 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd'
+export_simulation -of_objects [get_files D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/bd/comProtocol_full_test/comProtocol_full_test.bd] -directory D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.ip_user_files/sim_scripts -ip_user_files_dir D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.ip_user_files -ipstatic_source_dir D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.cache/compile_simlib/modelsim} {questa=D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.cache/compile_simlib/questa} {riviera=D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.cache/compile_simlib/riviera} {activehdl=D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-2266] Removing simulation data...
+INFO: [Vivado 12-2267] Reset complete
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'comProtocol_full_test_wrapper'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2023.1/data/xsim/xsim.ini' copied to run dir:'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'comProtocol_full_test_wrapper' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_14 -L processing_system7_vip_v1_0_16 -L xilinx_vip -prj comProtocol_full_test_wrapper_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.ip_user_files/bd/comProtocol_full_test/ip/comProtocol_full_test_fifo_generator_0_0/sim/comProtocol_full_test_fifo_generator_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module comProtocol_full_test_fifo_generator_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.ip_user_files/bd/comProtocol_full_test/ip/comProtocol_full_test_clk_wiz_0/comProtocol_full_test_clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module comProtocol_full_test_clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.ip_user_files/bd/comProtocol_full_test/ip/comProtocol_full_test_clk_wiz_0/comProtocol_full_test_clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module comProtocol_full_test_clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.ip_user_files/bd/comProtocol_full_test/ip/comProtocol_full_test_xlslice_0_0/sim/comProtocol_full_test_xlslice_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module comProtocol_full_test_xlslice_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+"xvhdl --incr --relax -prj comProtocol_full_test_wrapper_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/comunication_protocol.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'comunication_protocol'
+ERROR: [VRFC 10-8820] cannot read from 'out' object 'data_out'; use 'buffer' or 'inout' instead [D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/comunication_protocol.vhd:216]
+ERROR: [VRFC 10-3031] 'data_out' with mode 'out' cannot be read [D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/comunication_protocol.vhd:216]
+ERROR: [VRFC 10-9458] unit 'behavioral' is ignored due to previous errors [D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/comunication_protocol.vhd:64]
+INFO: [VRFC 10-8704] VHDL file 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/comunication_protocol.vhd' is ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 4207.633 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
 exit
-INFO: [Common 17-206] Exiting Vivado at Thu Mar 21 11:38:20 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed May 22 14:46:47 2024...
