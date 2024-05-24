@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/blockdesign_comunication_protocol_0_0_synth_1'
+HD_PWD='C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/blockdesign_comunication_protocol_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

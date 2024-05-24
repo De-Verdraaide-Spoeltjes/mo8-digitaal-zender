@@ -43,7 +43,7 @@
         "clk": [ { "direction": "in" } ],
         "reset": [ { "direction": "in" } ],
         "buffer_in": [ { "direction": "in", "size_left": "127", "size_right": "0" } ],
-        "buffer_data_ready": [ { "direction": "in", "size_left": "2", "size_right": "0" } ],
+        "buffer_data_ready": [ { "direction": "in", "size_left": "7", "size_right": "0" } ],
         "buffer_read": [ { "direction": "out" } ],
         "keypad_data": [ { "direction": "in", "size_left": "3", "size_right": "0" } ],
         "data_read_done": [ { "direction": "in" } ],

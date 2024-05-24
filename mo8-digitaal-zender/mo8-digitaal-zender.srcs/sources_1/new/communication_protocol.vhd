@@ -48,7 +48,7 @@ entity comunication_protocol is
 
         -- FIFO interface
         buffer_in           : in STD_LOGIC_VECTOR(127 downto 0);
-        buffer_data_ready   : in STD_LOGIC_VECTOR(2 downto 0);
+        buffer_data_ready   : in STD_LOGIC_VECTOR(7 downto 0);
         buffer_read         : out STD_LOGIC;
 
         -- Keypad
@@ -138,17 +138,17 @@ begin
     begin
         case current_state is
             when Waiting_for_hekkie =>
-                if keypad_is_hekkie = '1' AND keypad_is_hekkie_s = '0' AND buffer_data_ready >= std_logic_vector(to_unsigned(1, buffer_data_ready'length)) then
-                    next_state <= Enable_read_buffer;
+                if keypad_is_hekkie = '1' AND keypad_is_hekkie_s = '0' AND buffer_data_ready >= std_logic_vector(to_unsigned(128, buffer_data_ready'length)) then
+                    next_state <= Reading_buffer;
                 else
                     next_state <= Waiting_for_hekkie;
                 end if;
 
             when Enable_read_buffer =>
-                next_state <= Reading_buffer;
+                next_state <= Create_protocol;
             
             when Reading_buffer =>
-                next_state <= Create_protocol;
+                next_state <= Enable_read_buffer;
 
             when Create_protocol =>
                 next_state <= Send_data;
@@ -203,6 +203,7 @@ begin
                 header_buffer(31 downto 16) <= std_logic_vector(to_unsigned(16, 16));
 
             when Create_protocol =>
+                buffer_read <= '0';
                 keypad_is_hekkie_s <= '1';
 
                 -- Copy header to data_out

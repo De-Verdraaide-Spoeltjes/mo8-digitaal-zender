@@ -1,50 +1,54 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.15153",
-   "Default View_TopLeft":"147,3",
+   "Default View_ScaleFactor":"0.319653",
+   "Default View_TopLeft":"-1236,0",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 3 -x 830 -y 210 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 3 -x 830 -y 240 -defaultsOSRD
-preplace port UART -pg 1 -lvl 3 -x 830 -y 270 -defaultsOSRD
-preplace port port-id_clk_100MHz -pg 1 -lvl 3 -x 830 -y 300 -defaultsOSRD
-preplace port port-id_reset_in -pg 1 -lvl 0 -x 0 -y 990 -defaultsOSRD
-preplace portBus transmit_keys -pg 1 -lvl 0 -x 0 -y 680 -defaultsOSRD
-preplace portBus rsa_input_value -pg 1 -lvl 0 -x 0 -y 720 -defaultsOSRD
-preplace portBus status_led -pg 1 -lvl 3 -x 830 -y 820 -defaultsOSRD
-preplace portBus rsa_encrypted_char -pg 1 -lvl 3 -x 830 -y 90 -defaultsOSRD
-preplace portBus reset -pg 1 -lvl 3 -x 830 -y 990 -defaultsOSRD
-preplace inst rsa_input_value -pg 1 -lvl 2 -x 580 -y 640 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 2 -x 580 -y 270 -defaultsOSRD
-preplace inst xlconcat_0 -pg 1 -lvl 1 -x 170 -y 610 -defaultsOSRD
-preplace inst rsa_encrypted_char -pg 1 -lvl 2 -x 580 -y 80 -defaultsOSRD
-preplace inst transmit_keys -pg 1 -lvl 2 -x 580 -y 470 -defaultsOSRD
-preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -x 580 -y 990 -defaultsOSRD
-preplace inst status_led -pg 1 -lvl 2 -x 580 -y 810 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 1 -x 170 -y 340 -defaultsOSRD
-preplace netloc axi_gpio_0_ip2intc_irpt 1 0 3 30 540 330J 390 790
-preplace netloc axi_gpio_2_ip2intc_irpt 1 0 3 30 690 390J 560 770
-preplace netloc gpio_io_i_0_1 1 0 3 NJ 680 380J 550 780
-preplace netloc gpio_io_i_1_1 1 0 3 NJ 720 NJ 720 770
-preplace netloc proc_sys_reset_0_peripheral_aresetn 1 0 3 30 520 370 730 770
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 20 530 340 380 810
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 2 390 890 800
-preplace netloc rsa_encrypted_char_gpio_io_o 1 2 1 NJ 90
-preplace netloc status_led_gpio_io_o 1 2 1 NJ 820
-preplace netloc xlconcat_0_dout 1 1 1 320 280n
-preplace netloc proc_sys_reset_0_peripheral_reset 1 2 1 NJ 990
-preplace netloc aux_reset_in_0_1 1 0 2 NJ 990 NJ
-preplace netloc processing_system7_0_DDR 1 2 1 810J 210n
-preplace netloc processing_system7_0_FIXED_IO 1 2 1 NJ 240
-preplace netloc processing_system7_0_M_AXI_GP0 1 0 3 30 160 NJ 160 770
-preplace netloc processing_system7_0_UART_1 1 2 1 810J 260n
-preplace netloc ps7_0_axi_periph_M00_AXI 1 1 1 360 310n
-preplace netloc ps7_0_axi_periph_M01_AXI 1 1 1 310 60n
-preplace netloc ps7_0_axi_periph_M02_AXI 1 1 1 350 350n
-preplace netloc ps7_0_axi_periph_M03_AXI 1 1 1 310 370n
-levelinfo -pg 1 0 170 580 830
-pagesize -pg 1 -db -bbox -sgen -200 0 1060 1090
+preplace port DDR -pg 1 -lvl 3 -x 830 -y 240 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 3 -x 830 -y 270 -defaultsOSRD
+preplace port UART -pg 1 -lvl 3 -x 830 -y 300 -defaultsOSRD
+preplace port port-id_clk_100MHz -pg 1 -lvl 3 -x 830 -y 330 -defaultsOSRD
+preplace port port-id_reset_in -pg 1 -lvl 0 -x 0 -y 1170 -defaultsOSRD
+preplace portBus transmit_keys -pg 1 -lvl 0 -x 0 -y 580 -defaultsOSRD
+preplace portBus rsa_input_value -pg 1 -lvl 0 -x 0 -y 760 -defaultsOSRD
+preplace portBus status_led -pg 1 -lvl 3 -x 830 -y 1000 -defaultsOSRD
+preplace portBus rsa_encrypted_char -pg 1 -lvl 3 -x 830 -y 860 -defaultsOSRD
+preplace portBus reset -pg 1 -lvl 3 -x 830 -y 1170 -defaultsOSRD
+preplace portBus rsa_data_ready -pg 1 -lvl 3 -x 830 -y 140 -defaultsOSRD
+preplace inst rsa_input_value -pg 1 -lvl 2 -x 580 -y 680 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 2 -x 580 -y 300 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 1 -x 180 -y 510 -defaultsOSRD
+preplace inst rsa_encrypted_char -pg 1 -lvl 2 -x 580 -y 850 -defaultsOSRD
+preplace inst transmit_keys -pg 1 -lvl 2 -x 580 -y 500 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -x 580 -y 1170 -defaultsOSRD
+preplace inst status_led -pg 1 -lvl 2 -x 580 -y 990 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 1 -x 180 -y 210 -defaultsOSRD
+preplace inst rsa_data_ready -pg 1 -lvl 2 -x 580 -y 130 -defaultsOSRD -resize 240 116
+preplace netloc aux_reset_in_0_1 1 0 2 NJ 1170 NJ
+preplace netloc axi_gpio_0_ip2intc_irpt 1 0 3 20 600 NJ 600 780
+preplace netloc axi_gpio_2_ip2intc_irpt 1 0 3 40 590 NJ 590 780
+preplace netloc gpio_io_i_0_1 1 0 3 NJ 580 NJ 580 790
+preplace netloc gpio_io_i_1_1 1 0 3 NJ 760 NJ 760 770
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 0 3 40 10 350 1070 780
+preplace netloc proc_sys_reset_0_peripheral_reset 1 2 1 NJ 1170
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 30 410 370 410 810
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 2 390 770 800
+preplace netloc rsa_encrypted_char_gpio_io_o 1 2 1 NJ 860
+preplace netloc status_led_gpio_io_o 1 2 1 NJ 1000
+preplace netloc xlconcat_0_dout 1 1 1 380 310n
+preplace netloc rsa_encrypted_char1_gpio_io_o 1 2 1 NJ 140
+preplace netloc processing_system7_0_DDR 1 2 1 810J 240n
+preplace netloc processing_system7_0_FIXED_IO 1 2 1 NJ 270
+preplace netloc processing_system7_0_M_AXI_GP0 1 0 3 20 420 NJ 420 780
+preplace netloc processing_system7_0_UART_1 1 2 1 810J 290n
+preplace netloc ps7_0_axi_periph_M00_AXI 1 1 1 390 170n
+preplace netloc ps7_0_axi_periph_M01_AXI 1 1 1 340 190n
+preplace netloc ps7_0_axi_periph_M02_AXI 1 1 1 360 210n
+preplace netloc ps7_0_axi_periph_M03_AXI 1 1 1 320 230n
+preplace netloc ps7_0_axi_periph_M04_AXI 1 1 1 330 110n
+levelinfo -pg 1 0 180 580 830
+pagesize -pg 1 -db -bbox -sgen -180 0 1040 1270
 "
 }
 0

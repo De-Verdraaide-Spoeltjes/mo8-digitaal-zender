@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "blockdesign_DeBounce_0_0",
-    "cell_name": "DeBounce_0",
+    "cell_name": "module_keypad/DeBounce_0",
     "component_reference": "xilinx.com:module_ref:DeBounce:1.0",
     "ip_revision": "1",
     "gen_directory": "../../../../../../mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_DeBounce_0_0",

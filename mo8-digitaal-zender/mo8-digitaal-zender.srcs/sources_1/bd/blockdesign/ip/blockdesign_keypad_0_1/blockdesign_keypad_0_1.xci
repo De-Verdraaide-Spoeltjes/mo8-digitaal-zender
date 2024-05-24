@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "blockdesign_keypad_0_1",
-    "cell_name": "keypad_0",
+    "cell_name": "module_keypad/keypad_0",
     "component_reference": "xilinx.com:module_ref:keypad:1.0",
     "ip_revision": "1",
     "gen_directory": "../../../../../../mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_keypad_0_1",

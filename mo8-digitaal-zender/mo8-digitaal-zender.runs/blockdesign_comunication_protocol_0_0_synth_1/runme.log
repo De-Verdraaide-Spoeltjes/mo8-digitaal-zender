@@ -12,12 +12,12 @@
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source blockdesign_comunication_protocol_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1377.176 ; gain = 159.941
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 1460.410 ; gain = 159.965
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
 WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
-Current IP cache path is d:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.cache/ip 
+Current IP cache path is c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.cache/ip 
 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: blockdesign_comunication_protocol_0_0
 Command: synth_design -top blockdesign_comunication_protocol_0_0 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
 Starting synth_design
@@ -26,80 +26,80 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 10752
+INFO: [Synth 8-7075] Helper process launched with PID 31420
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 2232.035 ; gain = 409.441
+Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 2315.770 ; gain = 409.863
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'blockdesign_comunication_protocol_0_0' [d:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_comunication_protocol_0_0/synth/blockdesign_comunication_protocol_0_0.vhd:70]
+INFO: [Synth 8-638] synthesizing module 'blockdesign_comunication_protocol_0_0' [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_comunication_protocol_0_0/synth/blockdesign_comunication_protocol_0_0.vhd:70]
 	Parameter CRC_devider bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'comunication_protocol' declared at 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communication_protocol.vhd:41' bound to instance 'U0' of component 'comunication_protocol' [d:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_comunication_protocol_0_0/synth/blockdesign_comunication_protocol_0_0.vhd:104]
-INFO: [Synth 8-638] synthesizing module 'comunication_protocol' [D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communication_protocol.vhd:64]
-WARNING: [Synth 8-614] signal 'keypad_old' is read in the process but is not in the sensitivity list [D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communication_protocol.vhd:125]
-WARNING: [Synth 8-614] signal 'keypad_is_hekkie_s' is read in the process but is not in the sensitivity list [D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communication_protocol.vhd:137]
-WARNING: [Synth 8-614] signal 'header_buffer' is read in the process but is not in the sensitivity list [D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communication_protocol.vhd:184]
-WARNING: [Synth 8-614] signal 'buffer_in' is read in the process but is not in the sensitivity list [D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communication_protocol.vhd:184]
-INFO: [Synth 8-256] done synthesizing module 'comunication_protocol' (0#1) [D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communication_protocol.vhd:64]
-INFO: [Synth 8-256] done synthesizing module 'blockdesign_comunication_protocol_0_0' (0#1) [d:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_comunication_protocol_0_0/synth/blockdesign_comunication_protocol_0_0.vhd:70]
+INFO: [Synth 8-3491] module 'comunication_protocol' declared at 'C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communication_protocol.vhd:41' bound to instance 'U0' of component 'comunication_protocol' [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_comunication_protocol_0_0/synth/blockdesign_comunication_protocol_0_0.vhd:104]
+INFO: [Synth 8-638] synthesizing module 'comunication_protocol' [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communication_protocol.vhd:64]
+WARNING: [Synth 8-614] signal 'keypad_old' is read in the process but is not in the sensitivity list [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communication_protocol.vhd:125]
+WARNING: [Synth 8-614] signal 'keypad_is_hekkie_s' is read in the process but is not in the sensitivity list [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communication_protocol.vhd:137]
+WARNING: [Synth 8-614] signal 'header_buffer' is read in the process but is not in the sensitivity list [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communication_protocol.vhd:184]
+WARNING: [Synth 8-614] signal 'buffer_in' is read in the process but is not in the sensitivity list [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communication_protocol.vhd:184]
+INFO: [Synth 8-256] done synthesizing module 'comunication_protocol' (0#1) [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communication_protocol.vhd:64]
+INFO: [Synth 8-256] done synthesizing module 'blockdesign_comunication_protocol_0_0' (0#1) [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_comunication_protocol_0_0/synth/blockdesign_comunication_protocol_0_0.vhd:70]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 2337.020 ; gain = 514.426
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:24 . Memory (MB): peak = 2420.734 ; gain = 514.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 2354.934 ; gain = 532.340
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:24 . Memory (MB): peak = 2420.734 ; gain = 514.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 2354.934 ; gain = 532.340
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:24 . Memory (MB): peak = 2420.734 ; gain = 514.828
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2354.934 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 2420.734 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2443.383 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2454.254 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 2443.383 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.100 . Memory (MB): peak = 2455.824 ; gain = 1.570
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 2443.383 ; gain = 620.789
+Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:47 . Memory (MB): peak = 2455.824 ; gain = 549.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 2443.383 ; gain = 620.789
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:47 . Memory (MB): peak = 2455.824 ; gain = 549.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 2443.383 ; gain = 620.789
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:47 . Memory (MB): peak = 2455.824 ; gain = 549.918
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'comunication_protocol'
-WARNING: [Synth 8-327] inferring latch for variable 'buffer_read_reg' [D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communication_protocol.vhd:188]
+WARNING: [Synth 8-327] inferring latch for variable 'buffer_read_reg' [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communication_protocol.vhd:188]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
               reset_data |                           000001 |                              101
       waiting_for_hekkie |                           000010 |                              000
-      enable_read_buffer |                           000100 |                              001
-          reading_buffer |                           001000 |                              010
+          reading_buffer |                           000100 |                              010
+      enable_read_buffer |                           001000 |                              001
          create_protocol |                           010000 |                              011
                send_data |                           100000 |                              100
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'comunication_protocol'
-WARNING: [Synth 8-327] inferring latch for variable 'data_ready_reg' [D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communication_protocol.vhd:222]
-WARNING: [Synth 8-327] inferring latch for variable 'data_out_reg' [D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communication_protocol.vhd:209]
-WARNING: [Synth 8-327] inferring latch for variable 'header_buffer_reg' [D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communication_protocol.vhd:197]
-WARNING: [Synth 8-327] inferring latch for variable 'keypad_is_hekkie_s_reg' [D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communication_protocol.vhd:206]
+WARNING: [Synth 8-327] inferring latch for variable 'data_ready_reg' [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communication_protocol.vhd:223]
+WARNING: [Synth 8-327] inferring latch for variable 'data_out_reg' [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communication_protocol.vhd:210]
+WARNING: [Synth 8-327] inferring latch for variable 'header_buffer_reg' [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communication_protocol.vhd:197]
+WARNING: [Synth 8-327] inferring latch for variable 'keypad_is_hekkie_s_reg' [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/communication_protocol.vhd:207]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 2443.383 ; gain = 620.789
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:49 . Memory (MB): peak = 2455.824 ; gain = 549.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -154,25 +154,25 @@ INFO: [Synth 8-3332] Sequential element (U0/data_ready_reg) is unused and will b
 INFO: [Synth 8-3332] Sequential element (U0/header_buffer_reg[5]) is unused and will be removed from module blockdesign_comunication_protocol_0_0.
 INFO: [Synth 8-3332] Sequential element (U0/keypad_is_hekkie_s_reg) is unused and will be removed from module blockdesign_comunication_protocol_0_0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 2443.383 ; gain = 620.789
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:54 . Memory (MB): peak = 2455.824 ; gain = 549.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:16 . Memory (MB): peak = 2443.383 ; gain = 620.789
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:01:08 . Memory (MB): peak = 2455.824 ; gain = 549.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:16 . Memory (MB): peak = 2443.383 ; gain = 620.789
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:01:08 . Memory (MB): peak = 2455.824 ; gain = 549.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:05 ; elapsed = 00:00:16 . Memory (MB): peak = 2443.383 ; gain = 620.789
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:01:08 . Memory (MB): peak = 2455.824 ; gain = 549.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -190,37 +190,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:06 ; elapsed = 00:00:19 . Memory (MB): peak = 2443.383 ; gain = 620.789
+Finished IO Insertion : Time (s): cpu = 00:00:49 ; elapsed = 00:01:19 . Memory (MB): peak = 2455.824 ; gain = 549.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:06 ; elapsed = 00:00:19 . Memory (MB): peak = 2443.383 ; gain = 620.789
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:49 ; elapsed = 00:01:19 . Memory (MB): peak = 2455.824 ; gain = 549.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:06 ; elapsed = 00:00:19 . Memory (MB): peak = 2443.383 ; gain = 620.789
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:49 ; elapsed = 00:01:19 . Memory (MB): peak = 2455.824 ; gain = 549.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:06 ; elapsed = 00:00:19 . Memory (MB): peak = 2443.383 ; gain = 620.789
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:49 ; elapsed = 00:01:19 . Memory (MB): peak = 2455.824 ; gain = 549.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:19 . Memory (MB): peak = 2443.383 ; gain = 620.789
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:49 ; elapsed = 00:01:19 . Memory (MB): peak = 2455.824 ; gain = 549.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:06 ; elapsed = 00:00:19 . Memory (MB): peak = 2443.383 ; gain = 620.789
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:49 ; elapsed = 00:01:19 . Memory (MB): peak = 2455.824 ; gain = 549.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -238,26 +238,26 @@ Report Cell Usage:
 +-+-----+------+
 +-+-----+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:06 ; elapsed = 00:00:19 . Memory (MB): peak = 2443.383 ; gain = 620.789
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:49 ; elapsed = 00:01:19 . Memory (MB): peak = 2455.824 ; gain = 549.918
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:04 ; elapsed = 00:00:18 . Memory (MB): peak = 2443.383 ; gain = 532.340
-Synthesis Optimization Complete : Time (s): cpu = 00:00:06 ; elapsed = 00:00:19 . Memory (MB): peak = 2443.383 ; gain = 620.789
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:01:14 . Memory (MB): peak = 2455.824 ; gain = 514.828
+Synthesis Optimization Complete : Time (s): cpu = 00:00:49 ; elapsed = 00:01:19 . Memory (MB): peak = 2455.824 ; gain = 549.918
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2443.383 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2455.824 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2443.383 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2455.824 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: facf3a13
+Synth Design complete | Checksum: ccd64828
 INFO: [Common 17-83] Releasing license: Synthesis
 32 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:23 . Memory (MB): peak = 2443.383 ; gain = 1024.078
-INFO: [Common 17-1381] The checkpoint 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/blockdesign_comunication_protocol_0_0_synth_1/blockdesign_comunication_protocol_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP blockdesign_comunication_protocol_0_0, cache-ID = 3cbcdfad8ddf0b5d
-INFO: [Common 17-1381] The checkpoint 'D:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/blockdesign_comunication_protocol_0_0_synth_1/blockdesign_comunication_protocol_0_0.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:56 ; elapsed = 00:01:33 . Memory (MB): peak = 2455.824 ; gain = 954.633
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/blockdesign_comunication_protocol_0_0_synth_1/blockdesign_comunication_protocol_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP blockdesign_comunication_protocol_0_0, cache-ID = a33c45b20b128bb6
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/blockdesign_comunication_protocol_0_0_synth_1/blockdesign_comunication_protocol_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file blockdesign_comunication_protocol_0_0_utilization_synth.rpt -pb blockdesign_comunication_protocol_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed May 22 15:38:24 2024...
+INFO: [Common 17-206] Exiting Vivado at Fri May 24 11:30:54 2024...

@@ -2,10 +2,10 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
--- Date        : Wed May 22 15:38:24 2024
--- Host        : XPS-Tommy running 64-bit major release  (build 9200)
+-- Date        : Fri May 24 11:30:54 2024
+-- Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               d:/_code/Git/Fontys/Jaar_2/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_comunication_protocol_0_0/blockdesign_comunication_protocol_0_0_sim_netlist.vhdl
+--               c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_comunication_protocol_0_0/blockdesign_comunication_protocol_0_0_sim_netlist.vhdl
 -- Design      : blockdesign_comunication_protocol_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -20,7 +20,7 @@ entity blockdesign_comunication_protocol_0_0 is
     clk : in STD_LOGIC;
     reset : in STD_LOGIC;
     buffer_in : in STD_LOGIC_VECTOR ( 127 downto 0 );
-    buffer_data_ready : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    buffer_data_ready : in STD_LOGIC_VECTOR ( 7 downto 0 );
     buffer_read : out STD_LOGIC;
     keypad_data : in STD_LOGIC_VECTOR ( 3 downto 0 );
     data_read_done : in STD_LOGIC;
