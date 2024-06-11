@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri May 24 11:28:24 2024" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jun 11 12:56:18 2024" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="blockdesign" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -164,6 +164,21 @@
         <CONNECTION INSTANCE="module_keypad_keypad_0" PORT="Col_0"/>
       </CONNECTIONS>
     </PORT>
+    <PORT DIR="O" NAME="signal_o" SIGIS="undef" SIGNAME="test_modulator_0_signal_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="test_modulator_0" PORT="signal_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="5" NAME="leds2" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_0_Dout">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xlslice_0" PORT="Dout"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="leds" RIGHT="0" SIGIS="undef" SIGNAME="xlconcat_0_dout">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xlconcat_0" PORT="dout"/>
+      </CONNECTIONS>
+    </PORT>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES>
@@ -258,13 +273,14 @@
             <CONNECTION INSTANCE="module_keypad_DeBounce_0" PORT="data_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="data_read_done" SIGIS="undef" SIGNAME="encoder_4b5b_0_Output_rdy">
+        <PORT DIR="I" NAME="data_read_done" SIGIS="undef" SIGNAME="encoder_4b5b_0_Data_read_done">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="encoder_4b5b_0" PORT="Output_rdy"/>
+            <CONNECTION INSTANCE="encoder_4b5b_0" PORT="Data_read_done"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="data_ready" SIGIS="undef" SIGNAME="comunication_protocol_0_data_ready">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconcat_0" PORT="In1"/>
             <CONNECTION INSTANCE="encoder_4b5b_0" PORT="Data_rdy"/>
           </CONNECTIONS>
         </PORT>
@@ -320,6 +336,7 @@
             <CONNECTION INSTANCE="filter_sterretje_clk_divider_0" PORT="reset"/>
             <CONNECTION INSTANCE="filter_sterretje_hold_detector_0" PORT="reset"/>
             <CONNECTION INSTANCE="module_keypad_DeBounce_0" PORT="Reset"/>
+            <CONNECTION INSTANCE="module_keypad_clk_divider_0" PORT="reset"/>
             <CONNECTION INSTANCE="fifo_buffer_0" PORT="clear"/>
             <CONNECTION INSTANCE="comunication_protocol_0" PORT="reset"/>
           </CONNECTIONS>
@@ -1499,10 +1516,12 @@
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="FCLK_CLK0" SIGIS="clk" SIGNAME="connection_embedded_processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="filter_sterretje_clk_divider_0" PORT="clk_i"/>
-            <CONNECTION INSTANCE="module_keypad_keypad_0" PORT="clk"/>
             <CONNECTION INSTANCE="module_keypad_DeBounce_0" PORT="clk"/>
-            <CONNECTION INSTANCE="encoder_4b5b_0" PORT="clk"/>
+            <CONNECTION INSTANCE="module_keypad_clk_divider_0" PORT="clk_i"/>
             <CONNECTION INSTANCE="fifo_buffer_0" PORT="clk"/>
+            <CONNECTION INSTANCE="test_modulator_0" PORT="clk"/>
+            <CONNECTION INSTANCE="resetting_timer_0" PORT="clk"/>
+            <CONNECTION INSTANCE="encoder_4b5b_0" PORT="clk"/>
             <CONNECTION INSTANCE="comunication_protocol_0" PORT="clk"/>
             <CONNECTION INSTANCE="connection_embedded_proc_sys_reset_0" PORT="slowest_sync_clk"/>
             <CONNECTION INSTANCE="connection_embedded_processing_system7_0" PORT="M_AXI_GP0_ACLK"/>
@@ -2154,6 +2173,16 @@
             <CONNECTION INSTANCE="connection_embedded_proc_sys_reset_0" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" NAME="M04_ACLK" SIGIS="clk" SIGNAME="connection_embedded_processing_system7_0_FCLK_CLK0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="connection_embedded_processing_system7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M04_ARESETN" SIGIS="rst" SIGNAME="connection_embedded_proc_sys_reset_0_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="connection_embedded_proc_sys_reset_0" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" LEFT="11" NAME="S00_AXI_awid" RIGHT="0" SIGIS="undef" SIGNAME="connection_embedded_processing_system7_0_M_AXI_GP0_AWID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="connection_embedded_processing_system7_0" PORT="M_AXI_GP0_AWID"/>
@@ -2690,16 +2719,6 @@
         <PORT DIR="O" LEFT="0" NAME="M03_AXI_rready" RIGHT="0" SIGIS="undef" SIGNAME="connection_embedded_ps7_0_axi_periph_M03_AXI_rready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="connection_embedded_status_led" PORT="s_axi_rready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M04_ACLK" SIGIS="clk" SIGNAME="connection_embedded_processing_system7_0_FCLK_CLK0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="connection_embedded_processing_system7_0" PORT="FCLK_CLK0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M04_ARESETN" SIGIS="rst" SIGNAME="connection_embedded_proc_sys_reset_0_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="connection_embedded_proc_sys_reset_0" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="M04_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="connection_embedded_ps7_0_axi_periph_M04_AXI_awaddr">
@@ -3243,6 +3262,7 @@
         <PORT DIR="O" LEFT="0" NAME="gpio_io_o" RIGHT="0" SIGIS="undef" SIGNAME="connection_embedded_rsa_data_ready_gpio_io_o">
           <CONNECTIONS>
             <CONNECTION INSTANCE="fifo_buffer_0" PORT="write_en"/>
+            <CONNECTION INSTANCE="xlconcat_0" PORT="In0"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -4917,12 +4937,22 @@
             <CONNECTION INSTANCE="comunication_protocol_0" PORT="data_ready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="Output_rdy" SIGIS="undef" SIGNAME="encoder_4b5b_0_Output_rdy">
+        <PORT DIR="O" NAME="Data_read_done" SIGIS="undef" SIGNAME="encoder_4b5b_0_Data_read_done">
           <CONNECTIONS>
             <CONNECTION INSTANCE="comunication_protocol_0" PORT="data_read_done"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="239" NAME="Data_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Output_rdy" SIGIS="undef" SIGNAME="encoder_4b5b_0_Output_rdy">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconcat_0" PORT="In2"/>
+            <CONNECTION INSTANCE="test_modulator_0" PORT="run"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="239" NAME="Data_out" RIGHT="0" SIGIS="undef" SIGNAME="encoder_4b5b_0_Data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="test_modulator_0" PORT="data_i"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -4969,6 +4999,7 @@
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="bits_stored_o" RIGHT="0" SIGIS="undef" SIGNAME="fifo_buffer_0_bits_stored_o">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="xlslice_0" PORT="Din"/>
             <CONNECTION INSTANCE="comunication_protocol_0" PORT="buffer_data_ready"/>
           </CONNECTIONS>
         </PORT>
@@ -5133,6 +5164,32 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/module_keypad/clk_divider_0" HWVERSION="1.0" INSTANCE="module_keypad_clk_divider_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clk_divider" VLNV="xilinx.com:module_ref:clk_divider:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="division" VALUE="10000"/>
+        <PARAMETER NAME="Component_Name" VALUE="blockdesign_clk_divider_0_2"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk_i" SIGIS="undef" SIGNAME="connection_embedded_processing_system7_0_FCLK_CLK0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="connection_embedded_processing_system7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="connection_embedded_proc_sys_reset_0_peripheral_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="connection_embedded_proc_sys_reset_0" PORT="peripheral_reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="clk_o" SIGIS="undef" SIGNAME="module_keypad_clk_divider_0_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="module_keypad_keypad_0" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
     <MODULE COREREVISION="1" FULLNAME="/module_keypad/keypad_0" HWVERSION="1.0" INSTANCE="module_keypad_keypad_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="keypad" VLNV="xilinx.com:module_ref:keypad:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
@@ -5160,9 +5217,9 @@
             <CONNECTION INSTANCE="External_Ports" PORT="Row_3_0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="connection_embedded_processing_system7_0_FCLK_CLK0">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="module_keypad_clk_divider_0_clk_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="connection_embedded_processing_system7_0" PORT="FCLK_CLK0"/>
+            <CONNECTION INSTANCE="module_keypad_clk_divider_0" PORT="clk_o"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="Col_0" SIGIS="undef" SIGNAME="module_keypad_keypad_0_Col_0">
@@ -5183,6 +5240,272 @@
         <PORT DIR="O" LEFT="3" NAME="Data" RIGHT="0" SIGIS="undef" SIGNAME="module_keypad_keypad_0_Data">
           <CONNECTIONS>
             <CONNECTION INSTANCE="module_keypad_DeBounce_0" PORT="data_in"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/resetting_timer_0" HWVERSION="1.0" INSTANCE="resetting_timer_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="resetting_timer" VLNV="xilinx.com:module_ref:resetting_timer:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="goal" VALUE="10000"/>
+        <PARAMETER NAME="Component_Name" VALUE="blockdesign_resetting_timer_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="connection_embedded_processing_system7_0_FCLK_CLK0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="connection_embedded_processing_system7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="test_modulator_0_timer_enable_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="test_modulator_0" PORT="timer_enable_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="test_modulator_0_timer_reset_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="test_modulator_0" PORT="timer_reset_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="finished" SIGIS="undef" SIGNAME="resetting_timer_0_finished">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="test_modulator_0" PORT="timer_finished_i"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/test_modulator_0" HWVERSION="1.0" INSTANCE="test_modulator_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="test_modulator" VLNV="xilinx.com:module_ref:test_modulator:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="blockdesign_test_modulator_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="connection_embedded_processing_system7_0_FCLK_CLK0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="connection_embedded_processing_system7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="239" NAME="data_i" RIGHT="0" SIGIS="undef" SIGNAME="encoder_4b5b_0_Data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="encoder_4b5b_0" PORT="Data_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="run" SIGIS="undef" SIGNAME="encoder_4b5b_0_Output_rdy">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="encoder_4b5b_0" PORT="Output_rdy"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="timer_finished_i" SIGIS="undef" SIGNAME="resetting_timer_0_finished">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="resetting_timer_0" PORT="finished"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="timer_enable_o" SIGIS="undef" SIGNAME="test_modulator_0_timer_enable_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="resetting_timer_0" PORT="enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="timer_reset_o" SIGIS="undef" SIGNAME="test_modulator_0_timer_reset_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="resetting_timer_0" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="signal_o" SIGIS="undef" SIGNAME="test_modulator_0_signal_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="signal_o"/>
+            <CONNECTION INSTANCE="xlconcat_0" PORT="In3"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="4" FULLNAME="/xlconcat_0" HWVERSION="2.1" INSTANCE="xlconcat_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconcat" VLNV="xilinx.com:ip:xlconcat:2.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="IN0_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN1_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN2_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN3_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN4_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN5_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN6_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN7_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN8_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN9_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN10_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN11_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN12_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN13_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN14_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN15_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN16_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN17_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN18_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN19_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN20_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN21_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN22_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN23_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN24_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN25_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN26_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN27_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN28_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN29_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN30_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN31_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN32_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN33_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN34_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN35_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN36_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN37_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN38_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN39_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN40_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN41_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN42_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN43_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN44_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN45_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN46_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN47_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN48_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN49_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN50_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN51_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN52_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN53_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN54_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN55_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN56_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN57_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN58_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN59_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN60_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN61_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN62_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN63_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN64_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN65_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN66_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN67_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN68_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN69_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN70_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN71_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN72_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN73_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN74_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN75_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN76_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN77_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN78_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN79_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN80_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN81_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN82_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN83_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN84_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN85_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN86_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN87_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN88_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN89_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN90_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN91_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN92_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN93_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN94_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN95_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN96_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN97_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN98_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN99_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN100_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN101_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN102_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN103_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN104_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN105_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN106_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN107_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN108_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN109_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN110_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN111_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN112_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN113_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN114_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN115_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN116_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN117_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN118_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN119_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN120_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN121_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN122_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN123_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN124_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN125_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN126_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN127_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="dout_width" VALUE="4"/>
+        <PARAMETER NAME="NUM_PORTS" VALUE="4"/>
+        <PARAMETER NAME="Component_Name" VALUE="blockdesign_xlconcat_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="0" NAME="In0" RIGHT="0" SIGIS="undef" SIGNAME="connection_embedded_rsa_data_ready_gpio_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="connection_embedded_rsa_data_ready" PORT="gpio_io_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="In1" RIGHT="0" SIGIS="undef" SIGNAME="comunication_protocol_0_data_ready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="comunication_protocol_0" PORT="data_ready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="In2" RIGHT="0" SIGIS="undef" SIGNAME="encoder_4b5b_0_Output_rdy">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="encoder_4b5b_0" PORT="Output_rdy"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="In3" RIGHT="0" SIGIS="undef" SIGNAME="test_modulator_0_signal_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="test_modulator_0" PORT="signal_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconcat_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="leds"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/xlslice_0" HWVERSION="1.0" INSTANCE="xlslice_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="DIN_FROM" VALUE="7"/>
+        <PARAMETER NAME="DIN_TO" VALUE="2"/>
+        <PARAMETER NAME="Component_Name" VALUE="blockdesign_xlslice_0_0"/>
+        <PARAMETER NAME="DOUT_WIDTH" VALUE="6"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="fifo_buffer_0_bits_stored_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fifo_buffer_0" PORT="bits_stored_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="5" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_0_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="leds2"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

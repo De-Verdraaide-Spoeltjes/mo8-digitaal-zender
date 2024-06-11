@@ -33,6 +33,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign
 # IP: bd/blockdesign/ip/blockdesign_ps7_0_axi_periph_1/blockdesign_ps7_0_axi_periph_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_ps7_0_axi_periph_1 || ORIG_REF_NAME==blockdesign_ps7_0_axi_periph_1} -quiet] -quiet
 
+# IP: bd/blockdesign/ip/blockdesign_rsa_encrypted_char_0/blockdesign_rsa_encrypted_char_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_rsa_encrypted_char_0 || ORIG_REF_NAME==blockdesign_rsa_encrypted_char_0} -quiet] -quiet
+
 # IP: bd/blockdesign/ip/blockdesign_util_vector_logic_0_0/blockdesign_util_vector_logic_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_util_vector_logic_0_0 || ORIG_REF_NAME==blockdesign_util_vector_logic_0_0} -quiet] -quiet
 
@@ -54,17 +57,29 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign
 # IP: bd/blockdesign/ip/blockdesign_keypad_0_1/blockdesign_keypad_0_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_keypad_0_1 || ORIG_REF_NAME==blockdesign_keypad_0_1} -quiet] -quiet
 
-# IP: bd/blockdesign/ip/blockdesign_comunication_protocol_0_0/blockdesign_comunication_protocol_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_comunication_protocol_0_0 || ORIG_REF_NAME==blockdesign_comunication_protocol_0_0} -quiet] -quiet
+# IP: bd/blockdesign/ip/blockdesign_clk_divider_0_2/blockdesign_clk_divider_0_2.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_clk_divider_0_2 || ORIG_REF_NAME==blockdesign_clk_divider_0_2} -quiet] -quiet
+
+# IP: bd/blockdesign/ip/blockdesign_fifo_buffer_0_0/blockdesign_fifo_buffer_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_fifo_buffer_0_0 || ORIG_REF_NAME==blockdesign_fifo_buffer_0_0} -quiet] -quiet
+
+# IP: bd/blockdesign/ip/blockdesign_test_modulator_0_0/blockdesign_test_modulator_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_test_modulator_0_0 || ORIG_REF_NAME==blockdesign_test_modulator_0_0} -quiet] -quiet
+
+# IP: bd/blockdesign/ip/blockdesign_xlslice_0_0/blockdesign_xlslice_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_xlslice_0_0 || ORIG_REF_NAME==blockdesign_xlslice_0_0} -quiet] -quiet
+
+# IP: bd/blockdesign/ip/blockdesign_xlconcat_0_1/blockdesign_xlconcat_0_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_xlconcat_0_1 || ORIG_REF_NAME==blockdesign_xlconcat_0_1} -quiet] -quiet
+
+# IP: bd/blockdesign/ip/blockdesign_resetting_timer_0_0/blockdesign_resetting_timer_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_resetting_timer_0_0 || ORIG_REF_NAME==blockdesign_resetting_timer_0_0} -quiet] -quiet
 
 # IP: bd/blockdesign/ip/blockdesign_encoder_4b5b_0_0/blockdesign_encoder_4b5b_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_encoder_4b5b_0_0 || ORIG_REF_NAME==blockdesign_encoder_4b5b_0_0} -quiet] -quiet
 
-# IP: bd/blockdesign/ip/blockdesign_rsa_encrypted_char_0/blockdesign_rsa_encrypted_char_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_rsa_encrypted_char_0 || ORIG_REF_NAME==blockdesign_rsa_encrypted_char_0} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_fifo_buffer_0_0/blockdesign_fifo_buffer_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_fifo_buffer_0_0 || ORIG_REF_NAME==blockdesign_fifo_buffer_0_0} -quiet] -quiet
+# IP: bd/blockdesign/ip/blockdesign_comunication_protocol_0_0/blockdesign_comunication_protocol_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_comunication_protocol_0_0 || ORIG_REF_NAME==blockdesign_comunication_protocol_0_0} -quiet] -quiet
 
 # IP: bd/blockdesign/ip/blockdesign_auto_pc_0/blockdesign_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_auto_pc_0 || ORIG_REF_NAME==blockdesign_auto_pc_0} -quiet] -quiet

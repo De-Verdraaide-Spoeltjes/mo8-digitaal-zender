@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
---Date        : Fri May 24 11:28:22 2024
+--Date        : Tue Jun 11 12:56:16 2024
 --Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
 --Command     : generate_target blockdesign_wrapper.bd
 --Design      : blockdesign_wrapper
@@ -44,7 +44,10 @@ entity blockdesign_wrapper is
     Row_3_0 : in STD_LOGIC;
     UART_rxd : in STD_LOGIC;
     UART_txd : out STD_LOGIC;
+    leds : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    leds2 : out STD_LOGIC_VECTOR ( 5 downto 0 );
     reset_in : in STD_LOGIC;
+    signal_o : out STD_LOGIC;
     status_led : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
 end blockdesign_wrapper;
@@ -83,7 +86,10 @@ architecture STRUCTURE of blockdesign_wrapper is
     Row_3_0 : in STD_LOGIC;
     Col_1_0 : out STD_LOGIC;
     Col_2_0 : out STD_LOGIC;
-    Col_0_0 : out STD_LOGIC
+    Col_0_0 : out STD_LOGIC;
+    signal_o : out STD_LOGIC;
+    leds2 : out STD_LOGIC_VECTOR ( 5 downto 0 );
+    leds : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component blockdesign;
 begin
@@ -119,7 +125,10 @@ blockdesign_i: component blockdesign
       Row_3_0 => Row_3_0,
       UART_rxd => UART_rxd,
       UART_txd => UART_txd,
+      leds(3 downto 0) => leds(3 downto 0),
+      leds2(5 downto 0) => leds2(5 downto 0),
       reset_in => reset_in,
+      signal_o => signal_o,
       status_led(2 downto 0) => status_led(2 downto 0)
     );
 end STRUCTURE;

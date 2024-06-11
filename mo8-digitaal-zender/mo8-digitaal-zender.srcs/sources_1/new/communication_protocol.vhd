@@ -130,7 +130,7 @@ begin
             keypad_is_hekkie <= '0';
         end if;
 
-        keypad_old <= keypad_data;
+        
     end process;
 
     -- Next state logic
@@ -177,12 +177,15 @@ begin
             else
                 current_state <= next_state;
             end if;
+
+            keypad_old <= keypad_data;
         end if;
     end process;
 
     -- state machine
-    state_machine:process(current_state)
+    state_machine:process(clk)
     begin
+        if rising_edge(clk) then
         case current_state is
             when Waiting_for_hekkie =>
                 buffer_read <= '0';
@@ -237,6 +240,7 @@ begin
                 buffer_read <= '0';
 
         end case;
+        end if;
     end process;
 
 

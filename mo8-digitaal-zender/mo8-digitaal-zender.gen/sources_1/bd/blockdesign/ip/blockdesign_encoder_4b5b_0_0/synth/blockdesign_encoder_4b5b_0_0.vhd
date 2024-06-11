@@ -58,6 +58,7 @@ ENTITY blockdesign_encoder_4b5b_0_0 IS
     Data_in : IN STD_LOGIC_VECTOR(191 DOWNTO 0);
     clk : IN STD_LOGIC;
     Data_rdy : IN STD_LOGIC;
+    Data_read_done : OUT STD_LOGIC;
     Output_rdy : OUT STD_LOGIC;
     Data_out : OUT STD_LOGIC_VECTOR(239 DOWNTO 0)
   );
@@ -71,6 +72,7 @@ ARCHITECTURE blockdesign_encoder_4b5b_0_0_arch OF blockdesign_encoder_4b5b_0_0 I
       Data_in : IN STD_LOGIC_VECTOR(191 DOWNTO 0);
       clk : IN STD_LOGIC;
       Data_rdy : IN STD_LOGIC;
+      Data_read_done : OUT STD_LOGIC;
       Output_rdy : OUT STD_LOGIC;
       Data_out : OUT STD_LOGIC_VECTOR(239 DOWNTO 0)
     );
@@ -93,6 +95,7 @@ BEGIN
       Data_in => Data_in,
       clk => clk,
       Data_rdy => Data_rdy,
+      Data_read_done => Data_read_done,
       Output_rdy => Output_rdy,
       Data_out => Data_out
     );

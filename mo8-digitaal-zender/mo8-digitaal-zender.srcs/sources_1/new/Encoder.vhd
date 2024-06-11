@@ -61,11 +61,12 @@ use IEEE.numeric_std.ALL;
 ENTITY encoder_4b5b is
 port
 	(
-        Data_in      : in  STD_LOGIC_VECTOR (191 downto 0); -- 192 bits input vanuit vorige module
-        clk          : in  STD_LOGIC;                       -- Clock  
-        Data_rdy     : in  STD_LOGIC;                       -- Data ready
-        Output_rdy   : out STD_LOGIC;                       -- Output ready
-        Data_out     : out STD_LOGIC_VECTOR (239 downto 0)  -- 240 bits output naar volgende module
+        Data_in      	: in  STD_LOGIC_VECTOR (191 downto 0); -- 192 bits input vanuit vorige module
+        clk          	: in  STD_LOGIC;                       -- Clock  
+        Data_rdy     	: in  STD_LOGIC;                       -- Data ready
+		Data_read_done	: out STD_LOGIC;                       -- Data read done
+        Output_rdy   	: out STD_LOGIC;                       -- Output ready
+        Data_out     	: out STD_LOGIC_VECTOR (239 downto 0)  -- 240 bits output naar volgende module
 	);
 END encoder_4b5b;
 
@@ -130,9 +131,11 @@ begin
 					data_out <= (others => '0');                                   -- Zet data_out op 0
 
 				when s2 =>
+					Data_read_done <= '1';                                         -- Zet data read done hoog
 					Data_in_temp <= std_logic_vector(Data_in_buffer (3 downto 0)); -- Zet de 4 bits in de buffer naar de tijdelijke data
 
 				when s3 =>
+					Data_read_done <= '0';										   -- Zet data read done laag
 					Data_out_buffer(239 downto 235) <= unsigned(Data_out_temp);    -- Zet de 5 bits in de buffer
 
 				when s4 =>

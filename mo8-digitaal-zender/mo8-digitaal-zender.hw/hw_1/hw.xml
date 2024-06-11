@@ -8,7 +8,9 @@
   <device name="xc7z020_1" gui_info="dashboard1=hw_ila_1[xc7z020_1/hw_ila_1/Waveform=ILA_WAVE_1;xc7z020_1/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7z020_1/hw_ila_1/Status=ILA_STATUS_1;xc7z020_1/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7z020_1/hw_ila_1/Settings=ILA_SETTINGS_1;]"/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7z020_1" gui_info="">
-      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/blockdesign_wrapper.bit"/>
+      <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/design_1_wrapper.ltx"/>
+      <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_1/design_1_wrapper.ltx"/>
+      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/design_1_wrapper.bit"/>
       <Properties Property="SLR.COUNT" value="1"/>
     </Object>
   </ObjectList>
@@ -17,6 +19,363 @@
       <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
     </Object>
+    <Object name="design_1_i/system_ila_0/U0/ila_lib" gui_info="">
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CONTROL.TRIGGER_POSITION" value="50"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
   </ObjectList>
-  <probeset name="hw project" active="false"/>
+  <ObjectList object_type="hw_probe" gui_info="">
+    <Object name="design_1_i/system_ila_0/U0/probe4_1[3:0]" gui_info="Trigger Setup=0"/>
+  </ObjectList>
+  <probeset name="hw project" active="false">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[0]"/>
+        <Option Id="NAME.CUSTOM" value="comunication_protocol_0_buffer_read"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/system_ila_0/U0/probe0_1"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[0]"/>
+        <Option Id="NAME.CUSTOM" value="comunication_protocol_0_data_ready"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/system_ila_0/U0/probe1_1"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq192&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq192&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe2[191:0]"/>
+        <Option Id="NAME.CUSTOM" value="comunication_protocol_0_data_out"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq192&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[191]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[190]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[189]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[188]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[187]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[186]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[185]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[184]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[183]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[182]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[181]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[180]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[179]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[178]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[177]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[176]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[175]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[174]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[173]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[172]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[171]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[170]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[169]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[168]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[167]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[166]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[165]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[164]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[163]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[162]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[161]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[160]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[159]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[158]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[157]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[156]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[155]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[154]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[153]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[152]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[151]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[150]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[149]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[148]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[147]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[146]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[145]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[144]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[143]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[142]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[141]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[140]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[139]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[138]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[137]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[136]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[135]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[134]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[133]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[132]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[131]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[130]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[129]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[128]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[127]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[126]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[125]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[124]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[123]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[122]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[121]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[120]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[119]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[118]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[117]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[116]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[115]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[114]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[113]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[112]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[111]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[110]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[109]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[108]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[107]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[106]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[105]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[104]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[103]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[102]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[101]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[100]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[99]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[98]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[97]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[96]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[95]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[94]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[93]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[92]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[91]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[90]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[89]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[88]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[87]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[86]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[85]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[84]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[83]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[82]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[81]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[80]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[79]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[78]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[77]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[76]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[75]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[74]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[73]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[72]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[71]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[70]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[69]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[68]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[67]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[66]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[65]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[64]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[63]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[62]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[61]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[60]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[59]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[58]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[57]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[56]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[55]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[54]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[53]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[52]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[51]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[50]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[49]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[48]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[47]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[46]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[45]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[44]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[43]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[42]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[41]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[40]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[39]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[38]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[37]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[36]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[35]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[34]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[33]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[32]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[31]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[30]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[29]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[28]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[27]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[26]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[25]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[24]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[23]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[22]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[21]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[20]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[19]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[18]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[17]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[16]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[15]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[14]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[13]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[12]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[11]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[10]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[9]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[8]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[7]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[6]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[5]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[4]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[3]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[2]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[1]"/>
+        <net name="design_1_i/system_ila_0/U0/probe2_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe3[0]"/>
+        <Option Id="NAME.CUSTOM" value="data_read_done_0_1"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/system_ila_0/U0/probe3_1"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq4&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq4&apos;hA"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[3:0]"/>
+        <Option Id="NAME.CUSTOM" value="keypad_data_0_1"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq4&apos;hA"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/system_ila_0/U0/probe4_1[3]"/>
+        <net name="design_1_i/system_ila_0/U0/probe4_1[2]"/>
+        <net name="design_1_i/system_ila_0/U0/probe4_1[1]"/>
+        <net name="design_1_i/system_ila_0/U0/probe4_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe5[0]"/>
+        <Option Id="NAME.CUSTOM" value="reset_0_1"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/system_ila_0/U0/probe5_1"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq8&apos;hXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq8&apos;hXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="UNSIGNED"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe6[7:0]"/>
+        <Option Id="NAME.CUSTOM" value="xlconcat_0_dout"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq8&apos;hXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/system_ila_0/U0/probe6_1[7]"/>
+        <net name="design_1_i/system_ila_0/U0/probe6_1[6]"/>
+        <net name="design_1_i/system_ila_0/U0/probe6_1[5]"/>
+        <net name="design_1_i/system_ila_0/U0/probe6_1[4]"/>
+        <net name="design_1_i/system_ila_0/U0/probe6_1[3]"/>
+        <net name="design_1_i/system_ila_0/U0/probe6_1[2]"/>
+        <net name="design_1_i/system_ila_0/U0/probe6_1[1]"/>
+        <net name="design_1_i/system_ila_0/U0/probe6_1[0]"/>
+      </nets>
+    </probe>
+  </probeset>
 </hwsession>

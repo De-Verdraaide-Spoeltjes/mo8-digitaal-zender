@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Fri May 24 11:32:32 2024
+| Date         : Tue Jun 11 12:57:45 2024
 | Host         : Lenovo-Jochem running 64-bit major release  (build 9200)
 | Command      : report_utilization -file blockdesign_wrapper_utilization_synth.rpt -pb blockdesign_wrapper_utilization_synth.pb
 | Design       : blockdesign_wrapper
@@ -92,7 +92,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |   13 |     0 |          0 |       125 | 10.40 |
+| Bonded IOB                  |   24 |     0 |          0 |       125 | 19.20 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |          0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         4 |  0.00 |
@@ -148,7 +148,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| OBUF     |    7 |                  IO |
+| OBUF     |   18 |                  IO |
 | IBUF     |    6 |                  IO |
 +----------+------+---------------------+
 
@@ -162,7 +162,9 @@ Warning! LUT value is adjusted to account for LUT combining.
 | blockdesign_xbar_0                    |    1 |
 | blockdesign_util_vector_logic_0_0     |    1 |
 | blockdesign_util_reduced_logic_0_0    |    1 |
+| blockdesign_test_modulator_0_0        |    1 |
 | blockdesign_rsa_encrypted_char_0      |    1 |
+| blockdesign_resetting_timer_0_0       |    1 |
 | blockdesign_processing_system7_0_0    |    1 |
 | blockdesign_proc_sys_reset_0_0        |    1 |
 | blockdesign_keypad_0_1                |    1 |
@@ -170,6 +172,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 | blockdesign_fifo_buffer_0_0           |    1 |
 | blockdesign_encoder_4b5b_0_0          |    1 |
 | blockdesign_comunication_protocol_0_0 |    1 |
+| blockdesign_clk_divider_0_2           |    1 |
 | blockdesign_clk_divider_0_0           |    1 |
 | blockdesign_axi_gpio_3_0              |    1 |
 | blockdesign_axi_gpio_2_0              |    1 |

@@ -2,7 +2,7 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
--- Date        : Fri May 24 11:30:57 2024
+-- Date        : Tue Jun 11 11:27:42 2024
 -- Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_encoder_4b5b_0_0/blockdesign_encoder_4b5b_0_0_sim_netlist.vhdl
@@ -18,6 +18,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity blockdesign_encoder_4b5b_0_0_encoder_4b5b is
   port (
     Data_out : out STD_LOGIC_VECTOR ( 239 downto 0 );
+    Data_read_done : out STD_LOGIC;
     Output_rdy : out STD_LOGIC;
     clk : in STD_LOGIC;
     Data_rdy : in STD_LOGIC;
@@ -28,7 +29,6 @@ entity blockdesign_encoder_4b5b_0_0_encoder_4b5b is
 end blockdesign_encoder_4b5b_0_0_encoder_4b5b;
 
 architecture STRUCTURE of blockdesign_encoder_4b5b_0_0_encoder_4b5b is
-  signal Data_in_buffer : STD_LOGIC;
   signal \Data_in_buffer[0]_i_1_n_0\ : STD_LOGIC;
   signal \Data_in_buffer[100]_i_1_n_0\ : STD_LOGIC;
   signal \Data_in_buffer[101]_i_1_n_0\ : STD_LOGIC;
@@ -420,8 +420,11 @@ architecture STRUCTURE of blockdesign_encoder_4b5b_0_0_encoder_4b5b is
   signal \Data_out_buffer[238]_i_1_n_0\ : STD_LOGIC;
   signal \Data_out_buffer[239]_i_1_n_0\ : STD_LOGIC;
   signal \Data_out_buffer[239]_i_2_n_0\ : STD_LOGIC;
+  signal \^data_read_done\ : STD_LOGIC;
+  signal Data_read_done_i_1_n_0 : STD_LOGIC;
   signal \FSM_onehot_NS_reg[0]_i_1_n_0\ : STD_LOGIC;
   signal \FSM_onehot_NS_reg[1]_i_1_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_NS_reg[2]_i_1_n_0\ : STD_LOGIC;
   signal \FSM_onehot_NS_reg[4]_i_1_n_0\ : STD_LOGIC;
   signal \FSM_onehot_NS_reg[5]_i_1_n_0\ : STD_LOGIC;
   signal \FSM_onehot_NS_reg[5]_i_3_n_0\ : STD_LOGIC;
@@ -478,6 +481,7 @@ architecture STRUCTURE of blockdesign_encoder_4b5b_0_0_encoder_4b5b is
   attribute SOFT_HLUTNM of \counter_temp[3]_i_1\ : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of \counter_temp[4]_i_1\ : label is "soft_lutpair0";
 begin
+  Data_read_done <= \^data_read_done\;
   Output_rdy <= \^output_rdy\;
 \Data_in_buffer[0]_i_1\: unisim.vcomponents.LUT4
     generic map(
@@ -2559,7 +2563,7 @@ begin
 \Data_in_buffer_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[0]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[0]\,
       R => '0'
@@ -2567,7 +2571,7 @@ begin
 \Data_in_buffer_reg[100]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[100]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[100]\,
       R => '0'
@@ -2575,7 +2579,7 @@ begin
 \Data_in_buffer_reg[101]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[101]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[101]\,
       R => '0'
@@ -2583,7 +2587,7 @@ begin
 \Data_in_buffer_reg[102]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[102]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[102]\,
       R => '0'
@@ -2591,7 +2595,7 @@ begin
 \Data_in_buffer_reg[103]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[103]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[103]\,
       R => '0'
@@ -2599,7 +2603,7 @@ begin
 \Data_in_buffer_reg[104]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[104]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[104]\,
       R => '0'
@@ -2607,7 +2611,7 @@ begin
 \Data_in_buffer_reg[105]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[105]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[105]\,
       R => '0'
@@ -2615,7 +2619,7 @@ begin
 \Data_in_buffer_reg[106]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[106]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[106]\,
       R => '0'
@@ -2623,7 +2627,7 @@ begin
 \Data_in_buffer_reg[107]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[107]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[107]\,
       R => '0'
@@ -2631,7 +2635,7 @@ begin
 \Data_in_buffer_reg[108]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[108]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[108]\,
       R => '0'
@@ -2639,7 +2643,7 @@ begin
 \Data_in_buffer_reg[109]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[109]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[109]\,
       R => '0'
@@ -2647,7 +2651,7 @@ begin
 \Data_in_buffer_reg[10]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[10]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[10]\,
       R => '0'
@@ -2655,7 +2659,7 @@ begin
 \Data_in_buffer_reg[110]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[110]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[110]\,
       R => '0'
@@ -2663,7 +2667,7 @@ begin
 \Data_in_buffer_reg[111]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[111]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[111]\,
       R => '0'
@@ -2671,7 +2675,7 @@ begin
 \Data_in_buffer_reg[112]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[112]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[112]\,
       R => '0'
@@ -2679,7 +2683,7 @@ begin
 \Data_in_buffer_reg[113]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[113]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[113]\,
       R => '0'
@@ -2687,7 +2691,7 @@ begin
 \Data_in_buffer_reg[114]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[114]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[114]\,
       R => '0'
@@ -2695,7 +2699,7 @@ begin
 \Data_in_buffer_reg[115]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[115]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[115]\,
       R => '0'
@@ -2703,7 +2707,7 @@ begin
 \Data_in_buffer_reg[116]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[116]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[116]\,
       R => '0'
@@ -2711,7 +2715,7 @@ begin
 \Data_in_buffer_reg[117]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[117]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[117]\,
       R => '0'
@@ -2719,7 +2723,7 @@ begin
 \Data_in_buffer_reg[118]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[118]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[118]\,
       R => '0'
@@ -2727,7 +2731,7 @@ begin
 \Data_in_buffer_reg[119]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[119]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[119]\,
       R => '0'
@@ -2735,7 +2739,7 @@ begin
 \Data_in_buffer_reg[11]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[11]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[11]\,
       R => '0'
@@ -2743,7 +2747,7 @@ begin
 \Data_in_buffer_reg[120]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[120]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[120]\,
       R => '0'
@@ -2751,7 +2755,7 @@ begin
 \Data_in_buffer_reg[121]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[121]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[121]\,
       R => '0'
@@ -2759,7 +2763,7 @@ begin
 \Data_in_buffer_reg[122]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[122]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[122]\,
       R => '0'
@@ -2767,7 +2771,7 @@ begin
 \Data_in_buffer_reg[123]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[123]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[123]\,
       R => '0'
@@ -2775,7 +2779,7 @@ begin
 \Data_in_buffer_reg[124]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[124]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[124]\,
       R => '0'
@@ -2783,7 +2787,7 @@ begin
 \Data_in_buffer_reg[125]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[125]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[125]\,
       R => '0'
@@ -2791,7 +2795,7 @@ begin
 \Data_in_buffer_reg[126]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[126]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[126]\,
       R => '0'
@@ -2799,7 +2803,7 @@ begin
 \Data_in_buffer_reg[127]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[127]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[127]\,
       R => '0'
@@ -2807,7 +2811,7 @@ begin
 \Data_in_buffer_reg[128]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[128]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[128]\,
       R => '0'
@@ -2815,7 +2819,7 @@ begin
 \Data_in_buffer_reg[129]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[129]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[129]\,
       R => '0'
@@ -2823,7 +2827,7 @@ begin
 \Data_in_buffer_reg[12]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[12]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[12]\,
       R => '0'
@@ -2831,7 +2835,7 @@ begin
 \Data_in_buffer_reg[130]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[130]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[130]\,
       R => '0'
@@ -2839,7 +2843,7 @@ begin
 \Data_in_buffer_reg[131]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[131]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[131]\,
       R => '0'
@@ -2847,7 +2851,7 @@ begin
 \Data_in_buffer_reg[132]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[132]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[132]\,
       R => '0'
@@ -2855,7 +2859,7 @@ begin
 \Data_in_buffer_reg[133]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[133]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[133]\,
       R => '0'
@@ -2863,7 +2867,7 @@ begin
 \Data_in_buffer_reg[134]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[134]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[134]\,
       R => '0'
@@ -2871,7 +2875,7 @@ begin
 \Data_in_buffer_reg[135]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[135]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[135]\,
       R => '0'
@@ -2879,7 +2883,7 @@ begin
 \Data_in_buffer_reg[136]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[136]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[136]\,
       R => '0'
@@ -2887,7 +2891,7 @@ begin
 \Data_in_buffer_reg[137]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[137]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[137]\,
       R => '0'
@@ -2895,7 +2899,7 @@ begin
 \Data_in_buffer_reg[138]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[138]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[138]\,
       R => '0'
@@ -2903,7 +2907,7 @@ begin
 \Data_in_buffer_reg[139]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[139]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[139]\,
       R => '0'
@@ -2911,7 +2915,7 @@ begin
 \Data_in_buffer_reg[13]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[13]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[13]\,
       R => '0'
@@ -2919,7 +2923,7 @@ begin
 \Data_in_buffer_reg[140]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[140]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[140]\,
       R => '0'
@@ -2927,7 +2931,7 @@ begin
 \Data_in_buffer_reg[141]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[141]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[141]\,
       R => '0'
@@ -2935,7 +2939,7 @@ begin
 \Data_in_buffer_reg[142]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[142]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[142]\,
       R => '0'
@@ -2943,7 +2947,7 @@ begin
 \Data_in_buffer_reg[143]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[143]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[143]\,
       R => '0'
@@ -2951,7 +2955,7 @@ begin
 \Data_in_buffer_reg[144]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[144]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[144]\,
       R => '0'
@@ -2959,7 +2963,7 @@ begin
 \Data_in_buffer_reg[145]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[145]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[145]\,
       R => '0'
@@ -2967,7 +2971,7 @@ begin
 \Data_in_buffer_reg[146]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[146]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[146]\,
       R => '0'
@@ -2975,7 +2979,7 @@ begin
 \Data_in_buffer_reg[147]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[147]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[147]\,
       R => '0'
@@ -2983,7 +2987,7 @@ begin
 \Data_in_buffer_reg[148]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[148]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[148]\,
       R => '0'
@@ -2991,7 +2995,7 @@ begin
 \Data_in_buffer_reg[149]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[149]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[149]\,
       R => '0'
@@ -2999,7 +3003,7 @@ begin
 \Data_in_buffer_reg[14]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[14]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[14]\,
       R => '0'
@@ -3007,7 +3011,7 @@ begin
 \Data_in_buffer_reg[150]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[150]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[150]\,
       R => '0'
@@ -3015,7 +3019,7 @@ begin
 \Data_in_buffer_reg[151]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[151]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[151]\,
       R => '0'
@@ -3023,7 +3027,7 @@ begin
 \Data_in_buffer_reg[152]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[152]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[152]\,
       R => '0'
@@ -3031,7 +3035,7 @@ begin
 \Data_in_buffer_reg[153]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[153]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[153]\,
       R => '0'
@@ -3039,7 +3043,7 @@ begin
 \Data_in_buffer_reg[154]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[154]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[154]\,
       R => '0'
@@ -3047,7 +3051,7 @@ begin
 \Data_in_buffer_reg[155]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[155]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[155]\,
       R => '0'
@@ -3055,7 +3059,7 @@ begin
 \Data_in_buffer_reg[156]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[156]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[156]\,
       R => '0'
@@ -3063,7 +3067,7 @@ begin
 \Data_in_buffer_reg[157]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[157]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[157]\,
       R => '0'
@@ -3071,7 +3075,7 @@ begin
 \Data_in_buffer_reg[158]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[158]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[158]\,
       R => '0'
@@ -3079,7 +3083,7 @@ begin
 \Data_in_buffer_reg[159]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[159]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[159]\,
       R => '0'
@@ -3087,7 +3091,7 @@ begin
 \Data_in_buffer_reg[15]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[15]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[15]\,
       R => '0'
@@ -3095,7 +3099,7 @@ begin
 \Data_in_buffer_reg[160]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[160]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[160]\,
       R => '0'
@@ -3103,7 +3107,7 @@ begin
 \Data_in_buffer_reg[161]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[161]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[161]\,
       R => '0'
@@ -3111,7 +3115,7 @@ begin
 \Data_in_buffer_reg[162]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[162]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[162]\,
       R => '0'
@@ -3119,7 +3123,7 @@ begin
 \Data_in_buffer_reg[163]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[163]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[163]\,
       R => '0'
@@ -3127,7 +3131,7 @@ begin
 \Data_in_buffer_reg[164]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[164]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[164]\,
       R => '0'
@@ -3135,7 +3139,7 @@ begin
 \Data_in_buffer_reg[165]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[165]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[165]\,
       R => '0'
@@ -3143,7 +3147,7 @@ begin
 \Data_in_buffer_reg[166]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[166]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[166]\,
       R => '0'
@@ -3151,7 +3155,7 @@ begin
 \Data_in_buffer_reg[167]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[167]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[167]\,
       R => '0'
@@ -3159,7 +3163,7 @@ begin
 \Data_in_buffer_reg[168]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[168]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[168]\,
       R => '0'
@@ -3167,7 +3171,7 @@ begin
 \Data_in_buffer_reg[169]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[169]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[169]\,
       R => '0'
@@ -3175,7 +3179,7 @@ begin
 \Data_in_buffer_reg[16]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[16]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[16]\,
       R => '0'
@@ -3183,7 +3187,7 @@ begin
 \Data_in_buffer_reg[170]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[170]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[170]\,
       R => '0'
@@ -3191,7 +3195,7 @@ begin
 \Data_in_buffer_reg[171]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[171]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[171]\,
       R => '0'
@@ -3199,7 +3203,7 @@ begin
 \Data_in_buffer_reg[172]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[172]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[172]\,
       R => '0'
@@ -3207,7 +3211,7 @@ begin
 \Data_in_buffer_reg[173]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[173]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[173]\,
       R => '0'
@@ -3215,7 +3219,7 @@ begin
 \Data_in_buffer_reg[174]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[174]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[174]\,
       R => '0'
@@ -3223,7 +3227,7 @@ begin
 \Data_in_buffer_reg[175]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[175]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[175]\,
       R => '0'
@@ -3231,7 +3235,7 @@ begin
 \Data_in_buffer_reg[176]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[176]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[176]\,
       R => '0'
@@ -3239,7 +3243,7 @@ begin
 \Data_in_buffer_reg[177]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[177]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[177]\,
       R => '0'
@@ -3247,7 +3251,7 @@ begin
 \Data_in_buffer_reg[178]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[178]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[178]\,
       R => '0'
@@ -3255,7 +3259,7 @@ begin
 \Data_in_buffer_reg[179]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[179]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[179]\,
       R => '0'
@@ -3263,7 +3267,7 @@ begin
 \Data_in_buffer_reg[17]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[17]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[17]\,
       R => '0'
@@ -3271,7 +3275,7 @@ begin
 \Data_in_buffer_reg[180]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[180]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[180]\,
       R => '0'
@@ -3279,7 +3283,7 @@ begin
 \Data_in_buffer_reg[181]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[181]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[181]\,
       R => '0'
@@ -3287,7 +3291,7 @@ begin
 \Data_in_buffer_reg[182]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[182]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[182]\,
       R => '0'
@@ -3295,7 +3299,7 @@ begin
 \Data_in_buffer_reg[183]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[183]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[183]\,
       R => '0'
@@ -3303,7 +3307,7 @@ begin
 \Data_in_buffer_reg[184]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[184]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[184]\,
       R => '0'
@@ -3311,7 +3315,7 @@ begin
 \Data_in_buffer_reg[185]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[185]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[185]\,
       R => '0'
@@ -3319,7 +3323,7 @@ begin
 \Data_in_buffer_reg[186]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[186]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[186]\,
       R => '0'
@@ -3327,7 +3331,7 @@ begin
 \Data_in_buffer_reg[187]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[187]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[187]\,
       R => '0'
@@ -3335,7 +3339,7 @@ begin
 \Data_in_buffer_reg[188]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => Data_in(188),
       Q => \Data_in_buffer_reg_n_0_[188]\,
       R => \Data_in_buffer[191]_i_1_n_0\
@@ -3343,7 +3347,7 @@ begin
 \Data_in_buffer_reg[189]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => Data_in(189),
       Q => \Data_in_buffer_reg_n_0_[189]\,
       R => \Data_in_buffer[191]_i_1_n_0\
@@ -3351,7 +3355,7 @@ begin
 \Data_in_buffer_reg[18]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[18]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[18]\,
       R => '0'
@@ -3359,7 +3363,7 @@ begin
 \Data_in_buffer_reg[190]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => Data_in(190),
       Q => \Data_in_buffer_reg_n_0_[190]\,
       R => \Data_in_buffer[191]_i_1_n_0\
@@ -3367,7 +3371,7 @@ begin
 \Data_in_buffer_reg[191]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => Data_in(191),
       Q => \Data_in_buffer_reg_n_0_[191]\,
       R => \Data_in_buffer[191]_i_1_n_0\
@@ -3375,7 +3379,7 @@ begin
 \Data_in_buffer_reg[19]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[19]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[19]\,
       R => '0'
@@ -3383,7 +3387,7 @@ begin
 \Data_in_buffer_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[1]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[1]\,
       R => '0'
@@ -3391,7 +3395,7 @@ begin
 \Data_in_buffer_reg[20]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[20]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[20]\,
       R => '0'
@@ -3399,7 +3403,7 @@ begin
 \Data_in_buffer_reg[21]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[21]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[21]\,
       R => '0'
@@ -3407,7 +3411,7 @@ begin
 \Data_in_buffer_reg[22]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[22]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[22]\,
       R => '0'
@@ -3415,7 +3419,7 @@ begin
 \Data_in_buffer_reg[23]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[23]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[23]\,
       R => '0'
@@ -3423,7 +3427,7 @@ begin
 \Data_in_buffer_reg[24]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[24]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[24]\,
       R => '0'
@@ -3431,7 +3435,7 @@ begin
 \Data_in_buffer_reg[25]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[25]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[25]\,
       R => '0'
@@ -3439,7 +3443,7 @@ begin
 \Data_in_buffer_reg[26]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[26]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[26]\,
       R => '0'
@@ -3447,7 +3451,7 @@ begin
 \Data_in_buffer_reg[27]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[27]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[27]\,
       R => '0'
@@ -3455,7 +3459,7 @@ begin
 \Data_in_buffer_reg[28]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[28]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[28]\,
       R => '0'
@@ -3463,7 +3467,7 @@ begin
 \Data_in_buffer_reg[29]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[29]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[29]\,
       R => '0'
@@ -3471,7 +3475,7 @@ begin
 \Data_in_buffer_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[2]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[2]\,
       R => '0'
@@ -3479,7 +3483,7 @@ begin
 \Data_in_buffer_reg[30]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[30]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[30]\,
       R => '0'
@@ -3487,7 +3491,7 @@ begin
 \Data_in_buffer_reg[31]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[31]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[31]\,
       R => '0'
@@ -3495,7 +3499,7 @@ begin
 \Data_in_buffer_reg[32]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[32]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[32]\,
       R => '0'
@@ -3503,7 +3507,7 @@ begin
 \Data_in_buffer_reg[33]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[33]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[33]\,
       R => '0'
@@ -3511,7 +3515,7 @@ begin
 \Data_in_buffer_reg[34]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[34]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[34]\,
       R => '0'
@@ -3519,7 +3523,7 @@ begin
 \Data_in_buffer_reg[35]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[35]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[35]\,
       R => '0'
@@ -3527,7 +3531,7 @@ begin
 \Data_in_buffer_reg[36]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[36]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[36]\,
       R => '0'
@@ -3535,7 +3539,7 @@ begin
 \Data_in_buffer_reg[37]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[37]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[37]\,
       R => '0'
@@ -3543,7 +3547,7 @@ begin
 \Data_in_buffer_reg[38]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[38]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[38]\,
       R => '0'
@@ -3551,7 +3555,7 @@ begin
 \Data_in_buffer_reg[39]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[39]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[39]\,
       R => '0'
@@ -3559,7 +3563,7 @@ begin
 \Data_in_buffer_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[3]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[3]\,
       R => '0'
@@ -3567,7 +3571,7 @@ begin
 \Data_in_buffer_reg[40]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[40]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[40]\,
       R => '0'
@@ -3575,7 +3579,7 @@ begin
 \Data_in_buffer_reg[41]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[41]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[41]\,
       R => '0'
@@ -3583,7 +3587,7 @@ begin
 \Data_in_buffer_reg[42]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[42]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[42]\,
       R => '0'
@@ -3591,7 +3595,7 @@ begin
 \Data_in_buffer_reg[43]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[43]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[43]\,
       R => '0'
@@ -3599,7 +3603,7 @@ begin
 \Data_in_buffer_reg[44]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[44]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[44]\,
       R => '0'
@@ -3607,7 +3611,7 @@ begin
 \Data_in_buffer_reg[45]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[45]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[45]\,
       R => '0'
@@ -3615,7 +3619,7 @@ begin
 \Data_in_buffer_reg[46]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[46]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[46]\,
       R => '0'
@@ -3623,7 +3627,7 @@ begin
 \Data_in_buffer_reg[47]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[47]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[47]\,
       R => '0'
@@ -3631,7 +3635,7 @@ begin
 \Data_in_buffer_reg[48]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[48]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[48]\,
       R => '0'
@@ -3639,7 +3643,7 @@ begin
 \Data_in_buffer_reg[49]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[49]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[49]\,
       R => '0'
@@ -3647,7 +3651,7 @@ begin
 \Data_in_buffer_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[4]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[4]\,
       R => '0'
@@ -3655,7 +3659,7 @@ begin
 \Data_in_buffer_reg[50]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[50]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[50]\,
       R => '0'
@@ -3663,7 +3667,7 @@ begin
 \Data_in_buffer_reg[51]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[51]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[51]\,
       R => '0'
@@ -3671,7 +3675,7 @@ begin
 \Data_in_buffer_reg[52]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[52]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[52]\,
       R => '0'
@@ -3679,7 +3683,7 @@ begin
 \Data_in_buffer_reg[53]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[53]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[53]\,
       R => '0'
@@ -3687,7 +3691,7 @@ begin
 \Data_in_buffer_reg[54]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[54]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[54]\,
       R => '0'
@@ -3695,7 +3699,7 @@ begin
 \Data_in_buffer_reg[55]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[55]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[55]\,
       R => '0'
@@ -3703,7 +3707,7 @@ begin
 \Data_in_buffer_reg[56]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[56]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[56]\,
       R => '0'
@@ -3711,7 +3715,7 @@ begin
 \Data_in_buffer_reg[57]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[57]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[57]\,
       R => '0'
@@ -3719,7 +3723,7 @@ begin
 \Data_in_buffer_reg[58]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[58]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[58]\,
       R => '0'
@@ -3727,7 +3731,7 @@ begin
 \Data_in_buffer_reg[59]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[59]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[59]\,
       R => '0'
@@ -3735,7 +3739,7 @@ begin
 \Data_in_buffer_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[5]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[5]\,
       R => '0'
@@ -3743,7 +3747,7 @@ begin
 \Data_in_buffer_reg[60]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[60]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[60]\,
       R => '0'
@@ -3751,7 +3755,7 @@ begin
 \Data_in_buffer_reg[61]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[61]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[61]\,
       R => '0'
@@ -3759,7 +3763,7 @@ begin
 \Data_in_buffer_reg[62]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[62]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[62]\,
       R => '0'
@@ -3767,7 +3771,7 @@ begin
 \Data_in_buffer_reg[63]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[63]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[63]\,
       R => '0'
@@ -3775,7 +3779,7 @@ begin
 \Data_in_buffer_reg[64]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[64]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[64]\,
       R => '0'
@@ -3783,7 +3787,7 @@ begin
 \Data_in_buffer_reg[65]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[65]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[65]\,
       R => '0'
@@ -3791,7 +3795,7 @@ begin
 \Data_in_buffer_reg[66]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[66]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[66]\,
       R => '0'
@@ -3799,7 +3803,7 @@ begin
 \Data_in_buffer_reg[67]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[67]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[67]\,
       R => '0'
@@ -3807,7 +3811,7 @@ begin
 \Data_in_buffer_reg[68]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[68]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[68]\,
       R => '0'
@@ -3815,7 +3819,7 @@ begin
 \Data_in_buffer_reg[69]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[69]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[69]\,
       R => '0'
@@ -3823,7 +3827,7 @@ begin
 \Data_in_buffer_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[6]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[6]\,
       R => '0'
@@ -3831,7 +3835,7 @@ begin
 \Data_in_buffer_reg[70]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[70]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[70]\,
       R => '0'
@@ -3839,7 +3843,7 @@ begin
 \Data_in_buffer_reg[71]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[71]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[71]\,
       R => '0'
@@ -3847,7 +3851,7 @@ begin
 \Data_in_buffer_reg[72]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[72]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[72]\,
       R => '0'
@@ -3855,7 +3859,7 @@ begin
 \Data_in_buffer_reg[73]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[73]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[73]\,
       R => '0'
@@ -3863,7 +3867,7 @@ begin
 \Data_in_buffer_reg[74]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[74]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[74]\,
       R => '0'
@@ -3871,7 +3875,7 @@ begin
 \Data_in_buffer_reg[75]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[75]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[75]\,
       R => '0'
@@ -3879,7 +3883,7 @@ begin
 \Data_in_buffer_reg[76]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[76]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[76]\,
       R => '0'
@@ -3887,7 +3891,7 @@ begin
 \Data_in_buffer_reg[77]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[77]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[77]\,
       R => '0'
@@ -3895,7 +3899,7 @@ begin
 \Data_in_buffer_reg[78]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[78]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[78]\,
       R => '0'
@@ -3903,7 +3907,7 @@ begin
 \Data_in_buffer_reg[79]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[79]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[79]\,
       R => '0'
@@ -3911,7 +3915,7 @@ begin
 \Data_in_buffer_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[7]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[7]\,
       R => '0'
@@ -3919,7 +3923,7 @@ begin
 \Data_in_buffer_reg[80]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[80]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[80]\,
       R => '0'
@@ -3927,7 +3931,7 @@ begin
 \Data_in_buffer_reg[81]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[81]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[81]\,
       R => '0'
@@ -3935,7 +3939,7 @@ begin
 \Data_in_buffer_reg[82]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[82]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[82]\,
       R => '0'
@@ -3943,7 +3947,7 @@ begin
 \Data_in_buffer_reg[83]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[83]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[83]\,
       R => '0'
@@ -3951,7 +3955,7 @@ begin
 \Data_in_buffer_reg[84]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[84]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[84]\,
       R => '0'
@@ -3959,7 +3963,7 @@ begin
 \Data_in_buffer_reg[85]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[85]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[85]\,
       R => '0'
@@ -3967,7 +3971,7 @@ begin
 \Data_in_buffer_reg[86]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[86]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[86]\,
       R => '0'
@@ -3975,7 +3979,7 @@ begin
 \Data_in_buffer_reg[87]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[87]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[87]\,
       R => '0'
@@ -3983,7 +3987,7 @@ begin
 \Data_in_buffer_reg[88]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[88]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[88]\,
       R => '0'
@@ -3991,7 +3995,7 @@ begin
 \Data_in_buffer_reg[89]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[89]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[89]\,
       R => '0'
@@ -3999,7 +4003,7 @@ begin
 \Data_in_buffer_reg[8]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[8]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[8]\,
       R => '0'
@@ -4007,7 +4011,7 @@ begin
 \Data_in_buffer_reg[90]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[90]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[90]\,
       R => '0'
@@ -4015,7 +4019,7 @@ begin
 \Data_in_buffer_reg[91]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[91]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[91]\,
       R => '0'
@@ -4023,7 +4027,7 @@ begin
 \Data_in_buffer_reg[92]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[92]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[92]\,
       R => '0'
@@ -4031,7 +4035,7 @@ begin
 \Data_in_buffer_reg[93]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[93]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[93]\,
       R => '0'
@@ -4039,7 +4043,7 @@ begin
 \Data_in_buffer_reg[94]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[94]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[94]\,
       R => '0'
@@ -4047,7 +4051,7 @@ begin
 \Data_in_buffer_reg[95]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[95]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[95]\,
       R => '0'
@@ -4055,7 +4059,7 @@ begin
 \Data_in_buffer_reg[96]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[96]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[96]\,
       R => '0'
@@ -4063,7 +4067,7 @@ begin
 \Data_in_buffer_reg[97]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[97]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[97]\,
       R => '0'
@@ -4071,7 +4075,7 @@ begin
 \Data_in_buffer_reg[98]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[98]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[98]\,
       R => '0'
@@ -4079,7 +4083,7 @@ begin
 \Data_in_buffer_reg[99]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[99]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[99]\,
       R => '0'
@@ -4087,7 +4091,7 @@ begin
 \Data_in_buffer_reg[9]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => Data_in_buffer,
+      CE => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       D => \Data_in_buffer[9]_i_1_n_0\,
       Q => \Data_in_buffer_reg_n_0_[9]\,
       R => '0'
@@ -8749,6 +8753,24 @@ begin
       Q => Data_out(9),
       R => Data_out0
     );
+Data_read_done_i_1: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"BA"
+    )
+        port map (
+      I0 => Data_in_temp_0,
+      I1 => \FSM_onehot_PS_reg_n_0_[3]\,
+      I2 => \^data_read_done\,
+      O => Data_read_done_i_1_n_0
+    );
+Data_read_done_reg: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => '1',
+      D => Data_read_done_i_1_n_0,
+      Q => \^data_read_done\,
+      R => '0'
+    );
 \FSM_onehot_NS_reg[0]\: unisim.vcomponents.LDCE
     generic map(
       INIT => '1'
@@ -8798,7 +8820,7 @@ begin
     )
         port map (
       CLR => '0',
-      D => Data_in_buffer,
+      D => \FSM_onehot_NS_reg[2]_i_1_n_0\,
       G => NS,
       GE => '1',
       Q => \FSM_onehot_NS_reg_n_0_[2]\
@@ -8810,7 +8832,7 @@ begin
         port map (
       I0 => Data_out0,
       I1 => counter_temp,
-      O => Data_in_buffer
+      O => \FSM_onehot_NS_reg[2]_i_1_n_0\
     );
 \FSM_onehot_NS_reg[3]\: unisim.vcomponents.LDCE
     generic map(
@@ -9125,6 +9147,7 @@ entity blockdesign_encoder_4b5b_0_0 is
     Data_in : in STD_LOGIC_VECTOR ( 191 downto 0 );
     clk : in STD_LOGIC;
     Data_rdy : in STD_LOGIC;
+    Data_read_done : out STD_LOGIC;
     Output_rdy : out STD_LOGIC;
     Data_out : out STD_LOGIC_VECTOR ( 239 downto 0 )
   );
@@ -9151,6 +9174,7 @@ U0: entity work.blockdesign_encoder_4b5b_0_0_encoder_4b5b
       Data_in(191 downto 0) => Data_in(191 downto 0),
       Data_out(239 downto 0) => Data_out(239 downto 0),
       Data_rdy => Data_rdy,
+      Data_read_done => Data_read_done,
       Output_rdy => Output_rdy,
       clk => clk
     );

@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xF0CDF1F765B408F6",
+      "boundary_crc": "0xD40EF5497791267A",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../mo8-digitaal-zender.gen/sources_1/bd/blockdesign",
       "name": "blockdesign",
@@ -41,10 +41,15 @@
       },
       "module_keypad": {
         "DeBounce_0": "",
-        "keypad_0": ""
+        "keypad_0": "",
+        "clk_divider_0": ""
       },
-      "encoder_4b5b_0": "",
       "fifo_buffer_0": "",
+      "test_modulator_0": "",
+      "xlslice_0": "",
+      "xlconcat_0": "",
+      "resetting_timer_0": "",
+      "encoder_4b5b_0": "",
       "comunication_protocol_0": ""
     },
     "interface_ports": {
@@ -271,6 +276,25 @@
       },
       "Col_0_0": {
         "direction": "O"
+      },
+      "signal_o": {
+        "direction": "O"
+      },
+      "leds2": {
+        "direction": "O",
+        "left": "5",
+        "right": "0"
+      },
+      "leds": {
+        "direction": "O",
+        "left": "3",
+        "right": "0",
+        "parameters": {
+          "PortWidth": {
+            "value": "4",
+            "value_src": "ip_prop"
+          }
+        }
       }
     },
     "components": {
@@ -3291,10 +3315,6 @@
                 "type": "clk",
                 "direction": "I",
                 "parameters": {
-                  "FREQ_HZ": {
-                    "value": "100000000",
-                    "value_src": "user_prop"
-                  },
                   "CLK_DOMAIN": {
                     "value": "blockdesign_processing_system7_0_0_FCLK_CLK0",
                     "value_src": "default_prop"
@@ -3314,6 +3334,53 @@
                 "direction": "O",
                 "left": "3",
                 "right": "0"
+              }
+            }
+          },
+          "clk_divider_0": {
+            "vlnv": "xilinx.com:module_ref:clk_divider:1.0",
+            "xci_name": "blockdesign_clk_divider_0_2",
+            "xci_path": "ip\\blockdesign_clk_divider_0_2\\blockdesign_clk_divider_0_2.xci",
+            "inst_hier_path": "module_keypad/clk_divider_0",
+            "parameters": {
+              "division": {
+                "value": "10000"
+              }
+            },
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "clk_divider",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk_i": {
+                "direction": "I",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "PHASE": {
+                    "value": "0.0",
+                    "value_src": "default_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "blockdesign_processing_system7_0_0_FCLK_CLK0",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "reset": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_HIGH"
+                  }
+                }
+              },
+              "clk_o": {
+                "direction": "O"
               }
             }
           }
@@ -3343,17 +3410,24 @@
               "keypad_0/Row_3"
             ]
           },
+          "clk_divider_0_clk_o": {
+            "ports": [
+              "clk_divider_0/clk_o",
+              "keypad_0/clk"
+            ]
+          },
           "connection_embedded_clk_100MHz": {
             "ports": [
               "clk",
-              "keypad_0/clk",
-              "DeBounce_0/clk"
+              "DeBounce_0/clk",
+              "clk_divider_0/clk_i"
             ]
           },
           "connection_embedded_reset": {
             "ports": [
               "Reset",
-              "DeBounce_0/Reset"
+              "DeBounce_0/Reset",
+              "clk_divider_0/reset"
             ]
           },
           "keypad_0_Col_0": {
@@ -3385,49 +3459,6 @@
               "keypad_0/Data",
               "DeBounce_0/data_in"
             ]
-          }
-        }
-      },
-      "encoder_4b5b_0": {
-        "vlnv": "xilinx.com:module_ref:encoder_4b5b:1.0",
-        "xci_name": "blockdesign_encoder_4b5b_0_0",
-        "xci_path": "ip\\blockdesign_encoder_4b5b_0_0\\blockdesign_encoder_4b5b_0_0.xci",
-        "inst_hier_path": "encoder_4b5b_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "encoder_4b5b",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "Data_in": {
-            "direction": "I",
-            "left": "191",
-            "right": "0"
-          },
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "blockdesign_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "Data_rdy": {
-            "direction": "I"
-          },
-          "Output_rdy": {
-            "direction": "O"
-          },
-          "Data_out": {
-            "direction": "O",
-            "left": "239",
-            "right": "0"
           }
         }
       },
@@ -3498,6 +3529,173 @@
           "bits_stored_o": {
             "direction": "O",
             "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "test_modulator_0": {
+        "vlnv": "xilinx.com:module_ref:test_modulator:1.0",
+        "xci_name": "blockdesign_test_modulator_0_0",
+        "xci_path": "ip\\blockdesign_test_modulator_0_0\\blockdesign_test_modulator_0_0.xci",
+        "inst_hier_path": "test_modulator_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "test_modulator",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "blockdesign_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "data_i": {
+            "direction": "I",
+            "left": "239",
+            "right": "0"
+          },
+          "run": {
+            "direction": "I"
+          },
+          "timer_finished_i": {
+            "direction": "I"
+          },
+          "timer_enable_o": {
+            "direction": "O"
+          },
+          "timer_reset_o": {
+            "direction": "O"
+          },
+          "signal_o": {
+            "direction": "O"
+          }
+        }
+      },
+      "xlslice_0": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "blockdesign_xlslice_0_0",
+        "xci_path": "ip\\blockdesign_xlslice_0_0\\blockdesign_xlslice_0_0.xci",
+        "inst_hier_path": "xlslice_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "7"
+          },
+          "DIN_TO": {
+            "value": "2"
+          },
+          "DIN_WIDTH": {
+            "value": "8"
+          }
+        }
+      },
+      "xlconcat_0": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "xci_name": "blockdesign_xlconcat_0_1",
+        "xci_path": "ip\\blockdesign_xlconcat_0_1\\blockdesign_xlconcat_0_1.xci",
+        "inst_hier_path": "xlconcat_0",
+        "parameters": {
+          "NUM_PORTS": {
+            "value": "4"
+          }
+        }
+      },
+      "resetting_timer_0": {
+        "vlnv": "xilinx.com:module_ref:resetting_timer:1.0",
+        "xci_name": "blockdesign_resetting_timer_0_0",
+        "xci_path": "ip\\blockdesign_resetting_timer_0_0\\blockdesign_resetting_timer_0_0.xci",
+        "inst_hier_path": "resetting_timer_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "resetting_timer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "blockdesign_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "enable": {
+            "direction": "I"
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH"
+              }
+            }
+          },
+          "finished": {
+            "direction": "O"
+          }
+        }
+      },
+      "encoder_4b5b_0": {
+        "vlnv": "xilinx.com:module_ref:encoder_4b5b:1.0",
+        "xci_name": "blockdesign_encoder_4b5b_0_0",
+        "xci_path": "ip\\blockdesign_encoder_4b5b_0_0\\blockdesign_encoder_4b5b_0_0.xci",
+        "inst_hier_path": "encoder_4b5b_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "encoder_4b5b",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Data_in": {
+            "direction": "I",
+            "left": "191",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "blockdesign_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "Data_rdy": {
+            "direction": "I"
+          },
+          "Data_read_done": {
+            "direction": "O"
+          },
+          "Output_rdy": {
+            "direction": "O"
+          },
+          "Data_out": {
+            "direction": "O",
+            "left": "239",
             "right": "0"
           }
         }
@@ -3648,6 +3846,7 @@
       "comunication_protocol_0_data_ready": {
         "ports": [
           "comunication_protocol_0/data_ready",
+          "xlconcat_0/In1",
           "encoder_4b5b_0/Data_rdy"
         ]
       },
@@ -3656,8 +3855,10 @@
           "connection_embedded/clk_100MHz",
           "filter_sterretje/clk",
           "module_keypad/clk",
-          "encoder_4b5b_0/clk",
           "fifo_buffer_0/clk",
+          "test_modulator_0/clk",
+          "resetting_timer_0/clk",
+          "encoder_4b5b_0/clk",
           "comunication_protocol_0/clk"
         ]
       },
@@ -3673,7 +3874,8 @@
       "connection_embedded_rsa_data_ready": {
         "ports": [
           "connection_embedded/rsa_data_ready",
-          "fifo_buffer_0/write_en"
+          "fifo_buffer_0/write_en",
+          "xlconcat_0/In0"
         ]
       },
       "connection_embedded_rsa_encrypted_char": {
@@ -3688,15 +3890,29 @@
           "status_led"
         ]
       },
+      "encoder_4b5b_0_Data_out": {
+        "ports": [
+          "encoder_4b5b_0/Data_out",
+          "test_modulator_0/data_i"
+        ]
+      },
+      "encoder_4b5b_0_Data_read_done": {
+        "ports": [
+          "encoder_4b5b_0/Data_read_done",
+          "comunication_protocol_0/data_read_done"
+        ]
+      },
       "encoder_4b5b_0_Output_rdy": {
         "ports": [
           "encoder_4b5b_0/Output_rdy",
-          "comunication_protocol_0/data_read_done"
+          "xlconcat_0/In2",
+          "test_modulator_0/run"
         ]
       },
       "fifo_buffer_0_bits_stored_o": {
         "ports": [
           "fifo_buffer_0/bits_stored_o",
+          "xlslice_0/Din",
           "comunication_protocol_0/buffer_data_ready"
         ]
       },
@@ -3732,10 +3948,47 @@
           "comunication_protocol_0/keypad_data"
         ]
       },
+      "resetting_timer_0_finished": {
+        "ports": [
+          "resetting_timer_0/finished",
+          "test_modulator_0/timer_finished_i"
+        ]
+      },
+      "test_modulator_0_signal_o": {
+        "ports": [
+          "test_modulator_0/signal_o",
+          "signal_o",
+          "xlconcat_0/In3"
+        ]
+      },
+      "test_modulator_0_timer_enable_o": {
+        "ports": [
+          "test_modulator_0/timer_enable_o",
+          "resetting_timer_0/enable"
+        ]
+      },
+      "test_modulator_0_timer_reset_o": {
+        "ports": [
+          "test_modulator_0/timer_reset_o",
+          "resetting_timer_0/reset"
+        ]
+      },
       "util_reduced_logic_0_Res": {
         "ports": [
           "filter_sterretje/is_sterretje",
           "connection_embedded/transmit_keys"
+        ]
+      },
+      "xlconcat_0_dout": {
+        "ports": [
+          "xlconcat_0/dout",
+          "leds"
+        ]
+      },
+      "xlslice_0_Dout": {
+        "ports": [
+          "xlslice_0/Dout",
+          "leds2"
         ]
       }
     },

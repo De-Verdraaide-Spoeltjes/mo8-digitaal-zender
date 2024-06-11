@@ -4,8 +4,8 @@
 -- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
 -- Date        : Fri May 24 11:31:12 2024
 -- Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_xbar_0/blockdesign_xbar_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top blockdesign_xbar_0 -prefix
+--               blockdesign_xbar_0_ blockdesign_xbar_0_stub.vhdl
 -- Design      : blockdesign_xbar_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1

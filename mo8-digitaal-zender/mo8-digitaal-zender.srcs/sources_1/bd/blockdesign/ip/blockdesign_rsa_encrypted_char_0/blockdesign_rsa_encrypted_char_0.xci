@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "blockdesign_rsa_encrypted_char_0",
-    "cell_name": "rsa_data_ready",
+    "cell_name": "connection_embedded/rsa_data_ready",
     "component_reference": "xilinx.com:ip:axi_gpio:2.0",
     "ip_revision": "30",
     "gen_directory": "../../../../../../mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_rsa_encrypted_char_0",
