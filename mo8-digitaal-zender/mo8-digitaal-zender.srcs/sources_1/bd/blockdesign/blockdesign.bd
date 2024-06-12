@@ -48,9 +48,9 @@
       "test_modulator_0": "",
       "xlslice_0": "",
       "xlconcat_0": "",
-      "resetting_timer_0": "",
       "encoder_4b5b_0": "",
-      "comunication_protocol_0": ""
+      "comunication_protocol_0": "",
+      "resetting_timer_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -3608,52 +3608,6 @@
           }
         }
       },
-      "resetting_timer_0": {
-        "vlnv": "xilinx.com:module_ref:resetting_timer:1.0",
-        "xci_name": "blockdesign_resetting_timer_0_0",
-        "xci_path": "ip\\blockdesign_resetting_timer_0_0\\blockdesign_resetting_timer_0_0.xci",
-        "inst_hier_path": "resetting_timer_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "resetting_timer",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "reset",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "blockdesign_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "enable": {
-            "direction": "I"
-          },
-          "reset": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_HIGH"
-              }
-            }
-          },
-          "finished": {
-            "direction": "O"
-          }
-        }
-      },
       "encoder_4b5b_0": {
         "vlnv": "xilinx.com:module_ref:encoder_4b5b:1.0",
         "xci_name": "blockdesign_encoder_4b5b_0_0",
@@ -3778,6 +3732,57 @@
             "right": "0"
           }
         }
+      },
+      "resetting_timer_0": {
+        "vlnv": "xilinx.com:module_ref:resetting_timer:1.0",
+        "xci_name": "blockdesign_resetting_timer_0_0",
+        "xci_path": "ip\\blockdesign_resetting_timer_0_0\\blockdesign_resetting_timer_0_0.xci",
+        "inst_hier_path": "resetting_timer_0",
+        "parameters": {
+          "goal": {
+            "value": "100000"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "resetting_timer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "blockdesign_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "enable": {
+            "direction": "I"
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH"
+              }
+            }
+          },
+          "finished": {
+            "direction": "O"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -3857,9 +3862,9 @@
           "module_keypad/clk",
           "fifo_buffer_0/clk",
           "test_modulator_0/clk",
-          "resetting_timer_0/clk",
           "encoder_4b5b_0/clk",
-          "comunication_protocol_0/clk"
+          "comunication_protocol_0/clk",
+          "resetting_timer_0/clk"
         ]
       },
       "connection_embedded_reset": {

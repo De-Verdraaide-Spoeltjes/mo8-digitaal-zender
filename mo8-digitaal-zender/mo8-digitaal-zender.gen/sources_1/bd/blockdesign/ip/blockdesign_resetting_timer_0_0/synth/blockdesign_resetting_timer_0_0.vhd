@@ -81,7 +81,7 @@ ARCHITECTURE blockdesign_resetting_timer_0_0_arch OF blockdesign_resetting_timer
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF blockdesign_resetting_timer_0_0_arch : ARCHITECTURE IS "blockdesign_resetting_timer_0_0,resetting_timer,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF blockdesign_resetting_timer_0_0_arch: ARCHITECTURE IS "blockdesign_resetting_timer_0_0,resetting_timer,{x_ipProduct=Vivado 2023.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=resetting_timer,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,goal=10000}";
+  ATTRIBUTE CORE_GENERATION_INFO OF blockdesign_resetting_timer_0_0_arch: ARCHITECTURE IS "blockdesign_resetting_timer_0_0,resetting_timer,{x_ipProduct=Vivado 2023.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=resetting_timer,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,goal=100000}";
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF blockdesign_resetting_timer_0_0_arch: ARCHITECTURE IS "module_ref";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -93,7 +93,7 @@ ARCHITECTURE blockdesign_resetting_timer_0_0_arch OF blockdesign_resetting_timer
 BEGIN
   U0 : resetting_timer
     GENERIC MAP (
-      goal => 10000
+      goal => 100000
     )
     PORT MAP (
       clk => clk,

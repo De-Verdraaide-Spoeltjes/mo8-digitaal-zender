@@ -85,7 +85,7 @@ ARCHITECTURE blockdesign_resetting_timer_0_0_arch OF blockdesign_resetting_timer
 BEGIN
   U0 : resetting_timer
     GENERIC MAP (
-      goal => 10000
+      goal => 100000
     )
     PORT MAP (
       clk => clk,

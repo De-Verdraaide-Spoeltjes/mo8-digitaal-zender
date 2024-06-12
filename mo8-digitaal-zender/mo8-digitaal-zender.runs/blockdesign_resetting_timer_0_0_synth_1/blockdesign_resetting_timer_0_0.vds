@@ -3,8 +3,8 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Fri Jun  7 15:45:41 2024
-# Process ID: 4240
+# Start of session at: Tue Jun 11 20:36:43 2024
+# Process ID: 26508
 # Current directory: C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/blockdesign_resetting_timer_0_0_synth_1
 # Command line: vivado.exe -log blockdesign_resetting_timer_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source blockdesign_resetting_timer_0_0.tcl
 # Log file: C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/blockdesign_resetting_timer_0_0_synth_1/blockdesign_resetting_timer_0_0.vds
@@ -12,7 +12,7 @@
 # Running On: Lenovo-Jochem, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 4, Host memory: 17041 MB
 #-----------------------------------------------------------
 source blockdesign_resetting_timer_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 1461.617 ; gain = 159.828
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1460.926 ; gain = 160.062
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
@@ -26,59 +26,59 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 8892
+INFO: [Synth 8-7075] Helper process launched with PID 29656
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 2317.078 ; gain = 408.523
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2316.582 ; gain = 408.250
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'blockdesign_resetting_timer_0_0' [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_resetting_timer_0_0/synth/blockdesign_resetting_timer_0_0.vhd:65]
-	Parameter goal bound to: 10000 - type: integer 
+	Parameter goal bound to: 100000 - type: integer 
 INFO: [Synth 8-3491] module 'resetting_timer' declared at 'C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/resetting_timer.vhd:5' bound to instance 'U0' of component 'resetting_timer' [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_resetting_timer_0_0/synth/blockdesign_resetting_timer_0_0.vhd:94]
 INFO: [Synth 8-638] synthesizing module 'resetting_timer' [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/resetting_timer.vhd:15]
 INFO: [Synth 8-256] done synthesizing module 'resetting_timer' (0#1) [C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.srcs/sources_1/new/resetting_timer.vhd:15]
 INFO: [Synth 8-256] done synthesizing module 'blockdesign_resetting_timer_0_0' (0#1) [c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_resetting_timer_0_0/synth/blockdesign_resetting_timer_0_0.vhd:65]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 2410.410 ; gain = 501.855
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 2410.012 ; gain = 501.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:12 . Memory (MB): peak = 2428.336 ; gain = 519.781
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 2427.918 ; gain = 519.586
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:12 . Memory (MB): peak = 2428.336 ; gain = 519.781
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 2427.918 ; gain = 519.586
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2428.336 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2427.918 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2504.645 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2504.281 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.077 . Memory (MB): peak = 2504.680 ; gain = 0.035
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 2504.281 ; gain = 0.000
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:23 . Memory (MB): peak = 2504.680 ; gain = 596.125
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 2504.281 ; gain = 595.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:23 . Memory (MB): peak = 2504.680 ; gain = 596.125
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 2504.281 ; gain = 595.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:23 . Memory (MB): peak = 2504.680 ; gain = 596.125
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 2504.281 ; gain = 595.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:23 . Memory (MB): peak = 2504.680 ; gain = 596.125
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 2504.281 ; gain = 595.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -107,25 +107,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:26 . Memory (MB): peak = 2504.680 ; gain = 596.125
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:26 . Memory (MB): peak = 2504.281 ; gain = 595.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:34 . Memory (MB): peak = 2504.680 ; gain = 596.125
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:33 . Memory (MB): peak = 2504.281 ; gain = 595.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:34 . Memory (MB): peak = 2504.680 ; gain = 596.125
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:33 . Memory (MB): peak = 2504.281 ; gain = 595.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:34 . Memory (MB): peak = 2504.680 ; gain = 596.125
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:33 . Memory (MB): peak = 2504.281 ; gain = 595.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -143,37 +143,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:41 . Memory (MB): peak = 2504.680 ; gain = 596.125
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:38 . Memory (MB): peak = 2504.281 ; gain = 595.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:41 . Memory (MB): peak = 2504.680 ; gain = 596.125
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:38 . Memory (MB): peak = 2504.281 ; gain = 595.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:41 . Memory (MB): peak = 2504.680 ; gain = 596.125
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:38 . Memory (MB): peak = 2504.281 ; gain = 595.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:41 . Memory (MB): peak = 2504.680 ; gain = 596.125
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:38 . Memory (MB): peak = 2504.281 ; gain = 595.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:41 . Memory (MB): peak = 2504.680 ; gain = 596.125
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:38 . Memory (MB): peak = 2504.281 ; gain = 595.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:41 . Memory (MB): peak = 2504.680 ; gain = 596.125
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:38 . Memory (MB): peak = 2504.281 ; gain = 595.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -196,28 +196,28 @@ Report Cell Usage:
 |5     |FDRE   |    32|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:41 . Memory (MB): peak = 2504.680 ; gain = 596.125
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:38 . Memory (MB): peak = 2504.281 ; gain = 595.949
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:38 . Memory (MB): peak = 2504.680 ; gain = 519.781
-Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:41 . Memory (MB): peak = 2504.680 ; gain = 596.125
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:36 . Memory (MB): peak = 2504.281 ; gain = 519.586
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:38 . Memory (MB): peak = 2504.281 ; gain = 595.949
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2504.680 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2504.281 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2504.680 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2504.281 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 18e7c76f
+Synth Design complete | Checksum: 23cdae17
 INFO: [Common 17-83] Releasing license: Synthesis
 24 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:49 . Memory (MB): peak = 2504.680 ; gain = 1001.938
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:48 . Memory (MB): peak = 2504.281 ; gain = 1001.230
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/blockdesign_resetting_timer_0_0_synth_1/blockdesign_resetting_timer_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP blockdesign_resetting_timer_0_0, cache-ID = e1662916e57a8669
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP blockdesign_resetting_timer_0_0, cache-ID = 1073b8b489877679
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.runs/blockdesign_resetting_timer_0_0_synth_1/blockdesign_resetting_timer_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file blockdesign_resetting_timer_0_0_utilization_synth.rpt -pb blockdesign_resetting_timer_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jun  7 15:46:56 2024...
+INFO: [Common 17-206] Exiting Vivado at Tue Jun 11 20:37:56 2024...

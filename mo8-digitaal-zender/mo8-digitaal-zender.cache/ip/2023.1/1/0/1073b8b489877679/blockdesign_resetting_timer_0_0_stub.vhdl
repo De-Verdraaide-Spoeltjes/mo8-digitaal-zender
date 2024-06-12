@@ -4,8 +4,8 @@
 -- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
 -- Date        : Tue Jun 11 20:37:56 2024
 -- Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/Jochem/GitHub/Fontys/mo8-digitaal-zender/mo8-digitaal-zender/mo8-digitaal-zender.gen/sources_1/bd/blockdesign/ip/blockdesign_resetting_timer_0_0/blockdesign_resetting_timer_0_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
+--               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ blockdesign_resetting_timer_0_0_stub.vhdl
 -- Design      : blockdesign_resetting_timer_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1
@@ -13,7 +13,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity blockdesign_resetting_timer_0_0 is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
   Port ( 
     clk : in STD_LOGIC;
     enable : in STD_LOGIC;
@@ -21,9 +21,9 @@ entity blockdesign_resetting_timer_0_0 is
     finished : out STD_LOGIC
   );
 
-end blockdesign_resetting_timer_0_0;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix;
 
-architecture stub of blockdesign_resetting_timer_0_0 is
+architecture stub of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;

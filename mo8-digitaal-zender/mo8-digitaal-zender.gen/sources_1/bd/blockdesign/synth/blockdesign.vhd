@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
---Date        : Tue Jun 11 12:56:16 2024
+--Date        : Tue Jun 11 20:36:27 2024
 --Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
 --Command     : generate_target blockdesign.bd
 --Design      : blockdesign
@@ -2801,14 +2801,6 @@ architecture STRUCTURE of blockdesign is
     dout : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component blockdesign_xlconcat_0_1;
-  component blockdesign_resetting_timer_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    enable : in STD_LOGIC;
-    reset : in STD_LOGIC;
-    finished : out STD_LOGIC
-  );
-  end component blockdesign_resetting_timer_0_0;
   component blockdesign_encoder_4b5b_0_0 is
   port (
     Data_in : in STD_LOGIC_VECTOR ( 191 downto 0 );
@@ -2832,6 +2824,14 @@ architecture STRUCTURE of blockdesign is
     data_out : out STD_LOGIC_VECTOR ( 191 downto 0 )
   );
   end component blockdesign_comunication_protocol_0_0;
+  component blockdesign_resetting_timer_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    enable : in STD_LOGIC;
+    reset : in STD_LOGIC;
+    finished : out STD_LOGIC
+  );
+  end component blockdesign_resetting_timer_0_0;
   signal Row_0_0_1 : STD_LOGIC;
   signal Row_1_0_1 : STD_LOGIC;
   signal Row_2_0_1 : STD_LOGIC;

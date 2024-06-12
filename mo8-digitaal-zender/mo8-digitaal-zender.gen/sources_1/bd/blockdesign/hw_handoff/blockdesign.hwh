@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jun 11 12:56:18 2024" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jun 11 20:36:29 2024" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="blockdesign" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -1520,9 +1520,9 @@
             <CONNECTION INSTANCE="module_keypad_clk_divider_0" PORT="clk_i"/>
             <CONNECTION INSTANCE="fifo_buffer_0" PORT="clk"/>
             <CONNECTION INSTANCE="test_modulator_0" PORT="clk"/>
-            <CONNECTION INSTANCE="resetting_timer_0" PORT="clk"/>
             <CONNECTION INSTANCE="encoder_4b5b_0" PORT="clk"/>
             <CONNECTION INSTANCE="comunication_protocol_0" PORT="clk"/>
+            <CONNECTION INSTANCE="resetting_timer_0" PORT="clk"/>
             <CONNECTION INSTANCE="connection_embedded_proc_sys_reset_0" PORT="slowest_sync_clk"/>
             <CONNECTION INSTANCE="connection_embedded_processing_system7_0" PORT="M_AXI_GP0_ACLK"/>
             <CONNECTION INSTANCE="connection_embedded_ps7_0_axi_periph" PORT="S00_ACLK"/>
@@ -5248,7 +5248,7 @@
     <MODULE COREREVISION="1" FULLNAME="/resetting_timer_0" HWVERSION="1.0" INSTANCE="resetting_timer_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="resetting_timer" VLNV="xilinx.com:module_ref:resetting_timer:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="goal" VALUE="10000"/>
+        <PARAMETER NAME="goal" VALUE="100000"/>
         <PARAMETER NAME="Component_Name" VALUE="blockdesign_resetting_timer_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
