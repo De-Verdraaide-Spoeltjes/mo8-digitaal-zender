@@ -66,20 +66,17 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign
 # IP: bd/blockdesign/ip/blockdesign_test_modulator_0_0/blockdesign_test_modulator_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_test_modulator_0_0 || ORIG_REF_NAME==blockdesign_test_modulator_0_0} -quiet] -quiet
 
-# IP: bd/blockdesign/ip/blockdesign_xlslice_0_0/blockdesign_xlslice_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_xlslice_0_0 || ORIG_REF_NAME==blockdesign_xlslice_0_0} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_xlconcat_0_1/blockdesign_xlconcat_0_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_xlconcat_0_1 || ORIG_REF_NAME==blockdesign_xlconcat_0_1} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_resetting_timer_0_0/blockdesign_resetting_timer_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_resetting_timer_0_0 || ORIG_REF_NAME==blockdesign_resetting_timer_0_0} -quiet] -quiet
-
 # IP: bd/blockdesign/ip/blockdesign_encoder_4b5b_0_0/blockdesign_encoder_4b5b_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_encoder_4b5b_0_0 || ORIG_REF_NAME==blockdesign_encoder_4b5b_0_0} -quiet] -quiet
 
 # IP: bd/blockdesign/ip/blockdesign_comunication_protocol_0_0/blockdesign_comunication_protocol_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_comunication_protocol_0_0 || ORIG_REF_NAME==blockdesign_comunication_protocol_0_0} -quiet] -quiet
+
+# IP: bd/blockdesign/ip/blockdesign_resetting_timer_0_0/blockdesign_resetting_timer_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_resetting_timer_0_0 || ORIG_REF_NAME==blockdesign_resetting_timer_0_0} -quiet] -quiet
+
+# IP: bd/blockdesign/ip/blockdesign_ledController_0_0/blockdesign_ledController_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_ledController_0_0 || ORIG_REF_NAME==blockdesign_ledController_0_0} -quiet] -quiet
 
 # IP: bd/blockdesign/ip/blockdesign_auto_pc_0/blockdesign_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_auto_pc_0 || ORIG_REF_NAME==blockdesign_auto_pc_0} -quiet] -quiet

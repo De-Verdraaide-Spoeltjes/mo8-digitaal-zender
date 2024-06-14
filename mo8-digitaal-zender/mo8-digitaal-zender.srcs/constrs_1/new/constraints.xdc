@@ -36,13 +36,6 @@ set_property PULLUP true [get_ports Row_3_0]
 
 set_property -dict { PACKAGE_PIN V17 IOSTANDARD LVCMOS33 } [get_ports signal_o]
 
-set_property -dict {PACKAGE_PIN F20 IOSTANDARD LVCMOS33} [get_ports {leds2[5]}]
-set_property -dict {PACKAGE_PIN Y7 IOSTANDARD LVCMOS33} [get_ports {leds2[4]}]
-set_property -dict {PACKAGE_PIN W6 IOSTANDARD LVCMOS33} [get_ports {leds2[3]}]
-set_property -dict {PACKAGE_PIN U8 IOSTANDARD LVCMOS33} [get_ports {leds2[2]}]
-set_property -dict {PACKAGE_PIN W8 IOSTANDARD LVCMOS33} [get_ports {leds2[1]}]
-set_property -dict {PACKAGE_PIN B20 IOSTANDARD LVCMOS33} [get_ports {leds2[0]}]
-
 set_property -dict {PACKAGE_PIN M14 IOSTANDARD LVCMOS33} [get_ports {leds[3]}]
 set_property -dict {PACKAGE_PIN N16 IOSTANDARD LVCMOS33} [get_ports {leds[2]}]
 set_property -dict {PACKAGE_PIN P14 IOSTANDARD LVCMOS33} [get_ports {leds[1]}]

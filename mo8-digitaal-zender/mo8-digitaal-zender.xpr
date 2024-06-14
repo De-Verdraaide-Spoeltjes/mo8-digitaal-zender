@@ -127,12 +127,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/resetting_timer.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/new/Encoder.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -145,65 +139,80 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/new/resetting_timer.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/ledController.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/bd/blockdesign/blockdesign.bd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_encoder_4b5b_0_0/blockdesign_encoder_4b5b_0_0.xci">
-          <Proxy FileSetName="blockdesign_encoder_4b5b_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_clk_divider_0_2/blockdesign_clk_divider_0_2.xci">
-          <Proxy FileSetName="blockdesign_clk_divider_0_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_comunication_protocol_0_0/blockdesign_comunication_protocol_0_0.xci">
-          <Proxy FileSetName="blockdesign_comunication_protocol_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_test_modulator_0_0/blockdesign_test_modulator_0_0.xci">
-          <Proxy FileSetName="blockdesign_test_modulator_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_resetting_timer_0_0/blockdesign_resetting_timer_0_0.xci">
-          <Proxy FileSetName="blockdesign_resetting_timer_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_fifo_buffer_0_0/blockdesign_fifo_buffer_0_0.xci">
-          <Proxy FileSetName="blockdesign_fifo_buffer_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_axi_gpio_2_0/blockdesign_axi_gpio_2_0.xci">
-          <Proxy FileSetName="blockdesign_axi_gpio_2_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_axi_gpio_3_0/blockdesign_axi_gpio_3_0.xci">
-          <Proxy FileSetName="blockdesign_axi_gpio_3_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_xbar_0/blockdesign_xbar_0.xci">
-          <Proxy FileSetName="blockdesign_xbar_0"/>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_util_vector_logic_0_0/blockdesign_util_vector_logic_0_0.xci">
+          <Proxy FileSetName="blockdesign_util_vector_logic_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_proc_sys_reset_0_0/blockdesign_proc_sys_reset_0_0.xci">
           <Proxy FileSetName="blockdesign_proc_sys_reset_0_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_util_reduced_logic_0_0/blockdesign_util_reduced_logic_0_0.xci">
+          <Proxy FileSetName="blockdesign_util_reduced_logic_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_clk_divider_0_0/blockdesign_clk_divider_0_0.xci">
           <Proxy FileSetName="blockdesign_clk_divider_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_util_vector_logic_0_0/blockdesign_util_vector_logic_0_0.xci">
-          <Proxy FileSetName="blockdesign_util_vector_logic_0_0"/>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_axi_gpio_3_0/blockdesign_axi_gpio_3_0.xci">
+          <Proxy FileSetName="blockdesign_axi_gpio_3_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_util_reduced_logic_0_0/blockdesign_util_reduced_logic_0_0.xci">
-          <Proxy FileSetName="blockdesign_util_reduced_logic_0_0"/>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_comunication_protocol_0_0/blockdesign_comunication_protocol_0_0.xci">
+          <Proxy FileSetName="blockdesign_comunication_protocol_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_resetting_timer_0_0/blockdesign_resetting_timer_0_0.xci">
+          <Proxy FileSetName="blockdesign_resetting_timer_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_ledController_0_0/blockdesign_ledController_0_0.xci">
+          <Proxy FileSetName="blockdesign_ledController_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_rsa_encrypted_char_0/blockdesign_rsa_encrypted_char_0.xci">
           <Proxy FileSetName="blockdesign_rsa_encrypted_char_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_xbar_0/blockdesign_xbar_0.xci">
+          <Proxy FileSetName="blockdesign_xbar_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_hold_detector_0_0/blockdesign_hold_detector_0_0.xci">
           <Proxy FileSetName="blockdesign_hold_detector_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_DeBounce_0_0/blockdesign_DeBounce_0_0.xci">
-          <Proxy FileSetName="blockdesign_DeBounce_0_0"/>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_encoder_4b5b_0_0/blockdesign_encoder_4b5b_0_0.xci">
+          <Proxy FileSetName="blockdesign_encoder_4b5b_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_fifo_buffer_0_0/blockdesign_fifo_buffer_0_0.xci">
+          <Proxy FileSetName="blockdesign_fifo_buffer_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_processing_system7_0_0/blockdesign_processing_system7_0_0.xci">
+          <Proxy FileSetName="blockdesign_processing_system7_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_keypad_0_1/blockdesign_keypad_0_1.xci">
           <Proxy FileSetName="blockdesign_keypad_0_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_processing_system7_0_0/blockdesign_processing_system7_0_0.xci">
-          <Proxy FileSetName="blockdesign_processing_system7_0_0"/>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_axi_gpio_2_0/blockdesign_axi_gpio_2_0.xci">
+          <Proxy FileSetName="blockdesign_axi_gpio_2_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_DeBounce_0_0/blockdesign_DeBounce_0_0.xci">
+          <Proxy FileSetName="blockdesign_DeBounce_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_clk_divider_0_2/blockdesign_clk_divider_0_2.xci">
+          <Proxy FileSetName="blockdesign_clk_divider_0_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_test_modulator_0_0/blockdesign_test_modulator_0_0.xci">
+          <Proxy FileSetName="blockdesign_test_modulator_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/blockdesign/hdl/blockdesign_wrapper.vhd">
@@ -366,6 +375,12 @@
     <FileSet Name="blockdesign_resetting_timer_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blockdesign_resetting_timer_0_0" RelGenDir="$PGENDIR/blockdesign_resetting_timer_0_0">
       <Config>
         <Option Name="TopModule" Val="blockdesign_resetting_timer_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="blockdesign_ledController_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blockdesign_ledController_0_0" RelGenDir="$PGENDIR/blockdesign_ledController_0_0">
+      <Config>
+        <Option Name="TopModule" Val="blockdesign_ledController_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -570,6 +585,16 @@
       <RQSFiles/>
     </Run>
     <Run Id="blockdesign_resetting_timer_0_0_synth_1" Type="Ft3:Synth" SrcSet="blockdesign_resetting_timer_0_0" Part="xc7z020clg400-1" ConstrsSet="blockdesign_resetting_timer_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/blockdesign_resetting_timer_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_resetting_timer_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_resetting_timer_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_ledController_0_0_synth_1" Type="Ft3:Synth" SrcSet="blockdesign_ledController_0_0" Part="xc7z020clg400-1" ConstrsSet="blockdesign_ledController_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/blockdesign_ledController_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_ledController_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_ledController_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -889,6 +914,23 @@
       <RQSFiles/>
     </Run>
     <Run Id="blockdesign_resetting_timer_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="blockdesign_resetting_timer_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="blockdesign_resetting_timer_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_resetting_timer_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_resetting_timer_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_ledController_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="blockdesign_ledController_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="blockdesign_ledController_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_ledController_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_ledController_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
           <Desc>Default settings for Implementation.</Desc>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1718130994" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/design_1_wrapper.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1718360243" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/design_1_wrapper.dcp">
   <File Type="PA-TCL" Name="blockdesign_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="blockdesign_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="blockdesign_wrapper_reports.tcl"/>
@@ -47,12 +47,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/resetting_timer.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/Encoder.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -60,6 +54,18 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/communication_protocol.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/resetting_timer.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ledController.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -127,6 +133,7 @@
   <BlockFileSet Type="BlockSrcs" Name="blockdesign_keypad_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="blockdesign_fifo_buffer_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="blockdesign_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="blockdesign_ledController_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="blockdesign_rsa_encrypted_char_0"/>
   <BlockFileSet Type="BlockSrcs" Name="blockdesign_test_modulator_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="blockdesign_clk_divider_0_2"/>

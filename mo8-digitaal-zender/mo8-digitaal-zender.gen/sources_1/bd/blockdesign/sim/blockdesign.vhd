@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
---Date        : Tue Jun 11 20:36:27 2024
+--Date        : Fri Jun 14 12:17:15 2024
 --Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
 --Command     : generate_target blockdesign.bd
 --Design      : blockdesign
@@ -2752,13 +2752,12 @@ entity blockdesign is
     UART_rxd : in STD_LOGIC;
     UART_txd : out STD_LOGIC;
     leds : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    leds2 : out STD_LOGIC_VECTOR ( 5 downto 0 );
     reset_in : in STD_LOGIC;
     signal_o : out STD_LOGIC;
     status_led : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of blockdesign : entity is "blockdesign,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=blockdesign,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=35,numReposBlks=25,numNonXlnxBlks=0,numHierBlks=10,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=10,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=9,da_board_cnt=5,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of blockdesign : entity is "blockdesign,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=blockdesign,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=34,numReposBlks=24,numNonXlnxBlks=0,numHierBlks=10,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=11,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=9,da_board_cnt=5,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of blockdesign : entity is "blockdesign.hwdef";
 end blockdesign;
@@ -2786,21 +2785,6 @@ architecture STRUCTURE of blockdesign is
     signal_o : out STD_LOGIC
   );
   end component blockdesign_test_modulator_0_0;
-  component blockdesign_xlslice_0_0 is
-  port (
-    Din : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    Dout : out STD_LOGIC_VECTOR ( 5 downto 0 )
-  );
-  end component blockdesign_xlslice_0_0;
-  component blockdesign_xlconcat_0_1 is
-  port (
-    In0 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    In1 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    In2 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    In3 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    dout : out STD_LOGIC_VECTOR ( 3 downto 0 )
-  );
-  end component blockdesign_xlconcat_0_1;
   component blockdesign_encoder_4b5b_0_0 is
   port (
     Data_in : in STD_LOGIC_VECTOR ( 191 downto 0 );
@@ -2832,6 +2816,12 @@ architecture STRUCTURE of blockdesign is
     finished : out STD_LOGIC
   );
   end component blockdesign_resetting_timer_0_0;
+  component blockdesign_ledController_0_0 is
+  port (
+    bits_stored : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    leds : out STD_LOGIC_VECTOR ( 3 downto 0 )
+  );
+  end component blockdesign_ledController_0_0;
   signal Row_0_0_1 : STD_LOGIC;
   signal Row_1_0_1 : STD_LOGIC;
   signal Row_2_0_1 : STD_LOGIC;
@@ -2854,6 +2844,7 @@ architecture STRUCTURE of blockdesign is
   signal keypad_0_Col_1 : STD_LOGIC;
   signal keypad_0_Col_2 : STD_LOGIC;
   signal keypad_0_Data : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal ledController_0_leds : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal processing_system7_0_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal processing_system7_0_DDR_BA : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal processing_system7_0_DDR_CAS_N : STD_LOGIC;
@@ -2882,8 +2873,6 @@ architecture STRUCTURE of blockdesign is
   signal test_modulator_0_timer_enable_o : STD_LOGIC;
   signal test_modulator_0_timer_reset_o : STD_LOGIC;
   signal util_reduced_logic_0_Res : STD_LOGIC;
-  signal xlconcat_0_dout : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal xlslice_0_Dout : STD_LOGIC_VECTOR ( 5 downto 0 );
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of DDR_cas_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CAS_N";
   attribute X_INTERFACE_INFO of DDR_ck_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CK_N";
@@ -2923,8 +2912,7 @@ begin
   Row_3_0_1 <= Row_3_0;
   UART_txd <= processing_system7_0_UART_1_TxD;
   aux_reset_in_0_1 <= reset_in;
-  leds(3 downto 0) <= xlconcat_0_dout(3 downto 0);
-  leds2(5 downto 0) <= xlslice_0_Dout(5 downto 0);
+  leds(3 downto 0) <= ledController_0_leds(3 downto 0);
   processing_system7_0_UART_1_RxD <= UART_rxd;
   signal_o <= test_modulator_0_signal_o;
   status_led(2 downto 0) <= connection_embedded_status_led(2 downto 0);
@@ -3000,6 +2988,11 @@ filter_sterretje: entity work.filter_sterretje_imp_1BL3XA9
       keypad_value(3 downto 0) => keypad_0_Data(3 downto 0),
       reset => connection_embedded_reset(0)
     );
+ledController_0: component blockdesign_ledController_0_0
+     port map (
+      bits_stored(7 downto 0) => fifo_buffer_0_bits_stored_o(7 downto 0),
+      leds(3 downto 0) => ledController_0_leds(3 downto 0)
+    );
 module_keypad: entity work.module_keypad_imp_NHRZ6W
      port map (
       Col_0_0 => keypad_0_Col_0,
@@ -3029,18 +3022,5 @@ test_modulator_0: component blockdesign_test_modulator_0_0
       timer_enable_o => test_modulator_0_timer_enable_o,
       timer_finished_i => resetting_timer_0_finished,
       timer_reset_o => test_modulator_0_timer_reset_o
-    );
-xlconcat_0: component blockdesign_xlconcat_0_1
-     port map (
-      In0(0) => connection_embedded_rsa_data_ready(0),
-      In1(0) => comunication_protocol_0_data_ready,
-      In2(0) => encoder_4b5b_0_Output_rdy,
-      In3(0) => test_modulator_0_signal_o,
-      dout(3 downto 0) => xlconcat_0_dout(3 downto 0)
-    );
-xlslice_0: component blockdesign_xlslice_0_0
-     port map (
-      Din(7 downto 0) => fifo_buffer_0_bits_stored_o(7 downto 0),
-      Dout(5 downto 0) => xlslice_0_Dout(5 downto 0)
     );
 end STRUCTURE;

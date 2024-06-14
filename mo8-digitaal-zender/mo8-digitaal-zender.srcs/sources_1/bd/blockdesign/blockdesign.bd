@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xD40EF5497791267A",
+      "boundary_crc": "0xE7887882AAC5FA88",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../mo8-digitaal-zender.gen/sources_1/bd/blockdesign",
       "name": "blockdesign",
@@ -46,11 +46,10 @@
       },
       "fifo_buffer_0": "",
       "test_modulator_0": "",
-      "xlslice_0": "",
-      "xlconcat_0": "",
       "encoder_4b5b_0": "",
       "comunication_protocol_0": "",
-      "resetting_timer_0": ""
+      "resetting_timer_0": "",
+      "ledController_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -279,11 +278,6 @@
       },
       "signal_o": {
         "direction": "O"
-      },
-      "leds2": {
-        "direction": "O",
-        "left": "5",
-        "right": "0"
       },
       "leds": {
         "direction": "O",
@@ -3580,34 +3574,6 @@
           }
         }
       },
-      "xlslice_0": {
-        "vlnv": "xilinx.com:ip:xlslice:1.0",
-        "xci_name": "blockdesign_xlslice_0_0",
-        "xci_path": "ip\\blockdesign_xlslice_0_0\\blockdesign_xlslice_0_0.xci",
-        "inst_hier_path": "xlslice_0",
-        "parameters": {
-          "DIN_FROM": {
-            "value": "7"
-          },
-          "DIN_TO": {
-            "value": "2"
-          },
-          "DIN_WIDTH": {
-            "value": "8"
-          }
-        }
-      },
-      "xlconcat_0": {
-        "vlnv": "xilinx.com:ip:xlconcat:2.1",
-        "xci_name": "blockdesign_xlconcat_0_1",
-        "xci_path": "ip\\blockdesign_xlconcat_0_1\\blockdesign_xlconcat_0_1.xci",
-        "inst_hier_path": "xlconcat_0",
-        "parameters": {
-          "NUM_PORTS": {
-            "value": "4"
-          }
-        }
-      },
       "encoder_4b5b_0": {
         "vlnv": "xilinx.com:module_ref:encoder_4b5b:1.0",
         "xci_name": "blockdesign_encoder_4b5b_0_0",
@@ -3783,6 +3749,35 @@
             "direction": "O"
           }
         }
+      },
+      "ledController_0": {
+        "vlnv": "xilinx.com:module_ref:ledController:1.0",
+        "xci_name": "blockdesign_ledController_0_0",
+        "xci_path": "ip\\blockdesign_ledController_0_0\\blockdesign_ledController_0_0.xci",
+        "inst_hier_path": "ledController_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ledController",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "bits_stored": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "leds": {
+            "direction": "O",
+            "left": "3",
+            "right": "0",
+            "parameters": {
+              "PortWidth": {
+                "value": "4",
+                "value_src": "ip_prop"
+              }
+            }
+          }
+        }
       }
     },
     "interface_nets": {
@@ -3851,7 +3846,6 @@
       "comunication_protocol_0_data_ready": {
         "ports": [
           "comunication_protocol_0/data_ready",
-          "xlconcat_0/In1",
           "encoder_4b5b_0/Data_rdy"
         ]
       },
@@ -3879,8 +3873,7 @@
       "connection_embedded_rsa_data_ready": {
         "ports": [
           "connection_embedded/rsa_data_ready",
-          "fifo_buffer_0/write_en",
-          "xlconcat_0/In0"
+          "fifo_buffer_0/write_en"
         ]
       },
       "connection_embedded_rsa_encrypted_char": {
@@ -3910,15 +3903,14 @@
       "encoder_4b5b_0_Output_rdy": {
         "ports": [
           "encoder_4b5b_0/Output_rdy",
-          "xlconcat_0/In2",
           "test_modulator_0/run"
         ]
       },
       "fifo_buffer_0_bits_stored_o": {
         "ports": [
           "fifo_buffer_0/bits_stored_o",
-          "xlslice_0/Din",
-          "comunication_protocol_0/buffer_data_ready"
+          "comunication_protocol_0/buffer_data_ready",
+          "ledController_0/bits_stored"
         ]
       },
       "fifo_buffer_0_data_out": {
@@ -3953,6 +3945,12 @@
           "comunication_protocol_0/keypad_data"
         ]
       },
+      "ledController_0_leds": {
+        "ports": [
+          "ledController_0/leds",
+          "leds"
+        ]
+      },
       "resetting_timer_0_finished": {
         "ports": [
           "resetting_timer_0/finished",
@@ -3962,8 +3960,7 @@
       "test_modulator_0_signal_o": {
         "ports": [
           "test_modulator_0/signal_o",
-          "signal_o",
-          "xlconcat_0/In3"
+          "signal_o"
         ]
       },
       "test_modulator_0_timer_enable_o": {
@@ -3982,18 +3979,6 @@
         "ports": [
           "filter_sterretje/is_sterretje",
           "connection_embedded/transmit_keys"
-        ]
-      },
-      "xlconcat_0_dout": {
-        "ports": [
-          "xlconcat_0/dout",
-          "leds"
-        ]
-      },
-      "xlslice_0_Dout": {
-        "ports": [
-          "xlslice_0/Dout",
-          "leds2"
         ]
       }
     },
